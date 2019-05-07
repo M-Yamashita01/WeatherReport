@@ -1,0 +1,5 @@
+require 'test/unit'
+require_relative 'test_data_reader'
+require_relative 'test_url_creator'
+require_relative 'test_weather_collection'
+require_relative 'test_location_id_reader'

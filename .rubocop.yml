@@ -1,0 +1,13 @@
+inherit_from: rubocop-todo.yml
+
+AsciiComments:
+  Enabled: false
+
+ClassAndModuleChildren:
+  Enabled: false
+
+Documentation:
+  Enabled: false
+
+Style/AsciiComments:
+  Enabled: false
