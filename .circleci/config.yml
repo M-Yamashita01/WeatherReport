@@ -22,7 +22,7 @@ jobs:
       # Bundle install dependencies
       - run:
           name: Bundle Install
-          command: bundle check || bundle install
+          command: gem install bundler:2.0.1 || bundle check || bundle install
 
       # Store bundle cache
       - save_cache:
