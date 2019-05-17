@@ -27,7 +27,7 @@ jobs:
       - run:
           name: run tests
           command: 
-            ruby test/model/weather/all_test.rb
+            ruby test/models/weather/all_test.rb
  
       # Save test results for timing analysis
       - store_test_results:
