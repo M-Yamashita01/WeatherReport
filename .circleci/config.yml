@@ -6,7 +6,7 @@ jobs:
         environment:
           RAILS_ENV: test
     # ディレクトリ情報を移動（こうしないとエラーになる）
-    working_directory: ~/
+    working_directory: ~/WeatherReport
     steps:
       - checkout
 
