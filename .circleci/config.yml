@@ -1,0 +1,34 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/ruby:2.6.3-node
+        environment:
+          RAILS_ENV: test
+    # ディレクトリ情報を移動（こうしないとエラーになる）
+    working_directory: ~/
+    steps:
+      - checkout
+
+      # Restore bundle cache
+      - restore_cache:
+          key: rails-demo-{{ checksum "Gemfile.lock" }}
+
+      # Bundle install dependencies
+      - run: bundle install --path vendor/bundle
+
+      # Store bundle cache
+      - save_cache:
+          key: rails-demo-{{ checksum "Gemfile.lock" }}
+          paths:
+            - vendor/bundle
+
+      # run tests!
+      - run:
+          name: run tests
+          command: 
+            ruby test/model/weather/all_test.rb
+ 
+      # Save test results for timing analysis
+      - store_test_results:
+          path: test_results
