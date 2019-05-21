@@ -1,6 +1,7 @@
 <h1>Listing articles</h1>
 <%= link_to 'New article', new_article_path %>
 <table>
+<%= image_tag 'japanesemap.png', :size => '800x600' %>
     <% @location_weather_arr.each do |location_weather| %>
         <tr>
             <td><%= location_weather.city_name %></td>        
@@ -9,7 +10,7 @@
         </tr>
     <% end %>
 
-
+    
 
     <% @articles.each do |article| %>
         <tr>
