@@ -20,9 +20,9 @@ jobs:
           key: rails-demo-{{ checksum "Gemfile.lock" }}
 
       # Bundle install dependencies
-      - run:
-          name: Bundle Install
-          command: gem install bundler:2.0.1 || bundle check || bundle install
+      - run: gem install bundler:2.0.1
+      - run: bundle check
+      - run: bundle install
 
       # Store bundle cache
       - save_cache:
