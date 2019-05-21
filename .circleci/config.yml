@@ -4,8 +4,8 @@ jobs:
     docker:
       - image: circleci/ruby:2.6.3-node
         environment:
-          BUNDLE_JOBS: 3
-          BUNDLE_RETRY: 3
+          BUNDLE_JOBS: '3'
+          BUNDLE_RETRY: '3'
           BUNDLE_PATH: vendor/bundle
           PGHOST: 127.0.0.1
           PGUSER: circleci-demo-ruby
@@ -34,8 +34,9 @@ jobs:
       - run:
           name: run tests
           command: 
-            ruby test/models/weather/all_test.rb
- 
+            # ruby test/models/weather/all_test.rb
+            bundle exec rspec spec/models/weather/*
+
       # Save test results for timing analysis
       - store_test_results:
           path: test_results
