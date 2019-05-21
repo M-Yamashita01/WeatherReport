@@ -21,7 +21,7 @@ jobs:
 
       # Bundle install dependencies
       - run: gem install bundler:2.0.1
-      - run: bundle check
+      # - run: bundle check
       - run: bundle install
 
       # Store bundle cache
