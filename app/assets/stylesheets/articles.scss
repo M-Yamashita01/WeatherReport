@@ -1,3 +1,23 @@
 // Place all the styles related to the Articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.popover.show{
+  margin-bottom: 10px;
+}
+
+img.reviews {
+  margin-bottom: 10px;
+}
+
+.row-center {
+  text-align: center;
+  letter-spacing: -0.4em;
+}
+
+.row-center > [class*='col-'] {
+  display: inline-block;
+  letter-spacing: 0;
+  vertical-align: middle;
+  float: none !important;
+}

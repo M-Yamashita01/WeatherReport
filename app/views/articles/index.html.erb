@@ -1,6 +1,25 @@
 <h1>Listing articles</h1>
 <%= link_to 'New article', new_article_path %>
 <table>
+
+<!--
+地図に吹き出しをつけるコード実装中
+<div class="row row-center">
+  <div class='col-lg-2 col-md-3 col-sm-4 col-xs-5'>
+    
+  </div>
+  <div class="col-lg-10 col-md-9 col-sm-8 col-xs-7">
+    <div class="popover right show"style="position:relative; top=-90px; left=100px; max-width:100%; display:inline;">
+      <div class="arrow"></div>
+      <h3 class="popover-title">東京芸術大学 Mさん</h3>
+      <div class="popover-content">
+        <p>sample</p>
+      </div>
+    </div>
+  </div>
+</div>
+-->
+    <%= image_tag 'japanesemap.png', :size => '800x600', class:"img-responsive img-circle reviews" %>
     <% @location_weather_arr.each do |location_weather| %>
         <tr>
             <td><%= location_weather.city_name %></td>        
@@ -9,7 +28,7 @@
         </tr>
     <% end %>
 
-
+    
 
     <% @articles.each do |article| %>
         <tr>

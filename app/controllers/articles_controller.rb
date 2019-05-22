@@ -11,7 +11,7 @@ class ArticlesController < ApplicationController
     creator = URLCreator.new
     reader = DataReader.new
     weather_collection = WeatherCollection.new(creator, reader)
-    location_weather_list = weather_collection.get_all_location_weather
+    location_weather_list = weather_collection.get_main_location_weather
     # weather_count = location_weather_list.count
 
     # @location_weather = location_weather_list.pop
