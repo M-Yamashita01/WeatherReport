@@ -14,6 +14,13 @@ class DataReader
     return @parse_text['forecasts'][date_no]['telop']
   end
 
+  def get_weather_image_no(date_no)
+    url = @parse_text['forecasts'][date_no]['image']['url']
+    url.slice!('http://weather.livedoor.com/img/icon/')
+    url.slice!('.gif')
+    return url
+  end
+
   def get_date(date_no)
     return @parse_text['forecasts'][date_no]['date']
   end

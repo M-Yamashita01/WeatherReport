@@ -9,5 +9,12 @@ describe '天気データ取得' do
       reader.read(url)
       expect(Date.today.strftime('%Y-%m-%d')).to eq(reader.get_date(0))
     end
+
+    it '天気画像のURL取得' do
+      url = 'http://weather.livedoor.com/forecast/webservice/json/v1?city=130010'
+      reader = DataReaderMock.new
+      reader.read(url)
+      expect('2').to eq(reader.get_weather_image_no(0))
+    end
   end
 end
