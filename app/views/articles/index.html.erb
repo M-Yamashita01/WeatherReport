@@ -19,11 +19,12 @@
   </div>
 </div>
 -->
-    <%= image_tag 'japanesemap.png', :size => '800x600', class:"img-responsive img-circle reviews" %>
+    <%= image_tag 'japanesemap.png', :size => '600x450' %>
     <% @location_weather_arr.each do |location_weather| %>
         <tr>
             <td><%= location_weather.city_name %></td>        
             <td><%= location_weather.today_weather %></td>
+            <td><%= image_tag location_weather.today_weather_image_path, :size => '50x31'%></td>
 
         </tr>
     <% end %>
