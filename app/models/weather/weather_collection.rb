@@ -36,6 +36,7 @@ class WeatherCollection
       location_weather.today_weather = @reader.get_weather_telop(0)
       location_weather.today_date = @reader.get_date(0)
       location_weather.city_name = @reader.get_city_name
+      location_weather.today_weather_image_path = @reader.get_weather_image_file_name(0)
       location_weather_list.push(location_weather)
     end
 

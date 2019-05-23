@@ -9,6 +9,10 @@ class DataReaderMock < DataReader
     return 'sunny'
   end
 
+  def get_weather_image_file_name(_date_no)
+    return '1.gif'
+  end
+
   def get_date(_date_no)
     return Date.today.strftime('%Y-%m-%d')
   end

@@ -1,5 +1,6 @@
 require 'open-uri'
 require 'json'
+require_relative 'weather_image_search'
 
 # JSON形式のデータを読み込むクラス
 class DataReader
@@ -12,6 +13,12 @@ class DataReader
   # 今日、明日、あさっての天気がJSON内の配列内にあるため、数字を指定する
   def get_weather_telop(date_no)
     return @parse_text['forecasts'][date_no]['telop']
+  end
+
+  def get_weather_image_file_name(date_no)
+    url = @parse_text['forecasts'][date_no]['image']['url']
+    file_name = url.slice!('http://weather.livedoor.com/img/icon/')
+    return file_name
   end
 
   def get_date(date_no)
