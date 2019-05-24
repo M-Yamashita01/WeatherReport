@@ -17,8 +17,8 @@ class DataReader
 
   def get_weather_image_file_name(date_no)
     url = @parse_text['forecasts'][date_no]['image']['url']
-    file_name = url.slice!('http://weather.livedoor.com/img/icon/')
-    return file_name
+    url.slice!('http://weather.livedoor.com/img/icon/')
+    return url
   end
 
   def get_date(date_no)
