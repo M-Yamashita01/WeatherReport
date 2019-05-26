@@ -1,5 +1,6 @@
 <h3>全国の天気</h3>
 <table>
+    <!-- 各地点の地点名、天気、天気画像を表示-->
     <% @location_weather_arr.each do |location_weather| %>
         <tr>
             <td><%= location_weather.city_name %></td>        
@@ -10,7 +11,7 @@
     <% end %>
 
     
-
+<!-- <%= link_to 'New article', new_article_path %>-->
     <% @articles.each do |article| %>
         <tr>
             <td><%= article.title %></td>
