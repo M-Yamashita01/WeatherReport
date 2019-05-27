@@ -9,7 +9,7 @@ jobs:
           BUNDLE_PATH: vendor/bundle
           PGUSER: circleci-demo-ruby
           RAILS_ENV: test
-      - image circleci/mysql:8.0.16
+      - image: circleci/mysql:8.0.16
         environment:
           DB_HOST: 127.0.0.1
           MYSQL_ALLOW_EMPTY_PASSWORD: true
