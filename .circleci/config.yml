@@ -12,11 +12,9 @@ jobs:
       - image: circleci/mysql:8.0.16
         command: mysqld --default-authentication-plugin=mysql_native_password
         environment:
-          MYSQL_ALLOW_EMPTY_PASSWORD: yes
           DB_HOST: 127.0.0.1
-          MYSQL_ROOT_PASSWORD: ''
-          MYSQL_USER: 'user'
-          MYSQL_PASSWORD: 'user-pw'
+          MYSQL_USER_DEVELOPMENT: 'user'
+          MYSQL_PASS_DEVELOPMENT: 'user-pw'
           MYSQL_DATABASE: weather_report_test
     # ディレクトリ情報を移動（こうしないとエラーになる）
     working_directory: ~/WeatherReport
