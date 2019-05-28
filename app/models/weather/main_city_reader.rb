@@ -2,7 +2,7 @@ require 'json'
 
 class MainCityReader
   def read
-    file_path = File.expand_path('config/MainCity.json', __dir__)
+    file_path = File.expand_path('config/main_city.json', __dir__)
 
     @city_list = []
 
