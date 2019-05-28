@@ -7,9 +7,15 @@ jobs:
           BUNDLE_JOBS: '3'
           BUNDLE_RETRY: '3'
           BUNDLE_PATH: vendor/bundle
-          PGHOST: 127.0.0.1
           PGUSER: circleci-demo-ruby
           RAILS_ENV: test
+      - image circleci/mysql:8.0.16
+        environment:
+          DB_HOST: 127.0.0.1
+          MYSQL_ALLOW_EMPTY_PASSWORD: true
+          MYSQL_USER_DEVELOPMENT: root
+          MYSQL_PASS_DEVELOPMENT: ''
+          MYSQL_DATABASE: weather_report_test
     # ディレクトリ情報を移動（こうしないとエラーになる）
     working_directory: ~/WeatherReport
     steps:
@@ -30,6 +36,9 @@ jobs:
           paths:
             - vendor/bundle
 
+      - run:
+          name: Wait for DB
+          command: dockerize -wait tcp://127.0.0.1:3306 -timeout 120s
       # run tests!
       - run:
           name: run tests
