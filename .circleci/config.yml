@@ -42,9 +42,9 @@ jobs:
       - run:
           name: Setup DB
           command: |
-            bundle rake db:drop
-            bundle rake db:create
-            bundle rake db:migrate
+            bundle exec rake db:drop
+            bundle exec rake db:create
+            bundle exec rake db:migrate
       - run:
           name: run tests
           command: 
