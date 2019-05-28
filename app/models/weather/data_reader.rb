@@ -28,4 +28,8 @@ class DataReader
   def get_city_name
     return @parse_text['location']['city']
   end
+
+  def get_area_name
+    return @parse_text['location']['area']
+  end
 end
