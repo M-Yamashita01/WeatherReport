@@ -12,9 +12,8 @@ jobs:
       - image: circleci/mysql:8.0.16
         environment:
           DB_HOST: 127.0.0.1
-          MYSQL_ALLOW_EMPTY_PASSWORD: true
-          MYSQL_USER_DEVELOPMENT: root
-          MYSQL_PASS_DEVELOPMENT: ''
+          MYSQL_USER: 'user'
+          MYSQL_PASSWORD: 'user-pw'
           MYSQL_DATABASE: weather_report_test
     # ディレクトリ情報を移動（こうしないとエラーになる）
     working_directory: ~/WeatherReport
