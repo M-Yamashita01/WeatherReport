@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   get 'welcome/index'
+  get 'area/kanto' => 'area/kanto#index'
 
   resources :articles
 
