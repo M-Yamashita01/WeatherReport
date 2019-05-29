@@ -9,6 +9,8 @@ jobs:
           BUNDLE_PATH: vendor/bundle
           PGUSER: circleci-demo-ruby
           RAILS_ENV: test
+          MYSQL_USER_DEVELOPMENT: 'root'
+          MYSQL_PASS_DEVELOPMENT: 'test-pw'
       - image: circleci/mysql:8.0.16
         command: mysqld --default-authentication-plugin=mysql_native_password
         environment:
