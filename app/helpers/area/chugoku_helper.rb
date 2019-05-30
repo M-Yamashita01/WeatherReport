@@ -1,0 +1,2 @@
+module Area::ChugokuHelper
+end

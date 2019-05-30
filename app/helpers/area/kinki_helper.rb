@@ -1,0 +1,2 @@
+module Area::KinkiHelper
+end

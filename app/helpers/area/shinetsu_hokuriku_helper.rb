@@ -1,0 +1,2 @@
+module Area::ShinetsuHokurikuHelper
+end

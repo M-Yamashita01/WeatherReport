@@ -1,0 +1,2 @@
+module Area::KyusyuHelper
+end
