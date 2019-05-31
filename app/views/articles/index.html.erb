@@ -3,7 +3,9 @@
     <!-- 各地点の地点名、天気、天気画像を表示-->
     <% @location_weather_arr.each do |location_weather| %>
         <tr>
-            <% if location_weather.area_name == '関東' %>
+            <% if location_weather.area_name == '北海道'%>
+              <td><%= link_to location_weather.area_name,  '/area/hokkaido' %></td>
+            <% elsif location_weather.area_name == '関東' %>
               <td><%= link_to location_weather.area_name,  '/area/kanto' %></td>
             <% end %>
             <td><%= location_weather.city_name %></td>        
