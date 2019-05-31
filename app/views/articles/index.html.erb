@@ -5,8 +5,22 @@
         <tr>
             <% if location_weather.area_name == '北海道'%>
               <td><%= link_to location_weather.area_name,  '/area/hokkaido' %></td>
+            <% elsif location_weather.area_name == '東北'%>
+              <td><%= link_to location_weather.area_name,  '/area/tohoku' %></td>   
             <% elsif location_weather.area_name == '関東' %>
               <td><%= link_to location_weather.area_name,  '/area/kanto' %></td>
+            <% elsif location_weather.area_name == '信越 北陸'%>
+              <td><%= link_to location_weather.area_name,  '/area/shinetsu_hokuriku' %></td>   
+            <% elsif location_weather.area_name == '近畿' %>
+              <td><%= link_to location_weather.area_name,  '/area/kinki' %></td>
+            <% elsif location_weather.area_name == '中国' %>
+              <td><%= link_to location_weather.area_name,  '/area/chugoku' %></td>
+            <% elsif location_weather.area_name == '四国'%>
+              <td><%= link_to location_weather.area_name,  '/area/shikoku' %></td>   
+            <% elsif location_weather.area_name == '九州' %>
+              <td><%= link_to location_weather.area_name,  '/area/kyusyu' %></td>
+            <% elsif location_weather.area_name == '南西諸島' %>
+              <td><%= link_to location_weather.area_name,  '/area/nanseishoto' %></td>
             <% end %>
             <td><%= location_weather.city_name %></td>        
             <td><%= location_weather.today_weather %></td>

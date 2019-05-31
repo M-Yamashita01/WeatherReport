@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   get 'welcome/index'
   get 'area/hokkaido' => 'area/hokkaido#index'
-  get 'area/tohoku' => 'area/tohoku'
+  get 'area/tohoku' => 'area/tohoku#index'
   get 'area/kanto' => 'area/kanto#index'
   get 'area/tokai' => 'area/tokai#index'
   get 'area/shinetsu_hokuriku' => 'area/shinetsu_hokuriku#index'
@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   get 'area/chugoku' => 'area/chugoku#index'
   get 'area/shikoku' => 'area/shikoku#index'
   get 'area/kyusyu' => 'area/kyusyu#index'
-  get 'nanseishoto' => 'area/nanseishoto#index'
+  get 'area/nanseishoto' => 'area/nanseishoto#index'
 
   resources :articles
 
