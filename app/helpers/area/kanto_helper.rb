@@ -1,0 +1,2 @@
+module Area::KantoHelper
+end

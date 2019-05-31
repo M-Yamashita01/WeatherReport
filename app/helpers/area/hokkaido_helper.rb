@@ -1,0 +1,2 @@
+module Area::HokkaidoHelper
+end

@@ -51,3 +51,4 @@ build-iPhoneSimulator/
 
 log/
 RailsLaunch.sh
+TestExecution.sh

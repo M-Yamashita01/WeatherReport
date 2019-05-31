@@ -20,4 +20,8 @@ class DataReaderMock < DataReader
   def get_city_name
     return 'tokyo'
   end
+
+  def get_area_name
+    return 'kanto'
+  end
 end

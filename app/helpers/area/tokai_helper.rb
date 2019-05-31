@@ -1,0 +1,2 @@
+module Area::TokaiHelper
+end
