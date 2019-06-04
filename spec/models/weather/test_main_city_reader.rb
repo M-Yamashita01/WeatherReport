@@ -15,4 +15,12 @@ describe '主要地点取得' do
       expect(false).to be reader.contain?('千葉')
     end
   end
+
+  context '地方の主要地点の含み有無' do
+    it '熊本は主要地点か' do
+      reader = MainCityReader.new
+      reader.read_in_area('kyusyu')
+      expect(true).to be reader.contain?('熊本')
+    end
+  end
 end
