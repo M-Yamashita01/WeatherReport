@@ -44,12 +44,28 @@ class LocationIdReader
         for city_no in 0..city.count - 1
           city_name = city[city_no]['name']
           if reader.contain?(city_name)
-            location = Location.new
-            location.area_name = area[area_no]['name']
-            location.pref_name = prefs[pref_no]['name']
-            location.location_name = city_name
-            location.id = city[city_no]['id']
-            location_list.add(location)
+            create_location_list(parse_text, area_no, pref_no, city_no, location_list)
+          end
+        end
+      end
+    end
+
+    return location_list
+  end
+
+  def read_location_id_in_area(area_name)
+    parse_text = read_location_id
+    location_list = LocationList.new
+
+    area = parse_text['area']
+    for area_no in 0..area.count - 1
+      if area[area_no]['name'] == area_name
+        prefs = area[area_no]['prefs']
+        for pref_no in 0..prefs.count - 1
+          city = prefs[pref_no]['city']
+          for city_no in 0..city.count - 1
+            city_name = city[city_no]['name']
+            create_location_list(parse_text, area_no, pref_no, city_no, location_list)
           end
         end
       end
@@ -68,5 +84,19 @@ class LocationIdReader
     end
 
     return parse_text
+  end
+
+  def create_location_list(parse_text, area_no, pref_no, city_no, location_list)
+    area = parse_text['area']
+    prefs = area[area_no]['prefs']
+    city = prefs[pref_no]['city']
+    city_name = city[city_no]['name']
+
+    location = Location.new
+    location.area_name = area[area_no]['name']
+    location.pref_name = prefs[pref_no]['name']
+    location.location_name = city_name
+    location.id = city[city_no]['id']
+    location_list.add(location)
   end
 end
