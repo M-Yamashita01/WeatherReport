@@ -65,9 +65,7 @@ group :test do
 end
 
 group :development do
-  gem 'debase'
   gem 'less-rails'
-  gem 'ruby-debug-ide'  
   gem 'therubyracer', platforms: :ruby
   gem 'twitter-bootstrap-rails'
 end

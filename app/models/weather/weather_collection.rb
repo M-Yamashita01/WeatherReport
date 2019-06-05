@@ -19,13 +19,6 @@ class WeatherCollection
     return create_weather_location_list(location_list)
   end
 
-  def get_location_weather_in_area(area_name)
-    id_reader = LocationIdReader.new
-    location_list = id_reader.read_location_id_in_area(area_name)
-
-    return create_weather_location_list(location_list)
-  end
-
   private
 
   # LocationListから天気情報リストを作成します。
