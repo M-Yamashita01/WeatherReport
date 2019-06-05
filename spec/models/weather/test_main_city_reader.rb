@@ -19,7 +19,7 @@ describe '主要地点取得' do
   context '地方の主要地点の含み有無' do
     it '熊本は主要地点か' do
       reader = MainCityReader.new
-      reader.read_in_area('kyusyu')
+      reader.read_in_area('九州')
       expect(true).to be reader.contain?('熊本')
     end
   end

@@ -20,8 +20,8 @@ describe '地点情報取得' do
 
     it '指定地点数' do
       reader = LocationIdReader.new
-      location_list = reader.read_location_id_in_area('関東')
-      expect(20).to eq(location_list.count)
+      location_list = reader.read_location_id_in_area('九州')
+      expect(7).to eq(location_list.count)
     end
   end
 end
