@@ -1,6 +1,11 @@
 require 'json'
 
 class MainCityReader
+  def initialize
+    @area_name_file_hash = {}
+    @area_name_file_hash.store('九州', 'kyusyu_main_city.json')
+  end
+
   def read
     file_path = File.expand_path('config/main_city.json', __dir__)
 
@@ -16,7 +21,9 @@ class MainCityReader
   end
 
   def read_in_area(area_name)
-    file_path = File.expand_path('config/' + area_name + '_main_city.json', __dir__)
+    puts @area_name_file_hash[area_name]
+    area_file_name = @area_name_file_hash[area_name]
+    file_path = File.expand_path('config/' + area_file_name.to_s, __dir__)
     # TODO 変数使いまわしている。リファクタリング必要
     @city_list = []
 
