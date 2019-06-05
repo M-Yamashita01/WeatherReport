@@ -56,6 +56,8 @@ class LocationIdReader
   def read_location_id_in_area(area_name)
     parse_text = read_location_id
     location_list = LocationList.new
+    reader = MainCityReader.new
+    reader.read_in_area(area_name)
 
     area = parse_text['area']
     for area_no in 0..area.count - 1
@@ -65,7 +67,9 @@ class LocationIdReader
           city = prefs[pref_no]['city']
           for city_no in 0..city.count - 1
             city_name = city[city_no]['name']
-            create_location_list(parse_text, area_no, pref_no, city_no, location_list)
+            if reader.contain?(city_name)
+              create_location_list(parse_text, area_no, pref_no, city_no, location_list)
+            end
           end
         end
       end
