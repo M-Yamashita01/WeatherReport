@@ -1,0 +1,2 @@
+class LocationOnDay < ApplicationRecord
+end
