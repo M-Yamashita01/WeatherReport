@@ -3,7 +3,7 @@ class LocationList
     @array = Array.new
   end
 
-  # location: Locationクラス
+  # location: LocationInformationクラス
   def add(location)
     @array.push(location)
   end

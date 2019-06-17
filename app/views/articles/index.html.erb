@@ -33,6 +33,12 @@
 
     
 <!-- <%= link_to 'New article', new_article_path %>-->
+    <% @locations.each do |location| %>
+      <tr>
+        <td><%= location.area_name%></td>
+      </tr>
+    <% end %>
+
     <% @articles.each do |article| %>
         <tr>
             <td><%= article.title %></td>
