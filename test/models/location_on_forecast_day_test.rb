@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class LocationOnDayTest < ActiveSupport::TestCase
+class LocationOnForecastDayTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

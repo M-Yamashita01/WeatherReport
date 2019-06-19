@@ -1,6 +1,7 @@
 class CreateWeathers < ActiveRecord::Migration[5.2]
   def change
-    create_table :weathers do |t|
+    create_table :weathers, id: false do |t|
+      t.integer :weather_id, limit: 4, primary_key: true
       t.string :date_label, null: false
       t.string :telop_weather, null: false
       t.integer :weather_image_no, null: false
