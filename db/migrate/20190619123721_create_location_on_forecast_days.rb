@@ -2,7 +2,7 @@ class CreateLocationOnForecastDays < ActiveRecord::Migration[5.2]
   def change
     create_table :location_on_forecast_days do |t|
       t.references :location, type: :integer, limit: 4, null: false
-      t.datetime :weather_last_acquisition_date, null: false
+      t.datetime :weather_last_update_datetime, null: false
       t.date :forecast_day, null: false
       t.references :weather, type: :integer, limit: 4, null: false
 

@@ -30,7 +30,7 @@ ActiveRecord::Schema.define(version: 2019_06_19_123721) do
 
   create_table "location_on_forecast_days", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "location_id", null: false
-    t.datetime "weather_last_acquisition_date", null: false
+    t.datetime "weather_last_update_datetime", null: false
     t.date "forecast_day", null: false
     t.integer "weather_id", null: false
     t.datetime "created_at", null: false
@@ -68,7 +68,6 @@ ActiveRecord::Schema.define(version: 2019_06_19_123721) do
     t.integer "lowest_temperature", null: false
     t.string "weather_url", null: false
     t.datetime "weather_announcement_datetime", null: false
-    t.datetime "weather_update_datetime", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

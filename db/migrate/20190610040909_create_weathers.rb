@@ -9,7 +9,6 @@ class CreateWeathers < ActiveRecord::Migration[5.2]
       t.integer :lowest_temperature, null: false
       t.string :weather_url, null: false
       t.datetime :weather_announcement_datetime, null: false
-      t.datetime :weather_update_datetime, null: false
 
       t.timestamps
     end
