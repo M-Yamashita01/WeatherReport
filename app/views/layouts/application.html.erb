@@ -7,6 +7,19 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+    <%= javascript_include_tag 'jquery.japan-map.min.js'%>
+    <script>
+      $(function(){
+        $("#map-container").japanMap({
+          width:600,
+          onSelect : function(data){
+            alert(data.name);
+          }
+        });
+      });
+    </script>
   </head>
 
   <body>
@@ -23,6 +36,7 @@
       <li><%= link_to "新規登録", new_user_registration_path, class: 'post' %></li> <!--新規登録画面に移行する-->
     </ul>
     <% end %>
+    <div id="map-container"></div>
     <%= yield %>
   </body>
 </html>
