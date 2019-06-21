@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_10_041500) do
+ActiveRecord::Schema.define(version: 2019_06_19_123721) do
 
   create_table "articles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title"
@@ -28,18 +28,18 @@ ActiveRecord::Schema.define(version: 2019_06_10_041500) do
     t.index ["article_id"], name: "index_comments_on_article_id"
   end
 
-  create_table "location_on_days", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.bigint "locations_id", null: false
-    t.date "date", null: false
-    t.bigint "weathers_id", null: false
+  create_table "location_on_forecast_days", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "location_id", null: false
+    t.datetime "weather_last_update_datetime", null: false
+    t.date "forecast_day", null: false
+    t.integer "weather_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["locations_id"], name: "index_location_on_days_on_locations_id"
-    t.index ["weathers_id"], name: "index_location_on_days_on_weathers_id"
+    t.index ["location_id"], name: "index_location_on_forecast_days_on_location_id"
+    t.index ["weather_id"], name: "index_location_on_forecast_days_on_weather_id"
   end
 
-  create_table "locations", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "location_no", null: false
+  create_table "locations", primary_key: "location_id", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "area_name", null: false
     t.string "prefecture_name", null: false
     t.string "location_name", null: false
@@ -60,7 +60,7 @@ ActiveRecord::Schema.define(version: 2019_06_10_041500) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  create_table "weathers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "weathers", primary_key: "weather_id", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "date_label", null: false
     t.string "telop_weather", null: false
     t.integer "weather_image_no", null: false
@@ -68,12 +68,11 @@ ActiveRecord::Schema.define(version: 2019_06_10_041500) do
     t.integer "lowest_temperature", null: false
     t.string "weather_url", null: false
     t.datetime "weather_announcement_datetime", null: false
-    t.datetime "weather_update_datetime", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   add_foreign_key "comments", "articles"
-  add_foreign_key "location_on_days", "locations", column: "locations_id"
-  add_foreign_key "location_on_days", "weathers", column: "weathers_id"
+  add_foreign_key "location_on_forecast_days", "locations", primary_key: "location_id"
+  add_foreign_key "location_on_forecast_days", "weathers", primary_key: "weather_id"
 end
