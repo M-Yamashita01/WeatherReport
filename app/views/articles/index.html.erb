@@ -1,11 +1,11 @@
 <h3>全国の天気</h3>
+
 <table>
     <!-- 各地点の地点名、天気、天気画像を表示-->
     <% @location_weather_arr.each do |location_weather| %>
         <tr>
             <% area = location_weather.area_name %>
             <% if location_weather.area_name == '北海道'%>
-              <%= area %>
               <td><%= link_to location_weather.area_name, '/area/hokkaido', area_name: area %></td>
             <% elsif location_weather.area_name == '東北'%>
               <td><%= link_to location_weather.area_name,  '/area/tohoku' %></td>   
@@ -35,7 +35,7 @@
 <!-- <%= link_to 'New article', new_article_path %>-->
     <% @locations.each do |location| %>
       <tr>
-        <td><%= location.area_name%></td>
+        <!--<td><%= location.area_name%></td>-->
       </tr>
     <% end %>
 
