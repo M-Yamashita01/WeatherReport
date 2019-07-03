@@ -31,18 +31,11 @@
         </tr>
     <% end %>
 
-<<<<<<< HEAD
-    <%= javascript_pack_tag 'hello_vue' %>
-=======
-    
-<!-- <%= link_to 'New article', new_article_path %>-->
-    <% @locations.each do |location| %>
-      <tr>
-        <!--<td><%= location.area_name%></td>-->
-      </tr>
-    <% end %>
->>>>>>> 1902a55cba3c2a93969e9d4e30e558b581e792f6
+  <div id='app'>
+    <navbar></navbar>
+  </div>
 
+  <%= javascript_pack_tag 'hello_vue' %>
 <!--
     <ul id="example-2">
       <li v-for="(item, index) in items">

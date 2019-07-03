@@ -13,13 +13,11 @@ document.addEventListener('DOMContentLoaded', () => {
     render: h => h(App)
   }).$mount()
   document.body.appendChild(app.$el)
-<<<<<<< HEAD
-=======
-
-  console.log(app)
->>>>>>> 1902a55cba3c2a93969e9d4e30e558b581e792f6
 })
 
+var vueApp =  new Vue({
+  el:'#app',
+});
 
 // The above code uses Vue without the compiler, which means you cannot
 // use Vue to target elements in your existing html templates. You would

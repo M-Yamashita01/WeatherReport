@@ -6,18 +6,22 @@ require_relative '../models/weather/data_reader'
 
 class ArticlesController < ApplicationController
   def index
-    @articles = Article.all
-
     creator = URLCreator.new
     reader = DataReader.new
     weather_collection = WeatherCollection.new(creator, reader)
     location_weather_list = weather_collection.get_main_location_weather
-    # weather_count = location_weather_list.count
 
-    # @location_weather = locaation_weather_list.pop
     @locations = Location.all
     @location_weather_arr = location_weather_list.get_list
     @location_weather_arr.reverse!
+  end
+
+  def create
+    # nothing
+  end
+
+  def update
+    # nothing
   end
 
   def show
@@ -30,26 +34,6 @@ class ArticlesController < ApplicationController
 
   def edit
     @article = Article.find(params[:id])
-  end
-
-  def create
-    @article = Article.new(article_params)
-
-    if @article.save
-      redirect_to @article
-    else
-      render 'new'
-    end
-  end
-
-  def upadte
-    @article = Article.find(params[:id])
-
-    if @article.upadte(article_params)
-      redirect_to @article
-    else
-      render 'edit'
-    end
   end
 
   def destroy
