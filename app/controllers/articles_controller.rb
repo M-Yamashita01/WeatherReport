@@ -9,11 +9,11 @@ class ArticlesController < ApplicationController
     creator = URLCreator.new
     reader = DataReader.new
     weather_collection = WeatherCollection.new(creator, reader)
-    location_weather_list = weather_collection.get_main_location_weather
+    #location_weather_list = weather_collection.get_main_location_weather
 
-    @locations = Location.all
-    @location_weather_arr = location_weather_list.get_list
-    @location_weather_arr.reverse!
+    #@locations = Location.all
+    #@location_weather_arr = location_weather_list.get_list
+    #@location_weather_arr.reverse!  
   end
 
   def create

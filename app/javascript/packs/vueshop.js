@@ -1,3 +1,4 @@
+
 var example2 = new Vue({
   el: '#example-2',
   data: {

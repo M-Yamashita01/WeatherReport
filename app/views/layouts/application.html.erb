@@ -10,21 +10,21 @@
   </head>
 
   <body>
-    <%= javascript_pack_tag 'hello_vue'%>
-    <% if user_signed_in? %> <!--ログインしているか調べる -->
-    <!-- ログインしていた時の処理> -->
+  <!-- 
+    <% if user_signed_in? %> //ログインしているか調べる
+    //ログインしていた時の処理
     <ul class="nav navbar-nav navbar-right">
       <li><span class="navbar-text">ようこそ <strong><%= current_user.name %></strong>さん</li>
-      <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li> <!--ログアウトする-->
+      <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li> // ログアウトする
     </ul>
     <% else %>
-    <!-- ログインしていなかった時の処理-->    
+    // ログインしていなかった時の処理
     <ul class="nav navbar-nav navbar-right">
-      <li><%= link_to "ログイン", new_user_session_path, class: 'post' %></li> <!--ログイン画面に移行する-->
-      <li><%= link_to "新規登録", new_user_registration_path, class: 'post' %></li> <!--新規登録画面に移行する-->
+      <li><%= link_to "ログイン", new_user_session_path, class: 'post' %></li> // ログイン画面に移行する
+      <li><%= link_to "新規登録", new_user_registration_path, class: 'post' %></li> // 新規登録画面に移行する
     </ul>
     <% end %>
-    <div id="map-container"></div>
+-->    
     <%= yield %>
 
 <!--

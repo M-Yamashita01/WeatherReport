@@ -1,7 +1,13 @@
+<div id='weather'>
+<navbar></navbar>
+</div>
+<%= javascript_pack_tag 'weather' %>
+
 <h3>全国の天気</h3>
 
 <table>
     <!-- 各地点の地点名、天気、天気画像を表示-->
+<% if false %>
     <% @location_weather_arr.each do |location_weather| %>
         <tr>
             <% area = location_weather.area_name %>
@@ -30,12 +36,8 @@
 
         </tr>
     <% end %>
-
-  <div id='app'>
-    <navbar></navbar>
-  </div>
-
-  <%= javascript_pack_tag 'hello_vue' %>
+<% end %>
+  
 <!--
     <ul id="example-2">
       <li v-for="(item, index) in items">
