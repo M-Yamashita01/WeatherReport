@@ -1,17 +1,17 @@
 <template>
   <div>
     <ul id="dropdown" class="dropdown-content">
-      <li><a href="#">Top</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Help</a></li>
+      <li><router-link to='/'>Top</router-link></li>
+      <li><a href='/about'>About</a></li>
+      <li><a href='/help'>Help</a></li>
     </ul>
     <nav>
-      <div class="nav-wrapper container">
+      <div class="nav-wrapper">
         <a href="/" class="brand-logo left">Weather Report</a>
         <ul class="right hide-on-med-and-down">
-          <li><a href="#">Top</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Help</a></li>
+          <li><router-link to='/'>Top</router-link></li>
+          <li><router-link to="/about">About</router-link></li>
+          <li><router-link to="/help">Help</router-link></li>
         </ul>
         <ul class="right hide-on-large-only">
           <li>

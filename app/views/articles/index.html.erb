@@ -1,9 +1,9 @@
 <div id='weather'>
-<navbar></navbar>
+  <navbar></navbar>  
+  <router-view></router-view>
 </div>
-<%= javascript_pack_tag 'weather' %>
 
-<h3>全国の天気</h3>
+<%= javascript_pack_tag 'weather' %>
 
 <table>
     <!-- 各地点の地点名、天気、天気画像を表示-->
@@ -37,13 +37,5 @@
         </tr>
     <% end %>
 <% end %>
-  
-<!--
-    <ul id="example-2">
-      <li v-for="(item, index) in items">
-        {{ parentMessage }} - {{ index }} - {{ item.message }}
-      </li>
-    </ul>    
-    -->
 </table>
 

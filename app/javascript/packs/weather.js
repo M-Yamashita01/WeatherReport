@@ -6,6 +6,7 @@
 // All it does is render <div>Hello Vue</div> at the bottom of the page.
 
 import Vue from 'vue/dist/vue.esm.js';
+import Router from './router/router';
 import Header from './components/header.vue';
 
 /*
@@ -19,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
 */
 
 const wt = new Vue({
+	router: Router,
 	el: '#weather',
 	components: {
 		'navbar': Header,
