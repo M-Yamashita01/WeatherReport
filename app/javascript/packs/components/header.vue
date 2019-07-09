@@ -1,4 +1,19 @@
 <template>
+<div>
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">WeatherReport</a>
+  </nav>
+  <main role="main" class="container">
+    <div class="jumbotron">
+      <h3>Weather Report</h3>
+      <p class="lead">{{ message }}</p>
+      <button class="btn btn-outline-primary" type="submit">enter</button>
+    </div>
+  </main>
+</div>
+
+
+<!--
   <div>
     <ul id="dropdown" class="dropdown-content">
       <li><router-link to='/'>Top</router-link></li>
@@ -23,4 +38,15 @@
       </div>
     </nav>
   </div>
+  -->
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      message: 'Welcome to WeatherReport site.'
+    };
+  }
+};
+</script>

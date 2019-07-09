@@ -77,7 +77,6 @@ group :development do
   gem 'debase'  
   gem 'ruby-debug-ide'
   gem 'mini_racer'
-  gem 'twitter-bootstrap-rails'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
