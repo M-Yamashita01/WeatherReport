@@ -3,16 +3,30 @@
   <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
     <a class="navbar-brand" href="#">WeatherReport</a>
   </nav>
-  <main role="main" class="container">
-    <div class="jumbotron">
-      <h3>Weather Report</h3>
-      <p class="lead">{{ message }}</p>
-      <button class="btn btn-outline-primary" type="submit">enter</button>
+  <div class="container-fluid">
+    <div class="row">
+        <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+            <div class="sidebar-sticky">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">
+                            <span data-feather="home"></span>
+                            ダッシュボード
+                            <span class="sr-only">(現在地)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <span data-feather="file"></span>
+                            オーダー
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
     </div>
-  </main>
 </div>
-
-
+</div>
 <!--
   <div>
     <ul id="dropdown" class="dropdown-content">

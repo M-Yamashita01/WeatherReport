@@ -7,7 +7,7 @@
 
 import Vue from 'vue/dist/vue.esm.js';
 import Router from './router/router';
-import Header from './components/header.vue';
+import Index from './index.vue';
 
 import BootstrapVue from 'bootstrap-vue';
 
@@ -25,7 +25,8 @@ const wt = new Vue({
 	router: Router,
 	el: '#weather',
 	components: {
-		'navbar': Header,
+		//'navbar': Header,
+		'index': Index,
 	},
 });
 
