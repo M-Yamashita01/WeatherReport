@@ -25,7 +25,6 @@ const wt = new Vue({
 	router: Router,
 	el: '#weather',
 	components: {
-		//'navbar': Header,
 		'index': Index,
 	},
 });
