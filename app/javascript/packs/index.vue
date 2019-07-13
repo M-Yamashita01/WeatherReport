@@ -1,19 +1,26 @@
 <template>
-    <div>
-        <navbar></navbar>
-        <sidebar></sidebar>
+  <div>
+    <navigation></navigation>
+    <div class="container-fluid">
+      <div class="row">
+      <sidebar></sidebar>
+      <maincontents></maincontents>
+      </div>
     </div>
+  </div>
 </template>
 
 <script>
-import Header from './components/header.vue';
+import Navigation from './components/navigation.vue';
 import SideBar from './components/sidebar.vue';
+import MainContents from './components/MainContents';
 
 export default {
     name: "top",
     components : {
-        'navbar': Header,
+        'navigation': Navigation,
         'sidebar': SideBar,
+        'maincontents': MainContents,
     }
 }
 </script>
