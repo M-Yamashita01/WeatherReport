@@ -1,17 +1,4 @@
 <template>
-<!--
-<div>
-    <div class="col-md-4">
-        <div class="sidebar-nav affix" role="complementary">
-            <ul class="nav">
-                <li><a href="#">一番上</a></li>
-                <li><a href="#bottom">一番下</a></li>
-            </ul>
-        </div>
-    </div>
-</div>
--->
-
 <div class="container-fluid">
     <div class="row">
         <nav class="col-md-2 d-none d-md-block bg-light sidebar">
@@ -81,6 +68,8 @@
                 </ul>
             </div>
         </nav>
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+        </main>
     </div>
 </div>
 

@@ -1,5 +1,5 @@
 <template>
-    <div id="top">
+    <div>
         <navbar></navbar>
         <sidebar></sidebar>
     </div>
@@ -12,7 +12,7 @@ import SideBar from './components/sidebar.vue';
 export default {
     name: "top",
     components : {
-        //'navbar': Header,
+        'navbar': Header,
         'sidebar': SideBar,
     }
 }
