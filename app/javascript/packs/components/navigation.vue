@@ -1,7 +1,7 @@
 <template>
   <div>
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
-      <a class="navbar-brand" href="#">WeatherReport</a>
+    <nav class="navbar fixed-top navbar-expand-lg bg-info">
+      <a class="navbar-brand text-white" href="#">WeatherReport</a>
     </nav>
   </div>
 </template>
