@@ -5,21 +5,29 @@
 // like app/views/layouts/application.html.erb.
 // All it does is render <div>Hello Vue</div> at the bottom of the page.
 
-import Vue from 'vue'
-import App from '../app.vue'
+import Vue from 'vue/dist/vue.esm.js';
+import Router from './router/router';
+import Index from './index.vue';
 
+import BootstrapVue from 'bootstrap-vue';
+
+/*
 document.addEventListener('DOMContentLoaded', () => {
-  const app = new Vue({
-    render: h => h(App)
-  }).$mount()
-  document.body.appendChild(app.$el)
-<<<<<<< HEAD
-=======
 
-  console.log(app)
->>>>>>> 1902a55cba3c2a93969e9d4e30e558b581e792f6
-})
+	const app = new Vue({
+  		render: (h) => h(App),
+	}).$mount();
+  document.body.appendChild(app.$el);
+});
+*/
 
+const wt = new Vue({
+	router: Router,
+	el: '#weather',
+	components: {
+		'index': Index,
+	},
+});
 
 // The above code uses Vue without the compiler, which means you cannot
 // use Vue to target elements in your existing html templates. You would

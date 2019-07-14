@@ -12,12 +12,11 @@ Rails.application.routes.draw do
   get 'area/kyusyu' => 'area/kyusyu#index'
   get 'area/nanseishoto' => 'area/nanseishoto#index'
 
-  resources :articles
+  root 'articles#index'
 
-  resources :articles do
-    resources :comments
+  namespace :api, format: 'json' do
+    resources :location_on_forecast_days, only: %i[index create update]
   end
 
-  root 'articles#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
