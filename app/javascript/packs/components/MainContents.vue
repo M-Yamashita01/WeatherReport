@@ -56,7 +56,7 @@ export default {
     imageSeries.data = [{
       "latitude": 35.4122,
       "longitude": 139.4130,
-      "imageURL": sunny,
+      "imageURL": "https://www.amcharts.com/lib/images/weather/animated/day.svg",
       "width": 32,
       "height": 32,
       "label": "Tokyo: 25C"
