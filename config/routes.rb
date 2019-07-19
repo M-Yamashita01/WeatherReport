@@ -16,6 +16,7 @@ Rails.application.routes.draw do
 
   namespace :api, format: 'json' do
     resources :location_on_forecast_days, only: %i[index create update]
+    resources :locations, only: %i[index]
   end
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
