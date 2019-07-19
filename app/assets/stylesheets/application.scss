@@ -46,3 +46,7 @@ $secondary-color: color("cyan", "base") !default;
     overflow-x: hidden;
     overflow-y: auto; /* ビューポートがコンテンツより短い場合、スクロール可能なコンテンツ */
   }
+
+  .main-contents {
+    padding: 60px 0 0;
+  }
