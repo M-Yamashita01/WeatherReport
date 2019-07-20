@@ -1,7 +1,10 @@
 <template>
   <main role="main" class="col-md-8 ml-sm-auto col-lg-10 px-4 main-contents">
-    <!--<img v-bind:src="weatherImage" width="800" height="600"/>-->
-    <div id="chartdiv">
+    <!--<div id="chartdiv">
+    </div>-->
+    <div id="prefectureName-example" v-for="name in prefectureNames" :key="name.location_id">
+    <!--<div id="prefectureName-example">  -->
+      {{ name.prefecture_name }}
     </div>
   </main>
 </template>
@@ -10,9 +13,12 @@
 import * as am4core from "@amcharts/amcharts4/core";
 import * as am4maps from "@amcharts/amcharts4/maps";
 import am4geodata_japanLow from "@amcharts/amcharts4-geodata/japanLow";
+import axios from "axios";
 import sunny from "1.gif";
 
 export default {
+  el: "#prefectureName-example",
+  /*
   mounted() {
     // Create map instance
     let map = am4core.create("chartdiv", am4maps.MapChart);
@@ -61,6 +67,23 @@ export default {
       "height": 32,
       "label": "Tokyo: 25C"
     }];
+  },
+  */
+  data () {
+    return {
+      prefectureNames: [],
+      error: {}
+    }
+  },
+  created: function() {
+    axios.get("/api/locations")
+    .then(res => {
+      this.prefectureNames = res.data.location;
+      this.error = "Success."
+    })
+    .catch(res => {
+      this.error = "Error: Failed to get location by Rails API server."
+    });
   },
   beforeDestroy() {
     if (this.map) {
