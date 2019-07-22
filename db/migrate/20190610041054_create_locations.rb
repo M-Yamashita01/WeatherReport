@@ -5,6 +5,8 @@ class CreateLocations < ActiveRecord::Migration[5.2]
       t.string :area_name, null: false
       t.string :prefecture_name, null: false
       t.string :location_name, null: false
+      t.float :latitude, null: false
+      t.float :longitude, null: false
 
       t.timestamps
     end
