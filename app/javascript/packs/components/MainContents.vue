@@ -16,6 +16,7 @@ import am4geodata_japanLow from "@amcharts/amcharts4-geodata/japanLow";
 import axios from "axios";
 import sunny from "1.gif";
 import { constants } from 'crypto';
+import { circleIn } from '@amcharts/amcharts4/.internal/core/utils/Ease';
 
 export default {
 //  el: "#prefectureName-example",
@@ -27,18 +28,18 @@ export default {
     map.geodata = am4geodata_japanLow;
 
     // Set projection
-    map.projection = new am4maps.projections.Mercator();
+    map.projection = new am4maps.projections.Miller();
 
     // Set default position
-    map.homeZoomLevel = 2;
+    map.homeZoomLevel = 1;
     map.homeGeoPoint = { longitude: "35", latitude: "139"}
 
     var polygonSeries = map.series.push(new am4maps.MapPolygonSeries());
     polygonSeries.useGeodata = true;
 
-    polygonSeries.mapPolygons.template.events.on("hit", function(ev){
-      map.zoomToMapObject(ev.target);
-    });
+    //polygonSeries.mapPolygons.template.events.on("hit", function(ev){
+    //  map.zoomToMapObject(ev.target);
+    //});
 
     let imageSeries = map.series.push(new am4maps.MapImageSeries());
     let imageTemplate = imageSeries.mapImages.template;
@@ -48,17 +49,17 @@ export default {
 
     let image = imageTemplate.createChild(am4core.Image);
     image.propertyFields.href = "imageURL";
-    image.width = 50;
-    image.height = 50;
+    image.width = 30;
+    image.height = 30;
     image.horizontalCenter = "middle";
-    image.verticalCenter = "middle";
-
+    image.verticalCenter = "bottom";
+    
     let label = imageTemplate.createChild(am4core.Label);
     label.text = "{label}";
     label.horizontalCenter = "middle";
     label.verticalCenter = "top";
-    label.dy = 20;
-
+    label.dy = 5;
+ 
     await this.get_locations();
 
     imageSeries.data = [{}];
@@ -66,13 +67,12 @@ export default {
       imageSeries.data.push({
         "latitude" : prefectureName.latitude,
         "longitude" : prefectureName.longitude,
-        "imageURL" : "https://www.amcharts.com/lib/images/weather/animated/day.svg",
+        "imageURL" : sunny, //"https://www.amcharts.com/lib/images/weather/animated/day.svg",
         "width" : 32,
         "height" : 32,
-        "label" : prefectureName.prefecture_name
+        "label" : prefectureName.location_name
       });
     })
-    console.log(imageSeries.data);    
   },
   data () {
     return {
@@ -82,12 +82,16 @@ export default {
   },
   methods: {
     async get_locations() {
-      let res = await axios.get("/api/locations.json")
+      let res = await axios.get("/api/locations", {
+        params: {
+          main_city_flag: 1
+        },
+      });
+
       for ( var i = 0; i < res.data.location.length; i++)
       {
         this.prefectureNames.push(res.data.location[i]);
       }
-      console.log("create phase:" + this.prefectureNames.length);
     },
   },
   beforeDestroy() {

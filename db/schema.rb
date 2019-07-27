@@ -45,6 +45,7 @@ ActiveRecord::Schema.define(version: 2019_06_19_123721) do
     t.string "location_name", null: false
     t.float "latitude", null: false
     t.float "longitude", null: false
+    t.boolean "main_city_flag", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
