@@ -43,6 +43,9 @@ ActiveRecord::Schema.define(version: 2019_06_19_123721) do
     t.string "area_name", null: false
     t.string "prefecture_name", null: false
     t.string "location_name", null: false
+    t.float "latitude", null: false
+    t.float "longitude", null: false
+    t.boolean "main_city_flag", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -63,7 +66,7 @@ ActiveRecord::Schema.define(version: 2019_06_19_123721) do
   create_table "weathers", primary_key: "weather_id", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "date_label", null: false
     t.string "telop_weather", null: false
-    t.integer "weather_image_no", null: false
+    t.string "weather_image_link", null: false
     t.integer "highest_temperature", null: false
     t.integer "lowest_temperature", null: false
     t.string "weather_url", null: false

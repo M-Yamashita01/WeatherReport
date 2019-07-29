@@ -54,7 +54,7 @@
       "env": {
           "BROWSER": "chrome"
       }
-  }
+    },
     {
       "name": "Rails server",
       "type": "Ruby",
@@ -63,6 +63,6 @@
       "args": [
         "server"
       ]
-    }
+    },  
   ]
 }
