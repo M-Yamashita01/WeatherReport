@@ -82,15 +82,14 @@ export default {
   },
   methods: {
     async get_locations() {
-      let res = await axios.get("/api/locations", {
+      let res = await axios.get("/api/location_on_forecast_days", {
         params: {
           main_city_flag: 1
         },
       });
-
-      for ( var i = 0; i < res.data.location.length; i++)
+      for ( var i = 0; i < res.data.location_on_forecast.length; i++)
       {
-        this.prefectureNames.push(res.data.location[i]);
+        this.prefectureNames.push(res.data.location_on_forecast[i]);
       }
     },
   },

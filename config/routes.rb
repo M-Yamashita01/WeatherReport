@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   root 'articles#index'
 
   namespace :api, format: 'json' do
-    resources :location_on_forecast_days, only: %i[index create update]
+    resources :location_on_forecast_days, only: %i[index]
     resources :locations, only: %i[index]
   end
 
