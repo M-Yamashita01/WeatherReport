@@ -4,7 +4,7 @@ class CreateWeathers < ActiveRecord::Migration[5.2]
       t.integer :weather_id, limit: 4, primary_key: true
       t.string :date_label, null: false
       t.string :telop_weather, null: false
-      t.integer :weather_image_no, null: false
+      t.string :weather_image_link, null: false
       t.integer :highest_temperature, null: false
       t.integer :lowest_temperature, null: false
       t.string :weather_url, null: false

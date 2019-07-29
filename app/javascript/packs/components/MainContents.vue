@@ -37,10 +37,6 @@ export default {
     var polygonSeries = map.series.push(new am4maps.MapPolygonSeries());
     polygonSeries.useGeodata = true;
 
-    //polygonSeries.mapPolygons.template.events.on("hit", function(ev){
-    //  map.zoomToMapObject(ev.target);
-    //});
-
     let imageSeries = map.series.push(new am4maps.MapImageSeries());
     let imageTemplate = imageSeries.mapImages.template;
     imageTemplate.propertyFields.longitude = "longitude";
@@ -67,7 +63,7 @@ export default {
       imageSeries.data.push({
         "latitude" : prefectureName.latitude,
         "longitude" : prefectureName.longitude,
-        "imageURL" : sunny, //"https://www.amcharts.com/lib/images/weather/animated/day.svg",
+        "imageURL" : prefectureName.weather_image_link,
         "width" : 32,
         "height" : 32,
         "label" : prefectureName.location_name
