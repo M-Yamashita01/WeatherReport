@@ -1,39 +1,4 @@
 <div id='weather'>
-  <index></index>
+  <!--<index></index>-->
 </div>
 <%= javascript_pack_tag 'weather'%>
-
-<table>
-    <!-- 各地点の地点名、天気、天気画像を表示-->
-<% if false %>
-    <% @location_weather_arr.each do |location_weather| %>
-        <tr>
-            <% area = location_weather.area_name %>
-            <% if location_weather.area_name == '北海道'%>
-              <td><%= link_to location_weather.area_name, '/area/hokkaido', area_name: area %></td>
-            <% elsif location_weather.area_name == '東北'%>
-              <td><%= link_to location_weather.area_name,  '/area/tohoku' %></td>   
-            <% elsif location_weather.area_name == '関東' %>
-              <td><%= link_to location_weather.area_name,  '/area/kanto' %></td>
-            <% elsif location_weather.area_name == '信越 北陸'%>
-              <td><%= link_to location_weather.area_name,  '/area/shinetsu_hokuriku' %></td>   
-            <% elsif location_weather.area_name == '近畿' %>
-              <td><%= link_to location_weather.area_name,  '/area/kinki' %></td>
-            <% elsif location_weather.area_name == '中国' %>
-              <td><%= link_to location_weather.area_name,  '/area/chugoku' %></td>
-            <% elsif location_weather.area_name == '四国'%>
-              <td><%= link_to location_weather.area_name,  '/area/shikoku' %></td>   
-            <% elsif location_weather.area_name == '九州' %>
-              <td><%= link_to location_weather.area_name,  '/area/kyusyu' %></td>
-            <% elsif location_weather.area_name == '南西諸島' %>
-              <td><%= link_to location_weather.area_name,  '/area/nanseishoto' %></td>
-            <% end %>
-            <td><%= location_weather.city_name %></td>        
-            <td><%= location_weather.today_weather %></td>
-            <td><%= image_tag location_weather.today_weather_image_path, :size => '50x31'%></td>
-
-        </tr>
-    <% end %>
-<% end %>
-</table>
-
