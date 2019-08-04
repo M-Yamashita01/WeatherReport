@@ -11,37 +11,18 @@
     <%= javascript_pack_tag 'application' %>
     <%= stylesheet_pack_tag 'application'%>
 
-    <nav>
+<!--    <nav>
     <% if user_signed_in? %>
       <li><%= link_to "ログアウト", sign_out_path %></li>
     <% else %>
       <li><%= link_to "ログイン", new_user_session_path, class: 'post' %></li>
       <li><%= link_to "新規登録", new_user_registration_path, class: 'post' %></li>
     <% end %>
-
+-->
     </nav>
-
-
   </head>
 
-  <body>
-  
+  <body>  
     <%= yield %>
-
-<!--
-    <div id='Vueshop'>
-      <table class="table">
-        <tr>
-        <th>都道府県</th>
-        <td>
-          <select id="shop_pref" class="form-control input-lg" >
-            <option value="">都道府県を選択</option>
-            <option v-for="item in pref" v-bind:value="item.no">{{item.name}}</option> 
-          </select>
-        </td>
-        </tr>
-      </table>
-    </div>
--->
   </body>
 </html>
