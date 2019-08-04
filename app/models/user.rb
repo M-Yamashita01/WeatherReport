@@ -1,6 +1,9 @@
-class User < ApplicationRecord
+# frozen_string_literal: true
+
+class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable
+         :recoverable, :rememberable, :trackable, :validatable
+  include DeviseTokenAuth::Concerns::User
 end
