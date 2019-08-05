@@ -1,21 +1,19 @@
 <template>
-    <div>
-    <li v-for="(item, index) in items" :key="index">
-      {{ parentMessage }} - {{ index }} - {{ item.message }}
-    </li>
+    <div id="app">
+      <header-component />
+      <router-view />
+      <footer-component />
     </div>
 </template>
 
 <script>
+  import HeaderComponent from './packs/components/shared/header';
+  import FooterComponent from './packs/components/shared/footer';
+
   export default {
-    data () {
-      return {
-        parentMessage: 'Parent',
-        items: [
-          { message: 'Foo' },
-          { message: 'Bar' }
-        ]
-      }
+    components: {
+      HeaderComponent,
+      FooterComponent,
     }
   }
 </script>
