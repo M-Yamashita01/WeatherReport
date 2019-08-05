@@ -7,11 +7,13 @@
 </template>
 
 <script>
-  import HeaderComponent from './packs/components/header';
-  import FooterComponent from './packs/components/footer';
+  import HeaderComponent from './packs/components/shared/header';
+  import FooterComponent from './packs/components/shared/footer';
 
   export default {
-    HeaderComponent,
-    FooterComponent
+    components: {
+      HeaderComponent,
+      FooterComponent,
+    }
   }
 </script>

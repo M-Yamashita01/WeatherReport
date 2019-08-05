@@ -33,5 +33,5 @@ document.addEventListener('DOMContentLoaded', () => {
 		store: new Vuex.Store(store),
 		router,
 		render: (h) => h(App),
-	})
+	});
 });
