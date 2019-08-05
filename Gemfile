@@ -37,6 +37,9 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 
 gem 'devise'
+gem 'devise_token_auth', '1.0.0'
+gem 'rack-cors'
+
 gem 'mysql2'
 gem 'sprockets', '3.6.3'
 
