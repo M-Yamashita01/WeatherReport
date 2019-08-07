@@ -1,9 +1,7 @@
 <template>
   <div>
     <h3>LogIn</h3>
-    <div id="login">
-      <user-login></user-login>
-    </div>
+    <log-in-template></log-in-template>
   </div>
 </template>
 
@@ -11,8 +9,9 @@
   import LogInTemplate from './login-template';
 
 export default {
-    component: {
-      'user-login': LogInTemplate
-    }
+    components: {
+      LogInTemplate,
+    },
+    name: 'login-page',
 };
 </script>
