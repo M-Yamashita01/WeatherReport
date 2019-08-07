@@ -25,9 +25,6 @@ export default {
         auth.login(this.userid, this.password);
       }
     },
-
-    name: 'login-template-page',
-    
 };
 
   var auth = {

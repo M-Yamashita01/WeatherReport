@@ -2,10 +2,6 @@
   <main role="main" class="col-md-8 ml-sm-auto col-lg-10 px-4 main-contents">
     <div id="chartdiv">
     </div>
-    <!--<div id="prefectureName-example">  -->
-    <!--<div id="prefectureName-example" v-for="name in prefectureNames" :key="name.location_id">
-      {{ name.prefecture_name }} {{ name.location_name}} {{ name.longitude }} {{ name.latitude }}
-    </div>-->
   </main>
 </template>
 
