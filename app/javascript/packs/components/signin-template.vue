@@ -9,7 +9,7 @@
       <input type="email" placeholder="xxx@yyy.zzz" v-model="user.email">
     </div>
     <div>
-      <label>パスワード:</label>
+      <label>パスワード(8文字以上):</label>
       <input type="password" placeholder="xxxxxxxx" v-model="user.password">
     </div>
     <div v-if="error" class="error">
@@ -20,6 +20,9 @@
 </template>
 
 <script>
+import axios from "axios";
+const PASSWORD_MIN_LENGTH = 8;
+
 export default {
   el: "login",
   data: function　() {
@@ -35,9 +38,16 @@ export default {
 
   methods: {
     postUser : function (params, callback) {
-      setTimeout(function(){
-        callback(null, params)
-      }, 1000)
+      let res = axios.post("/api/auth", {
+        name: params.name,
+        email: params.email,
+        password: params.password,
+      }).then(response => {
+        console.log("status:");
+        callback(null, params);
+      }).catch(err => {
+        callback(err, params);
+      });
     },
 
     defaultUser: function () {
@@ -60,6 +70,10 @@ export default {
       if (this.user.password.trim() === "") {
         this.error = "パスワードは必須です";
         return;
+      }
+      if (this.user.password.length() < PASSWORD_MIN_LENGTH)
+      {
+        this.error = 'パスワードは' + PASSWORD_MIN_LENGTH + '文字以上にしてください。';
       }
 
       this.postUser(this.user, (function(err, user) {
