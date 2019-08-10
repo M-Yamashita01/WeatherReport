@@ -10,7 +10,7 @@
         <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link" href="#">雨雲の動き</a></li>
           <li class="nav-item"><a class="nav-link" href="#">地震情報</a></li>
-          <li class="nav-item"><a class="nav-link" href="/users/sign_in">ログイン</a></li>
+          <li class="nav-item"><router-link to="/login">ログイン</router-link></li>
         </ul>
       </div>
     </nav>
