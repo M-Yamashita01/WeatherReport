@@ -21,6 +21,8 @@
 
 <script>
 import axios from "axios";
+import token from "./token";
+
 const PASSWORD_MIN_LENGTH = 8;
 
 export default {
@@ -43,7 +45,14 @@ export default {
         email: params.email,
         password: params.password,
       }).then(response => {
-        console.log("status:");
+        token.accessToken = response.headers['access-token'];
+        token.client = response.headers['client'];
+        token.uid = response.headers['uid'];
+
+        console.log("token.accessToken:" + token.accessToken);
+        console.log("token.client:" + token.client);
+        console.log("token.uid:" + token.uid);
+
         callback(null, params);
       }).catch(err => {
         callback(err, params);
@@ -71,10 +80,11 @@ export default {
         this.error = "パスワードは必須です";
         return;
       }
-      if (this.user.password.length() < PASSWORD_MIN_LENGTH)
+/*      if (this.user.password.length() < PASSWORD_MIN_LENGTH)
       {
         this.error = 'パスワードは' + PASSWORD_MIN_LENGTH + '文字以上にしてください。';
       }
+*/
 
       this.postUser(this.user, (function(err, user) {
         this.sending = false;
