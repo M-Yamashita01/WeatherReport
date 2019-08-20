@@ -11,6 +11,7 @@
           <li class="nav-item"><router-link to="#">雨雲の動き</router-link></li>
           <li class="nav-item"><router-link to="#">地震情報</router-link></li>
           <li class="nav-item"><router-link to="/login">ログイン</router-link></li>
+          <li class="nav-item"><router-link to="/logout">ログアウト</router-link></li>
         </ul>
       </div>
     </nav>

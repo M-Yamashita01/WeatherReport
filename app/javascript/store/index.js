@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 import createPersistedState from 'vuex-persistedstate';
-import auth from './modules/auth';
+
 
 Vue.use(Vuex);
 
@@ -17,10 +17,18 @@ export default new Vuex.Store({
 			state.client = data.client;
 			state.uid = data.uid;
 		},
+		destroy(state) {
+			state.accessToken = '';
+			state.client = '';
+			state.uid = '';
+		},
 	},
 	actions: {
 		create({commit}, payload) {
 			commit('create', payload);
+		},
+		destroy({commit}) {
+			commit('destroy');
 		},
 	},
 	plugins: [createPersistedState({
