@@ -22,6 +22,7 @@
 <script>
 import axios from "axios";
 import token from "./token";
+import store from '../../store/index'
 
 const PASSWORD_MIN_LENGTH = 8;
 
@@ -45,13 +46,8 @@ export default {
         email: params.email,
         password: params.password,
       }).then(response => {
-        token.accessToken = response.headers['access-token'];
-        token.client = response.headers['client'];
-        token.uid = response.headers['uid'];
-
-        console.log("token.accessToken:" + token.accessToken);
-        console.log("token.client:" + token.client);
-        console.log("token.uid:" + token.uid);
+        loginUser.setToken(response.headers['access-token'], response.headers['client'], response.headers['uid'])
+        store.dispatch('create', loginUser);
 
         callback(null, params);
       }).catch(err => {
@@ -100,7 +96,18 @@ export default {
         }
 
       }).bind(this))
-    }
+    },
   }
+}
+
+var loginUser = {
+  accessToken: '',
+  client: '',
+  uid: '',
+  setToken: function (accessToken, client, uid) {
+    this.accessToken = accessToken;
+    this.client = client;
+    this.uid = uid;
+  },
 }
 </script>
