@@ -21,7 +21,6 @@
 
 <script>
 import axios from "axios";
-import token from "./token";
 import store from '../../store/index'
 
 const PASSWORD_MIN_LENGTH = 8;
@@ -34,9 +33,6 @@ export default {
       user: this.defaultUser(),
       error: null
     }
-  },
-
-  created: function () {
   },
 
   methods: {
