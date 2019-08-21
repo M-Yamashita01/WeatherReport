@@ -1,28 +1,68 @@
 <template>
   <div id="login-template">
     <div>
-      <input type="text" placeholder="ログインID" v-model="userid">
+      <label>メールアドレス:</label>
+      <input type="email" placeholder="xxx@yyy.zzz" v-model="user.email">
     </div>
     <div>
-      <input type="password" placeholder="パスワード" v-model="password">
+      <label>パスワード</label>
+      <input type="password" placeholder="xxxxxxxx" v-model="user.password">
     </div>
-    <button @click="login()">ログイン</button>
+    <div v-if="error" class="error">
+      {{ error }}
+    </div>
+    <button @click="loginUser">ログイン</button>
   </div>
 </template>
 
 <script>
+import axios from 'axios';
+import store from '../../store/index';
+
 export default {
-    el: "login",
     data: function(){
       return {
-        userid: "",
-        password: ""
+        sending: false,
+        user: this.defautUser(),
+        error: null
       }
     },
 
     methods: {
-      login: function() {
-        auth.login(this.userid, this.password);
+      postUser: function (params, callback) {
+        let res = axios.post("/api/auth/sign_in", {
+          email: params.email,
+          password: params.password,
+        }).then(response => {
+          loginUser.setToken(response.headers['access-token'], response.headers['client'], response.headers['uid'])
+          store.dispatch('create', loginUser);          
+
+          callback(null, params);
+        }).catch(err => {
+          callback(err, params);
+        });
+      },
+
+      defautUser: function () {
+        return {
+          email:"",
+          password: ""
+        }
+      },
+
+      loginUser: function() {
+        this.postUser(this.user, (function(err, user) {
+          this.sending = false;
+          if (err) {
+            this.error = err.toString();
+          } else {
+            this.error = null,
+            this.user = this.defautUser();
+
+            //トップページに戻る
+            this.$router.push("/");
+          }
+        }).bind(this))
       }
     },
 };
@@ -32,4 +72,15 @@ export default {
       window.alert("userid:" + id + "\n" + "password:" + pass);
     }
   };
+
+var loginUser = {
+  accessToken: '',
+  client: '',
+  uid: '',
+  setToken: function (accessToken, client, uid) {
+    this.accessToken = accessToken;
+    this.client = client;
+    this.uid = uid;
+  },
+}  
 </script>
