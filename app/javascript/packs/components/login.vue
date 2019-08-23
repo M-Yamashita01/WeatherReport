@@ -8,12 +8,12 @@
 </template>
 
 <script>
-  import LogInTemplate from './login-template';
+import LogInTemplate from './login-template';
 
 export default {
-    components: {
-      LogInTemplate,
-    },
-    name: 'login-page',
+  name: 'login-page',
+  components: {
+    LogInTemplate,
+  },
 };
 </script>
