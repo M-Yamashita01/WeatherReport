@@ -31,6 +31,14 @@ export default new Vuex.Store({
 			commit('destroy');
 		},
 	},
+	getters: {
+		hasToken(state) {
+			if (state.accessToken != '') {
+				return true;
+			}
+			return false;
+		},
+	},
 	plugins: [createPersistedState({
 		key: 'WeatherReportToken',
 		storage: window.sessionStorage,
