@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="main-contents">
     <h3>SignIn</h3>
     <sign-in-template></sign-in-template>
     <h5><router-link to="/login">ログイン</router-link></h5>

@@ -1,5 +1,6 @@
 <template>
-  <main role="main" class="col-md-8 ml-sm-auto col-lg-10 px-4 main-contents">
+  <!--<main role="main" class="col-md-8 ml-sm-auto col-lg-10 px-4 main-contents">-->
+  <main role="main" class="main-contents">
     <div id="chartdiv">
     </div>
   </main>
