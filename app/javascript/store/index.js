@@ -10,17 +10,20 @@ export default new Vuex.Store({
 		accessToken: '',
 		client: '',
 		uid: '',
+		userName: '',
 	},
 	mutations: {
 		create(state, data) {
 			state.accessToken = data.accessToken;
 			state.client = data.client;
 			state.uid = data.uid;
+			state.userName = data.userName;
 		},
 		destroy(state) {
 			state.accessToken = '';
 			state.client = '';
 			state.uid = '';
+			state.userName = '';
 		},
 	},
 	actions: {
@@ -29,6 +32,17 @@ export default new Vuex.Store({
 		},
 		destroy({commit}) {
 			commit('destroy');
+		},
+	},
+	getters: {
+		hasToken(state) {
+			if (state.accessToken != '') {
+				return true;
+			}
+			return false;
+		},
+		getUserName(state) {
+			return state.userName;
 		},
 	},
 	plugins: [createPersistedState({

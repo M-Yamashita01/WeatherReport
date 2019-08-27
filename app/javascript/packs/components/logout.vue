@@ -17,7 +17,6 @@
     },
     created: function() {
       store.dispatch('destroy');
-      console.log('logout_accessToken: ' + store.state.accessToken);
       setInterval(() => {this.remainingTime--}, 1000);
     },
     watch: {
