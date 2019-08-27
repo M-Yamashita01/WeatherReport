@@ -8,10 +8,13 @@
 
       <div class="navbar-collapse collapse" id="navigationBar">
         <ul class="navbar-nav">
+          <li class="nav-item" v-if="!logined"><router-link to="/login" class="text-white" data-toggle="collapse" data-target=".navbar-collapse.show">ログイン</router-link></li>
+          <li class="nav-item" v-if="logined">
+            <div class="text-white">ようこそ {{ userName }}さん</div>
+            <router-link to="/logout" class="text-white" data-toggle="collapse" data-target=".navbar-collapse.show">ログアウト</router-link>
+          </li>          
           <li class="nav-item"><router-link to="#" class="text-white" data-toggle="collapse" data-target=".navbar-collapse.show">雨雲の動き</router-link></li>
           <li class="nav-item"><router-link to="#" class="text-white" data-toggle="collapse" data-target=".navbar-collapse.show">地震情報</router-link></li>
-          <li class="nav-item" v-if="!logined"><router-link to="/login" class="text-white" data-toggle="collapse" data-target=".navbar-collapse.show">ログイン</router-link></li>
-          <li class="nav-item" v-if="logined"><router-link to="/logout" class="text-white" data-toggle="collapse" data-target=".navbar-collapse.show">ログアウト</router-link></li>
         </ul>
       </div>
     </nav>
@@ -24,11 +27,13 @@ import store from "../../../store/index";
 export default {
   data() {
     return {
-      logined : true,
+      logined : false,
+      userName : '',
     }
   },
   created() {
-    this.logined = this.$store.getters.hasToken;
+    this.logined = store.getters.hasToken;
+    this.userName = store.getters.getUserName;
   },
 };
 </script>

@@ -42,7 +42,7 @@ export default {
         email: params.email,
         password: params.password,
       }).then(response => {
-        loginUser.setToken(response.headers['access-token'], response.headers['client'], response.headers['uid'])
+        loginUser.setToken(response.headers['access-token'], response.headers['client'], response.headers['uid'], name)
         store.dispatch('create', loginUser);
 
         callback(null, params);
@@ -100,10 +100,12 @@ var loginUser = {
   accessToken: '',
   client: '',
   uid: '',
-  setToken: function (accessToken, client, uid) {
+  userName: '',
+  setToken: function (accessToken, client, uid, useName) {
     this.accessToken = accessToken;
     this.client = client;
     this.uid = uid;
+    this.userName = userName;
   },
 }
 </script>
