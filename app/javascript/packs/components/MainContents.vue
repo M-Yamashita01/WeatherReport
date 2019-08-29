@@ -1,9 +1,17 @@
 <template>
   <!--<main role="main" class="col-md-8 ml-sm-auto col-lg-10 px-4 main-contents">-->
-  <main role="main" class="main-contents">
+  <div class="main-contents">
+    <ul class="list-inline">
+      <button class="list-inline-item" v-on:click="getTodayWeathers">{{ todayDate}}</button>
+      <button class="list-inline-item" v-on:click="getTommorowWeathers">{{ tommorowDate }}</button>
+      <button class="list-inline-item" v-on:click="getDayAfterTommorowDate">{{ dayAfterTommorowDate }}</button>
+    </ul>    
+  <!--<main role="main" class="main-contents">-->
+  <main role="main">
     <div id="chartdiv">
     </div>
   </main>
+  </div>
 </template>
 
 <script>
@@ -16,7 +24,8 @@ import { circleIn } from '@amcharts/amcharts4/.internal/core/utils/Ease';
 
 export default {
 //  el: "#prefectureName-example",
-  async mounted() {
+  //async mounted() {
+    mounted() {
     // Create map instance
     let map = am4core.create("chartdiv", am4maps.MapChart);
 
@@ -33,8 +42,8 @@ export default {
     var polygonSeries = map.series.push(new am4maps.MapPolygonSeries());
     polygonSeries.useGeodata = true;
 
-    let imageSeries = map.series.push(new am4maps.MapImageSeries());
-    let imageTemplate = imageSeries.mapImages.template;
+    this.imageSeries = map.series.push(new am4maps.MapImageSeries());
+    let imageTemplate = this.imageSeries.mapImages.template;
     imageTemplate.propertyFields.longitude = "longitude";
     imageTemplate.propertyFields.latitude = "latitude";
     imageTemplate.nonScaling = true;
@@ -51,39 +60,66 @@ export default {
     label.horizontalCenter = "middle";
     label.verticalCenter = "top";
     label.dy = 5;
- 
-    await this.get_locations();
-
-    imageSeries.data = [{}];
-    this.prefectureNames.forEach( prefectureName =>{
-      imageSeries.data.push({
-        "latitude" : prefectureName.latitude,
-        "longitude" : prefectureName.longitude,
-        "imageURL" : prefectureName.weather_image_link,
-        "width" : 32,
-        "height" : 32,
-        "label" : prefectureName.location_name
-      });
-    })
-  },
+   },
   data () {
     return {
+      imageSeries: null,
       prefectureNames: [],
-      error: {}
+      error: {},
+      todayDate: '',
+      tommorowDate: '',
+      dayAfterTommorowDate: '',
     }
   },
   methods: {
-    async get_locations() {
+    async getWeathers(date) {
+      console.log(date);
       let res = await axios.get("/api/location_on_forecast_days", {
         params: {
-          main_city_flag: 1
+          main_city_flag: 1,
+          date: date
         },
       });
+
+      if (this.prefectureNames.length != 0)
+      {
+        this.prefectureNames = [];
+      }
+
       for ( var i = 0; i < res.data.location_on_forecast.length; i++)
       {
         this.prefectureNames.push(res.data.location_on_forecast[i]);
       }
+
+      this.imageSeries.data = [{}];
+
+      this.prefectureNames.forEach( prefectureName =>{
+        this.imageSeries.data.push({
+          "latitude" : prefectureName.latitude,
+          "longitude" : prefectureName.longitude,
+          "imageURL" : prefectureName.weather_image_link,
+          "width" : 32,
+          "height" : 32,
+          "label" : prefectureName.location_name
+        });
+      });      
     },
+    getTodayWeathers() {
+      this.getWeathers(this.todayDate);
+    },
+    getTommorowWeathers() {
+      this.getWeathers(this.tommorowDate);
+    },
+    getDayAfterTommorowDate() {
+      this.getWeathers(this.dayAfterTommorowDate);
+    }
+  },
+  async created() {
+      let today = new Date();
+      this.todayDate = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
+      this.tommorowDate = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + (today.getDate() + 1);
+      this.dayAfterTommorowDate = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + (today.getDate() + 2);
+      this.getWeathers(this.todayDate);      
   },
   beforeDestroy() {
     if (this.map) {
