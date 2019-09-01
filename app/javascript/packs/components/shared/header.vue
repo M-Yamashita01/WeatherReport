@@ -8,11 +8,6 @@
 
         <div class="navbar-collapse collapse" id="navigationBar">
           <ul class="navbar-nav">
-            <li class="nav-item" v-if="!logined"><router-link to="/login" data-toggle="collapse" data-target=".navbar-collapse.show">ログイン</router-link></li>
-            <li class="nav-item" v-if="logined">
-              <div>ようこそ {{ userName }}さん</div>
-              <router-link to="/logout" data-toggle="collapse" data-target=".navbar-collapse.show">ログアウト</router-link>
-            </li>          
             <li class="nav-item"><router-link to="#" data-toggle="collapse" data-target=".navbar-collapse.show">雨雲の動き</router-link></li>
             <li class="nav-item"><router-link to="#" data-toggle="collapse" data-target=".navbar-collapse.show">地震情報</router-link></li>
           </ul>
