@@ -1,16 +1,12 @@
 <template>
-  <!--<main role="main" class="col-md-8 ml-sm-auto col-lg-10 px-4 main-contents">-->
-  <div class="main-contents">
+  <div>
     <ul class="list-inline">
       <button class="list-inline-item" v-on:click="getTodayWeathers">{{ todayDate}}</button>
       <button class="list-inline-item" v-on:click="getTommorowWeathers">{{ tommorowDate }}</button>
       <button class="list-inline-item" v-on:click="getDayAfterTommorowDate">{{ dayAfterTommorowDate }}</button>
     </ul>    
-  <!--<main role="main" class="main-contents">-->
-  <main role="main">
     <div id="chartdiv">
     </div>
-  </main>
   </div>
 </template>
 
