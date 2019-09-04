@@ -1,11 +1,33 @@
 <template>
-  <div>
-    <p>Sidebar</p>
+  <div>    
+    <div class="twitter-widget" style="width:400px;" :index="i" v-for="(tw, i) in twitterIds" :key="tw.title">
+      <timeline
+        :id="tw"
+        :source-type="'profile'"
+        :options="{ 'height': twitterHeight }" >
+      </timeline>
+    </div>
   </div>
 </template>
 
 <script>
-export default {
+import TimeLine from 'vue-tweet-embed/src/timeline';
 
+export default {
+  components: {
+    'timeline': TimeLine,
+  },
+  data() {
+    return {
+      twitterHeight: '400',
+      twitterIds: [],
+    }
+  },
+  created () {
+    var ids = [];
+    ids.push('JMA_kishou');
+    ids.push('tenkijp');    
+    this.twitterIds = ids;
+  }
 }
 </script>
