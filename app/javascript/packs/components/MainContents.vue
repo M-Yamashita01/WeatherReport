@@ -38,6 +38,23 @@ export default {
     var polygonSeries = map.series.push(new am4maps.MapPolygonSeries());
     polygonSeries.useGeodata = true;
 
+    // zoom control
+    map.zoomControl = new am4maps.ZoomControl();
+
+    //Add button
+    var homeButton = new am4core.Button();
+    homeButton.events.on("hit", function() {
+      map.goHome();
+    });
+    homeButton.icon = new am4core.Sprite();
+    homeButton.icon.path = "M16,8 L14,8 L14,16 L10,16 L10,10 L6,10 L6,16 L2,16 L2,8 L0,8 L8,0 L16,8 Z M16,8";
+
+    homeButton.padding(7, 5, 7, 5);
+    homeButton.width = 30;
+    homeButton.marginBottom = 10;
+    homeButton.parent = map.zoomControl;
+    homeButton.insertBefore(map.zoomControl.plusButton);
+
     this.imageSeries = map.series.push(new am4maps.MapImageSeries());
     let imageTemplate = this.imageSeries.mapImages.template;
     imageTemplate.propertyFields.longitude = "longitude";
