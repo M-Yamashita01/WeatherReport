@@ -38,6 +38,9 @@ export default {
     var polygonSeries = map.series.push(new am4maps.MapPolygonSeries());
     polygonSeries.useGeodata = true;
 
+    // mouse wheel disable
+    map.chartContainer.wheelable = false;
+
     // zoom control
     map.zoomControl = new am4maps.ZoomControl();
 
