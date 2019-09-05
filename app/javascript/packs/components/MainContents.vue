@@ -38,6 +38,12 @@ export default {
     var polygonSeries = map.series.push(new am4maps.MapPolygonSeries());
     polygonSeries.useGeodata = true;
 
+    // zoom event by click on map
+    var polygonTemplate = polygonSeries.mapPolygons.template;
+    polygonTemplate.events.on("hit", function(ev) {
+      ev.target.series.chart.zoomToMapObject(ev.target);
+    });
+
     // mouse wheel disable
     map.chartContainer.wheelable = false;
 
