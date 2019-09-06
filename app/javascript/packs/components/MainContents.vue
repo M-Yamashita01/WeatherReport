@@ -23,37 +23,38 @@ export default {
   //async mounted() {
     mounted() {
     // Create map instance
-    let map = am4core.create("chartdiv", am4maps.MapChart);
+    this.map = am4core.create("chartdiv", am4maps.MapChart);
 
     // Set japan map definition
-    map.geodata = am4geodata_japanLow;
+    this.map.geodata = am4geodata_japanLow;
 
     // Set projection
-    map.projection = new am4maps.projections.Miller();
+    this.map.projection = new am4maps.projections.Miller();
 
     // Set default position
-    map.homeZoomLevel = 1;
-    map.homeGeoPoint = { longitude: "35", latitude: "139"}
+    this.map.homeZoomLevel = 1;
+    this.map.homeGeoPoint = { longitude: "35", latitude: "139"}
 
-    var polygonSeries = map.series.push(new am4maps.MapPolygonSeries());
+    var polygonSeries = this.map.series.push(new am4maps.MapPolygonSeries());
     polygonSeries.useGeodata = true;
 
     // zoom event by click on map
     var polygonTemplate = polygonSeries.mapPolygons.template;
     polygonTemplate.events.on("hit", function(ev) {
       ev.target.series.chart.zoomToMapObject(ev.target);
-    });
+      this.currentZoomLevel = ev.target.series.chart.zoomLevel;
+    }.bind(this));
 
     // mouse wheel disable
-    map.chartContainer.wheelable = false;
+    this.map.chartContainer.wheelable = false;
 
     // zoom control
-    map.zoomControl = new am4maps.ZoomControl();
+    this.map.zoomControl = new am4maps.ZoomControl();
 
     //Add button
     var homeButton = new am4core.Button();
     homeButton.events.on("hit", function() {
-      map.goHome();
+      this.map.goHome();
     });
     homeButton.icon = new am4core.Sprite();
     homeButton.icon.path = "M16,8 L14,8 L14,16 L10,16 L10,10 L6,10 L6,16 L2,16 L2,8 L0,8 L8,0 L16,8 Z M16,8";
@@ -61,10 +62,10 @@ export default {
     homeButton.padding(7, 5, 7, 5);
     homeButton.width = 30;
     homeButton.marginBottom = 10;
-    homeButton.parent = map.zoomControl;
-    homeButton.insertBefore(map.zoomControl.plusButton);
+    homeButton.parent = this.map.zoomControl;
+    homeButton.insertBefore(this.map.zoomControl.plusButton);
 
-    this.imageSeries = map.series.push(new am4maps.MapImageSeries());
+    this.imageSeries = this.map.series.push(new am4maps.MapImageSeries());
     let imageTemplate = this.imageSeries.mapImages.template;
     imageTemplate.propertyFields.longitude = "longitude";
     imageTemplate.propertyFields.latitude = "latitude";
@@ -91,6 +92,8 @@ export default {
       todayDate: '',
       tommorowDate: '',
       dayAfterTommorowDate: '',
+      map: null,
+      previousZoomLevel: 1,
     }
   },
   methods: {
@@ -134,6 +137,9 @@ export default {
     },
     getDayAfterTommorowDate() {
       this.getWeathers(this.dayAfterTommorowDate);
+    },
+    setCurrentZoomLevel(zoomLevel) {
+      this.currentZoomLevel = zoomLevel;
     }
   },
   async created() {
@@ -142,6 +148,16 @@ export default {
       this.tommorowDate = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + (today.getDate() + 1);
       this.dayAfterTommorowDate = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + (today.getDate() + 2);
       this.getWeathers(this.todayDate);      
+  },
+  watch : {
+    'map.zoomLevel': function(val) {
+      var zoomLevelNum = Math.floor(val);
+      if ( this.previousZoomLevel != zoomLevelNum ) {
+        console.log('zoomLevel changed: ' + zoomLevelNum);
+        this.previousZoomLevel = zoomLevelNum;
+      }
+      
+    }
   },
   beforeDestroy() {
     if (this.map) {
