@@ -94,14 +94,14 @@ export default {
       dayAfterTommorowDate: '',
       map: null,
       previousZoomLevel: 1,
+      remainingTime: this.initRemainingTime(),
     }
   },
   methods: {
-    async getWeathers(date) {
-      console.log(date);
+    async getWeathers(date, main_city_flag) {
       let res = await axios.get("/api/location_on_forecast_days", {
         params: {
-          main_city_flag: 1,
+          main_city_flag: main_city_flag,
           date: date
         },
       });
@@ -140,6 +140,9 @@ export default {
     },
     setCurrentZoomLevel(zoomLevel) {
       this.currentZoomLevel = zoomLevel;
+    },
+    initRemainingTime() {
+      this.remainingTime = 2;
     }
   },
   async created() {
@@ -147,16 +150,23 @@ export default {
       this.todayDate = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
       this.tommorowDate = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + (today.getDate() + 1);
       this.dayAfterTommorowDate = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + (today.getDate() + 2);
-      this.getWeathers(this.todayDate);      
+      this.getWeathers(this.todayDate, 1);
   },
   watch : {
     'map.zoomLevel': function(val) {
       var zoomLevelNum = Math.floor(val);
       if ( this.previousZoomLevel != zoomLevelNum ) {
-        console.log('zoomLevel changed: ' + zoomLevelNum);
         this.previousZoomLevel = zoomLevelNum;
+        this.initRemainingTime();
+        setTimeout(() => {this.remainingTime--}, 1000);
       }
-      
+    },
+    remainingTime: function(val) {
+      if (val <= 0) {
+        console.log('remainingTime is zero');
+        this.getWeathers(this.todayDate, 0);
+        this.initRemainingTime();
+      }
     }
   },
   beforeDestroy() {
