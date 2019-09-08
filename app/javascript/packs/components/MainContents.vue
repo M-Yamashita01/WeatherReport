@@ -130,13 +130,13 @@ export default {
       });      
     },
     getTodayWeathers() {
-      this.getWeathers(this.todayDate);
+      this.getWeathers(this.todayDate, 1);
     },
     getTommorowWeathers() {
-      this.getWeathers(this.tommorowDate);
+      this.getWeathers(this.tommorowDate, 1);
     },
     getDayAfterTommorowDate() {
-      this.getWeathers(this.dayAfterTommorowDate);
+      this.getWeathers(this.dayAfterTommorowDate, 1);
     },
     setCurrentZoomLevel(zoomLevel) {
       this.currentZoomLevel = zoomLevel;
