@@ -33,3 +33,9 @@ $ export MYSQL_USER_DEVELOPMENT=root
 $ export MYSQL_PASS_DEVELOPMENT=
 $ bundle exec rails s -p 3000
 ```
+
+天気情報のセット
+
+以下WeatherInfoUpdaterのREADMEを参照
+
+https://github.com/MYamashii/WeatherInfoUpdater
