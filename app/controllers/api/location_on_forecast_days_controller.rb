@@ -5,7 +5,7 @@ class Api::LocationOnForecastDaysController < ApplicationController
   end
 
   def search_params
-    params.permit(:main_city_flag, :date)
+    params.permit(:main_city_flag, :date, :longitude_max, :longitude_min, :latitude_max, :latitude_min)
   end
 
   def create
