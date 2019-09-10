@@ -43,11 +43,11 @@ export default {
     // zoom event by click on map
     var polygonTemplate = polygonSeries.mapPolygons.template;
     polygonTemplate.events.on("hit", function(ev) {
-      var coords = this.map.svgPointToGeo(ev.svgPoint);
-      this.clickedLongitude = coords.longitude
-      his.clickedLatitude = coords.latitude;
       ev.target.series.chart.zoomToMapObject(ev.target);
       this.currentZoomLevel = ev.target.series.chart.zoomLevel;
+      this.zoomGeoPoint = ev.target.series.chart.zoomGeoPoint;
+      console.log(this.zoomGeoPoint.longitude);
+      console.log(this.zoomGeoPoint.latitude);
     }.bind(this));
 
     // mouse wheel disable
@@ -101,8 +101,7 @@ export default {
       currentZoomLevel: 1,
       remainingTime: this.initRemainingTime(),
       weathers: "",
-      clickedLongitude: this.initLongitude(),
-      clickedLatitude: this.initLatitude(),
+      zoomGeoPoint: this.initZoomGeoPoint(),
     }
   },
   components: {
@@ -170,12 +169,9 @@ export default {
     initRemainingTime() {
       this.remainingTime = 2;
     },
-    initLongitude() {
-      this.clickedLongitude = 35;
-    },
-    initLatitude() {
-      this.clickedLatitude = 139;
-    },  
+    initZoomGeoPoint() {
+      this.zoomGeoPoint = { longitude: "35", latitude: "139"};
+    }
   },
   async created() {
       let today = new Date();
@@ -195,8 +191,12 @@ export default {
     },
     remainingTime: function(val) {
       if (val <= 0) {
-        console.log('remainingTime is zero');
-        this.getWeathers(this.todayDate, 0);
+        // 緯度、経度の中心からの幅の数値は適当
+        var longitudeMax = this.zoomGeoPoint.longitude + 3;
+        var longitudeMin = this.zoomGeoPoint.longitude - 3;
+        var latitudeMax = this.zoomGeoPoint.latitude + 1;
+        var latitudeMin = this.zoomGeoPoint.latitude - 1;
+        this.getWeathers(this.todayDate, '', longitudeMax, longitudeMin, latitudeMax, latitudeMin);
         this.initRemainingTime();
       }
     }
