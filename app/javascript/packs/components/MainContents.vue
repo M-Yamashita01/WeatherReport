@@ -43,6 +43,9 @@ export default {
     // zoom event by click on map
     var polygonTemplate = polygonSeries.mapPolygons.template;
     polygonTemplate.events.on("hit", function(ev) {
+      var coords = this.map.svgPointToGeo(ev.svgPoint);
+      this.clickedLongitude = coords.longitude
+      his.clickedLatitude = coords.latitude;
       ev.target.series.chart.zoomToMapObject(ev.target);
       this.currentZoomLevel = ev.target.series.chart.zoomLevel;
     }.bind(this));
@@ -98,6 +101,8 @@ export default {
       currentZoomLevel: 1,
       remainingTime: this.initRemainingTime(),
       weathers: "",
+      clickedLongitude: this.initLongitude(),
+      clickedLatitude: this.initLatitude(),
     }
   },
   components: {
@@ -164,7 +169,13 @@ export default {
     },
     initRemainingTime() {
       this.remainingTime = 2;
-    }
+    },
+    initLongitude() {
+      this.clickedLongitude = 35;
+    },
+    initLatitude() {
+      this.clickedLatitude = 139;
+    },  
   },
   async created() {
       let today = new Date();
