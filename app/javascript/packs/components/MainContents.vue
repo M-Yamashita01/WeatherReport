@@ -18,6 +18,8 @@ import axios from "axios";
 import { constants } from 'crypto';
 import { circleIn } from '@amcharts/amcharts4/.internal/core/utils/Ease';
 
+import Weathers from "./weathers.js";
+
 export default {
 //  el: "#prefectureName-example",
   //async mounted() {
@@ -93,27 +95,36 @@ export default {
       tommorowDate: '',
       dayAfterTommorowDate: '',
       map: null,
-      previousZoomLevel: 1,
+      currentZoomLevel: 1,
       remainingTime: this.initRemainingTime(),
+      weathers: "",
     }
   },
+  components: {
+    Weathers,
+  },
   methods: {
-    async getWeathers(date, main_city_flag) {
-      let res = await axios.get("/api/location_on_forecast_days", {
+    async getWeathers(date, main_city_flag, longitude_max, longitude_min, latitude_max, latitude_min) {
+      let res = await Weathers.getWeathers(date, main_city_flag, longitude_max, longitude_min, latitude_max, latitude_min, this.setWeathers);
+      /* let res = await axios.get("/api/location_on_forecast_days", {
         params: {
+          date: date,
           main_city_flag: main_city_flag,
-          date: date
+          longitude_max: longitude_max,
+          longitude_min: longitude_min,
+          latitude_max: latitude_max,
+          latitude_min: latitude_min
         },
-      });
+      }); */
 
       if (this.prefectureNames.length != 0)
       {
         this.prefectureNames = [];
       }
 
-      for ( var i = 0; i < res.data.location_on_forecast.length; i++)
+      for ( var i = 0; i < this.weathers.data.location_on_forecast.length; i++)
       {
-        this.prefectureNames.push(res.data.location_on_forecast[i]);
+        this.prefectureNames.push(this.weathers.data.location_on_forecast[i]);
       }
 
       this.imageSeries.data = [{}];
@@ -129,6 +140,13 @@ export default {
         });
       });      
     },
+    getLocationWeathers(date, longitude_max, longitude_min, latitude_max, latitude_min) {
+      var main_city_flag = 1;
+      if (this.currentZoomLevel >= 3) { // 3は適当
+        main_city_flag = '';
+      }
+      getWeathers(date, main_city_flag, longitude_max, longitude_min, latitude_max, latitude_min)
+    },
     getTodayWeathers() {
       this.getWeathers(this.todayDate);
     },
@@ -140,6 +158,9 @@ export default {
     },
     setCurrentZoomLevel(zoomLevel) {
       this.currentZoomLevel = zoomLevel;
+    },
+    setWeathers: function(weathers) {
+      this.weathers = weathers;
     },
     initRemainingTime() {
       this.remainingTime = 2;
@@ -155,8 +176,8 @@ export default {
   watch : {
     'map.zoomLevel': function(val) {
       var zoomLevelNum = Math.floor(val);
-      if ( this.previousZoomLevel != zoomLevelNum ) {
-        this.previousZoomLevel = zoomLevelNum;
+      if ( this.currentZoomLevel != zoomLevelNum ) {
+        this.currentZoomLevel = zoomLevelNum;
         this.initRemainingTime();
         setTimeout(() => {this.remainingTime--}, 1000);
       }
