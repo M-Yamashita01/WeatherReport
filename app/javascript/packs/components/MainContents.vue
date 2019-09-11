@@ -132,21 +132,14 @@ export default {
         });
       });      
     },
-    /*getLocationWeathers(date, longitude_max, longitude_min, latitude_max, latitude_min) {
-      var main_city_flag = 1;
-      if (this.currentZoomLevel >= 3) { // 3は適当
-        main_city_flag = '';
-      }
-      getWeathers(date, main_city_flag, longitude_max, longitude_min, latitude_max, latitude_min)
-    },*/
     getTodayWeathers() {
-      this.getWeathers(this.todayDate, 1);
+      this.getWeathers(this.todayDate);
     },
     getTommorowWeathers() {
-      this.getWeathers(this.tommorowDate, 1);
+      this.getWeathers(this.tommorowDate);
     },
     getDayAfterTommorowDate() {
-      this.getWeathers(this.dayAfterTommorowDate, 1);
+      this.getWeathers(this.dayAfterTommorowDate);
     },
     setCurrentZoomLevel(zoomLevel) {
       this.currentZoomLevel = zoomLevel;
@@ -180,11 +173,7 @@ export default {
     remainingTime: function(val) {
       if (val <= 0) {
         // 緯度、経度の中心からの幅の数値は適当
-        var longitudeMax = this.zoomGeoPoint.longitude + 3;
-        var longitudeMin = this.zoomGeoPoint.longitude - 3;
-        var latitudeMax = this.zoomGeoPoint.latitude + 1;
-        var latitudeMin = this.zoomGeoPoint.latitude - 1;
-        this.getWeathers(this.todayDate, '', longitudeMax, longitudeMin, latitudeMax, latitudeMin);
+        this.getWeathers(this.todayDate);
         this.initRemainingTime();
       }
     }
