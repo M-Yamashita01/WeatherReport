@@ -35,7 +35,7 @@ export default {
 
     // Set default position
     this.map.homeZoomLevel = 1;
-    this.map.homeGeoPoint = { longitude: "35", latitude: "139"}
+    this.map.homeGeoPoint = { longitude: "139", latitude: "35"}
 
     var polygonSeries = this.map.series.push(new am4maps.MapPolygonSeries());
     polygonSeries.useGeodata = true;
@@ -46,8 +46,6 @@ export default {
       ev.target.series.chart.zoomToMapObject(ev.target);
       this.currentZoomLevel = ev.target.series.chart.zoomLevel;
       this.zoomGeoPoint = ev.target.series.chart.zoomGeoPoint;
-      console.log(this.zoomGeoPoint.longitude);
-      console.log(this.zoomGeoPoint.latitude);
     }.bind(this));
 
     // mouse wheel disable
@@ -108,18 +106,8 @@ export default {
     Weathers,
   },
   methods: {
-    async getWeathers(date, main_city_flag, longitude_max, longitude_min, latitude_max, latitude_min) {
-      let res = await Weathers.getWeathers(date, main_city_flag, longitude_max, longitude_min, latitude_max, latitude_min, this.setWeathers);
-      /* let res = await axios.get("/api/location_on_forecast_days", {
-        params: {
-          date: date,
-          main_city_flag: main_city_flag,
-          longitude_max: longitude_max,
-          longitude_min: longitude_min,
-          latitude_max: latitude_max,
-          latitude_min: latitude_min
-        },
-      }); */
+    async getWeathers(date) {
+      let res = await Weathers.getLocationWeathers(date, this.currentZoomLevel, this.zoomGeoPoint.longitude, this.zoomGeoPoint.latitude, this.setWeathers);
 
       if (this.prefectureNames.length != 0)
       {
@@ -144,21 +132,14 @@ export default {
         });
       });      
     },
-    getLocationWeathers(date, longitude_max, longitude_min, latitude_max, latitude_min) {
-      var main_city_flag = 1;
-      if (this.currentZoomLevel >= 3) { // 3は適当
-        main_city_flag = '';
-      }
-      getWeathers(date, main_city_flag, longitude_max, longitude_min, latitude_max, latitude_min)
-    },
     getTodayWeathers() {
-      this.getWeathers(this.todayDate, 1);
+      this.getWeathers(this.todayDate);
     },
     getTommorowWeathers() {
-      this.getWeathers(this.tommorowDate, 1);
+      this.getWeathers(this.tommorowDate);
     },
     getDayAfterTommorowDate() {
-      this.getWeathers(this.dayAfterTommorowDate, 1);
+      this.getWeathers(this.dayAfterTommorowDate);
     },
     setCurrentZoomLevel(zoomLevel) {
       this.currentZoomLevel = zoomLevel;
@@ -170,7 +151,7 @@ export default {
       this.remainingTime = 2;
     },
     initZoomGeoPoint() {
-      this.zoomGeoPoint = { longitude: "35", latitude: "139"};
+      return { longitude: "139", latitude: "35"};
     }
   },
   async created() {
@@ -178,7 +159,7 @@ export default {
       this.todayDate = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
       this.tommorowDate = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + (today.getDate() + 1);
       this.dayAfterTommorowDate = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + (today.getDate() + 2);
-      this.getWeathers(this.todayDate, 1);
+      this.getWeathers(this.todayDate);
   },
   watch : {
     'map.zoomLevel': function(val) {
@@ -192,11 +173,7 @@ export default {
     remainingTime: function(val) {
       if (val <= 0) {
         // 緯度、経度の中心からの幅の数値は適当
-        var longitudeMax = this.zoomGeoPoint.longitude + 3;
-        var longitudeMin = this.zoomGeoPoint.longitude - 3;
-        var latitudeMax = this.zoomGeoPoint.latitude + 1;
-        var latitudeMin = this.zoomGeoPoint.latitude - 1;
-        this.getWeathers(this.todayDate, '', longitudeMax, longitudeMin, latitudeMax, latitudeMin);
+        this.getWeathers(this.todayDate);
         this.initRemainingTime();
       }
     }
