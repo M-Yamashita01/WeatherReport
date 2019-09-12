@@ -19,6 +19,7 @@ import { constants } from 'crypto';
 import { circleIn } from '@amcharts/amcharts4/.internal/core/utils/Ease';
 
 import Weathers from "./weathers.js";
+import { setTimeout } from 'timers';
 
 export default {
 //  el: "#prefectureName-example",
@@ -97,9 +98,9 @@ export default {
       dayAfterTommorowDate: '',
       map: null,
       currentZoomLevel: 1,
-      remainingTime: this.initRemainingTime(),
       weathers: "",
       zoomGeoPoint: this.initZoomGeoPoint(),
+      timer: null,
     }
   },
   components: {
@@ -148,7 +149,7 @@ export default {
       this.weathers = weathers;
     },
     initRemainingTime() {
-      this.remainingTime = 2;
+      this.remainingTime = 1;
     },
     initZoomGeoPoint() {
       return { longitude: "139", latitude: "35"};
@@ -163,20 +164,16 @@ export default {
   },
   watch : {
     'map.zoomLevel': function(val) {
-      var zoomLevelNum = Math.floor(val);
-      if ( this.currentZoomLevel != zoomLevelNum ) {
-        this.currentZoomLevel = zoomLevelNum;
-        this.initRemainingTime();
-        setTimeout(() => {this.remainingTime--}, 1000);
+      if (this.timer > 0 ) {
+        console.log('clear timeoutId:');
+        window.clearTimeout(this.timer);
       }
-    },
-    remainingTime: function(val) {
-      if (val <= 0) {
-        // 緯度、経度の中心からの幅の数値は適当
+
+      this.timer = window.setTimeout( function() {
+        console.log('called setTimeout');
         this.getWeathers(this.todayDate);
-        this.initRemainingTime();
-      }
-    }
+      }.bind(this), 1000);
+    },
   },
   beforeDestroy() {
     if (this.map) {
