@@ -163,16 +163,16 @@ export default {
       this.getWeathers(this.todayDate);
   },
   watch : {
-    'map.zoomLevel': function(val) {
+    'map.zoomLevel': function(zoomLevel) {
       if (this.timer > 0 ) {
-        console.log('clear timeoutId:');
         window.clearTimeout(this.timer);
       }
 
+      this.currentZoomLevel = zoomLevel;
+
       this.timer = window.setTimeout( function() {
-        console.log('called setTimeout');
         this.getWeathers(this.todayDate);
-      }.bind(this), 1000);
+      }.bind(this), 200);
     },
   },
   beforeDestroy() {
