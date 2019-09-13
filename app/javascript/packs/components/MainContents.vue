@@ -36,7 +36,7 @@ export default {
 
     // Set default position
     this.map.homeZoomLevel = 1;
-    this.map.homeGeoPoint = { longitude: "139", latitude: "35"}
+    //this.map.homeGeoPoint = { longitude: "139", latitude: "35"}
 
     var polygonSeries = this.map.series.push(new am4maps.MapPolygonSeries());
     polygonSeries.useGeodata = true;
@@ -59,7 +59,7 @@ export default {
     var homeButton = new am4core.Button();
     homeButton.events.on("hit", function() {
       this.map.goHome();
-    });
+    }.bind(this));
     homeButton.icon = new am4core.Sprite();
     homeButton.icon.path = "M16,8 L14,8 L14,16 L10,16 L10,10 L6,10 L6,16 L2,16 L2,8 L0,8 L8,0 L16,8 Z M16,8";
 
