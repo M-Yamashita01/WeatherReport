@@ -14,7 +14,7 @@ const SEARCH_ALL_CITY = '';
  * @param {*} callback
  * @return  {res} weather from Rails API
  */
-async function getWeathers(date, mainCityFlag, longitudeMax, longitudeMin, latitudeMax, latitudeMin, callback) {
+async function getWeathers(date, mainCityFlag, longitudeMax, longitudeMin, latitudeMax, latitudeMin) {
 	let res = await axios.get('/api/location_on_forecast_days', {
 		params: {
 			date: date,
@@ -24,13 +24,11 @@ async function getWeathers(date, mainCityFlag, longitudeMax, longitudeMin, latit
 			latitude_max: latitudeMax,
 			latitude_min: latitudeMin,
 		},
-	}).then( (response) => {
-		callback(response);
-	})
-		.catch( (e) => {
-			console.log('Error : Failed to get weather from Rails API.');
-			console.log(e);
-		});
+	}).catch((e) => {
+		console.log('Error : Failed to get weather from Rails API.');
+		console.log(e);
+	});
+	return res.data;
 }
 
 /**
@@ -42,7 +40,7 @@ async function getWeathers(date, mainCityFlag, longitudeMax, longitudeMin, latit
  * @param {*} latitude
  * @param {*} callback
  */
-async function getLocationWeathers(date, zoomLevel, longitude, latitude, callback) {
+function getLocationWeathers(date, zoomLevel, longitude, latitude) {
 	// DBで検索する地域を、主要都市のみか全地域のみかズームの度合いで決定する
 	// デフォルトは主要都市のみ検索とする
 	let mainCityFlag = SEARCH_ONLY_MAIN_CITY;
@@ -63,8 +61,8 @@ async function getLocationWeathers(date, zoomLevel, longitude, latitude, callbac
 		latitudeMin = parseInt(latitude) - 1;
 	}
 
-	await getWeathers(date, mainCityFlag, longitudeMax, longitudeMin, latitudeMax, latitudeMin, callback);
+	return getWeathers(date, mainCityFlag, longitudeMax, longitudeMin, latitudeMax, latitudeMin);
 }
 
-export default {getLocationWeathers};
+export default { getLocationWeathers };
 
