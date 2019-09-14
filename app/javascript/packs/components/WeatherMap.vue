@@ -114,15 +114,6 @@ export default {
     label.dy = 5;
   },
   methods: {
-    getTodayWeathers() {
-      this.updateScope(this.todayDate);
-    },
-    getTommorowWeathers() {
-      this.updateScope(this.tommorowDate);
-    },
-    getDayAfterTommorowDate() {
-      this.updateScope(this.dayAfterTommorowDate);
-    },
     updateScope(date) {
       this.$emit("scopechange", {
         date,
