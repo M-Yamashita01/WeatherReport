@@ -141,25 +141,18 @@ export default {
     }
   },
   async created() {
-    let today = new Date();
-    this.todayDate =
-      today.getFullYear() +
-      "-" +
-      (today.getMonth() + 1) +
-      "-" +
-      today.getDate();
-    this.tommorowDate =
-      today.getFullYear() +
-      "-" +
-      (today.getMonth() + 1) +
-      "-" +
-      (today.getDate() + 1);
-    this.dayAfterTommorowDate =
-      today.getFullYear() +
-      "-" +
-      (today.getMonth() + 1) +
-      "-" +
-      (today.getDate() + 2);
+    const dateToString = date =>
+      date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate();
+
+    const date = new Date();
+    this.todayDate = dateToString(date);
+
+    date.setDate(date.getDate() + 1);
+    this.tommorowDate = dateToString(date);
+
+    date.setDate(date.getDate() + 1);
+    this.dayAfterTommorowDate = dateToString(date);
+
     this.updateScope(this.todayDate);
   },
   watch: {
