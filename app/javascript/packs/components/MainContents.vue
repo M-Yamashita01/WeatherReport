@@ -28,15 +28,13 @@ export default {
   },
   methods: {
     async onScopeChanged(evt) {
-      await Weathers.getLocationWeathers(
+      const locationWeathers = await Weathers.getLocationWeathers(
         evt.date,
         evt.zoomLevel,
         evt.longitude,
-        evt.latitude,
-        weathers => {
-          this.weathers = weathers.data.location_on_forecast;
-        }
+        evt.latitude
       );
+      this.weathers = locationWeathers.location_on_forecast;
     }
   }
 };
