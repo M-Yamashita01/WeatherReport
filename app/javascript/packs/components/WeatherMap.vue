@@ -67,14 +67,11 @@ export default {
 
     // zoom event by click on map
     var polygonTemplate = polygonSeries.mapPolygons.template;
-    polygonTemplate.events.on(
-      "hit",
-      function(ev) {
-        ev.target.series.chart.zoomToMapObject(ev.target);
-        this.currentZoomLevel = ev.target.series.chart.zoomLevel;
-        this.zoomGeoPoint = ev.target.series.chart.zoomGeoPoint;
-      }.bind(this)
-    );
+    polygonTemplate.events.on("hit", ev => {
+      ev.target.series.chart.zoomToMapObject(ev.target);
+      this.currentZoomLevel = ev.target.series.chart.zoomLevel;
+      this.zoomGeoPoint = ev.target.series.chart.zoomGeoPoint;
+    });
 
     // mouse wheel disable
     this.map.chartContainer.wheelable = false;
@@ -84,12 +81,9 @@ export default {
 
     //Add button
     var homeButton = new am4core.Button();
-    homeButton.events.on(
-      "hit",
-      function() {
-        this.map.goHome();
-      }.bind(this)
-    );
+    homeButton.events.on("hit", () => {
+      this.map.goHome();
+    });
     homeButton.icon = new am4core.Sprite();
     homeButton.icon.path =
       "M16,8 L14,8 L14,16 L10,16 L10,10 L6,10 L6,16 L2,16 L2,8 L0,8 L8,0 L16,8 Z M16,8";
@@ -175,12 +169,9 @@ export default {
 
       this.currentZoomLevel = zoomLevel;
 
-      this.timer = window.setTimeout(
-        function() {
-          this.updateScope(this.todayDate);
-        }.bind(this),
-        200
-      );
+      this.timer = window.setTimeout(() => {
+        this.updateScope(this.todayDate);
+      }, 200);
     }
   },
   beforeDestroy() {
