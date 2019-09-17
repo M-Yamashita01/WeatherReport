@@ -1,0 +1,2 @@
+class WeathermapLocation < ApplicationRecord
+end
