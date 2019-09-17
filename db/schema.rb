@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_17_134620) do
+ActiveRecord::Schema.define(version: 2019_09_17_135415) do
 
   create_table "articles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title"
@@ -26,6 +26,29 @@ ActiveRecord::Schema.define(version: 2019_09_17_134620) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["article_id"], name: "index_comments_on_article_id"
+  end
+
+  create_table "current_weather_datas", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.datetime "acquired_datetime", null: false
+    t.bigint "weathermap_location_id", null: false
+    t.integer "weather_group_id", null: false
+    t.float "temperature", null: false
+    t.float "pressure", null: false
+    t.integer "humidity", null: false
+    t.float "temperature_min", null: false
+    t.float "temperature_max", null: false
+    t.float "wind_speed", null: false
+    t.float "wind_degree", null: false
+    t.integer "cloudiness", null: false
+    t.float "rain_1h"
+    t.float "rain_3h"
+    t.float "snow_1h"
+    t.float "snow_3h"
+    t.string "country_code", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["weather_group_id"], name: "index_current_weather_datas_on_weather_group_id"
+    t.index ["weathermap_location_id"], name: "index_current_weather_datas_on_weathermap_location_id"
   end
 
   create_table "location_on_forecast_days", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
