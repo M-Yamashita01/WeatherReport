@@ -16,6 +16,8 @@ class CreateCurrentWeatherDatas < ActiveRecord::Migration[5.2]
       t.float :rain_3h
       t.float :snow_1h
       t.float :snow_3h
+      t.integer :sunrise, limit: 8
+      t.integer :sunset, limit: 8
       t.string :country_code, null: false
 
       t.timestamps

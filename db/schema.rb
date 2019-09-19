@@ -44,6 +44,8 @@ ActiveRecord::Schema.define(version: 2019_09_17_135415) do
     t.float "rain_3h"
     t.float "snow_1h"
     t.float "snow_3h"
+    t.bigint "sunrise"
+    t.bigint "sunset"
     t.string "country_code", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
