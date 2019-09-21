@@ -1,0 +1,2 @@
+class WeatherGroup < ApplicationRecord
+end

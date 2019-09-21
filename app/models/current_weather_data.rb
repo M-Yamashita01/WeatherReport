@@ -1,0 +1,2 @@
+class CurrentWeatherData < ApplicationRecord
+end
