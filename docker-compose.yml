@@ -1,0 +1,22 @@
+version: '3.7'
+services:
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_DATABASE: weather_report_development
+      MYSQL_ROOT_PASSWORD: ${MYSQL_PASS_DEVELOPMENT}
+    ports:
+      - "3306:3306"
+
+  web:
+    build: .
+    command: bundle exec foreman start -f Procfile.dev
+    volumes:
+      - .:/weather_report
+    ports:
+      - '3000:3000'
+      - '3035:3035'
+    links:
+      - db
+    environment:
+      TZ: 'Asia/Tokyo'
