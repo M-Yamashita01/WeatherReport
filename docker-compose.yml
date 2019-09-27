@@ -1,22 +1,41 @@
 version: '3.7'
+
+volumes:
+  exclusion:
+
 services:
   db:
     image: mysql:5.7
     environment:
       MYSQL_DATABASE: weather_report_development
-      MYSQL_ROOT_PASSWORD: ${MYSQL_PASS_DEVELOPMENT}
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_USER: mysql_user
+      MYSQL_PASSWORD: mysql_user
     ports:
       - "3306:3306"
 
-  web:
+  webpacker:
     build: .
-    command: bundle exec foreman start -f Procfile.dev
+    command: bundle exec bin/webpack-dev-server
     volumes:
       - .:/weather_report
+      - exclusion:/weather_report/node_modules      
+    ports:
+      - "8080:8080"
+
+  web:
+    build: .
+    command: bundle exec rails s -p 3000 -b '0.0.0.0'
+    volumes:
+      - .:/weather_report
+      - exclusion:/weather_report/node_modules
     ports:
       - '3000:3000'
-      - '3035:3035'
-    links:
+    depends_on:
       - db
+      - webpacker
     environment:
       TZ: 'Asia/Tokyo'
+      MYSQL_PASS_DEVELOPMENT: mysql_user
+      MYSQL_USER_DEVELOPMENT: mysql_user
+      RAILS_SERVE_STATIC_FILES: 'true'

@@ -43,6 +43,10 @@ class ArticlesController < ApplicationController
     redirect_to articles_path
   end
 
+  def redirect_to_root
+    redirect_to :root
+  end
+
   private
 
   def article_params

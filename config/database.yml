@@ -8,9 +8,9 @@ default: &default
   adapter: mysql2
   encoding: utf8
   pool: 5
-  username: <%= ENV['MYSQL_USER_DEVELOPMENT'] %>
-  password: <%= ENV['MYSQL_PASS_DEVELOPMENT'] %>
-  host: 127.0.0.1
+  username: mysql_user
+  password: mysql_user
+  host: db
   socket: /tmp/mysql.sock
 
 development:
@@ -20,9 +20,9 @@ development:
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
-test:
-  <<: *default
-  database: weather_report_test
+# test:
+#   <<: *default
+#   database: weather_report_test
 
 production:
   <<: *default
