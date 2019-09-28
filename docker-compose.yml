@@ -1,7 +1,6 @@
 version: '3.7'
 
 x-web-container: &web-container
-  build: .
   environment:
     TZ: 'Asia/Tokyo'
     MYSQL_PASS_DEVELOPMENT: mysql_user
@@ -11,6 +10,7 @@ x-web-container: &web-container
 services:
   db:
     image: mysql:5.7
+    command: mysqld --character-set-server=utf8 --collation-server=utf8_unicode_ci
     environment:
       MYSQL_DATABASE: weather_report_development
       MYSQL_ROOT_PASSWORD: password
@@ -24,12 +24,23 @@ services:
   # db migration after mysql startup
   db-migrate:
     << : *web-container
+    build: .
     depends_on:
       - db
     command: './wait-for-it.sh -t 60 -h db -p 3306 -- bin/rails db:migrate RAILS_ENV=development'
 
+  # insert weather/location data to db
+  db-seed:
+    << : *web-container
+    build:
+      context: .
+      dockerfile: Dockerfile.seed
+    depends_on:
+      - db-migrate
+
   web:
     << : *web-container
+    build: .
     command: bundle exec rails s -p 3000 -b '0.0.0.0'
     ports:
       - '3000:3000'
