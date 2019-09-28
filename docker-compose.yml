@@ -44,5 +44,7 @@ services:
     command: sh -c "rm -rf tmp && bundle exec rails s -p 3000 -b '0.0.0.0'"
     ports:
       - '3000:3000'
+    volumes:
+      - ./app/javascript:/weather_report/app/javascript
     depends_on:
       - db-migrate
