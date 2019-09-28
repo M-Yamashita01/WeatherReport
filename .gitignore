@@ -61,3 +61,6 @@ yarn-debug.log*
 .yarn-integrity
 *.DS_Store
 .env
+
+# data directory for docker
+/data

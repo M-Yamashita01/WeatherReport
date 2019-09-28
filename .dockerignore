@@ -1,0 +1,9 @@
+.bundle
+.circleci
+.vscode
+log
+node_modules
+public/packs
+test
+tmp
+vendor
