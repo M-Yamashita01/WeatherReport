@@ -1,14 +1,10 @@
 FROM ruby:2.6.3
 
 WORKDIR /WeatherInfoUpdater
-# RUN git clone -b develop https://github.com/MYamashii/WeatherInfoUpdater .
 
 COPY ./app/models/weather /WeatherInfoUpdater/
 RUN gem install bundler:2.0.1 && \
     bundle install
-
-# WeatherInfoUpdaterは現在localhostにしか対応していないため、力技で別ホストに対応
-# RUN find . -name "*.rb" | xargs -I% sed -i -e "s/host: 'localhost'/host: 'db'/" %
 
 WORKDIR /WeatherInfoUpdater/weatherHack
 
