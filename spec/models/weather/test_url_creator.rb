@@ -1,5 +1,5 @@
 require_relative '../../rails_helper'
-require_relative '../../../app/models/weather/url_creator'
+require_relative '../../../app/models/weather/weatherHack/url_creator'
 
 describe 'WebAPI用URL作成' do
   context '地点のURL作成' do

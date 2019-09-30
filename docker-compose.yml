@@ -6,6 +6,7 @@ x-web-container: &web-container
     MYSQL_PASS_DEVELOPMENT: mysql_user
     MYSQL_USER_DEVELOPMENT: mysql_user
     RAILS_SERVE_STATIC_FILES: 'true'
+    DB_SERVICE_NAME: 'db'
 
 services:
   db:

@@ -1,6 +1,6 @@
 require_relative '../../rails_helper'
-require_relative '../../../app/models/weather/location_id_reader'
-require_relative '../../../app/models/weather/location_list'
+require_relative '../../../app/models/weather/weatherHack/location_id_reader'
+require_relative '../../../app/models/weather/weatherHack/location_list'
 
 
 describe '地点情報取得' do
