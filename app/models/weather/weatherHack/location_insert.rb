@@ -1,8 +1,8 @@
-require 'mysql2'
 require_relative 'location_id_reader'
 require_relative 'location_list'
+require_relative '../db/db_access'
 
-file_path = File.expand_path('main_city.json', __dir__)
+file_path = File.expand_path('../config/weatherHack/main_city.json', __dir__)
 
 city_list = []
 
@@ -13,11 +13,9 @@ File.open(file_path, 'r') do |text|
   }
 end
 
-user_name = ENV['MYSQL_USER_DEVELOPMENT']
-password = ENV['MYSQL_PASS_DEVELOPMENT']
-client = Mysql2::Client.new(host: 'localhost', username: user_name, password: password)
+db_access = DBAccess.new
 query = 'use weather_report_development;'
-results = client.query(query)
+db_access.execute_query(query)
 
 reader = LocationIdReader.new
 location_list = reader.read_all_location_id
@@ -40,11 +38,11 @@ for location_num in 0..location_list.count - 1
   end
   query = "insert into locations values(#{location.id}, \"#{location.area_name}\", \"#{location.pref_name}\", \"#{location.location_name}\", \"#{location.latitude}\", \"#{location.longitude}\", #{main_city_flag}, now(), now());"
   puts query
-  client.query(query)
+  db_access.execute_query(query)
 end
 
 query = 'select * from locations'
-results = client.query(query)
+results = db_access.execute_query(query)
 results.each do |row|
   puts row
 end

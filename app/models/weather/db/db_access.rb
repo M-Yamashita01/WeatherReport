@@ -5,8 +5,9 @@ class DBAccess
   def initialize
     user_name = ENV['MYSQL_USER_DEVELOPMENT']
     password = ENV['MYSQL_PASS_DEVELOPMENT']
+    host_name = ENV['DB_SERVICE_NAME']
 
-    @client = Mysql2::Client.new(host: 'localhost', username: user_name, password: password)
+    @client = Mysql2::Client.new(host: host_name, username: user_name, password: password)
   end
 
   def execute_query(query)

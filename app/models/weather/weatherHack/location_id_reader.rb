@@ -35,7 +35,7 @@ class LocationIdReader
   private
 
   def read_location_id
-    file_path = File.expand_path('../config/location_id_new.json', __dir__)
+    file_path = File.expand_path('../config/weatherHack/location_id_new.json', __dir__)
     parse_text = ''
     File.open(file_path, 'r') do |text|
       parse_text = JSON.parse(text.read)
