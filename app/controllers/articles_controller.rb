@@ -1,14 +1,8 @@
-require_relative '../models/weather/weather_collection'
-require_relative '../models/weather/location_weather_list'
-require_relative '../models/weather/location_weather'
-require_relative '../models/weather/url_creator'
-require_relative '../models/weather/data_reader'
-
 class ArticlesController < ApplicationController
   def index
-    creator = URLCreator.new
-    reader = DataReader.new
-    weather_collection = WeatherCollection.new(creator, reader)
+    #creator = URLCreator.new
+    #reader = DataReader.new
+    #weather_collection = WeatherCollection.new(creator, reader)
     #location_weather_list = weather_collection.get_main_location_weather
 
     #@locations = Location.all

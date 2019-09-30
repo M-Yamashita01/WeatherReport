@@ -1,5 +1,5 @@
 require_relative '../../rails_helper'
-require_relative '../../../app/models/weather/main_city_reader'
+require_relative '../../../app/models/weather/weatherHack/main_city_reader'
 
 describe '主要地点取得' do
   context '主要地点の含み有無' do

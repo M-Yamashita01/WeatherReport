@@ -1,7 +1,7 @@
-require_relative '../../../app/models/weather/url_creator'
-require_relative '../../../app/models/weather/weather_collection'
-require_relative '../../../app/models/weather/location_weather'
-require_relative '../../../app/models/weather/location_weather_list'
+require_relative '../../../app/models/weather/weatherHack/url_creator'
+require_relative '../../../app/models/weather/weatherHack/weather_collection'
+require_relative '../../../app/models/weather/weatherHack/location_weather'
+require_relative '../../../app/models/weather/weatherHack/location_weather_list'
 require_relative 'mock/data_reader_mock'
 
 describe '天気情報取得' do

@@ -1,4 +1,4 @@
-require_relative '../../../../app/models/weather/data_reader'
+require_relative '../../../../app/models/weather/weatherHack/data_reader'
 
 class DataReaderMock < DataReader
   def read(_url)
