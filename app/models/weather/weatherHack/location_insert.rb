@@ -2,6 +2,8 @@ require_relative 'location_id_reader'
 require_relative 'location_list'
 require_relative '../db/db_access'
 
+puts 'location insert start'
+
 file_path = File.expand_path('../config/weatherHack/main_city.json', __dir__)
 
 city_list = []
@@ -22,18 +24,10 @@ location_list = reader.read_all_location_id
 main_city_flag = 0
 for location_num in 0..location_list.count - 1
   location = location_list.get
-  puts location.id
-  puts location.area_name
-  puts location.pref_name
-  puts location.location_name
-  puts location.longitude
-  puts location.latitude
 
   if city_list.include?(location.location_name)
-    puts 1
     main_city_flag = 1
   else
-    puts 0
     main_city_flag = 0
   end
 
