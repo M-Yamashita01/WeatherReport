@@ -44,7 +44,7 @@ def insert_current_weather_data(db_access, current_weather, location_id, weather
                                         current_weather.country_code)
 end
 
-puts 'start insert'
+puts 'current weather insert start'
 
 db_access = DBAccess.new
 query = 'use weather_report_development;'
