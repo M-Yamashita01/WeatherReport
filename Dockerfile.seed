@@ -13,4 +13,4 @@ RUN curl -O https://raw.githubusercontent.com/vishnubob/wait-for-it/54d1f0bfeb65
     chmod +x wait-for-it.sh
 
 # MySQL初期化とMigration待ちのため10秒sleep後、各種データ挿入
-CMD ./wait-for-it.sh -t 60 -h db -p 3306 -- sh -c "sleep 10s && ruby location_insert.rb && ruby location_update.rb && ruby location_weather_insert.rb"
+CMD ./wait-for-it.sh -t 60 -h db -p 3306 -- sh -c "sleep 10s && ruby location_insert.rb && ruby location_weather_insert.rb"
