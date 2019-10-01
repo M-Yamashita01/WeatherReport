@@ -14,6 +14,11 @@ class DBAccess
     return @client.query(query)
   end
 
+  def get_last_insert_id()
+    @client.query('select last_insert_id();')
+    return @client.last_id
+  end
+
   def insert_weathermap_location(city_id, latitude, longitude, city_name)
     current_datetime = Time.now.strftime('%Y-%m-%d %H:%M:%S')
     statement = @client.prepare('INSERT INTO weathermap_locations (city_id, latitude, longitude, city_name, created_at, updated_at) VALUES(?, ?, ?, ?, ?, ?)')
