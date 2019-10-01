@@ -36,13 +36,14 @@ for location_num in 0..location_list.count - 1
     puts 0
     main_city_flag = 0
   end
-  query = "insert into locations values(#{location.id}, \"#{location.area_name}\", \"#{location.pref_name}\", \"#{location.location_name}\", \"#{location.latitude}\", \"#{location.longitude}\", #{main_city_flag}, now(), now());"
-  puts query
-  db_access.execute_query(query)
+
+  # insertする地域情報がDBになければinsert
+  query = "select location_id from locations where location_id = #{location.id};"
+  results = db_access.execute_query(query)
+  if results.size.zero?
+    query = "insert into locations values(#{location.id}, \"#{location.area_name}\", \"#{location.pref_name}\", \"#{location.location_name}\", \"#{location.latitude}\", \"#{location.longitude}\", #{main_city_flag}, now(), now());"
+    db_access.execute_query(query)
+  end
 end
 
-query = 'select * from locations'
-results = db_access.execute_query(query)
-results.each do |row|
-  puts row
-end
+puts 'location insert success.'
