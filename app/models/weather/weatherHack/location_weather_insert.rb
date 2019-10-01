@@ -32,11 +32,10 @@ range.each do |weather_forcast_day_num|
     db_access.execute_query(query)
 
     # その日の地域idをinsert
-    query = 'select last_insert_id();'
-    db_access.execute_query(query)
+    last_insert_id = db_access.get_last_insert_id
 
     # 地域のidと天気idを持つテーブルへinsert
-    query = "insert into location_on_forecast_days values(0, #{location_weather.location_id}, now(), \"#{location_weather.date}\", #{client.last_id}, now(), now());"
+    query = "insert into location_on_forecast_days values(0, #{location_weather.location_id}, now(), \"#{location_weather.date}\", #{last_insert_id}, now(), now());"
     puts query
     db_access.execute_query(query)    
   end
