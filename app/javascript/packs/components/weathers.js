@@ -15,10 +15,20 @@ const SEARCH_ALL_CITY = '';
  * @return  {res} weather from Rails API
  */
 async function getWeathers(date, mainCityFlag, longitudeMax, longitudeMin, latitudeMax, latitudeMin) {
+
+	/*
 	let res = await axios.get('/api/location_on_forecast_days', {
 		params: {
 			date: date,
 			main_city_flag: mainCityFlag,
+			longitude_max: longitudeMax,
+			longitude_min: longitudeMin,
+			latitude_max: latitudeMax,
+			latitude_min: latitudeMin,
+		},
+*/
+	let res = await axios.get('/api/current_weather_datas', {
+		params: {
 			longitude_max: longitudeMax,
 			longitude_min: longitudeMin,
 			latitude_max: latitudeMax,
@@ -30,7 +40,6 @@ async function getWeathers(date, mainCityFlag, longitudeMax, longitudeMin, latit
 	});
 	return res.data;
 }
-
 /**
  *
  *
@@ -64,5 +73,5 @@ function getLocationWeathers(date, zoomLevel, longitude, latitude) {
 	return getWeathers(date, mainCityFlag, longitudeMax, longitudeMin, latitudeMax, latitudeMin);
 }
 
-export default { getLocationWeathers };
+export default {getLocationWeathers};
 
