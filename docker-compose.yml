@@ -47,5 +47,8 @@ services:
       - '3000:3000'
     volumes:
       - ./app/javascript:/weather_report/app/javascript
+      - ./app/controllers:/weather_report/app/controllers
+      - ./app/models:/weather_report/app/models
+      - ./app/views:/weather_report/app/views
     depends_on:
       - db-migrate
