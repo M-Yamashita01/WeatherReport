@@ -1,8 +1,6 @@
 class Api::CurrentWeatherDatasController < ApplicationController
   def index
-    # @current_weather_data = CurrentWeatherData.joins(:weather_group, :weathermap_location).search(search_params).select('current_weather_datas.*, weather_groups.*, weathermap_locations.*')
-    @current_weather_data = CurrentWeatherData.select('current_weather_datas.*')
-    puts @current_weather_data
+    @current_weather_data = CurrentWeatherData.joins(:weathermap_location, :weather_group).search(search_params).select('current_weather_datas.*, weathermap_location.*, weather_group.*')
   end
 
   def search_params
