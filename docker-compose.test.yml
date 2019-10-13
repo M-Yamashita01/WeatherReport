@@ -37,6 +37,9 @@ services:
     ports:
       - '3000:3000'
     volumes:
+      - ./app/controllers:/weather_report/app/controllers
+      - ./app/models:/weather_report/app/models
+      - ./app/views:/weather_report/app/views      
       - ./spec:/weather_report/spec
     depends_on:
       - db-migrate
