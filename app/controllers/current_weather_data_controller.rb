@@ -1,2 +1,0 @@
-class CurrentWeatherDataController < ApplicationController
-end
