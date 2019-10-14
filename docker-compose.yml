@@ -7,6 +7,7 @@ x-web-container: &web-container
     MYSQL_USER_DEVELOPMENT: mysql_user
     RAILS_SERVE_STATIC_FILES: 'true'
     DB_SERVICE_NAME: 'db'
+    OPENWEATHERMAP_API_KEY:
 
 services:
   db:
@@ -37,6 +38,14 @@ services:
       context: .
       dockerfile: Dockerfile.seed
     depends_on:
+      - db-migrate
+
+  db-openweathermap:
+    << : *web-container
+    build:
+      context: .
+      dockerfile: Dockerfile.openWeatherMap
+    depends_on: 
       - db-migrate
 
   web:

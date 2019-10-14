@@ -1,7 +1,7 @@
 require 'json'
 class CityIdReader
   def read_city_id(country_code)
-    file_path = File.expand_path('city.list.json', __dir__)
+    file_path = File.expand_path('../config/openWeatherMap/city.list.json', __dir__)
     parse_text = ''
     File.open(file_path, 'r') do |text|
       parse_text = JSON.parse(text.read)
