@@ -8,6 +8,8 @@ x-web-container: &web-container
     RAILS_SERVE_STATIC_FILES: 'true'
     DB_SERVICE_NAME: 'db'
     OPENWEATHERMAP_API_KEY:
+    MYSQL_DATABASE: weather_report_development
+
 
 services:
   db:
