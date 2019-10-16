@@ -47,8 +47,6 @@ end
 puts 'current weather insert start'
 
 db_access = DBAccess.new
-query = 'use weather_report_development;'
-db_access.execute_query(query)
 
 city_id_reader = CityIdReader.new
 city_id_list = city_id_reader.read_city_id('JP')

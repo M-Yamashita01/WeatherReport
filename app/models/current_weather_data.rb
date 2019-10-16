@@ -1,2 +1,0 @@
-class CurrentWeatherData < ApplicationRecord
-end
