@@ -146,10 +146,10 @@ export default {
         this.imageSeries.data.push({
           latitude: weather.latitude,
           longitude: weather.longitude,
-          imageURL: weather.weather_image_link,
+          imageURL: 'http://openweathermap.org/img/wn/' + weather.weather_icon + '@2x.png',
           width: 32,
           height: 32,
-          label: weather.location_name
+          label: weather.city_name
         });
       });
     },
