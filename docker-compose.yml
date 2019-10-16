@@ -3,8 +3,8 @@ version: '3.7'
 x-web-container: &web-container
   environment:
     TZ: 'Asia/Tokyo'
-    MYSQL_PASS_DEVELOPMENT: mysql_user
-    MYSQL_USER_DEVELOPMENT: mysql_user
+    MYSQL_PASS: mysql_user
+    MYSQL_USER: mysql_user
     RAILS_SERVE_STATIC_FILES: 'true'
     DB_SERVICE_NAME: 'db'
     OPENWEATHERMAP_API_KEY:

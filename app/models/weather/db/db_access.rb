@@ -3,11 +3,14 @@ require 'time'
 
 class DBAccess
   def initialize
-    user_name = ENV['MYSQL_USER_DEVELOPMENT']
-    password = ENV['MYSQL_PASS_DEVELOPMENT']
+    user_name = ENV['MYSQL_USER']
+    password = ENV['MYSQL_PASS']
     host_name = ENV['DB_SERVICE_NAME']
+    database = ENV['MYSQL_DATABASE']
 
     @client = Mysql2::Client.new(host: host_name, username: user_name, password: password)
+    query = 'use ' + database
+    execute_query(query)
   end
 
   def execute_query(query)

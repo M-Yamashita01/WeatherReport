@@ -3,10 +3,12 @@ version: '3.7'
 x-web-container: &test-web-container
   environment:
     TZ: 'Asia/Tokyo'
-    MYSQL_PASS_DEVELOPMENT: mysql_user
-    MYSQL_USER_DEVELOPMENT: mysql_user
+    MYSQL_PASS: mysql_user
+    MYSQL_USER: mysql_user
     RAILS_SERVE_STATIC_FILES: 'true'
     DB_SERVICE_NAME: 'db'
+    OPENWEATHERMAP_API_KEY:
+    MYSQL_DATABASE: weather_report_test
 
 services:
   db:
@@ -29,6 +31,14 @@ services:
     depends_on:
       - db
     command: './wait-for-it.sh -t 60 -h db -p 3306 -- bin/rails db:migrate RAILS_ENV=test'
+
+  db-openweathermap:
+    << : *test-web-container
+    build:
+      context: .
+      dockerfile: Dockerfile.openWeatherMap
+    depends_on: 
+      - db-migrate
 
   web:
     << : *test-web-container
