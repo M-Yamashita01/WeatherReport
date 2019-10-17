@@ -26,6 +26,34 @@ async function getWeathers(date, mainCityFlag, longitudeMax, longitudeMin, latit
 		console.log('Error : Failed to get weather from Rails API.');
 		console.log(e);
 	});
+
+	if (mainCityFlag == SEARCH_ALL_CITY) {
+		return res.data
+	}
+	
+	var patternPrefecture = '-ken';
+	var patternOsaka = 'Ōsaka-fu';
+	var patternKyoto = 'Kyōto-fu'
+	var patternTokyo = 'Tokyo'
+	var patternHokkaido = 'Hokkaidō'
+
+	let weatherDatas = res.data.current_weather_data
+	Object.keys(weatherDatas).forEach(function (key) {
+		if ( ( weatherDatas[key].city_name.endsWith(patternPrefecture) ) ||
+				 ( weatherDatas[key].city_name == patternOsaka ) ||
+				 ( weatherDatas[key].city_name == patternKyoto ) ||
+				 ( weatherDatas[key].city_name == patternTokyo ) ||
+				 ( weatherDatas[key].city_name == patternHokkaido ) ) {
+					console.log(key + 'は' + weatherDatas[key].city_name + 'です');
+					console.log(key + 'は' + weatherDatas[key].longitude + 'です');
+					console.log(key + 'は' + weatherDatas[key].latitude + 'です');
+				 }
+				 else {
+					 delete weatherDatas[key]
+				 }
+		}
+	);
+
 	return res.data;
 }
 /**
