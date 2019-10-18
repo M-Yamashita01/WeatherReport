@@ -21,13 +21,6 @@ jobs:
           name: docker load
 
       - run:
-          name: Install Docker Compose
-          command: |
-            curl -L https://github.com/docker/compose/releases/download/1.24.1/docker-compose-`uname -s`-`uname -m` > ~/docker-compose
-            chmod +x ~/docker-compose
-            sudo mv ~/docker-compose /usr/local/bin/docker-compose
-
-      - run:
           name: docker-compose up
           command: |
             set -x
@@ -48,7 +41,7 @@ jobs:
           path: /tmp/test-results
 
       - run:
-          name: docker-compose dwon
+          name: docker-compose down
           command: |
             set -x
             sudo docker-compose down
