@@ -67,7 +67,7 @@ jobs:
           name: docker-compose down
           command: |
             set -x
-            sudo docker-compose down
+            ${SUDO_COMMAND} docker-compose down
 
       - save_cache:
           key: v1-{{ checksum "Gemfile.lock" }}
