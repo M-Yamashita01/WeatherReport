@@ -1,6 +1,7 @@
 import axios from "axios";
 
-const SEARCH_ONLY_MAIN_CITY = 1;
+const SEARCH_MAIN_CITY = 1;
+const SEARCH_PREFECTURE_CITY = 2;
 const SEARCH_ALL_CITY = "";
 /**
  *
@@ -36,50 +37,50 @@ async function getWeathers(
       console.log(e);
     });
 
+  let weatherDatas = [];
   if (mainCityFlag == SEARCH_ALL_CITY) {
-    return res.data;
-  }
-
-  if (mainCityFlag == SEARCH_ONLY_MAIN_CITY) {
+    weatherDatas = res.data.current_weather_data;
+  } else if (mainCityFlag == SEARCH_MAIN_CITY) {
     const httpObj = new XMLHttpRequest();
     httpObj.onreadystatechange = function() {
-      console.log(httpObj.responseText);
       if (httpObj.responseText == "") {
         console.log("main city locations is none.");
         return;
       }
-      const mainCityData = JSON.parse(httpObj.responseText || "null");
-      for (let i = 0; i < mainCityData.length; i++) {
-        console.log(mainCityData[i]);
-      }
+      const jsonRes = JSON.parse(httpObj.responseText || "null");
+      const mainCityData = jsonRes["main_city"];
+      Object.keys(mainCityData).forEach(function(key) {
+        res.data.current_weather_data.filter(function(item, index) {
+          if (item.city_id == mainCityData[key].id) {
+            weatherDatas.push(item);
+          }
+        });
+      });
     };
 
     httpObj.open("get", "/api/main_city_locations", false);
     httpObj.send(null);
+  } else {
+    const patternPrefecture = "-ken";
+    const patternOsaka = "Ōsaka-fu";
+    const patternKyoto = "Kyōto-fu";
+    const patternTokyo = "Tokyo";
+    const patternHokkaido = "Hokkaidō";
+
+    const currentWeatherDatas = res.data.current_weather_data;
+    Object.keys(currentWeatherDatas).forEach(function(key) {
+      if (
+        currentWeatherDatas[key].city_name.endsWith(patternPrefecture) ||
+        currentWeatherDatas[key].city_name == patternOsaka ||
+        currentWeatherDatas[key].city_name == patternKyoto ||
+        currentWeatherDatas[key].city_name == patternTokyo ||
+        currentWeatherDatas[key].city_name == patternHokkaido
+      ) {
+        weatherDatas.push(currentWeatherDatas[key]);
+      }
+    });
   }
-
-  const patternPrefecture = "-ken";
-  const patternOsaka = "Ōsaka-fu";
-  const patternKyoto = "Kyōto-fu";
-  const patternTokyo = "Tokyo";
-  const patternHokkaido = "Hokkaidō";
-
-  const weatherDatas = res.data.current_weather_data;
-  Object.keys(weatherDatas).forEach(function(key) {
-    if (
-      weatherDatas[key].city_name.endsWith(patternPrefecture) ||
-      weatherDatas[key].city_name == patternOsaka ||
-      weatherDatas[key].city_name == patternKyoto ||
-      weatherDatas[key].city_name == patternTokyo ||
-      weatherDatas[key].city_name == patternHokkaido
-    ) {
-      // nothing
-    } else {
-      delete weatherDatas[key];
-    }
-  });
-
-  return res.data;
+  return weatherDatas;
 }
 /**
  *
@@ -92,10 +93,14 @@ async function getWeathers(
  * @return  {getWeathers} weather from Rails API
  */
 function getLocationWeathers(date, zoomLevel, longitude, latitude) {
-  // DBで検索する地域を、主要都市のみか全地域のみかズームの度合いで決定する
+  // DBで検索する地域を、主要都市のみ、県のみ、全地域のみかズームの度合いで決定する
   // デフォルトは主要都市のみ検索とする
-  let mainCityFlag = SEARCH_ONLY_MAIN_CITY;
-  if (zoomLevel >= 3) {
+
+  console.log(zoomLevel);
+  let mainCityFlag = SEARCH_MAIN_CITY;
+  if (10 >= zoomLevel && zoomLevel >= 3) {
+    mainCityFlag = SEARCH_PREFECTURE_CITY;
+  } else if (zoomLevel > 10) {
     mainCityFlag = SEARCH_ALL_CITY;
   }
 

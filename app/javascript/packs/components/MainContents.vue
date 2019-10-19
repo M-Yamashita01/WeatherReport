@@ -23,7 +23,7 @@ export default {
         evt.longitude,
         evt.latitude
       );
-      this.weathers = locationWeathers.current_weather_data;
+      this.weathers = locationWeathers;
     }
   }
 };
