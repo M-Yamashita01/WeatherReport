@@ -1,8 +1,5 @@
 <template>
-  <weather-map
-    :weathers="weathers"
-    @scopechange="onScopeChanged"
-  />
+  <weather-map :weathers="weathers" @scopechange="onScopeChanged" />
 </template>
 
 <script>

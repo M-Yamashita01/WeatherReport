@@ -1,21 +1,20 @@
 <template>
   <div>
     <ul class="list-inline">
-      <button
-        class="list-inline-item"
-        v-on:click="updateScope(todayDate)"
-      >{{ todayDate}}</button>
-      <button
-        class="list-inline-item"
-        v-on:click="updateScope(tommorowDate);"
-      >{{ tommorowDate }}</button>
+      <button class="list-inline-item" v-on:click="updateScope(todayDate)">
+        {{ todayDate }}
+      </button>
+      <button class="list-inline-item" v-on:click="updateScope(tommorowDate)">
+        {{ tommorowDate }}
+      </button>
       <button
         class="list-inline-item"
         v-on:click="updateScope(dayAfterTommorowDate)"
-      >{{ dayAfterTommorowDate }}</button>
+      >
+        {{ dayAfterTommorowDate }}
+      </button>
     </ul>
-    <div id="chartdiv">
-    </div>
+    <div id="chartdiv"></div>
   </div>
 </template>
 
@@ -60,13 +59,13 @@ export default {
 
     // Set default position
     this.map.homeZoomLevel = 1;
-    //this.map.homeGeoPoint = { longitude: "139", latitude: "35"}
+    // this.map.homeGeoPoint = { longitude: "139", latitude: "35"}
 
-    var polygonSeries = this.map.series.push(new am4maps.MapPolygonSeries());
+    let polygonSeries = this.map.series.push(new am4maps.MapPolygonSeries());
     polygonSeries.useGeodata = true;
 
     // zoom event by click on map
-    var polygonTemplate = polygonSeries.mapPolygons.template;
+    let polygonTemplate = polygonSeries.mapPolygons.template;
     polygonTemplate.events.on("hit", ev => {
       ev.target.series.chart.zoomToMapObject(ev.target);
       this.currentZoomLevel = ev.target.series.chart.zoomLevel;
@@ -79,8 +78,8 @@ export default {
     // zoom control
     this.map.zoomControl = new am4maps.ZoomControl();
 
-    //Add button
-    var homeButton = new am4core.Button();
+    // Add button
+    let homeButton = new am4core.Button();
     homeButton.events.on("hit", () => {
       this.map.goHome();
     });
@@ -95,19 +94,19 @@ export default {
     homeButton.insertBefore(this.map.zoomControl.plusButton);
 
     this.imageSeries = this.map.series.push(new am4maps.MapImageSeries());
-    let imageTemplate = this.imageSeries.mapImages.template;
+    const imageTemplate = this.imageSeries.mapImages.template;
     imageTemplate.propertyFields.longitude = "longitude";
     imageTemplate.propertyFields.latitude = "latitude";
     imageTemplate.nonScaling = true;
 
-    let image = imageTemplate.createChild(am4core.Image);
+    const image = imageTemplate.createChild(am4core.Image);
     image.propertyFields.href = "imageURL";
     image.width = 30;
     image.height = 30;
     image.horizontalCenter = "middle";
     image.verticalCenter = "bottom";
 
-    let label = imageTemplate.createChild(am4core.Label);
+    const label = imageTemplate.createChild(am4core.Label);
     label.text = "{label}";
     label.horizontalCenter = "middle";
     label.verticalCenter = "top";
@@ -146,7 +145,10 @@ export default {
         this.imageSeries.data.push({
           latitude: weather.latitude,
           longitude: weather.longitude,
-          imageURL: 'http://openweathermap.org/img/wn/' + weather.weather_icon + '@2x.png',
+          imageURL:
+            "http://openweathermap.org/img/wn/" +
+            weather.weather_icon +
+            "@2x.png",
           width: 32,
           height: 32,
           label: weather.city_name
