@@ -24,14 +24,14 @@ jobs:
           name: docker-compose up
           command: |
             set -x
-            sudo docker-compose -f docker-compose.test.yml up --force-recreate --build -d
+            docker-compose -f docker-compose.test.yml up --force-recreate --build -d
       
       - run:
           name: run tests
           command: |
             mkdir -p /tmp/test-results
             TEST_FILES="$(circleci tests glob 'spec/**/*_spec.rb' | circleci tests split --split-by=timings)"
-            sudo docker-compose -f docker-compose.test.yml exec web bundle exec rspec --format progress \
+            docker-compose -f docker-compose.test.yml exec web bundle exec rspec --format progress \
                                                                   --format RspecJunitFormatter \
                                                                   --out /tmp/test-results/rspec.xml \
                                                                   $TEST_FILES            
