@@ -1,33 +1,40 @@
 <template>
-  <div>    
-    <div class="twitter-widget" style="width:400px;" :index="i" v-for="(tw, i) in twitterIds" :key="tw.title">
+  <div>
+    <div
+      class="twitter-widget"
+      style="width:400px;"
+      :index="i"
+      v-for="(tw, i) in twitterIds"
+      :key="tw.title"
+    >
       <timeline
         :id="tw"
         :source-type="'profile'"
-        :options="{ 'height': twitterHeight }" >
+        :options="{ height: twitterHeight }"
+      >
       </timeline>
     </div>
   </div>
 </template>
 
 <script>
-import TimeLine from 'vue-tweet-embed/src/timeline';
+import TimeLine from "vue-tweet-embed/src/timeline";
 
 export default {
   components: {
-    'timeline': TimeLine,
+    timeline: TimeLine
   },
   data() {
     return {
-      twitterHeight: '400',
-      twitterIds: [],
-    }
+      twitterHeight: "400",
+      twitterIds: []
+    };
   },
-  created () {
-    var ids = [];
-    ids.push('JMA_kishou');
-    ids.push('tenkijp');    
+  created() {
+    const ids = [];
+    ids.push("JMA_kishou");
+    ids.push("tenkijp");
     this.twitterIds = ids;
   }
-}
+};
 </script>

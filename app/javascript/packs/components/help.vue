@@ -1,5 +1,5 @@
 <template>
-    <div>
-        <p>This is help page.</p>
-    </div>
+  <div>
+    <p>This is help page.</p>
+  </div>
 </template>

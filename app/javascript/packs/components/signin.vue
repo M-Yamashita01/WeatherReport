@@ -7,11 +7,11 @@
 </template>
 
 <script>
-import SignInTemplate from "./signin-template";
+import SignInTemplate from "./SignInTemplate";
 
 export default {
   components: {
-    SignInTemplate,
-  },
+    SignInTemplate
+  }
 };
 </script>

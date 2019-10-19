@@ -1,5 +1,7 @@
 <template>
   <div>
-    <ul>Footer</ul>
+    <ul>
+      Footer
+    </ul>
   </div>
 </template>
