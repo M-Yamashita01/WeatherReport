@@ -1,0 +1,104 @@
+{
+	"main_city":
+  	[
+		{
+			"id": 2130037,
+			"name": "Hokkaidō",
+			"country": "JP",
+			"coord": {
+				"lon": 141.346603,
+				"lat": 43.06451
+			}
+		},
+		{
+			"id": 2112922,
+			"name": "Fukushima-ken",
+			"country": "JP",
+			"coord": {
+				"lon": 140.221985,
+				"lat": 37.38158
+			}
+		},
+		{
+			"id": 1855429,
+			"name": "Niigata-ken",
+			"country": "JP",
+			"coord": {
+				"lon": 138.91748,
+				"lat": 37.52343
+			}
+		},
+		{
+			"id": 1861387,
+			"name": "Ishikawa-ken",
+			"country": "JP",
+			"coord": {
+				"lon": 136.770493,
+				"lat": 36.77145
+			}
+		},    
+		{
+			"id": 1850147,
+			"name": "Tokyo",
+			"country": "JP",
+			"coord": {
+				"lon": 139.691711,
+				"lat": 35.689499
+			}
+		},
+		{
+			"id": 1865694,
+			"name": "Aichi-ken",
+			"country": "JP",
+			"coord": {
+				"lon": 136.906555,
+				"lat": 35.180168
+			}
+		},
+		{
+			"id": 1853904,
+			"name": "Ōsaka-fu",
+			"country": "JP",
+			"coord": {
+				"lon": 135.519684,
+				"lat": 34.68631
+			}
+		},
+		{
+			"id": 1862413,
+			"name": "Hiroshima-ken",
+			"country": "JP",
+			"coord": {
+				"lon": 132.785431,
+				"lat": 34.606731
+			}
+		},
+		{
+			"id": 1859133,
+			"name": "Kōchi-ken",
+			"country": "JP",
+			"coord": {
+				"lon": 133.364014,
+				"lat": 33.428009
+			}
+		},
+		{
+			"id": 1863958,
+			"name": "Fukuoka-ken",
+			"country": "JP",
+			"coord": {
+				"lon": 130.664719,
+				"lat": 33.52813
+			}
+		},
+		{
+			"id": 1854345,
+			"name": "Okinawa-ken",
+			"country": "JP",
+			"coord": {
+				"lon": 126.668709,
+				"lat": 25.772249
+			}
+		}
+	]
+}

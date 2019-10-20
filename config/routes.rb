@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     resources :location_on_forecast_days, only: %i[index]
     resources :current_weather_datas, only: %i[index]
     resources :locations, only: %i[index]
+    resources :main_city_locations, only: %i[index]
   end
 
   namespace :api do
