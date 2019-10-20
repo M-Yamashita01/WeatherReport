@@ -45,4 +45,9 @@ class DBAccess
       humidity, temperature_min, temperature_max, wind_speed, wind_degree, cloudiness, rain_1h, rain_3h,
       snow_1h, snow_3h, sunrise, sunset, country_code, current_datetime, current_datetime)
   end
+
+  def delete_current_weather_data_by_weathermap_location_id(weathermap_location_id)
+    statement = @client.prepare('DELETE FROM current_weather_datas where weathermap_location_id = ?')
+    statement.execute(weathermap_location_id)
+  end
 end
