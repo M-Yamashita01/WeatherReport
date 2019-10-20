@@ -26,7 +26,7 @@ def insert_weather_group(db_access, current_weather)
   results = db_access.execute_query(query)
 
   if results.size.zero?
-    db_access.insert_weather_group(current_weather.weather_group_id, current_weather.weather_icon, current_weather.weather_main, current_weather.weather_description)  
+    db_access.insert_weather_group(current_weather.weather_group_id, current_weather.weather_icon, current_weather.weather_main, current_weather.weather_description)
     results = db_access.execute_query(query)
   end
 
@@ -36,6 +36,7 @@ def insert_weather_group(db_access, current_weather)
 end
 
 def insert_current_weather_data(db_access, current_weather, location_id, weather_group_id)
+  db_access.delete_current_weather_data_by_weathermap_location_id(location_id)
   db_access.insert_current_weather_data(location_id, weather_group_id, current_weather.temperature,
                                         current_weather.pressure, current_weather.humidity, current_weather.temperature_min,
                                         current_weather.temperature_max, current_weather.wind_speed, current_weather.wind_degree,
@@ -59,10 +60,9 @@ city_id_list.each do |city|
   timers.after(1) { current_weather = current_weather_getter.get_weather(city['id']) }
   timers.wait
 
-  puts current_weather.city_name
   location_id = insert_weathermap_location(db_access, current_weather)
   weather_group_id = insert_weather_group(db_access, current_weather)
   insert_current_weather_data(db_access, current_weather, location_id, weather_group_id)
 end
 
-puts 'success'
+puts 'current weather insert end'
