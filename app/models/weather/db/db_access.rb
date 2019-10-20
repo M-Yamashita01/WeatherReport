@@ -47,7 +47,7 @@ class DBAccess
   end
 
   def delete_current_weather_data_by_weathermap_location_id(weathermap_location_id)
-    statement = @client.prepare('DELETE FROM from current_weather_datas where weathermap_location_id = ?')
+    statement = @client.prepare('DELETE FROM current_weather_datas where weathermap_location_id = ?')
     statement.execute(weathermap_location_id)
   end
 end
