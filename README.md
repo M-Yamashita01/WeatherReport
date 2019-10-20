@@ -11,7 +11,7 @@ cloneしてきた環境に、以下.envファイルを作り、API Keyをセッ�
 OPENWEATHERMAP_API_KEY=取得したAPIキー
 ```
 
-docker-composeによる起動
+docker-composeで起動します。
 ```
 $ docker-compose up --force-recreate --build
 ```
@@ -21,5 +21,5 @@ db-openweathermapコンテナ内で天気情報を取得し、DBに入れてい�
 
 
 ## 補足情報
-地図にはamchartsを使用
+地図にはamchartsを使用  
 ログインにはdevise tokenを使用
