@@ -21,9 +21,7 @@
 
 <script>
 import axios from "axios";
-import store from "../../store/index";
-
-const PASSWORD_MIN_LENGTH = 8;
+import store from "./store/index";
 
 export default {
   el: "login",
@@ -37,7 +35,7 @@ export default {
 
   methods: {
     postUser: function(params, callback) {
-      const res = axios
+      axios
         .post("/api/auth", {
           name: params.name,
           email: params.email,

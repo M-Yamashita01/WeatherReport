@@ -1,8 +1,8 @@
 import VueRouter from "vue-router";
-import Index from "./packs/Index";
-import LogIn from "./packs/components/Login";
-import SignIn from "./packs/components/SignIn";
-import LogOut from "./packs/components/Logout";
+import Index from "./components/Index";
+import LogIn from "./components/Login";
+import SignIn from "./components/SignIn";
+import LogOut from "./components/Logout";
 
 const routes = [
   {

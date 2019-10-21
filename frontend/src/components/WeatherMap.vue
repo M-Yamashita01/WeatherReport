@@ -21,10 +21,7 @@
 <script>
 import * as am4core from "@amcharts/amcharts4/core";
 import * as am4maps from "@amcharts/amcharts4/maps";
-import am4geodata_japanLow from "@amcharts/amcharts4-geodata/japanLow";
-import axios from "axios";
-
-import { setTimeout } from "timers";
+import am4geodataJapanLow from "@amcharts/amcharts4-geodata/japanLow";
 
 export default {
   props: {
@@ -52,7 +49,7 @@ export default {
     this.map = am4core.create("chartdiv", am4maps.MapChart);
 
     // Set japan map definition
-    this.map.geodata = am4geodata_japanLow;
+    this.map.geodata = am4geodataJapanLow;
 
     // Set projection
     this.map.projection = new am4maps.projections.Miller();
@@ -61,11 +58,11 @@ export default {
     this.map.homeZoomLevel = 1;
     // this.map.homeGeoPoint = { longitude: "139", latitude: "35"}
 
-    let polygonSeries = this.map.series.push(new am4maps.MapPolygonSeries());
+    const polygonSeries = this.map.series.push(new am4maps.MapPolygonSeries());
     polygonSeries.useGeodata = true;
 
     // zoom event by click on map
-    let polygonTemplate = polygonSeries.mapPolygons.template;
+    const polygonTemplate = polygonSeries.mapPolygons.template;
     polygonTemplate.events.on("hit", ev => {
       ev.target.series.chart.zoomToMapObject(ev.target);
       this.currentZoomLevel = ev.target.series.chart.zoomLevel;
@@ -79,7 +76,7 @@ export default {
     this.map.zoomControl = new am4maps.ZoomControl();
 
     // Add button
-    let homeButton = new am4core.Button();
+    const homeButton = new am4core.Button();
     homeButton.events.on("hit", () => {
       this.map.goHome();
     });

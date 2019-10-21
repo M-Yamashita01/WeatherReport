@@ -14,8 +14,8 @@
 </template>
 
 <script>
-import MainContents from "./components/MainContents";
-import SideBarContents from "./components/Sidebar";
+import MainContents from "./MainContents";
+import SideBarContents from "./Sidebar";
 
 export default {
   name: "top",
