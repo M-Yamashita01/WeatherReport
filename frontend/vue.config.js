@@ -17,12 +17,17 @@ module.exports = {
     port: 8080,
     disableHostCheck: true,
     proxy: {
-      "api/auth/registrations": {
+      "/api/auth/registrations": {
         target: "http://0.0.0.0:3000",
         ws: true,
         changeOrigin: true
       },
-      "api/current_weather_datas": {
+      "/api/current_weather_datas": {
+        target: "http://0.0.0.0:3000",
+        ws: true,
+        changeOrigin: true
+      },
+      "/api/main_city_locations": {
         target: "http://0.0.0.0:3000",
         ws: true,
         changeOrigin: true

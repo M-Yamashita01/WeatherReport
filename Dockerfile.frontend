@@ -1,4 +1,4 @@
-FROM node:lts-alpine
+FROM node:12.13.0
 
 # カレントワーキングディレクトリとして 'app' フォルダを指定する
 WORKDIR /app
@@ -16,3 +16,5 @@ COPY ./frontend/ .
 RUN yarn build
 
 EXPOSE 8080
+
+CMD [ "./node_modules/http-server/bin/http-server", "dist" ]

@@ -33,15 +33,6 @@ services:
       - db
     command: './wait-for-it.sh -t 60 -h db -p 3306 -- bin/rails db:migrate RAILS_ENV=development'
 
-  # insert weather/location data to db
-  # db-seed:
-  #  << : *web-container
-  #  build:
-  #    context: .
-  #    dockerfile: Dockerfile.seed
-  #  depends_on:
-  #    - db-migrate
-
   db-openweathermap:
     << : *web-container
     build:
@@ -68,8 +59,7 @@ services:
     build: 
       context: .
       dockerfile: Dockerfile.frontend
-    command: yarn run serve
     ports:
-      - '8000:8000'
+      - '8080:8080'
     depends_on:
       - server
