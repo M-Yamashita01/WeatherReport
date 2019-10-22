@@ -13,16 +13,9 @@ import "./assets/application.scss";
 Vue.use(VueRouter);
 Vue.use(BootstrapVue);
 
-// document.addEventListener("DOMContentLoaded", () => {
 new Vue({
   name: "#application",
   store: store,
   router,
   render: h => h(App)
 }).$mount("#app");
-// });
-
-/* new Vue({
-  render: h => h(App)
-}).$mount("#app");
-*/
