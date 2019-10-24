@@ -17,4 +17,4 @@ RUN yarn build
 
 EXPOSE 8080
 
-CMD [ "./node_modules/http-server/bin/http-server", "dist" ]
+CMD ["yarn", "run", "serve"]
