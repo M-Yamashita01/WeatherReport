@@ -1,0 +1,20 @@
+FROM node:12.13.0
+
+# カレントワーキングディレクトリとして 'app' フォルダを指定する
+WORKDIR /app
+
+# `package.json` と `package-lock.json` （あれば）を両方コピーする
+COPY ./frontend/package*.json ./
+
+# プロジェクトの依存ライブラリをインストールする
+RUN yarn install
+
+# カレントワーキングディレクトリ(つまり 'app' フォルダ)にプロジェクトのファイルやフォルダをコピーする
+COPY ./frontend/ .
+
+# 本番向けに圧縮しながらアプリケーションをビルドする
+RUN yarn build
+
+EXPOSE 8080
+
+CMD ["yarn", "run", "serve"]

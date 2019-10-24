@@ -17,7 +17,7 @@
 
 <script>
 import axios from "axios";
-import store from "../../store/index";
+import store from "./store/index";
 
 export default {
   data: function() {
@@ -30,7 +30,7 @@ export default {
 
   methods: {
     postUser: function(params, callback) {
-      const res = axios
+      axios
         .post("/api/auth/sign_in", {
           email: params.email,
           password: params.password
@@ -74,12 +74,6 @@ export default {
         }.bind(this)
       );
     }
-  }
-};
-
-const auth = {
-  login: function(id, pass) {
-    window.alert("userid:" + id + "\n" + "password:" + pass);
   }
 };
 

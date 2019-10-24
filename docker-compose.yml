@@ -33,15 +33,6 @@ services:
       - db
     command: './wait-for-it.sh -t 60 -h db -p 3306 -- bin/rails db:migrate RAILS_ENV=development'
 
-  # insert weather/location data to db
-  db-seed:
-    << : *web-container
-    build:
-      context: .
-      dockerfile: Dockerfile.seed
-    depends_on:
-      - db-migrate
-
   db-openweathermap:
     << : *web-container
     build:
@@ -50,7 +41,7 @@ services:
     depends_on: 
       - db-migrate
 
-  web:
+  server:
     << : *web-container
     build: .
     command: sh -c "rm -rf tmp && bundle exec rails s -p 3000 -b '0.0.0.0'"
@@ -63,3 +54,12 @@ services:
       - ./app/views:/weather_report/app/views
     depends_on:
       - db-migrate
+
+  client:
+    build: 
+      context: .
+      dockerfile: Dockerfile.frontend
+    ports:
+      - '8080:8080'
+    depends_on:
+      - server
