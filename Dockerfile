@@ -31,10 +31,4 @@ COPY Gemfile.lock ./
 RUN gem install bundler:2.0.1 && \
     bundle install
 
-# packageを追加する
-COPY package.json ./
-
-COPY yarn.lock ./
-RUN yarn install
-
 COPY . ./
