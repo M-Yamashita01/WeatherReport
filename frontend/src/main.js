@@ -5,9 +5,6 @@ import store from "./components/store/index";
 import router from "./routes";
 import App from "./App";
 
-import "bootstrap/dist/css/bootstrap.css";
-import "bootstrap-vue/dist/bootstrap-vue.css";
-
 import "./assets/application.scss";
 
 Vue.use(VueRouter);
