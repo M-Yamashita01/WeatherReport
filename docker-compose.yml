@@ -61,5 +61,9 @@ services:
       dockerfile: Dockerfile.frontend
     ports:
       - '8080:8080'
+    volumes:
+      - ./frontend/src:/app/src
+      - ./frontend/static:/app/static
+      - ./frontend/public:/app/public
     depends_on:
       - server
