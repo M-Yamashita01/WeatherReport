@@ -40,7 +40,8 @@ export default {
             response.headers["access-token"],
             response.headers["client"],
             response.headers["uid"],
-            response.data["data"]["name"]
+            response.data["data"]["name"],
+            response.data["data"]["email"]
           );
           store.dispatch("create", loginUser);
 
@@ -82,11 +83,13 @@ const loginUser = {
   client: "",
   uid: "",
   userName: "",
-  setToken: function(accessToken, client, uid, userName) {
+  email: "",
+  setToken: function(accessToken, client, uid, userName, email) {
     this.accessToken = accessToken;
     this.client = client;
     this.uid = uid;
     this.userName = userName;
+    this.email = email;
   }
 };
 </script>
