@@ -11,7 +11,7 @@
             <div class="card text-center">
               <!--Card content-->
               <div class="card-body">
-                <router-link class="text-body" to="/">
+                <router-link class="text-body" to="/profile-edit">
                   <button
                     type="button"
                     class="btn btn-sm waves-effect profile-edit"
