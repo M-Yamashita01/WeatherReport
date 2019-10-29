@@ -2,7 +2,11 @@
   <div id="login-template">
     <div>
       <label>メールアドレス:</label>
-      <input type="email" placeholder="xxx@yyy.zzz" v-model="user.email" />
+      <input
+        type="email"
+        placeholder="weather@report.com"
+        v-model="user.email"
+      />
     </div>
     <div>
       <label>パスワード</label>

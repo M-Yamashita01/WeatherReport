@@ -43,6 +43,15 @@ export default new Vuex.Store({
       }
       return false;
     },
+    getAccessToken(state) {
+      return state.accessToken;
+    },
+    getClient(state) {
+      return state.client;
+    },
+    getUid(state) {
+      return state.uid;
+    },
     getUserName(state) {
       return state.userName;
     },
