@@ -9,7 +9,8 @@ export default new Vuex.Store({
     accessToken: "",
     client: "",
     uid: "",
-    userName: ""
+    userName: "",
+    email: ""
   },
   mutations: {
     create(state, data) {
@@ -17,12 +18,14 @@ export default new Vuex.Store({
       state.client = data.client;
       state.uid = data.uid;
       state.userName = data.userName;
+      state.email = data.email;
     },
     destroy(state) {
       state.accessToken = "";
       state.client = "";
       state.uid = "";
       state.userName = "";
+      state.email = "";
     }
   },
   actions: {
@@ -40,8 +43,20 @@ export default new Vuex.Store({
       }
       return false;
     },
+    getAccessToken(state) {
+      return state.accessToken;
+    },
+    getClient(state) {
+      return state.client;
+    },
+    getUid(state) {
+      return state.uid;
+    },
     getUserName(state) {
       return state.userName;
+    },
+    getEmail(state) {
+      return state.email;
     }
   },
   plugins: [

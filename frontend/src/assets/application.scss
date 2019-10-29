@@ -65,3 +65,11 @@ $secondary-color: color("cyan", "base") !default;
   .bs-navbar {
     background-color: #563d7c
   }
+
+  .profile-edit {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    width: auto;
+    text-align: center;
+  }

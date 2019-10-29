@@ -26,7 +26,14 @@
         </li>
         <li class="nav-item" v-if="logined">
           <div>
-            {{ userName }}
+            <router-link
+              to="/profile"
+              data-toggle="collapse"
+              data-target=".navbar-collapse.show"
+              class="text-white"
+            >
+              {{ userName }}
+            </router-link>
             <router-link
               to="/logout"
               data-toggle="collapse"

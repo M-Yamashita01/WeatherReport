@@ -3,6 +3,8 @@ import Index from "./components/Index";
 import LogIn from "./components/Login";
 import SignIn from "./components/SignIn";
 import LogOut from "./components/Logout";
+import Profile from "./components/Profile";
+import ProfileEdit from "./components/ProfileEdit";
 
 const routes = [
   {
@@ -20,6 +22,14 @@ const routes = [
   {
     path: "/logout",
     component: LogOut
+  },
+  {
+    path: "/profile",
+    component: Profile
+  },
+  {
+    path: "/profile-edit",
+    component: ProfileEdit
   }
 ];
 
