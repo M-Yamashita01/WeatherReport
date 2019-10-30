@@ -76,20 +76,6 @@
                   <a
                     class="list-group-item list-group-item-action waves-effect"
                   >
-                    <!-- Material input -->
-                    <div class="md-form">
-                      <i class="fas fa-lock prefix"></i>
-                      <input
-                        type="password"
-                        class="form-control"
-                        placeholder="パスワード"
-                        value="abcdef"
-                      />
-                    </div>
-                  </a>
-                  <a
-                    class="list-group-item list-group-item-action waves-effect"
-                  >
                     <div>
                       <button
                         @click="updateUser"
@@ -183,21 +169,21 @@ export default {
     },
     currentUserProfile: function() {
       return {
-        userName: "",
-        email: "",
         assetsImage: "",
         accessToken: "",
         client: "",
-        uid: ""
+        uid: "",
+        userName: "",
+        email: ""
       };
     },
     setUserProfile: function() {
-      this.user.userName = store.getters.getUserName;
-      this.user.email = store.getters.getEmail;
-      this.user.assetsImage = assetsImage;
       this.user.accessToken = store.getters.getAccessToken;
       this.user.client = store.getters.getClient;
       this.user.uid = store.getters.getUid;
+      this.user.userName = store.getters.getUserName;
+      this.user.email = store.getters.getEmail;
+      this.user.assetsImage = assetsImage;
     }
   }
 };
