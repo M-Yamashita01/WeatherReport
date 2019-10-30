@@ -11,7 +11,7 @@
             <div class="card text-center">
               <!--Card content-->
               <div class="card-body">
-                <router-link class="text-body" to="/">
+                <router-link class="text-body" to="/profile">
                   <button type="button" class="btn btn-sm waves-effect">
                     プロフィールへ戻る
                   </button>
@@ -71,20 +71,6 @@
                         v-model="user.email"
                       />
                       <label for="inputIconEx1"></label>
-                    </div>
-                  </a>
-                  <a
-                    class="list-group-item list-group-item-action waves-effect"
-                  >
-                    <!-- Material input -->
-                    <div class="md-form">
-                      <i class="fas fa-lock prefix"></i>
-                      <input
-                        type="password"
-                        class="form-control"
-                        placeholder="パスワード"
-                        value="abcdef"
-                      />
                     </div>
                   </a>
                   <a
@@ -173,7 +159,7 @@ export default {
       this.putUser(this.user, function(err, user) {
         if (err) {
           alert(
-            "更新できませんでした。ユーザ名、メールアドレス、パスワードにミスがあります。"
+            "更新できませんでした。ユーザ名、メールアドレスに間違いがあります。"
           );
           console.log(err.toString());
         } else {
@@ -183,21 +169,21 @@ export default {
     },
     currentUserProfile: function() {
       return {
-        userName: "",
-        email: "",
         assetsImage: "",
         accessToken: "",
         client: "",
-        uid: ""
+        uid: "",
+        userName: "",
+        email: ""
       };
     },
     setUserProfile: function() {
-      this.user.userName = store.getters.getUserName;
-      this.user.email = store.getters.getEmail;
-      this.user.assetsImage = assetsImage;
       this.user.accessToken = store.getters.getAccessToken;
       this.user.client = store.getters.getClient;
       this.user.uid = store.getters.getUid;
+      this.user.userName = store.getters.getUserName;
+      this.user.email = store.getters.getEmail;
+      this.user.assetsImage = assetsImage;
     }
   }
 };
