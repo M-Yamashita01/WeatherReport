@@ -11,7 +11,7 @@
             <div class="card text-center">
               <!--Card content-->
               <div class="card-body">
-                <router-link class="text-body" to="/">
+                <router-link class="text-body" to="/profile">
                   <button type="button" class="btn btn-sm waves-effect">
                     プロフィールへ戻る
                   </button>
@@ -159,7 +159,7 @@ export default {
       this.putUser(this.user, function(err, user) {
         if (err) {
           alert(
-            "更新できませんでした。ユーザ名、メールアドレス、パスワードにミスがあります。"
+            "更新できませんでした。ユーザ名、メールアドレスに間違いがあります。"
           );
           console.log(err.toString());
         } else {
