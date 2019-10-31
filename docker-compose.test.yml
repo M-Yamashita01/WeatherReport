@@ -32,20 +32,18 @@ services:
       - db
     command: './wait-for-it.sh -t 60 -h db -p 3306 -- bin/rails db:migrate RAILS_ENV=test'
 
-  db-openweathermap:
-    << : *test-web-container
-    build:
-      context: .
-      dockerfile: Dockerfile.openWeatherMap
-    depends_on: 
-      - db-migrate
-
   server:
     << : *test-web-container
     build: .
     command: sh -c "rm -rf tmp && bundle exec rails s -p 3000 -b '0.0.0.0'"
     ports:
       - '3000:3000'
+    volumes: 
+      - ./app/javascript:/weather_report/app/javascript
+      - ./app/controllers:/weather_report/app/controllers
+      - ./app/models:/weather_report/app/models
+      - ./app/views:/weather_report/app/views
+      - ./spec:/weather_report/spec
     depends_on:
       - db-migrate
 
