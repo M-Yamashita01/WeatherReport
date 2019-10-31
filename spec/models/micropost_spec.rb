@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe Micropost, type: :model do
   before(:each) do
     @user = FactoryBot.create(:user)
-    @micropost = Micropost.new(content: 'Lorem ipsum', user_id: @user.id)
+    @micropost = @user.microposts.build(content: 'Lorem ipsum')
   end
 
   describe '投稿データが存在する場合' do
