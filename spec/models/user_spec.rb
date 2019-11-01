@@ -10,7 +10,7 @@ RSpec.describe User, type: :model do
       @user.save
       @user.microposts.create(content: 'test')
       @user.destroy
-      
+
       expect(Micropost.count).to eq 0
     end
   end
