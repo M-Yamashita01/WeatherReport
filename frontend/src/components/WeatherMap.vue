@@ -137,7 +137,6 @@ export default {
   watch: {
     weathers(weathers) {
       this.imageSeries.data = [{}];
-
       weathers.forEach(weather => {
         this.imageSeries.data.push({
           latitude: weather.latitude,
