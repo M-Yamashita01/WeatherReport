@@ -131,8 +131,6 @@ export default {
 
     date.setDate(date.getDate() + 1);
     this.dayAfterTommorowDate = dateToString(date);
-
-    this.updateScope(this.todayDate);
   },
   watch: {
     weathers(weathers) {
