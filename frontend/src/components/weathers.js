@@ -21,39 +21,29 @@ async function getWeathers(
   latitudeMax,
   latitudeMin
 ) {
-  console.log("getWeathers start.");
   let weatherDatas = [];
   await request
     .getWeathers(longitudeMax, longitudeMin, latitudeMax, latitudeMin)
-    .then(response => {
-      console.log("set response");
-      console.log(response);
-      console.log(response.data.current_weather_data);
-      weatherDatas = response.data.current_weather_data;
-      // return response; // ⇦これが見えていない。undefinedになる
-      /*
-      console.log("getWeathers finished.");
-      console.log(response);
-      console.log(response.data);
-      console.log(response.data.current_weather_data);
-      return response.data.current_weather_data;
-      */
+    .then(async response => {
+      await getWeathersForSpecifiedCity(
+        response.data.current_weather_data,
+        targetCity
+      )
+        .then(specifiedCityWeathers => {
+          weatherDatas = specifiedCityWeathers;
+        })
+        .catch(error => {
+          console.log("getWeathersForSpecifiedCity failed.");
+          console.log(error);
+          weatherDatas = [];
+        });
     })
     .catch(error => {
-      console.log("weathers does not exist.");
+      console.log("getWeathers failed");
+      console.log(error);
       return [];
     });
-  console.log("getWeathers return");
   return weatherDatas;
-  /*    .then(weathers => {
-      console.log("Start getWeathersForSpecifiedCity function");
-      return getWeathersForSpecifiedCity(weathers, targetCity);
-    })
-    .catch(error => {
-      console.log("weathers does not exist.");
-      return [];
-    });
-    */
 }
 
 /**
@@ -63,33 +53,33 @@ async function getWeathers(
  * @param {*} targetCity
  * @return {weatherDatas}
  */
-/*
-function getWeathersForSpecifiedCity(weathers, targetCity) {
-  const weatherDatas = [];
+async function getWeathersForSpecifiedCity(weathers, targetCity) {
+  let weatherDatas = [];
 
-  console.log("getWeathersForSpecifiedCity start");
-  console.log(weathers);
   if (targetCity == TARGET_ALL_CITY) {
     weatherDatas = weathers;
   } else if (targetCity == TARGET_MAIN_CITY) {
-    console.log("Start getMainCityLocations");
-    const mainCityData = request.getMainCityLocations();
-    console.log("Fnished getMainCityLocations");
-    if (mainCityData) {
-      console.log("maiinCityData existed");
-      Object.keys(mainCityData).forEach(function(key) {
-        weathers.filter(function(item, index) {
-          if (item.city_id == mainCityData[key].id) {
-            weatherDatas.push(item);
-          }
-        });
+    await request
+      .getMainCityLocations()
+      .then(mainCityData => {
+        if (mainCityData) {
+          Object.keys(mainCityData).forEach(function(key) {
+            weathers.filter(function(item, index) {
+              if (item.city_id == mainCityData[key].id) {
+                weatherDatas.push(item);
+              }
+            });
+          });
+        } else {
+          console.log("main city does not exist.");
+          weatherDatas = [];
+        }
+      })
+      .catch(error => {
+        console.log("getMainCityLocations failed.");
+        console.log(error);
+        weatherDatas = [];
       });
-      console.log("weatherDatas pushed finished");
-      console.log(weatherDatas);
-    } else {
-      console.log("getWeathersForSpecifiedCity error");
-      return [];
-    }
   } else {
     const patternPrefecture = "-ken";
     const patternOsaka = "Ōsaka-fu";
@@ -112,7 +102,7 @@ function getWeathersForSpecifiedCity(weathers, targetCity) {
   }
   return weatherDatas;
 }
-*/
+
 /**
  *
  *
@@ -146,7 +136,6 @@ async function getLocationWeathers(date, zoomLevel, longitude, latitude) {
       latitudeMin = parseInt(latitude) - 1;
     }
 
-    console.log("Start getWeathers");
     let weatherDatas = [];
     await getWeathers(
       date,
@@ -156,19 +145,17 @@ async function getLocationWeathers(date, zoomLevel, longitude, latitude) {
       latitudeMax,
       latitudeMin
     )
-      .then(re => {
-        console.log("Finshed getWeathers");
-        console.log(re);
-        weatherDatas = re;
+      .then(weathers => {
+        weatherDatas = weathers;
       })
       .catch(error => {
-        console.log("Error getWeathers");
+        console.log("getWeathers failed.");
         console.log(error);
         weatherDatas = [];
       });
     return weatherDatas;
-  } catch (err) {
-    console.log(err);
+  } catch (error) {
+    console.log(error);
   }
 }
 

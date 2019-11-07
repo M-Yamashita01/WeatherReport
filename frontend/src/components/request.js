@@ -13,6 +13,7 @@ async function getWeathers(
   latitudeMax,
   latitudeMin
 ) {
+  const response = "";
   return await axios
     .get("/api/current_weather_datas", {
       params: {
@@ -35,7 +36,7 @@ async function getWeathers(
  *
  */
 async function getMainCityLocations() {
-  const res = await axios
+  return await axios
     .get("/api/main_city_locations")
     .then(response => {
       return response.data.main_city;
