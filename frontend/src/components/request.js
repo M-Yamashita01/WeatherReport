@@ -13,8 +13,8 @@ async function getWeathers(
   latitudeMax,
   latitudeMin
 ) {
-  const response = "";
-  return await axios
+  let weatherDatas = [];
+  await axios
     .get("/api/current_weather_datas", {
       params: {
         longitude_max: longitudeMax,
@@ -24,27 +24,31 @@ async function getWeathers(
       }
     })
     .then(response => {
-      return response;
+      console.log(response);
+      weatherDatas = response.data.current_weather_data;
     })
     .catch(error => {
       printResponseErrorLog(error);
       throw error;
     });
+  return weatherDatas;
 }
 
 /**
  *
  */
 async function getMainCityLocations() {
-  return await axios
+  let mainCityDatas = [];
+  await axios
     .get("/api/main_city_locations")
     .then(response => {
-      return response.data.main_city;
+      mainCityDatas = response.data.main_city;
     })
     .catch(err => {
       printResponseErrorLog(err);
-      return [];
+      mainCityDatas = [];
     });
+  return mainCityDatas;
 }
 
 /**

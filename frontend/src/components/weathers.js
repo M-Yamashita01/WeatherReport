@@ -25,10 +25,7 @@ async function getWeathers(
   await request
     .getWeathers(longitudeMax, longitudeMin, latitudeMax, latitudeMin)
     .then(async response => {
-      await getWeathersForSpecifiedCity(
-        response.data.current_weather_data,
-        targetCity
-      )
+      await getWeathersForSpecifiedCity(response, targetCity)
         .then(specifiedCityWeathers => {
           weatherDatas = specifiedCityWeathers;
         })
