@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import axios from "axios";
+import request from "./request";
 import store from "./store/index";
 
 export default {
@@ -33,12 +33,9 @@ export default {
   },
 
   methods: {
-    postUser: function(params, callback) {
-      axios
-        .post("/api/auth/sign_in", {
-          email: params.email,
-          password: params.password
-        })
+    postUser: async function(params, callback) {
+      await request
+        .postSignin(params.email, params.password)
         .then(response => {
           loginUser.setToken(
             response.headers["access-token"],
@@ -48,11 +45,9 @@ export default {
             response.data["data"]["email"]
           );
           store.dispatch("create", loginUser);
-
-          callback(null, params);
         })
-        .catch(err => {
-          callback(err, params);
+        .catch(error => {
+          throw error;
         });
     },
 
@@ -64,20 +59,26 @@ export default {
     },
 
     loginUser: function() {
-      this.postUser(
-        this.user,
-        function(err, user) {
-          this.sending = false;
-          if (err) {
-            this.error = err.toString();
+      this.postUser(this.user)
+        .then(response => {
+          this.error = null;
+          this.user = this.defautUser();
+          alert("ログインしました");
+          // トップページに戻る
+          document.location = "/";
+        })
+        .catch(error => {
+          if (error.response.status == 401) {
+            this.error = "メールアドレス、もしくはパスワードが間違っています。";
+            this.user.password = "";
           } else {
-            (this.error = null), (this.user = this.defautUser());
-
-            // トップページに戻る
+            console.log("postUser failed.");
+            console.log(error);
+            this.error = "予期せぬ例外が発生しました。ログイン画面に戻ります。";
+            this.user = this.defautUser;
             document.location = "/";
           }
-        }.bind(this)
-      );
+        });
     }
   }
 };

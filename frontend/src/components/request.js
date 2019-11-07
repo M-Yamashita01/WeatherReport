@@ -1,6 +1,5 @@
-/* eslint-disable no-unused-vars */
 import axios from "axios";
-import { resolve } from "path";
+
 /**
  * @param {*} longitudeMax
  * @param {*} longitudeMin
@@ -52,6 +51,27 @@ async function getMainCityLocations() {
 }
 
 /**
+ * @param {*} email
+ * @param {*} password
+ */
+async function postSignin(email, password) {
+  let signedInUser = "";
+  await axios
+    .post("/api/auth/sign_in", {
+      email: email,
+      password: password
+    })
+    .then(response => {
+      signedInUser = response;
+    })
+    .catch(error => {
+      printResponseErrorLog(error);
+      throw error;
+    });
+  return signedInUser;
+}
+
+/**
  * @param {*} error
  */
 function printResponseErrorLog(error) {
@@ -68,4 +88,4 @@ function printResponseErrorLog(error) {
   console.log(error.config);
 }
 
-export default { getWeathers, getMainCityLocations };
+export default { getWeathers, getMainCityLocations, postSignin };
