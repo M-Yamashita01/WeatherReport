@@ -54,7 +54,7 @@ async function getMainCityLocations() {
  * @param {*} email
  * @param {*} password
  */
-async function postSignin(email, password) {
+async function postLogin(email, password) {
   let signedInUser = "";
   await axios
     .post("/api/auth/sign_in", {
@@ -88,4 +88,4 @@ function printResponseErrorLog(error) {
   console.log(error.config);
 }
 
-export default { getWeathers, getMainCityLocations, postSignin };
+export default { getWeathers, getMainCityLocations, postLogin };

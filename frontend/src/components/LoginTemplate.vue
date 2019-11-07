@@ -35,7 +35,7 @@ export default {
   methods: {
     postUser: async function(params, callback) {
       await request
-        .postSignin(params.email, params.password)
+        .postLogin(params.email, params.password)
         .then(response => {
           loginUser.setToken(
             response.headers["access-token"],
