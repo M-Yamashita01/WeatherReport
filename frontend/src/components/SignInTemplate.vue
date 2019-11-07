@@ -41,8 +41,9 @@ export default {
             response.headers["access-token"],
             response.headers["client"],
             response.headers["uid"],
-            params.name,
-            params.email
+            response.data["data"]["name"],
+            response.data["data"]["email"],
+            response.data["data"]["id"]
           );
           store.dispatch("create", loginUser);
         })

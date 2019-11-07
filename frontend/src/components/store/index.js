@@ -10,7 +10,8 @@ export default new Vuex.Store({
     client: "",
     uid: "",
     userName: "",
-    email: ""
+    email: "",
+    id: 0
   },
   mutations: {
     create(state, data) {
@@ -19,6 +20,7 @@ export default new Vuex.Store({
       state.uid = data.uid;
       state.userName = data.userName;
       state.email = data.email;
+      state.id = data.id;
     },
     destroy(state) {
       state.accessToken = "";
@@ -26,6 +28,7 @@ export default new Vuex.Store({
       state.uid = "";
       state.userName = "";
       state.email = "";
+      state.id = 0;
     }
   },
   actions: {
@@ -57,6 +60,9 @@ export default new Vuex.Store({
     },
     getEmail(state) {
       return state.email;
+    },
+    getId(state) {
+      return state.id;
     }
   },
   plugins: [

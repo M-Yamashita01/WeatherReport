@@ -42,7 +42,8 @@ export default {
             response.headers["client"],
             response.headers["uid"],
             response.data["data"]["name"],
-            response.data["data"]["email"]
+            response.data["data"]["email"],
+            response.data["data"]["id"]
           );
           store.dispatch("create", loginUser);
         })
