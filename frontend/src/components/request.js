@@ -72,6 +72,28 @@ async function postLogin(email, password) {
 }
 
 /**
+ * @param {*} name
+ * @param {*} email
+ * @param {*} password
+ */
+async function postSignIn(name, email, password) {
+  let signedInUser = "";
+  await axios
+    .post("/api/auth", {
+      name: name,
+      email: email,
+      password: password
+    })
+    .then(response => {
+      signedInUser = response;
+    })
+    .catch(error => {
+      printResponseErrorLog(error);
+      throw error;
+    });
+  return signedInUser;
+}
+/**
  * @param {*} error
  */
 function printResponseErrorLog(error) {
@@ -88,4 +110,4 @@ function printResponseErrorLog(error) {
   console.log(error.config);
 }
 
-export default { getWeathers, getMainCityLocations, postLogin };
+export default { getWeathers, getMainCityLocations, postLogin, postSignIn };

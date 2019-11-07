@@ -20,11 +20,10 @@
 </template>
 
 <script>
-import axios from "axios";
+import request from "./request";
 import store from "./store/index";
 
 export default {
-  el: "login",
   data: function() {
     return {
       sending: false,
@@ -34,27 +33,21 @@ export default {
   },
 
   methods: {
-    postUser: function(params, callback) {
-      axios
-        .post("/api/auth", {
-          name: params.name,
-          email: params.email,
-          password: params.password
-        })
+    postUser: async function(params, callback) {
+      await request
+        .postSignIn(params.name, params.email, params.password)
         .then(response => {
           loginUser.setToken(
             response.headers["access-token"],
             response.headers["client"],
             response.headers["uid"],
-            name,
-            email
+            params.name,
+            params.email
           );
           store.dispatch("create", loginUser);
-
-          callback(null, params);
         })
-        .catch(err => {
-          callback(err, params);
+        .catch(error => {
+          throw error;
         });
     },
 
@@ -80,22 +73,29 @@ export default {
         return;
       }
 
-      this.postUser(
-        this.user,
-        function(err, user) {
-          this.sending = false;
-          if (err) {
-            this.error = err.toString();
-          } else {
-            (this.error = null),
-              alert("新規ユーザが登録されました。ユーザ名 : " + this.user.name);
-            this.user = this.defaultUser();
+      this.postUser(this.user)
+        .then(response => {
+          this.error = null;
+          alert("新規ユーザが登録されました。ユーザ名 : " + this.user.name);
+          this.user = this.defaultUser();
 
-            // トップページにもどる
-            this.$router.push("/");
+          // トップページにもどる
+          document.location = "/";
+        })
+        .catch(error => {
+          if (error.response.status == 422) {
+            this.error = "入力内容が間違っています。";
+            this.user.password = "";
+          } else {
+            console.log("postUser failed.");
+            console.log(error);
+            this.error =
+              "予期せぬ例外が発生しました。サインイン画面に戻ります。";
+            this.user = this.defautUser;
+            document.location = "/";
           }
-        }.bind(this)
-      );
+          this.error = err.toString();
+        });
     }
   }
 };
@@ -106,7 +106,7 @@ const loginUser = {
   uid: "",
   userName: "",
   email: "",
-  setToken: function(accessToken, client, uid, useName, email) {
+  setToken: function(accessToken, client, uid, userName, email) {
     this.accessToken = accessToken;
     this.client = client;
     this.uid = uid;
