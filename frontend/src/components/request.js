@@ -55,20 +55,20 @@ async function getMainCityLocations() {
  * @param {*} password
  */
 async function postLogin(email, password) {
-  let signedInUser = "";
+  let loginedUser = "";
   await axios
     .post("/api/auth/sign_in", {
       email: email,
       password: password
     })
     .then(response => {
-      signedInUser = response;
+      loginedUser = response;
     })
     .catch(error => {
       printResponseErrorLog(error);
       throw error;
     });
-  return signedInUser;
+  return loginedUser;
 }
 
 /**
