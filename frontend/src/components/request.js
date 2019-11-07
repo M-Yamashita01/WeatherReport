@@ -1,20 +1,19 @@
+/* eslint-disable no-unused-vars */
 import axios from "axios";
+import { resolve } from "path";
 /**
  * @param {*} longitudeMax
  * @param {*} longitudeMin
  * @param {*} latitudeMax
  * @param {*} latitudeMin
- * @param {*} callback
- * @return {weather|error}
  */
 async function getWeathers(
   longitudeMax,
   longitudeMin,
   latitudeMax,
-  latitudeMin,
-  callback
+  latitudeMin
 ) {
-  const res = await axios
+  return await axios
     .get("/api/current_weather_datas", {
       params: {
         longitude_max: longitudeMax,
@@ -23,12 +22,28 @@ async function getWeathers(
         latitude_min: latitudeMin
       }
     })
+    .then(response => {
+      return response;
+    })
+    .catch(error => {
+      printResponseErrorLog(error);
+      throw error;
+    });
+}
+
+/**
+ *
+ */
+async function getMainCityLocations() {
+  const res = await axios
+    .get("/api/main_city_locations")
+    .then(response => {
+      return response.data.main_city;
+    })
     .catch(err => {
       printResponseErrorLog(err);
-      callback(null, err);
+      return [];
     });
-
-  callback(res.data.current_weather_data, null);
 }
 
 /**
@@ -48,4 +63,4 @@ function printResponseErrorLog(error) {
   console.log(error.config);
 }
 
-export default { getWeathers };
+export default { getWeathers, getMainCityLocations };

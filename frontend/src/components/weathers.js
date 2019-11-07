@@ -12,10 +12,8 @@ const TARGET_ALL_CITY = 3;
  * @param {*} longitudeMin
  * @param {*} latitudeMax
  * @param {*} latitudeMin
- * @param {*} callback
- * @return  {res.data} weather from Rails API
  */
-function getWeathers(
+async function getWeathers(
   date,
   targetCity,
   longitudeMax,
@@ -23,71 +21,98 @@ function getWeathers(
   latitudeMax,
   latitudeMin
 ) {
-  try {
-    let weatherDatas = [];
-
-    request.getWeathers(
-      longitudeMax,
-      longitudeMin,
-      latitudeMax,
-      latitudeMin,
-      function(weathers, error) {
-        if (error) {
-          return [];
-        } else {
-          if (targetCity == TARGET_ALL_CITY) {
-            weatherDatas = weathers;
-          } else if (targetCity == TARGET_MAIN_CITY) {
-            const httpObj = new XMLHttpRequest();
-            httpObj.onreadystatechange = function() {
-              if (httpObj.responseText == "") {
-                console.log("main city locations is none.");
-                return;
-              }
-              const jsonRes = JSON.parse(httpObj.responseText || "null");
-              const mainCityData = jsonRes["main_city"];
-              Object.keys(mainCityData).forEach(function(key) {
-                weathers.filter(function(item, index) {
-                  if (item.city_id == mainCityData[key].id) {
-                    weatherDatas.push(item);
-                  }
-                });
-              });
-            };
-
-            httpObj.open("get", "/api/main_city_locations", false);
-            httpObj.send(null);
-          } else {
-            const patternPrefecture = "-ken";
-            const patternOsaka = "Ōsaka-fu";
-            const patternKyoto = "Kyōto-fu";
-            const patternTokyo = "Tokyo";
-            const patternHokkaido = "Hokkaidō";
-
-            const currentWeatherDatas = res.data.current_weather_data;
-            Object.keys(currentWeatherDatas).forEach(function(key) {
-              if (
-                currentWeatherDatas[key].city_name.endsWith(
-                  patternPrefecture
-                ) ||
-                currentWeatherDatas[key].city_name == patternOsaka ||
-                currentWeatherDatas[key].city_name == patternKyoto ||
-                currentWeatherDatas[key].city_name == patternTokyo ||
-                currentWeatherDatas[key].city_name == patternHokkaido
-              ) {
-                weatherDatas.push(currentWeatherDatas[key]);
-              }
-            });
-          }
-        }
-      }
-    );
-    return weatherDatas;
-  } catch (e) {
-    console.log(e);
-  }
+  console.log("getWeathers start.");
+  let weatherDatas = [];
+  await request
+    .getWeathers(longitudeMax, longitudeMin, latitudeMax, latitudeMin)
+    .then(response => {
+      console.log("set response");
+      console.log(response);
+      console.log(response.data.current_weather_data);
+      weatherDatas = response.data.current_weather_data;
+      // return response; // ⇦これが見えていない。undefinedになる
+      /*
+      console.log("getWeathers finished.");
+      console.log(response);
+      console.log(response.data);
+      console.log(response.data.current_weather_data);
+      return response.data.current_weather_data;
+      */
+    })
+    .catch(error => {
+      console.log("weathers does not exist.");
+      return [];
+    });
+  console.log("getWeathers return");
+  return weatherDatas;
+  /*    .then(weathers => {
+      console.log("Start getWeathersForSpecifiedCity function");
+      return getWeathersForSpecifiedCity(weathers, targetCity);
+    })
+    .catch(error => {
+      console.log("weathers does not exist.");
+      return [];
+    });
+    */
 }
 
+/**
+ *
+ *
+ * @param {*} weathers
+ * @param {*} targetCity
+ * @return {weatherDatas}
+ */
+/*
+function getWeathersForSpecifiedCity(weathers, targetCity) {
+  const weatherDatas = [];
+
+  console.log("getWeathersForSpecifiedCity start");
+  console.log(weathers);
+  if (targetCity == TARGET_ALL_CITY) {
+    weatherDatas = weathers;
+  } else if (targetCity == TARGET_MAIN_CITY) {
+    console.log("Start getMainCityLocations");
+    const mainCityData = request.getMainCityLocations();
+    console.log("Fnished getMainCityLocations");
+    if (mainCityData) {
+      console.log("maiinCityData existed");
+      Object.keys(mainCityData).forEach(function(key) {
+        weathers.filter(function(item, index) {
+          if (item.city_id == mainCityData[key].id) {
+            weatherDatas.push(item);
+          }
+        });
+      });
+      console.log("weatherDatas pushed finished");
+      console.log(weatherDatas);
+    } else {
+      console.log("getWeathersForSpecifiedCity error");
+      return [];
+    }
+  } else {
+    const patternPrefecture = "-ken";
+    const patternOsaka = "Ōsaka-fu";
+    const patternKyoto = "Kyōto-fu";
+    const patternTokyo = "Tokyo";
+    const patternHokkaido = "Hokkaidō";
+
+    const currentWeatherDatas = weathers;
+    Object.keys(currentWeatherDatas).forEach(function(key) {
+      if (
+        currentWeatherDatas[key].city_name.endsWith(patternPrefecture) ||
+        currentWeatherDatas[key].city_name == patternOsaka ||
+        currentWeatherDatas[key].city_name == patternKyoto ||
+        currentWeatherDatas[key].city_name == patternTokyo ||
+        currentWeatherDatas[key].city_name == patternHokkaido
+      ) {
+        weatherDatas.push(currentWeatherDatas[key]);
+      }
+    });
+  }
+  return weatherDatas;
+}
+*/
 /**
  *
  *
@@ -96,40 +121,55 @@ function getWeathers(
  * @param {*} longitude
  * @param {*} latitude
  * @param {*} callback
- * @return  {getWeathers} weather from Rails API
  */
-function getLocationWeathers(date, zoomLevel, longitude, latitude) {
-  // 表示する地域を、主要都市のみ、県のみ、全地域のみかズームの度合いで決定する
-  // デフォルトは主要都市のみ検索とする
-  let targetCity = TARGET_MAIN_CITY;
-  if (10 >= zoomLevel && zoomLevel >= 3) {
-    targetCity = TARGET_PREFECTURE_CITY;
-  } else if (zoomLevel > 10) {
-    targetCity = TARGET_ALL_CITY;
-  }
+async function getLocationWeathers(date, zoomLevel, longitude, latitude) {
+  try {
+    // 表示する地域を、主要都市のみ、県のみ、全地域のみかズームの度合いで決定する
+    // デフォルトは主要都市のみ検索とする
+    let targetCity = TARGET_MAIN_CITY;
+    if (10 >= zoomLevel && zoomLevel >= 3) {
+      targetCity = TARGET_PREFECTURE_CITY;
+    } else if (zoomLevel > 10) {
+      targetCity = TARGET_ALL_CITY;
+    }
 
-  let longitudeMax = "";
-  let longitudeMin = "";
-  let latitudeMax = "";
-  let latitudeMin = "";
-  if (targetCity == TARGET_ALL_CITY) {
-    // 検索する緯度、経度の範囲を指定する
-    // 範囲の数値は適当
-    longitudeMax = parseInt(longitude, 10) + 3;
-    longitudeMin = parseInt(longitude) - 3;
-    latitudeMax = parseInt(latitude) + 1;
-    latitudeMin = parseInt(latitude) - 1;
-  }
+    let longitudeMax = "";
+    let longitudeMin = "";
+    let latitudeMax = "";
+    let latitudeMin = "";
+    if (targetCity == TARGET_ALL_CITY) {
+      // 検索する緯度、経度の範囲を指定する
+      // 範囲の数値は適当
+      longitudeMax = parseInt(longitude, 10) + 3;
+      longitudeMin = parseInt(longitude) - 3;
+      latitudeMax = parseInt(latitude) + 1;
+      latitudeMin = parseInt(latitude) - 1;
+    }
 
-  const response = getWeathers(
-    date,
-    targetCity,
-    longitudeMax,
-    longitudeMin,
-    latitudeMax,
-    latitudeMin
-  );
-  return response;
+    console.log("Start getWeathers");
+    let weatherDatas = [];
+    await getWeathers(
+      date,
+      targetCity,
+      longitudeMax,
+      longitudeMin,
+      latitudeMax,
+      latitudeMin
+    )
+      .then(re => {
+        console.log("Finshed getWeathers");
+        console.log(re);
+        weatherDatas = re;
+      })
+      .catch(error => {
+        console.log("Error getWeathers");
+        console.log(error);
+        weatherDatas = [];
+      });
+    return weatherDatas;
+  } catch (err) {
+    console.log(err);
+  }
 }
 
 export default { getLocationWeathers };

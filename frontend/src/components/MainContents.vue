@@ -16,14 +16,19 @@ export default {
     };
   },
   methods: {
-    async onScopeChanged(evt) {
-      const locationWeathers = await Weathers.getLocationWeathers(
+    onScopeChanged(evt) {
+      Weathers.getLocationWeathers(
         evt.date,
         evt.zoomLevel,
         evt.longitude,
         evt.latitude
-      );
-      this.weathers = locationWeathers;
+      )
+        .then(weathers => {
+          this.weathers = weathers;
+        })
+        .catch(error => {
+          this.weathers = [];
+        });
     }
   }
 };
