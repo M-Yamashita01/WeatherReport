@@ -107,12 +107,13 @@ const loginUser = {
   uid: "",
   userName: "",
   email: "",
-  setToken: function(accessToken, client, uid, userName, email) {
+  setToken: function(accessToken, client, uid, userName, email, id) {
     this.accessToken = accessToken;
     this.client = client;
     this.uid = uid;
     this.userName = userName;
     this.email = email;
+    this.id = id;
   }
 };
 </script>
