@@ -23,7 +23,6 @@ async function getWeathers(
       }
     })
     .then(response => {
-      console.log(response);
       weatherDatas = response.data.current_weather_data;
     })
     .catch(error => {
@@ -93,6 +92,27 @@ async function postSignIn(name, email, password) {
     });
   return signedInUser;
 }
+
+/**
+ * @param {*} id
+ */
+async function getUserPosts(id) {
+  let microposts = [];
+  await axios
+    .get("/api/microposts", {
+      params: {
+        user_id: id
+      }
+    })
+    .then(response => {
+      microposts = response.data.micropost;
+    })
+    .catch(error => {
+      printResponseErrorLog(error);
+      throw error;
+    });
+  return microposts;
+}
 /**
  * @param {*} error
  */
@@ -110,4 +130,10 @@ function printResponseErrorLog(error) {
   console.log(error.config);
 }
 
-export default { getWeathers, getMainCityLocations, postLogin, postSignIn };
+export default {
+  getWeathers,
+  getMainCityLocations,
+  postLogin,
+  postSignIn,
+  getUserPosts
+};
