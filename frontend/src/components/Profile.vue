@@ -40,7 +40,7 @@
               <div class="card-body">
                 <div
                   class="list-group list-group-flush"
-                  v-for="(post, i) in filterPosts"
+                  v-for="(post, i) in posts"
                   :key="i"
                 >
                   <div class="list-group-item list-group-item-action">
