@@ -40,13 +40,6 @@ services:
     command: "./wait-for-it.sh -h db-migrate -p 3307 -- rm -rf tmp -- bundle exec rails s -p 3000 -b '0.0.0.0'"
     ports:
       - '3000:3000'
-    volumes: 
-      - ./app/javascript:/weather_report/app/javascript
-      - ./app/controllers:/weather_report/app/controllers
-      - ./app/models:/weather_report/app/models
-      - ./app/views:/weather_report/app/views
-      - ./spec:/weather_report/spec
-      - ./log:/weather_report/log
     depends_on:
       - db-migrate
 
