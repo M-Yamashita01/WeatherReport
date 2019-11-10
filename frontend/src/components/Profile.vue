@@ -38,7 +38,20 @@
               </div>
               <!--Card content-->
               <div class="card-body">
-                <canvas id="pieChart"></canvas>
+                <div
+                  class="list-group list-group-flush"
+                  v-for="(post, i) in posts"
+                  :key="i"
+                >
+                  <div class="list-group-item list-group-item-action">
+                    <div>
+                      {{ post.created_at | moment }}
+                    </div>
+                    <div>
+                      {{ post.content }}
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
             <!--/.Card-->
@@ -53,7 +66,9 @@
 </template>
 
 <script>
+import moment from "moment";
 import store from "./store/index";
+import request from "./request";
 import assetsImage from "@/assets/logo.png";
 
 export default {
@@ -61,12 +76,28 @@ export default {
     return {
       userName: "",
       email: "",
-      assetsImage: assetsImage
+      assetsImage: assetsImage,
+      posts: []
     };
+  },
+  filters: {
+    moment: function(date) {
+      return moment(date).format("YYYY/MM/DD HH:mm:ss");
+    }
   },
   created() {
     this.userName = store.getters.getUserName;
     this.email = store.getters.getEmail;
+    request
+      .getUserPosts(store.getters.getId)
+      .then(userPosts => {
+        this.posts = userPosts;
+      })
+      .catch(error => {
+        console.log("getUserPosts failed.");
+        console.log(error);
+        this.posts = [];
+      });
   }
 };
 </script>
