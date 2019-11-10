@@ -31,7 +31,7 @@ services:
     build: .
     depends_on:
       - db
-    command: './wait-for-it.sh -t 60 -h db -p 3306 -- bin/rails db:migrate RAILS_ENV=development'
+    command: sh -c './wait-for-it.sh -t 60 -h db -p 3306 -- bin/rails db:migrate RAILS_ENV=development'
 
   db-openweathermap:
     << : *web-container
