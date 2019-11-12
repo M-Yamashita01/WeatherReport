@@ -30,12 +30,12 @@ services:
     build: .
     depends_on:
       - db
-    command: './wait-for-it.sh -t 60 -h db -p 3306 -- bin/rails db:migrate RAILS_ENV=test'
+    command: sh -c "./wait-for-it.sh -t 60 -h db -p 3306 && bin/rails db:migrate RAILS_ENV=test"
 
   server:
     << : *test-web-container
     build: .
-    command: sh -c "rm -rf tmp -- bundle exec rails s -p 3000 -b '0.0.0.0'"
+    command: sh -c "rm -rf tmp && bundle exec rails s -p 3000 -b '0.0.0.0'"
     ports:
       - '3000:3000'
     depends_on:
