@@ -22,13 +22,7 @@ jobs:
       - checkout
  
       - setup_remote_docker
- 
-      - restore_cache:
-          keys:
-            - v1-{{ checksum "Gemfile.lock" }}
-          path:
-            - ~/caches/images.tar
- 
+  
       - run:
           command: |
             if [[ -e ~/caches/images.tar ]]; then
@@ -47,7 +41,7 @@ jobs:
       - run:
           name: sleep for waiting launch db
           command: |
-            sleep 10
+            sleep 30
 
       - run:
           name: run tests
@@ -68,8 +62,3 @@ jobs:
           command: |
             set -x
             ${SUDO_COMMAND} docker-compose down
-
-      - save_cache:
-          key: v1-{{ checksum "Gemfile.lock" }}
-          paths:
-            - ~/caches/images.tar

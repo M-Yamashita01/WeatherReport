@@ -31,7 +31,9 @@ services:
     build: .
     depends_on:
       - db
-    command: './wait-for-it.sh -t 60 -h db -p 3306 -- bin/rails db:migrate RAILS_ENV=development'
+    command: sh -c './wait-for-it.sh -t 60 -h db -p 3306 -- bin/rails db:migrate RAILS_ENV=development'
+    ports:
+      - "3307:3307"
 
   db-openweathermap:
     << : *web-container
@@ -40,6 +42,7 @@ services:
       dockerfile: Dockerfile.openWeatherMap
     depends_on: 
       - db-migrate
+    command: sh -c "./wait-for-it.sh -t 60 -h db -p 3306 && ruby current_weather_insert.rb"
 
   server:
     << : *web-container
