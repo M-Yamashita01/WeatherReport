@@ -1,11 +1,12 @@
-FROM ruby:2.6.5-alpine
+FROM ruby:2.6.5-alpine3.9
 
 # 必要なパッケージのインストール（基本的に必要になってくるものだと思うので削らないこと）
 RUN apk update && \
     apk --no-cache add build-base \
                        mysql-dev \
                        curl \
-                       bash
+                       bash \
+                       nodejs
 
 # 作業ディレクトリの作成、設定
 WORKDIR /weather_report

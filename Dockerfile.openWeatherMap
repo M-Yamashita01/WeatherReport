@@ -1,6 +1,10 @@
-FROM ruby:2.6.5-alpine
+FROM ruby:2.6.5-alpine3.9
 
-RUN apk --no-cache add build-base mysql-dev curl bash
+RUN apk --no-cache add build-base \
+                       mysql-dev \
+                       curl \
+                       bash \
+                       nodejs
 
 WORKDIR /WeatherInfoUpdater
 
@@ -13,6 +17,3 @@ WORKDIR /WeatherInfoUpdater/openWeatherMap
 # MySQLの確実な起動待ちのためにwait-for-it.sh利用
 RUN curl -O https://raw.githubusercontent.com/vishnubob/wait-for-it/54d1f0bfeb6557adf8a3204455389d0901652242/wait-for-it.sh && \
     chmod +x wait-for-it.sh
-
-# MySQL初期化とMigration待ちのため20秒sleep後、各種データ挿入
-CMD sh -c "./wait-for-it.sh -t 60 -h db -p 3306 && sleep 20s && ruby current_weather_insert.rb"
