@@ -36,7 +36,6 @@
                   <div v-if="error" class="error">
                     {{ error }}
                   </div>
-                  <!--<button @click="loginUser">ログイン</button>-->
                   <button
                     @click="loginUser"
                     type="button"
