@@ -12,24 +12,23 @@
             <div class="card">
               <!--Card content-->
               <div class="card-body">
-                <h4 class="card-title text-center">Weather Report</h4>
-                <h6 class="card-subtitle text-center">ログイン</h6>
+                <h4 class="card-title text-center mb-3">Weather Report</h4>
+                <h6 class="card-subtitle text-center mb-3">ログイン</h6>
                 <div id="login-template">
-                  <div class="border border-primary">
-                    aaa
-                  </div>
-                  <div>
-                    <div>メールアドレス</div>
+                  <div class="mb-3">
+                    <div class="mb-3">メールアドレス</div>
                     <input
                       type="email"
+                      class="form-control"
                       placeholder="weather@report.com"
                       v-model="user.email"
                     />
                   </div>
-                  <div>
-                    <div>パスワード</div>
+                  <div class="mb-5">
+                    <div class="mb-3">パスワード</div>
                     <input
                       type="password"
+                      class="form-control"
                       placeholder="xxxxxxxx"
                       v-model="user.password"
                     />
@@ -37,7 +36,14 @@
                   <div v-if="error" class="error">
                     {{ error }}
                   </div>
-                  <button @click="loginUser">ログイン</button>
+                  <!--<button @click="loginUser">ログイン</button>-->
+                  <button
+                    @click="loginUser"
+                    type="button"
+                    class="btn btn-block waves-effect"
+                  >
+                    ログイン
+                  </button>
                 </div>
               </div>
             </div>
