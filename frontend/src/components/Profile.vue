@@ -52,6 +52,17 @@
                     </div>
                   </div>
                 </div>
+                <!--<paginate
+                :page-count="getPageCount"
+                :page-range="3"
+                :margin-pages="2"
+                :click-handler="clickCallback"
+                :prev-text="'<'"
+                :next-text="'>'"
+                :container-class="'pagination'"
+                :page-class="'page-item'"
+                >
+                </paginate>-->
               </div>
             </div>
             <!--/.Card-->
@@ -77,7 +88,9 @@ export default {
       userName: "",
       email: "",
       assetsImage: assetsImage,
-      posts: []
+      posts: [],
+      parPage: 10,
+      currentPage: 1
     };
   },
   filters: {
@@ -98,6 +111,21 @@ export default {
         console.log(error);
         this.posts = [];
       });
+  },
+  methods: {
+    clickCallback(pageNum) {
+      this.currentPage = Number(pageNum);
+    }
+  },
+  computed: {
+    getPosts() {
+      const current = this.currentPage * this.parPage;
+      const start = current - this.parPage;
+      return this.posts.slice(start, current);
+    },
+    getPageCount() {
+      return Math.ceil(this.posts.length / this.parPage);
+    }
   }
 };
 </script>
