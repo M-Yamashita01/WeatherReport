@@ -40,7 +40,7 @@
               <div class="card-body">
                 <div
                   class="list-group list-group-flush"
-                  v-for="(post, i) in posts"
+                  v-for="(post, i) in getPosts"
                   :key="i"
                 >
                   <div class="list-group-item list-group-item-action">
@@ -52,6 +52,22 @@
                     </div>
                   </div>
                 </div>
+                <paginate
+                  v-if="show"
+                  :page-count="getPageCount"
+                  :click-handler="clickCallback"
+                  :prev-text="'Prev'"
+                  :next-text="'Next'"
+                  :container-class="'pagination'"
+                  :page-class="'page-item'"
+                  :page-link-class="'page-link'"
+                  :prev-class="'page-item'"
+                  :next-class="'page-item'"
+                  :prev-link-class="'page-link'"
+                  :next-link-class="'page-link'"
+                  :active-class="'active'"
+                >
+                </paginate>
               </div>
             </div>
             <!--/.Card-->
@@ -77,7 +93,10 @@ export default {
       userName: "",
       email: "",
       assetsImage: assetsImage,
-      posts: []
+      posts: [],
+      parPage: 10,
+      currentPage: 1,
+      show: false
     };
   },
   filters: {
@@ -92,12 +111,30 @@ export default {
       .getUserPosts(store.getters.getId)
       .then(userPosts => {
         this.posts = userPosts;
+        if (this.posts.length > 0) {
+          this.show = true;
+        }
       })
       .catch(error => {
         console.log("getUserPosts failed.");
         console.log(error);
         this.posts = [];
       });
+  },
+  methods: {
+    clickCallback(pageNum) {
+      this.currentPage = Number(pageNum);
+    }
+  },
+  computed: {
+    getPosts() {
+      const current = this.currentPage * this.parPage;
+      const start = current - this.parPage;
+      return this.posts.slice(start, current);
+    },
+    getPageCount() {
+      return Math.ceil(this.posts.length / this.parPage);
+    }
   }
 };
 </script>
