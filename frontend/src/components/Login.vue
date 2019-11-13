@@ -40,10 +40,11 @@
                   <button
                     @click="loginUser"
                     type="button"
-                    class="btn btn-block waves-effect"
+                    class="btn btn-block waves-effect mb-3"
                   >
                     ログイン
                   </button>
+                  <router-link to="/signin">サインイン</router-link>
                 </div>
               </div>
             </div>
@@ -105,7 +106,8 @@ export default {
         })
         .catch(error => {
           if (error.response.status == 401) {
-            this.error = "メールアドレス、もしくはパスワードが間違っています。";
+            this.error =
+              "メールアドレス、もしくはパスワードが正しくないようです。。";
             this.user.password = "";
           } else {
             console.log("postUser failed.");
