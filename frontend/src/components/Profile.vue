@@ -40,7 +40,7 @@
               <div class="card-body">
                 <div
                   class="list-group list-group-flush"
-                  v-for="(post, i) in posts"
+                  v-for="(post, i) in getPosts"
                   :key="i"
                 >
                   <div class="list-group-item list-group-item-action">
@@ -52,17 +52,22 @@
                     </div>
                   </div>
                 </div>
-                <!--<paginate
-                :page-count="getPageCount"
-                :page-range="3"
-                :margin-pages="2"
-                :click-handler="clickCallback"
-                :prev-text="'<'"
-                :next-text="'>'"
-                :container-class="'pagination'"
-                :page-class="'page-item'"
+                <paginate
+                  v-if="show"
+                  :page-count="getPageCount"
+                  :click-handler="clickCallback"
+                  :prev-text="'Prev'"
+                  :next-text="'Next'"
+                  :container-class="'pagination'"
+                  :page-class="'page-item'"
+                  :page-link-class="'page-link'"
+                  :prev-class="'page-item'"
+                  :next-class="'page-item'"
+                  :prev-link-class="'page-link'"
+                  :next-link-class="'page-link'"
+                  :active-class="'active'"
                 >
-                </paginate>-->
+                </paginate>
               </div>
             </div>
             <!--/.Card-->
@@ -90,7 +95,8 @@ export default {
       assetsImage: assetsImage,
       posts: [],
       parPage: 10,
-      currentPage: 1
+      currentPage: 1,
+      show: false
     };
   },
   filters: {
@@ -105,6 +111,9 @@ export default {
       .getUserPosts(store.getters.getId)
       .then(userPosts => {
         this.posts = userPosts;
+        if (this.posts.length > 0) {
+          this.show = true;
+        }
       })
       .catch(error => {
         console.log("getUserPosts failed.");
