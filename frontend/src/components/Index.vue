@@ -1,15 +1,23 @@
 <template>
-  <div class="container main-content">
-    <div class="row">
-      <div class="col-md-9 content-area main-contents japan-weather">
-        <maincontents></maincontents>
+  <div class="container-for-admin">
+    <!--Main layout-->
+    <main class="pt-5 mx-lg-5">
+      <div class="container-fluid mt-5">
+        <!--Grid row-->
+        <div class="row wow fadeIn">
+          <!--Grid column-->
+          <div class="col-md-8 mb-4">
+            <maincontents></maincontents>
+          </div>
+          <div class="col-md-4 mb-4">
+            <sidebarcontents></sidebarcontents>
+          </div>
+          <!--Grid column-->
+        </div>
+        <!--Grid row-->
       </div>
-      <div class="col-md-3 sidebar main-contents">
-        <aside>
-          <sidebarcontents></sidebarcontents>
-        </aside>
-      </div>
-    </div>
+    </main>
+    <!--Main layout-->
   </div>
 </template>
 

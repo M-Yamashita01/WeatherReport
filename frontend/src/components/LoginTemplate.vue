@@ -1,21 +1,38 @@
 <template>
-  <div id="login-template">
-    <div>
-      <label>メールアドレス:</label>
-      <input
-        type="email"
-        placeholder="weather@report.com"
-        v-model="user.email"
-      />
-    </div>
-    <div>
-      <label>パスワード</label>
-      <input type="password" placeholder="xxxxxxxx" v-model="user.password" />
-    </div>
-    <div v-if="error" class="error">
-      {{ error }}
-    </div>
-    <button @click="loginUser">ログイン</button>
+  <div class="container-for-admin">
+    <!--Main layout-->
+    <main class="pt-5 mx-lg-5">
+      <div class="container-fluid mt-5">
+        <!--Grid row-->
+        <div class="row wow fadeIn">
+          <!--Grid column-->
+          <div class="col-md-8 mb-4">
+            <div id="login-template">
+              <div>
+                <label>メールアドレス:</label>
+                <input
+                  type="email"
+                  placeholder="weather@report.com"
+                  v-model="user.email"
+                />
+              </div>
+              <div>
+                <label>パスワード</label>
+                <input
+                  type="password"
+                  placeholder="xxxxxxxx"
+                  v-model="user.password"
+                />
+              </div>
+              <div v-if="error" class="error">
+                {{ error }}
+              </div>
+              <button @click="loginUser">ログイン</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
   </div>
 </template>
 
