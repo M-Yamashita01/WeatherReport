@@ -1,5 +1,9 @@
 <template>
-  <weather-map :weathers="weathers" @scopechange="onScopeChanged" />
+  <div class="card">
+    <div class="card-body">
+      <weather-map :weathers="weathers" @scopechange="onScopeChanged" />
+    </div>
+  </div>
 </template>
 
 <script>
