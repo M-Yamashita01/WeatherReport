@@ -24,11 +24,24 @@
     </div>
 
     <!--Card-->
-    <div class="card mb-4">
+    <div class="card mb-4" style="height:300px">
       <!-- Card header -->
       <div class="card-header text-center">新着投稿</div>
-      <div class="card-body">
-        test
+      <div class="card-body overflow-auto">
+        <div
+          class="list-group list-group-flush"
+          v-for="(post, i) in posts"
+          :key="i"
+        >
+          <div class="list-group-item list-group-item-action">
+            <div>
+              {{ post.created_at | moment }}
+            </div>
+            <div>
+              {{ post.content }}
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <!--Card-->
@@ -37,6 +50,8 @@
 
 <script>
 import TimeLine from "vue-tweet-embed/src/timeline";
+import moment from "moment";
+import request from "./request";
 
 export default {
   components: {
@@ -45,14 +60,31 @@ export default {
   data() {
     return {
       twitterHeight: "400",
-      twitterIds: []
+      twitterIds: [],
+      posts: []
     };
+  },
+  filters: {
+    moment: function(date) {
+      return moment(date).format("YYYY/MM/DD HH:mm:ss");
+    }
   },
   created() {
     const ids = [];
     ids.push("JMA_kishou");
     ids.push("tenkijp");
     this.twitterIds = ids;
+
+    request
+      .getUserPosts() // store.getters.getId)
+      .then(userPosts => {
+        this.posts = userPosts;
+      })
+      .catch(error => {
+        console.log("getUserPosts failed in Sidebar");
+        console.log(error);
+        this.posts = [];
+      });
   }
 };
 </script>
