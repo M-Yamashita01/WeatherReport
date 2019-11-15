@@ -14,11 +14,9 @@ class Api::MicropostsController < ApplicationController
     puts @micropost.created_at
 
     if @micropost.save
-      puts 'save success!!!'
       render 'create', formats: 'json', handlers: 'jbuilder'
     else
-      puts 'save failed!!!'
-      render json: @micropost.errors, status: :unprocessable_entity
+      render json: @micropost.errors.full_messages, status: :unprocessable_entity
     end
   end
 
