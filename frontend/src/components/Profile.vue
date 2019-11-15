@@ -35,6 +35,12 @@
               <!-- Card header -->
               <div class="card-header text-center">
                 投稿一覧
+                <button
+                  type="button"
+                  class="btn btn-sm waves-effect float-right"
+                >
+                  <span class="fas fa-pen fa-lg" aria-hidden="true"> </span>
+                </button>
               </div>
               <!--Card content-->
               <div class="card-body">
