@@ -43,7 +43,7 @@
                   >
                     <span class="fas fa-pen fa-lg" aria-hidden="true"> </span>
                   </button>
-                  <comment-modal @close="closeModal" />
+                  <comment-modal @updatePosts="onUpdatePosts" />
                 </div>
                 <!--Card content-->
                 <div class="card-body">
@@ -119,28 +119,28 @@ export default {
     }
   },
   created() {
-    this.userName = store.getters.getUserName;
-    this.email = store.getters.getEmail;
-    request
-      .getUserPosts(store.getters.getId)
-      .then(userPosts => {
-        this.posts = userPosts;
-        if (this.posts.length > 0) {
-          this.paginationShow = true;
-        }
-      })
-      .catch(error => {
-        console.log("getUserPosts failed.");
-        console.log(error);
-        this.posts = [];
-      });
+    this.onUpdatePosts();
   },
   methods: {
     clickCallback(pageNum) {
       this.currentPage = Number(pageNum);
     },
-    closeModal() {
-      this.$bvModal.hide();
+    onUpdatePosts() {
+      this.userName = store.getters.getUserName;
+      this.email = store.getters.getEmail;
+      request
+        .getUserPosts(store.getters.getId)
+        .then(userPosts => {
+          this.posts = userPosts;
+          if (this.posts.length > 0) {
+            this.paginationShow = true;
+          }
+        })
+        .catch(error => {
+          console.log("getUserPosts failed.");
+          console.log(error);
+          this.posts = [];
+        });
     }
   },
   computed: {

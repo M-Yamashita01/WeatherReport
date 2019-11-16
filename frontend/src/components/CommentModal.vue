@@ -46,6 +46,7 @@ export default {
 
       this.$bvModal.hide("commentModal");
       this.resetModal();
+      this.$emit("updatePosts");
     },
     resetModal() {
       this.comment = "";
