@@ -16,6 +16,9 @@
 </template>
 
 <script>
+import request from "./request";
+import store from "./store/index";
+
 export default {
   data() {
     return {
@@ -28,6 +31,18 @@ export default {
       if (this.comment == "") {
         return;
       }
+
+      request
+        .postComment(store.getters.getId, this.comment)
+        .then(resultPost => {
+          // nothing
+        })
+        .catch(error => {
+          console.log("postComment failed.");
+          console.log(error);
+          alert("投稿できませんでした。もう一度試してみてください。");
+          return;
+        });
 
       this.$bvModal.hide("commentModal");
       this.resetModal();

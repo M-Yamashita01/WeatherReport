@@ -113,6 +113,28 @@ async function getUserPosts(id) {
     });
   return microposts;
 }
+
+/**
+ * @param {*} id
+ * @param {*} content
+ * @return {resultPost}
+ */
+async function postComment(id, content) {
+  let resultPost = [];
+  await axios
+    .post("/api/microposts", {
+      user_id: id,
+      content: content
+    })
+    .then(response => {
+      resultPost = response;
+    })
+    .catch(error => {
+      printResponseErrorLog(error);
+      throw error;
+    });
+  return resultPost;
+}
 /**
  * @param {*} error
  */
@@ -135,5 +157,6 @@ export default {
   getMainCityLocations,
   postLogin,
   postSignIn,
-  getUserPosts
+  getUserPosts,
+  postComment
 };
