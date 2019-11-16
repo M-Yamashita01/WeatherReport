@@ -6,7 +6,11 @@ RUN apk update && \
                        mysql-dev \
                        curl \
                        bash \
-                       nodejs
+                       nodejs \
+                       tzdata && \
+    cp /usr/share/zoneinfo/Asia/Tokyo /etc/localtime && \
+    echo "Asia/Tokyo" > /etc/timezone && \
+    apk del tzdata
 
 # 作業ディレクトリの作成、設定
 WORKDIR /weather_report
