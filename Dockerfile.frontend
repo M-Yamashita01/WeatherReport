@@ -1,5 +1,12 @@
 FROM node:12.13.0-alpine
 
+# 時刻を日本時間に合わせる
+RUN apk --no-cache add tzdata && \
+    cp /usr/share/zoneinfo/Asia/Tokyo /etc/localtime && \
+    echo "Asia/Tokyo" > /etc/timezone && \
+    apk del tzdata
+
+
 # カレントワーキングディレクトリとして 'app' フォルダを指定する
 WORKDIR /app
 

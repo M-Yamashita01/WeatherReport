@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :sunny_comment, class: Micropost do
     content { 'today is sunny.' }
-    created_at { Time.now}
+    created_at { Time.now }
   end
 
   factory :cloudy_comment, class: Micropost do
