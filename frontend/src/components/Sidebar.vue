@@ -8,6 +8,7 @@
         <button
           type="button"
           class="btn btn-sm waves-effect float-right"
+          v-if="showPostButton"
           @click="$bvModal.show('commentModal')"
         >
           <span class="fas fa-pen fa-lg" aria-hidden="true"> </span>
@@ -54,6 +55,7 @@ import TimeLine from "vue-tweet-embed/src/timeline";
 import moment from "moment";
 import request from "./request";
 import CommentModal from "./CommentModal";
+import store from "./store/index";
 
 export default {
   components: {
@@ -64,7 +66,8 @@ export default {
     return {
       twitterHeight: "400",
       twitterIds: [],
-      posts: []
+      posts: [],
+      showPostButton: false
     };
   },
   filters: {
@@ -79,6 +82,11 @@ export default {
     this.twitterIds = ids;
 
     this.onUpdatePosts();
+
+    // ユーザIDは1から発番されるため
+    if (store.getters.getId > 0) {
+      this.showPostButton = true;
+    }
   },
   methods: {
     onUpdatePosts() {
