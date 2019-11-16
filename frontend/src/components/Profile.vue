@@ -53,8 +53,9 @@
                     :key="i"
                   >
                     <div class="list-group-item list-group-item-action">
+                      <div></div>
                       <div>
-                        {{ post.created_at | moment }}
+                        {{ post.name }} | {{ post.created_at | moment }}
                       </div>
                       <div>
                         {{ post.content }}
