@@ -1,6 +1,6 @@
 class Api::MicropostsController < ApplicationController
   def index
-    @micropost = Micropost.search(search_params).select('microposts.*')
+    @micropost = Micropost.joins(:user).search(search_params).select('microposts.*, users.*')
   end
 
   def create
@@ -8,10 +8,6 @@ class Api::MicropostsController < ApplicationController
     current_time = Time.now.strftime('%Y-%m-%d %H:%M:%S')
     @micropost.created_at = current_time
     @micropost.updated_at = current_time
-    puts 'create test !!!!'
-    puts @micropost
-    puts @micropost.user_id
-    puts @micropost.created_at
 
     if @micropost.save
       render 'create', formats: 'json', handlers: 'jbuilder'
