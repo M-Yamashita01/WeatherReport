@@ -7,13 +7,16 @@ require_relative '../db/db_access'
 require 'bundler/setup'
 require 'timers'
 
-def insert_weathermap_location(db_access, current_weather)
+def insert_weathermap_location(db_access, current_weather, city_name_ja)
   query = "select id from weathermap_locations where city_id = #{current_weather.city_id};"
   results = db_access.execute_query(query)
 
   if results.size.zero?
     db_access.insert_weathermap_location(current_weather.city_id, current_weather.latitude, current_weather.longitude, current_weather.city_name)
     results = db_access.execute_query(query)
+  else
+    # 既にDBにある地名や緯度、軽度が変わっている可能性があるため更新
+    db_access.update_weathermap_location(current_weather.city_id, current_weather.latitude, current_weather.longitude, current_weather.city_name, city_name_ja);
   end
 
   results.each do |row|
@@ -60,7 +63,7 @@ city_id_list.each do |city|
   timers.after(1) { current_weather = current_weather_getter.get_weather(city['id']) }
   timers.wait
 
-  location_id = insert_weathermap_location(db_access, current_weather)
+  location_id = insert_weathermap_location(db_access, current_weather, city['name_ja'])
   weather_group_id = insert_weather_group(db_access, current_weather)
   insert_current_weather_data(db_access, current_weather, location_id, weather_group_id)
 end
