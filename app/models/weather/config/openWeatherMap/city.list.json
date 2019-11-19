@@ -12,6 +12,7 @@
 	{
 		"id": 1857578,
 		"name": "Matoba",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 133.949997,
@@ -31,6 +32,7 @@
 	{
 		"id": 2130135,
 		"name": "Hashimoto",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.75,
@@ -40,6 +42,7 @@
 	{
 		"id": 2110681,
 		"name": "Tsukuba-kenkyūgakuen-toshi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.116669,
@@ -49,6 +52,7 @@
 	{
 		"id": 1862845,
 		"name": "Higashi-asahimachi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 133.066666,
@@ -58,6 +62,7 @@
 	{
 		"id": 1863250,
 		"name": "Hanabatachō",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 130.699997,
@@ -67,6 +72,7 @@
 	{
 		"id": 1852699,
 		"name": "Senzaki",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 131.199997,
@@ -76,6 +82,7 @@
 	{
 		"id": 1853163,
 		"name": "Sakaki",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 138.183334,
@@ -95,6 +102,7 @@
 	{
 		"id": 1861816,
 		"name": "Ikaruga",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 134.583328,
@@ -104,6 +112,7 @@
 	{
 		"id": 1857451,
 		"name": "Matsuzaki",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 138.783325,
@@ -133,6 +142,7 @@
 	{
 		"id": 1859472,
 		"name": "Kimiidera",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 135.199997,
@@ -142,6 +152,7 @@
 	{
 		"id": 1848382,
 		"name": "Youkaichi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 136.197678,
@@ -161,6 +172,7 @@
 	{
 		"id": 1851357,
 		"name": "Suzaka",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 138.316666,
@@ -180,6 +192,7 @@
 	{
 		"id": 1851542,
 		"name": "Sueyoshi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 131.016663,
@@ -189,6 +202,7 @@
 	{
 		"id": 1852102,
 		"name": "Shinichi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 133.266663,
@@ -198,6 +212,7 @@
 	{
 		"id": 1854028,
 		"name": "Ono",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 132.266663,
@@ -217,6 +232,7 @@
 	{
 		"id": 1863426,
 		"name": "Haebaru",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 127.871941,
@@ -226,6 +242,7 @@
 	{
 		"id": 2111401,
 		"name": "Onagawa Cho",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 141.449997,
@@ -235,6 +252,7 @@
 	{
 		"id": 2130075,
 		"name": "Hinode",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 141.916672,
@@ -254,6 +272,7 @@
 	{
 		"id": 1856300,
 		"name": "Myōrakuji",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 134.916672,
@@ -273,6 +292,7 @@
 	{
 		"id": 1926016,
 		"name": "Yokogawara",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 132.886414,
@@ -292,6 +312,7 @@
 	{
 		"id": 2114102,
 		"name": "Mazawa",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.124176,
@@ -311,6 +332,7 @@
 	{
 		"id": 1864470,
 		"name": "Daidō",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 131.483337,
@@ -330,6 +352,7 @@
 	{
 		"id": 1861454,
 		"name": "Isawa",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 138.633331,
@@ -349,6 +372,7 @@
 	{
 		"id": 1865110,
 		"name": "Arimatsu",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 136.966675,
@@ -358,6 +382,7 @@
 	{
 		"id": 2110608,
 		"name": "Wada",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.216675,
@@ -377,6 +402,7 @@
 	{
 		"id": 1856472,
 		"name": "Mukai-awagasaki",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 136.633331,
@@ -386,6 +412,7 @@
 	{
 		"id": 1859181,
 		"name": "Kobaruyama",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 131.283325,
@@ -395,6 +422,7 @@
 	{
 		"id": 1852748,
 		"name": "Sembonyama",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 129.850006,
@@ -404,6 +432,7 @@
 	{
 		"id": 1856566,
 		"name": "Morizane",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 131.033325,
@@ -413,6 +442,7 @@
 	{
 		"id": 1852025,
 		"name": "Shiobaru",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 130.433334,
@@ -422,6 +452,7 @@
 	{
 		"id": 1854029,
 		"name": "Ono",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 134.366669,
@@ -431,6 +462,7 @@
 	{
 		"id": 1856207,
 		"name": "Nagao",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 134.166672,
@@ -440,6 +472,7 @@
 	{
 		"id": 1865721,
 		"name": "Ageki",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 136.516663,
@@ -449,6 +482,7 @@
 	{
 		"id": 1862978,
 		"name": "Hayashi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.633331,
@@ -458,6 +492,7 @@
 	{
 		"id": 1860310,
 		"name": "Kamonomiya",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.183334,
@@ -467,6 +502,7 @@
 	{
 		"id": 1907255,
 		"name": "Koyasu",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.255554,
@@ -476,6 +512,7 @@
 	{
 		"id": 1907235,
 		"name": "Miyanomae",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.392776,
@@ -485,6 +522,7 @@
 	{
 		"id": 6419788,
 		"name": "Kubota",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.008331,
@@ -494,6 +532,7 @@
 	{
 		"id": 1852278,
 		"name": "Shimo-kodanaka",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.633331,
@@ -503,6 +542,7 @@
 	{
 		"id": 1864381,
 		"name": "Denenchōfu",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.666672,
@@ -512,6 +552,7 @@
 	{
 		"id": 1855301,
 		"name": "Nishi-hanawa",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 138.533325,
@@ -521,6 +562,7 @@
 	{
 		"id": 1907157,
 		"name": "Fujino",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.143066,
@@ -530,6 +572,7 @@
 	{
 		"id": 1865090,
 		"name": "Asagaya",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.649994,
@@ -539,6 +582,7 @@
 	{
 		"id": 1864231,
 		"name": "Egotamachi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.666672,
@@ -548,6 +592,7 @@
 	{
 		"id": 1864878,
 		"name": "Awatabe",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 136.239395,
@@ -567,6 +612,7 @@
 	{
 		"id": 2110809,
 		"name": "Tateno",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.116669,
@@ -576,6 +622,7 @@
 	{
 		"id": 1848119,
 		"name": "Yugawa",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 138.233337,
@@ -585,6 +632,7 @@
 	{
 		"id": 2111043,
 		"name": "Shiogasaki",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.550003,
@@ -594,6 +642,7 @@
 	{
 		"id": 2114152,
 		"name": "Aone",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.533615,
@@ -603,6 +652,7 @@
 	{
 		"id": 2112569,
 		"name": "Ishiwaki",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.050003,
@@ -622,6 +672,7 @@
 	{
 		"id": 2111258,
 		"name": "Ryugasaki",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.183334,
@@ -641,6 +692,7 @@
 	{
 		"id": 1854579,
 		"name": "Ohama",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 136.833328,
@@ -650,6 +702,7 @@
 	{
 		"id": 1894616,
 		"name": "Okinawa",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 127.801392,
@@ -659,6 +712,7 @@
 	{
 		"id": 1862818,
 		"name": "Higashi-horidōri",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.050003,
@@ -668,6 +722,7 @@
 	{
 		"id": 2111220,
 		"name": "Sakura",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.233337,
@@ -687,6 +742,7 @@
 	{
 		"id": 1860797,
 		"name": "Kaigandōri",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 133.916672,
@@ -696,6 +752,7 @@
 	{
 		"id": 1852524,
 		"name": "Shijōdōri",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 135.763031,
@@ -715,6 +772,7 @@
 	{
 		"id": 1856697,
 		"name": "Miyoshi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 137.066666,
@@ -724,6 +782,7 @@
 	{
 		"id": 1856524,
 		"name": "Motoichiba",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 138.649994,
@@ -743,6 +802,7 @@
 	{
 		"id": 1854629,
 		"name": "Ogori",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 131.399994,
@@ -752,6 +812,7 @@
 	{
 		"id": 1856900,
 		"name": "Mitsugarasuchō",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 135.833328,
@@ -771,6 +832,7 @@
 	{
 		"id": 1860483,
 		"name": "Kami-nagarekawachō",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 132.449997,
@@ -780,6 +842,7 @@
 	{
 		"id": 1863130,
 		"name": "Harisakichō",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 137.149994,
@@ -809,6 +872,7 @@
 	{
 		"id": 1862197,
 		"name": "Honjōchō",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 136.75,
@@ -828,6 +892,7 @@
 	{
 		"id": 2128295,
 		"name": "Sapporo-shi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 141.346939,
@@ -857,6 +922,7 @@
 	{
 		"id": 1856789,
 		"name": "Miyake",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 135.550003,
@@ -876,6 +942,7 @@
 	{
 		"id": 1862554,
 		"name": "Hiradogoyamachi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 129.866669,
@@ -905,6 +972,7 @@
 	{
 		"id": 1855863,
 		"name": "Nakano",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 138.366669,
@@ -914,6 +982,7 @@
 	{
 		"id": 1863219,
 		"name": "Hanawadamachi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.883331,
@@ -923,6 +992,7 @@
 	{
 		"id": 1855265,
 		"name": "Nishikichō",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 138.566666,
@@ -942,6 +1012,7 @@
 	{
 		"id": 1853045,
 		"name": "Sambashidōri",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 133.550003,
@@ -961,6 +1032,7 @@
 	{
 		"id": 1855944,
 		"name": "Nakaichi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 131.483337,
@@ -970,6 +1042,7 @@
 	{
 		"id": 1865103,
 		"name": "Arita",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 129.899994,
@@ -979,6 +1052,7 @@
 	{
 		"id": 1863822,
 		"name": "Furukawabashi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 135.600006,
@@ -988,6 +1062,7 @@
 	{
 		"id": 1850314,
 		"name": "Tōbō",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 129.933334,
@@ -997,6 +1072,7 @@
 	{
 		"id": 1857140,
 		"name": "Minami-senjumachi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.816666,
@@ -1006,6 +1082,7 @@
 	{
 		"id": 1853188,
 		"name": "Sakaidechō",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 133.850006,
@@ -1015,6 +1092,7 @@
 	{
 		"id": 1863683,
 		"name": "Ganiko",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 127.75351,
@@ -1034,6 +1112,7 @@
 	{
 		"id": 1850152,
 		"name": "Tokuyama",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 131.816666,
@@ -1073,6 +1152,7 @@
 	{
 		"id": 1926108,
 		"name": "Komatsu",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 133.116669,
@@ -1082,6 +1162,7 @@
 	{
 		"id": 2114009,
 		"name": "Nishikawa",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.176392,
@@ -1091,6 +1172,7 @@
 	{
 		"id": 2128574,
 		"name": "Otaru",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 141.002213,
@@ -1120,6 +1202,7 @@
 	{
 		"id": 1896348,
 		"name": "Hikari",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 131.949997,
@@ -1159,6 +1242,7 @@
 	{
 		"id": 1848706,
 		"name": "Yamae",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 130.566666,
@@ -1168,6 +1252,7 @@
 	{
 		"id": 1849977,
 		"name": "Toriimatsu",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 136.966675,
@@ -1177,6 +1262,7 @@
 	{
 		"id": 2111127,
 		"name": "Shibayama",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.433334,
@@ -1196,6 +1282,7 @@
 	{
 		"id": 1858333,
 		"name": "Kuradani",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 135.333328,
@@ -1205,6 +1292,7 @@
 	{
 		"id": 1857922,
 		"name": "Kyōguchi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 135.333328,
@@ -1224,6 +1312,7 @@
 	{
 		"id": 1849713,
 		"name": "Tsukaguchi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 135.416672,
@@ -1233,6 +1322,7 @@
 	{
 		"id": 2110774,
 		"name": "Togane",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.366669,
@@ -1242,6 +1332,7 @@
 	{
 		"id": 1863173,
 		"name": "Hanyu",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.533325,
@@ -1261,6 +1352,7 @@
 	{
 		"id": 1863276,
 		"name": "Hamanose",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 135.149994,
@@ -1280,6 +1372,7 @@
 	{
 		"id": 1861207,
 		"name": "Iwakura",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 136.866669,
@@ -1289,6 +1382,7 @@
 	{
 		"id": 1857089,
 		"name": "Minatomachi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 130.449997,
@@ -1298,6 +1392,7 @@
 	{
 		"id": 1857343,
 		"name": "Mifune",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 130.800003,
@@ -1317,6 +1412,7 @@
 	{
 		"id": 1859716,
 		"name": "Kawai",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 135.850006,
@@ -1326,6 +1422,7 @@
 	{
 		"id": 2128333,
 		"name": "Samani",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 142.919174,
@@ -1335,6 +1432,7 @@
 	{
 		"id": 2129447,
 		"name": "Koshimizu",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 144.459717,
@@ -1344,6 +1442,7 @@
 	{
 		"id": 2112370,
 		"name": "Kanegasaki",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 141.116669,
@@ -1353,6 +1452,7 @@
 	{
 		"id": 1855987,
 		"name": "Nakagawa",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 137.033325,
@@ -1362,6 +1462,7 @@
 	{
 		"id": 2110506,
 		"name": "Yokote",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.566666,
@@ -1391,6 +1492,7 @@
 	{
 		"id": 1847996,
 		"name": "Zaōmachi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 138.850006,
@@ -1410,6 +1512,7 @@
 	{
 		"id": 1850762,
 		"name": "Tamagawa",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.666672,
@@ -1419,6 +1522,7 @@
 	{
 		"id": 1858492,
 		"name": "Kudoyama",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 135.566666,
@@ -1428,6 +1532,7 @@
 	{
 		"id": 7302983,
 		"name": "芦屋",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 135.30719,
@@ -1437,6 +1542,7 @@
 	{
 		"id": 1861202,
 		"name": "Iwami",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 134.533325,
@@ -1456,6 +1562,7 @@
 	{
 		"id": 1851079,
 		"name": "Takamori",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 131.116669,
@@ -1465,6 +1572,7 @@
 	{
 		"id": 1861853,
 		"name": "Iijima",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 137.883331,
@@ -1474,6 +1582,7 @@
 	{
 		"id": 1862998,
 		"name": "Hayakawa",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 138.350006,
@@ -1483,6 +1592,7 @@
 	{
 		"id": 1855585,
 		"name": "Narusawa",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 138.733337,
@@ -1492,6 +1602,7 @@
 	{
 		"id": 1854691,
 		"name": "Ogano",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139,
@@ -1521,6 +1632,7 @@
 	{
 		"id": 1861838,
 		"name": "Iiyama",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 138.366669,
@@ -1550,6 +1662,7 @@
 	{
 		"id": 1849845,
 		"name": "Toyokawa",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 137.399994,
@@ -1559,6 +1672,7 @@
 	{
 		"id": 1853237,
 		"name": "Saiki",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 131.899994,
@@ -1568,6 +1682,7 @@
 	{
 		"id": 2113698,
 		"name": "Kahoku",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 141.321671,
@@ -1577,6 +1692,7 @@
 	{
 		"id": 1865485,
 		"name": "Akashichō",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.783325,
@@ -1586,6 +1702,7 @@
 	{
 		"id": 1848040,
 		"name": "Yūrakuchō",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.766663,
@@ -1595,6 +1712,7 @@
 	{
 		"id": 6415253,
 		"name": "Kawasaki",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 136.064438,
@@ -1604,6 +1722,7 @@
 	{
 		"id": 2112062,
 		"name": "Kurosawajiri",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 141.116669,
@@ -1613,6 +1732,7 @@
 	{
 		"id": 1855623,
 		"name": "Nanukaichi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 133.466675,
@@ -1622,6 +1742,7 @@
 	{
 		"id": 2130705,
 		"name": "Akabira",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 142.053055,
@@ -1631,6 +1752,7 @@
 	{
 		"id": 1853412,
 		"name": "Renjakuchō",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.066666,
@@ -1640,6 +1762,7 @@
 	{
 		"id": 1860039,
 		"name": "Kariwa",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 138.61879,
@@ -1649,6 +1772,7 @@
 	{
 		"id": 1863475,
 		"name": "Habu",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 130.699997,
@@ -1668,6 +1792,7 @@
 	{
 		"id": 1856938,
 		"name": "Mitake",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 137.133331,
@@ -1678,6 +1803,7 @@
 		"id": 1858067,
 		"name": "Kusatsu",
 		"name_ja": "草津",
+
 		"country": "JP",
 		"coord": {
 			"lon": 135.966675,
@@ -1697,6 +1823,7 @@
 	{
 		"id": 1850589,
 		"name": "Tarumizu",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 130.699997,
@@ -1706,6 +1833,7 @@
 	{
 		"id": 2128710,
 		"name": "Oku-ikutahara",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 143.516663,
@@ -1715,6 +1843,7 @@
 	{
 		"id": 2130700,
 		"name": "Akaigawa",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.817215,
@@ -1724,6 +1853,7 @@
 	{
 		"id": 1850217,
 		"name": "Tokamachi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 138.766663,
@@ -1753,6 +1883,7 @@
 	{
 		"id": 2128498,
 		"name": "Pippu",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 142.473892,
@@ -1762,6 +1893,7 @@
 	{
 		"id": 2128215,
 		"name": "Shari",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 144.659439,
@@ -1781,6 +1913,7 @@
 	{
 		"id": 1854807,
 		"name": "Obita",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 129.883331,
@@ -1790,6 +1923,7 @@
 	{
 		"id": 2127652,
 		"name": "Toyokoro",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 143.533325,
@@ -1799,6 +1933,7 @@
 	{
 		"id": 2129387,
 		"name": "Kuromatsunai",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.306107,
@@ -1808,6 +1943,7 @@
 	{
 		"id": 1849347,
 		"name": "Uken",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 129.233337,
@@ -1827,6 +1963,7 @@
 	{
 		"id": 1848764,
 		"name": "Yakage",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 133.583328,
@@ -1836,6 +1973,7 @@
 	{
 		"id": 1863837,
 		"name": "Furugen",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 127.751106,
@@ -1845,6 +1983,7 @@
 	{
 		"id": 1856488,
 		"name": "Mugi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 134.416672,
@@ -1854,6 +1993,7 @@
 	{
 		"id": 2130389,
 		"name": "Embetsu",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 141.788895,
@@ -1863,6 +2003,7 @@
 	{
 		"id": 2128139,
 		"name": "Shimokawa",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 142.636383,
@@ -1872,6 +2013,7 @@
 	{
 		"id": 1849073,
 		"name": "Utazu",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 133.816666,
@@ -1881,6 +2023,7 @@
 	{
 		"id": 1863866,
 		"name": "Funato",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 135.316666,
@@ -1890,6 +2033,7 @@
 	{
 		"id": 1865312,
 		"name": "Anamizu",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 136.899994,
@@ -1899,6 +2043,7 @@
 	{
 		"id": 1848528,
 		"name": "Yanohama",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 136.199997,
@@ -1918,6 +2063,7 @@
 	{
 		"id": 1854026,
 		"name": "Ono",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 134.933334,
@@ -1947,6 +2093,7 @@
 	{
 		"id": 1848705,
 		"name": "Yamaga",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 130.683334,
@@ -1956,6 +2103,7 @@
 	{
 		"id": 1926006,
 		"name": "Iyo",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 132.701385,
@@ -1975,6 +2123,7 @@
 	{
 		"id": 2130106,
 		"name": "Higashikawa",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 141.783325,
@@ -1984,6 +2133,7 @@
 	{
 		"id": 1862752,
 		"name": "Higashi-ōsaka",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 135.583328,
@@ -1993,6 +2143,7 @@
 	{
 		"id": 2127545,
 		"name": "Utashinai",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 142.050003,
@@ -2002,6 +2153,7 @@
 	{
 		"id": 2128159,
 		"name": "Shimizu",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 142.88472,
@@ -2011,6 +2163,7 @@
 	{
 		"id": 2127731,
 		"name": "Tomamae",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 141.654434,
@@ -2020,6 +2173,7 @@
 	{
 		"id": 1848935,
 		"name": "Wake",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 134.133331,
@@ -2029,6 +2183,7 @@
 	{
 		"id": 1894619,
 		"name": "Urazoe",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 127.70639,
@@ -2038,6 +2193,7 @@
 	{
 		"id": 2129696,
 		"name": "Kamoenai",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.434433,
@@ -2047,6 +2203,7 @@
 	{
 		"id": 1861305,
 		"name": "Itano",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 133.783325,
@@ -2056,6 +2213,7 @@
 	{
 		"id": 1848194,
 		"name": "Yoshii",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 138.983337,
@@ -2065,6 +2223,7 @@
 	{
 		"id": 1848498,
 		"name": "Yashiro",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 134.966675,
@@ -2084,6 +2243,7 @@
 	{
 		"id": 1848933,
 		"name": "Waki",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 134.149994,
@@ -2093,6 +2253,7 @@
 	{
 		"id": 1849367,
 		"name": "Ujiie",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.966675,
@@ -2102,6 +2263,7 @@
 	{
 		"id": 1849424,
 		"name": "Ueki",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 130.683334,
@@ -2111,6 +2273,7 @@
 	{
 		"id": 1849561,
 		"name": "Tsurusaki",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 131.684433,
@@ -2120,6 +2283,7 @@
 	{
 		"id": 1849814,
 		"name": "Toyota",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 137.149994,
@@ -2129,6 +2293,7 @@
 	{
 		"id": 1849817,
 		"name": "Toyoshina",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 137.901077,
@@ -2138,6 +2303,7 @@
 	{
 		"id": 1849850,
 		"name": "Toyohama",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 136.933334,
@@ -2147,6 +2313,7 @@
 	{
 		"id": 1850269,
 		"name": "Togitsu",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 129.850006,
@@ -2156,6 +2323,7 @@
 	{
 		"id": 1850405,
 		"name": "Tenno",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.966675,
@@ -2165,6 +2333,7 @@
 	{
 		"id": 1850627,
 		"name": "Tanushimaru",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 130.683334,
@@ -2174,6 +2343,7 @@
 	{
 		"id": 1850630,
 		"name": "Tanuma",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.583328,
@@ -2183,6 +2353,7 @@
 	{
 		"id": 1850742,
 		"name": "Tamano",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 133.949997,
@@ -2232,6 +2403,7 @@
 	{
 		"id": 1851622,
 		"name": "Sobue",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 136.716675,
@@ -2241,6 +2413,7 @@
 	{
 		"id": 1851711,
 		"name": "Shobu",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.600006,
@@ -2260,6 +2433,7 @@
 	{
 		"id": 1851952,
 		"name": "Shiozawa",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 138.850006,
@@ -2269,6 +2443,7 @@
 	{
 		"id": 1852109,
 		"name": "Shingu",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 130.433334,
@@ -2288,6 +2463,7 @@
 	{
 		"id": 1852561,
 		"name": "Shido",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 134.173325,
@@ -2297,6 +2473,7 @@
 	{
 		"id": 1852673,
 		"name": "Setaka",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 130.466675,
@@ -2306,6 +2483,7 @@
 	{
 		"id": 1853193,
 		"name": "Sakai",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.800003,
@@ -2345,6 +2523,7 @@
 	{
 		"id": 1854177,
 		"name": "Omama",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.283325,
@@ -2354,6 +2533,7 @@
 	{
 		"id": 1854246,
 		"name": "Okuchi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 130.616669,
@@ -2363,6 +2543,7 @@
 	{
 		"id": 1855066,
 		"name": "Nogata",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 130.733337,
@@ -2402,6 +2583,7 @@
 	{
 		"id": 1855907,
 		"name": "Nakama",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 130.699997,
@@ -2411,6 +2593,7 @@
 	{
 		"id": 1856456,
 		"name": "Muko",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 135.704147,
@@ -2420,6 +2603,7 @@
 	{
 		"id": 1856476,
 		"name": "Muikamachi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 138.883331,
@@ -2439,6 +2623,7 @@
 	{
 		"id": 1856828,
 		"name": "Miyada",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 130.666672,
@@ -2448,6 +2633,7 @@
 	{
 		"id": 1857403,
 		"name": "Menuma",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.383331,
@@ -2457,6 +2643,7 @@
 	{
 		"id": 1857470,
 		"name": "Matsuto",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 136.566666,
@@ -2466,6 +2653,7 @@
 	{
 		"id": 1857651,
 		"name": "Maruoka",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 136.270294,
@@ -2475,6 +2663,7 @@
 	{
 		"id": 1857659,
 		"name": "Maruko",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 138.266663,
@@ -2504,6 +2693,7 @@
 	{
 		"id": 1858249,
 		"name": "Kuroda",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 136.783325,
@@ -2513,6 +2703,7 @@
 	{
 		"id": 1858283,
 		"name": "Kurihashi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.699997,
@@ -2522,6 +2713,7 @@
 	{
 		"id": 1858591,
 		"name": "Kozakai-cho",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 137.358887,
@@ -2531,6 +2723,7 @@
 	{
 		"id": 1858836,
 		"name": "Konan",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 136.870422,
@@ -2540,6 +2733,7 @@
 	{
 		"id": 1858858,
 		"name": "Komoro",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 138.433334,
@@ -2549,6 +2743,7 @@
 	{
 		"id": 1859113,
 		"name": "Kodama",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.133331,
@@ -2558,6 +2753,7 @@
 	{
 		"id": 1859335,
 		"name": "Kitahama",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 135.916672,
@@ -2567,6 +2763,7 @@
 	{
 		"id": 1859400,
 		"name": "Kisai",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.583328,
@@ -2576,6 +2773,7 @@
 	{
 		"id": 1859586,
 		"name": "Kazo",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.600006,
@@ -2585,6 +2783,7 @@
 	{
 		"id": 1859647,
 		"name": "Kawasaki",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 130.833328,
@@ -2594,6 +2793,7 @@
 	{
 		"id": 1859891,
 		"name": "Kasugai",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 136.97229,
@@ -2603,6 +2803,7 @@
 	{
 		"id": 1859951,
 		"name": "Kashihara-shi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 135.792892,
@@ -2622,6 +2823,7 @@
 	{
 		"id": 1860191,
 		"name": "Kanie",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 136.800003,
@@ -2631,6 +2833,7 @@
 	{
 		"id": 1860211,
 		"name": "Kaneko",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139,
@@ -2640,6 +2843,7 @@
 	{
 		"id": 1860256,
 		"name": "Kanaya",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 138.133331,
@@ -2649,6 +2853,7 @@
 	{
 		"id": 1860321,
 		"name": "Kamojima",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 134.350006,
@@ -2658,6 +2863,7 @@
 	{
 		"id": 1860335,
 		"name": "Kamogata",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 133.583328,
@@ -2667,6 +2873,7 @@
 	{
 		"id": 1860648,
 		"name": "Kameda",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.116669,
@@ -2676,6 +2883,7 @@
 	{
 		"id": 1860750,
 		"name": "Kajiki",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 130.666672,
@@ -2685,6 +2893,7 @@
 	{
 		"id": 1861171,
 		"name": "Iwata",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 137.850006,
@@ -2694,6 +2903,7 @@
 	{
 		"id": 1861223,
 		"name": "Iwai",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.899994,
@@ -2703,6 +2913,7 @@
 	{
 		"id": 1861244,
 		"name": "Iwade",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 135.316666,
@@ -2712,6 +2923,7 @@
 	{
 		"id": 1861383,
 		"name": "Ishiki",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 137.016663,
@@ -2721,6 +2933,7 @@
 	{
 		"id": 1861406,
 		"name": "Ishige",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.966675,
@@ -2760,6 +2973,7 @@
 	{
 		"id": 1861825,
 		"name": "Ijuin",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 130.399994,
@@ -2779,6 +2993,7 @@
 	{
 		"id": 1862033,
 		"name": "Ibaraki",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 135.568283,
@@ -2798,6 +3013,7 @@
 	{
 		"id": 1862098,
 		"name": "Hotaka",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 137.882538,
@@ -2807,6 +3023,7 @@
 	{
 		"id": 1862389,
 		"name": "Hisai",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 136.466675,
@@ -2816,6 +3033,7 @@
 	{
 		"id": 1862471,
 		"name": "Hirata",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 132.816666,
@@ -2825,6 +3043,7 @@
 	{
 		"id": 1862601,
 		"name": "Hino",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 136.25,
@@ -2834,6 +3053,7 @@
 	{
 		"id": 1862912,
 		"name": "Hekinan",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 136.983337,
@@ -2843,6 +3063,7 @@
 	{
 		"id": 1863279,
 		"name": "Hamanoichi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 130.733337,
@@ -2852,6 +3073,7 @@
 	{
 		"id": 1863293,
 		"name": "Hamakita",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 137.783325,
@@ -2861,6 +3083,7 @@
 	{
 		"id": 1863398,
 		"name": "Haibara",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 135.949997,
@@ -2870,6 +3093,7 @@
 	{
 		"id": 1863451,
 		"name": "Omihachiman",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 136.097595,
@@ -2889,6 +3113,7 @@
 	{
 		"id": 1863627,
 		"name": "Ginowan",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 127.761467,
@@ -2898,6 +3123,7 @@
 	{
 		"id": 1863953,
 		"name": "Fukura",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 134.716675,
@@ -2907,6 +3133,7 @@
 	{
 		"id": 1863973,
 		"name": "Fukumitsu",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 136.866669,
@@ -2916,6 +3143,7 @@
 	{
 		"id": 1863978,
 		"name": "Fukuma",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 130.466675,
@@ -2935,6 +3163,7 @@
 	{
 		"id": 1863997,
 		"name": "Fukue",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 128.841934,
@@ -2944,6 +3173,7 @@
 	{
 		"id": 1864025,
 		"name": "Fukiage",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.449997,
@@ -2953,6 +3183,7 @@
 	{
 		"id": 1864098,
 		"name": "Fujioka",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.649994,
@@ -2982,6 +3213,7 @@
 	{
 		"id": 1864557,
 		"name": "Chino",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 138.154282,
@@ -2991,6 +3223,7 @@
 	{
 		"id": 1865375,
 		"name": "Amagi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 130.649994,
@@ -3000,6 +3233,7 @@
 	{
 		"id": 1865661,
 		"name": "Aioi-shi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 134.468063,
@@ -3029,6 +3263,7 @@
 	{
 		"id": 2110538,
 		"name": "Yanagawa",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.600006,
@@ -3048,6 +3283,7 @@
 	{
 		"id": 2110743,
 		"name": "Tomobe",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.300003,
@@ -3057,6 +3293,7 @@
 	{
 		"id": 2110893,
 		"name": "Takahagi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.716675,
@@ -3066,6 +3303,7 @@
 	{
 		"id": 2111425,
 		"name": "Omiya",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.416672,
@@ -3075,6 +3313,7 @@
 	{
 		"id": 2111429,
 		"name": "Omigawa",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.616669,
@@ -3084,6 +3323,7 @@
 	{
 		"id": 2111441,
 		"name": "Okunoya",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.416672,
@@ -3093,6 +3333,7 @@
 	{
 		"id": 2111495,
 		"name": "Ohara",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.383331,
@@ -3102,6 +3343,7 @@
 	{
 		"id": 2111824,
 		"name": "Motomiya",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.399994,
@@ -3111,6 +3353,7 @@
 	{
 		"id": 2111859,
 		"name": "Mizusawa",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 141.133331,
@@ -3120,6 +3363,7 @@
 	{
 		"id": 2111964,
 		"name": "Matsushima",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 141.06105,
@@ -3129,6 +3373,7 @@
 	{
 		"id": 2112019,
 		"name": "Makabe",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.100006,
@@ -3148,6 +3393,7 @@
 	{
 		"id": 2112182,
 		"name": "Kogota",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 141.050003,
@@ -3167,6 +3413,7 @@
 	{
 		"id": 2112297,
 		"name": "Kawaguchi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.100006,
@@ -3186,6 +3433,7 @@
 	{
 		"id": 2112319,
 		"name": "Katori-shi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.499435,
@@ -3205,6 +3453,7 @@
 	{
 		"id": 2112521,
 		"name": "Iwase",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.100006,
@@ -3214,6 +3463,7 @@
 	{
 		"id": 2112583,
 		"name": "Ishikawa",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.449997,
@@ -3223,6 +3473,7 @@
 	{
 		"id": 2112615,
 		"name": "Inawashiro",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.116669,
@@ -3232,6 +3483,7 @@
 	{
 		"id": 2112692,
 		"name": "Hobara",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.550003,
@@ -3241,6 +3493,7 @@
 	{
 		"id": 2112903,
 		"name": "Funehiki",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.583328,
@@ -3250,6 +3503,7 @@
 	{
 		"id": 2112940,
 		"name": "Fujishiro",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.116669,
@@ -3259,6 +3513,7 @@
 	{
 		"id": 2112963,
 		"name": "Edosaki",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.316666,
@@ -3278,6 +3533,7 @@
 	{
 		"id": 2129766,
 		"name": "Kamiiso",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.649994,
@@ -3297,6 +3553,7 @@
 	{
 		"id": 8125829,
 		"name": "Kamigyo-ku",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 135.756653,
@@ -3306,6 +3563,7 @@
 	{
 		"id": 1859895,
 		"name": "Kasugabaru",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 130.466675,
@@ -3315,6 +3573,7 @@
 	{
 		"id": 1860521,
 		"name": "Kami-kōjaku",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 130.760193,
@@ -3324,6 +3583,7 @@
 	{
 		"id": 1857441,
 		"name": "Mayanoheta",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 136.516663,
@@ -3333,6 +3593,7 @@
 	{
 		"id": 1859842,
 		"name": "Katase",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.474442,
@@ -3342,6 +3603,7 @@
 	{
 		"id": 1848848,
 		"name": "Yabuhana",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.467224,
@@ -3351,6 +3613,7 @@
 	{
 		"id": 6419432,
 		"name": "Shōwajima",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.75,
@@ -3360,6 +3623,7 @@
 	{
 		"id": 1851992,
 		"name": "Shiomidai",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.533325,
@@ -3369,6 +3633,7 @@
 	{
 		"id": 1907174,
 		"name": "Okura",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.470276,
@@ -3378,6 +3643,7 @@
 	{
 		"id": 1862143,
 		"name": "Horinouchi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.649994,
@@ -3387,6 +3653,7 @@
 	{
 		"id": 1848305,
 		"name": "Yokota",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.383331,
@@ -3396,6 +3663,7 @@
 	{
 		"id": 2112874,
 		"name": "Futto",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.366669,
@@ -3405,6 +3673,7 @@
 	{
 		"id": 2128131,
 		"name": "Shimo-masukawa",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.850006,
@@ -3414,6 +3683,7 @@
 	{
 		"id": 2130574,
 		"name": "Bannaguro",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 141.321106,
@@ -3423,6 +3693,7 @@
 	{
 		"id": 2127712,
 		"name": "Tomioka",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 142.183334,
@@ -3432,6 +3703,7 @@
 	{
 		"id": 1855939,
 		"name": "Nakaizumi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 137.850006,
@@ -3441,6 +3713,7 @@
 	{
 		"id": 1853398,
 		"name": "Rokujizō",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 135.800003,
@@ -3450,6 +3723,7 @@
 	{
 		"id": 1865006,
 		"name": "Ashiharachō",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 135.5,
@@ -3459,6 +3733,7 @@
 	{
 		"id": 1855444,
 		"name": "Nihon’ōdōri",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.649994,
@@ -3468,6 +3743,7 @@
 	{
 		"id": 1864771,
 		"name": "Bentenchō",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 135.183334,
@@ -3487,6 +3763,7 @@
 	{
 		"id": 1850418,
 		"name": "Tenjinchō",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 130.399994,
@@ -3496,6 +3773,7 @@
 	{
 		"id": 1865264,
 		"name": "Aoichō",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 136.916672,
@@ -3535,6 +3813,7 @@
 	{
 		"id": 1855309,
 		"name": "Nishigochō",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 138.183334,
@@ -3554,6 +3833,7 @@
 	{
 		"id": 2110617,
 		"name": "Uwamachi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.466675,
@@ -3563,6 +3843,7 @@
 	{
 		"id": 1853620,
 		"name": "Ohtemachi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 136.220169,
@@ -3572,6 +3853,7 @@
 	{
 		"id": 1863140,
 		"name": "Harigayachō",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.633331,
@@ -3591,6 +3873,7 @@
 	{
 		"id": 1857689,
 		"name": "Mandaimachi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 134.566666,
@@ -3600,6 +3883,7 @@
 	{
 		"id": 2127660,
 		"name": "Toyohira",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 141.366669,
@@ -3609,6 +3893,7 @@
 	{
 		"id": 1853058,
 		"name": "Sakurakabu",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.466675,
@@ -3618,6 +3903,7 @@
 	{
 		"id": 1860704,
 		"name": "Kakogawa",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 134.850006,
@@ -3627,6 +3913,7 @@
 	{
 		"id": 2110657,
 		"name": "Uchimaru",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 141.149994,
@@ -3636,6 +3923,7 @@
 	{
 		"id": 1859900,
 		"name": "Kasuga",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 130.050003,
@@ -3655,6 +3943,7 @@
 	{
 		"id": 1848489,
 		"name": "Yasu",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 136.02327,
@@ -3664,6 +3953,7 @@
 	{
 		"id": 1854642,
 		"name": "Ōgimachiya",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.399994,
@@ -3673,6 +3963,7 @@
 	{
 		"id": 2112892,
 		"name": "Fusa",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.133331,
@@ -3692,6 +3983,7 @@
 	{
 		"id": 2111106,
 		"name": "Shimizu-kōji",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.883331,
@@ -3711,6 +4003,7 @@
 	{
 		"id": 1850420,
 		"name": "Tenjimmae",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 134.050003,
@@ -3730,6 +4023,7 @@
 	{
 		"id": 1852795,
 		"name": "Seki",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 136.399994,
@@ -3749,6 +4043,7 @@
 	{
 		"id": 1864821,
 		"name": "Bakurochō",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 136.649994,
@@ -3758,6 +4053,7 @@
 	{
 		"id": 1860649,
 		"name": "Kamearimachi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.850006,
@@ -3807,6 +4103,7 @@
 	{
 		"id": 1848131,
 		"name": "Yuasa",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 135.183334,
@@ -3816,6 +4113,7 @@
 	{
 		"id": 1855342,
 		"name": "Nishihara",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 127.755829,
@@ -3835,6 +4133,7 @@
 	{
 		"id": 1848667,
 		"name": "Yamakita",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.073334,
@@ -3844,6 +4143,7 @@
 	{
 		"id": 2130421,
 		"name": "Date",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.868057,
@@ -3853,6 +4153,7 @@
 	{
 		"id": 1926102,
 		"name": "Mannen",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 132.792694,
@@ -3862,6 +4163,7 @@
 	{
 		"id": 2110560,
 		"name": "Yamada",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 141.949997,
@@ -3871,6 +4173,7 @@
 	{
 		"id": 1862136,
 		"name": "Hōryūji",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 135.733337,
@@ -3880,6 +4183,7 @@
 	{
 		"id": 1850822,
 		"name": "Taketomi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 124.08506,
@@ -3909,6 +4213,7 @@
 	{
 		"id": 1848949,
 		"name": "Wakasa",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 134.399994,
@@ -3918,6 +4223,7 @@
 	{
 		"id": 1862291,
 		"name": "Hōjō",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.866669,
@@ -3927,6 +4233,7 @@
 	{
 		"id": 1926024,
 		"name": "Tsutsui",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 132.705017,
@@ -3936,6 +4243,7 @@
 	{
 		"id": 2112562,
 		"name": "Isomura",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.100006,
@@ -3955,6 +4263,7 @@
 	{
 		"id": 1850943,
 		"name": "Takata",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 136.233337,
@@ -3964,6 +4273,7 @@
 	{
 		"id": 1848440,
 		"name": "Yatsuzawa",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.116669,
@@ -3973,6 +4283,7 @@
 	{
 		"id": 1856521,
 		"name": "Motomachi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 135.366669,
@@ -3982,6 +4293,7 @@
 	{
 		"id": 1851009,
 		"name": "Takasago",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 134.800003,
@@ -3990,8 +4302,8 @@
 	},
 	{
 		"id": 1863310,
-		"name_ja": "浜田",
 		"name": "Hamada",
+		"name_ja": "浜田",
 		"country": "JP",
 		"coord": {
 			"lon": 132.083328,
@@ -4001,6 +4313,7 @@
 	{
 		"id": 1856950,
 		"name": "Mita",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.733337,
@@ -4030,6 +4343,7 @@
 	{
 		"id": 6416230,
 		"name": "Asahi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 133.000488,
@@ -4039,6 +4353,7 @@
 	{
 		"id": 1856764,
 		"name": "Miyamaechō",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.199997,
@@ -4048,6 +4363,7 @@
 	{
 		"id": 2130332,
 		"name": "Fukagawa",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 142.039169,
@@ -4067,6 +4383,7 @@
 	{
 		"id": 1853807,
 		"name": "Oshi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.449997,
@@ -4076,6 +4393,7 @@
 	{
 		"id": 2130677,
 		"name": "Akkeshi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 144.852493,
@@ -4105,6 +4423,7 @@
 	{
 		"id": 1851141,
 		"name": "Takaharu",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 131.016663,
@@ -4114,6 +4433,7 @@
 	{
 		"id": 1848841,
 		"name": "Yabutani",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 134.466675,
@@ -4133,6 +4453,7 @@
 	{
 		"id": 1858681,
 		"name": "Kōtari",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 135.699997,
@@ -4142,6 +4463,7 @@
 	{
 		"id": 2112688,
 		"name": "Hokota",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.516663,
@@ -4151,6 +4473,7 @@
 	{
 		"id": 2110901,
 		"name": "Takado",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.716675,
@@ -4170,6 +4493,7 @@
 	{
 		"id": 2129646,
 		"name": "Karumai",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 141.458328,
@@ -4179,6 +4503,7 @@
 	{
 		"id": 1859913,
 		"name": "Kashiwara",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 135.766663,
@@ -4198,6 +4523,7 @@
 	{
 		"id": 1850302,
 		"name": "Todaka",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 131.366669,
@@ -4217,6 +4543,7 @@
 	{
 		"id": 2112860,
 		"name": "Gojōnome",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.116669,
@@ -4226,6 +4553,7 @@
 	{
 		"id": 1851617,
 		"name": "Soeda",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 130.866669,
@@ -4235,6 +4563,7 @@
 	{
 		"id": 2128490,
 		"name": "Piuka",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 142.343063,
@@ -4244,6 +4573,7 @@
 	{
 		"id": 2111049,
 		"name": "Shiogama",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 141.033325,
@@ -4253,6 +4583,7 @@
 	{
 		"id": 2129132,
 		"name": "Moseushi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 141.959167,
@@ -4262,6 +4593,7 @@
 	{
 		"id": 2130531,
 		"name": "Biei",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 142.459717,
@@ -4271,6 +4603,7 @@
 	{
 		"id": 2130567,
 		"name": "Bekkai",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 145.286667,
@@ -4280,6 +4613,7 @@
 	{
 		"id": 2113001,
 		"name": "Chōnan",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.233337,
@@ -4299,6 +4633,7 @@
 	{
 		"id": 1864031,
 		"name": "Fukaya",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.283325,
@@ -4318,6 +4653,7 @@
 	{
 		"id": 1848002,
 		"name": "Zamami",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 127.301109,
@@ -4337,6 +4673,7 @@
 	{
 		"id": 2127955,
 		"name": "Sunagawa",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 141.905563,
@@ -4346,6 +4683,7 @@
 	{
 		"id": 1851279,
 		"name": "Taga",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 136.286255,
@@ -4355,6 +4693,7 @@
 	{
 		"id": 1862444,
 		"name": "Hirokawa",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 130.966675,
@@ -4364,6 +4703,7 @@
 	{
 		"id": 2127398,
 		"name": "Yuni",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 141.784439,
@@ -4373,6 +4713,7 @@
 	{
 		"id": 1859619,
 		"name": "Kawatana",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 129.866669,
@@ -4382,6 +4723,7 @@
 	{
 		"id": 1862569,
 		"name": "Hioki",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 130.350006,
@@ -4391,6 +4733,7 @@
 	{
 		"id": 2127588,
 		"name": "Urahoro",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 143.654724,
@@ -4400,6 +4743,7 @@
 	{
 		"id": 1850233,
 		"name": "Tōji",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 130.833328,
@@ -4419,6 +4763,7 @@
 	{
 		"id": 1851068,
 		"name": "Takanabe",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 131.5,
@@ -4428,6 +4773,7 @@
 	{
 		"id": 1856386,
 		"name": "Murotsu",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 134.149994,
@@ -4437,6 +4783,7 @@
 	{
 		"id": 1848852,
 		"name": "Yabu",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 134.816666,
@@ -4446,6 +4793,7 @@
 	{
 		"id": 1859143,
 		"name": "Kōchi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 138.933334,
@@ -4455,6 +4803,7 @@
 	{
 		"id": 1861290,
 		"name": "Ito",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.083328,
@@ -4464,6 +4813,7 @@
 	{
 		"id": 2114134,
 		"name": "Yamanobe",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.266663,
@@ -4483,6 +4833,7 @@
 	{
 		"id": 1850223,
 		"name": "Tōkaichi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 132.850006,
@@ -4492,6 +4843,7 @@
 	{
 		"id": 1860588,
 		"name": "Kamigōri",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 134.366669,
@@ -4501,6 +4853,7 @@
 	{
 		"id": 2129884,
 		"name": "Itayanagi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.45694,
@@ -4510,6 +4863,7 @@
 	{
 		"id": 1848210,
 		"name": "Yoshida",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 138.883331,
@@ -4519,6 +4873,7 @@
 	{
 		"id": 1848447,
 		"name": "Yatsuo",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 137.133331,
@@ -4528,6 +4883,7 @@
 	{
 		"id": 1848633,
 		"name": "Yamasaki",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 134.550003,
@@ -4537,6 +4893,7 @@
 	{
 		"id": 1849414,
 		"name": "Ueno",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 136.133331,
@@ -4546,6 +4903,7 @@
 	{
 		"id": 1849647,
 		"name": "Tsuma",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 131.399994,
@@ -4565,6 +4923,7 @@
 	{
 		"id": 1850307,
 		"name": "Tochio",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139,
@@ -4584,6 +4943,7 @@
 	{
 		"id": 1851494,
 		"name": "Suibara",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.233337,
@@ -4593,6 +4953,7 @@
 	{
 		"id": 1851813,
 		"name": "Shirone",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.016663,
@@ -4602,6 +4963,7 @@
 	{
 		"id": 1852383,
 		"name": "Shimminatocho",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 135.199997,
@@ -4611,6 +4973,7 @@
 	{
 		"id": 1852385,
 		"name": "Shimminato",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 137.066666,
@@ -4620,6 +4983,7 @@
 	{
 		"id": 1853280,
 		"name": "Sagara",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 138.199997,
@@ -4629,6 +4993,7 @@
 	{
 		"id": 1853354,
 		"name": "Ryuo",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 138.5,
@@ -4638,6 +5003,7 @@
 	{
 		"id": 1853371,
 		"name": "Ryotsu",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 138.433334,
@@ -4647,6 +5013,7 @@
 	{
 		"id": 1855410,
 		"name": "Niitsu",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.116669,
@@ -4666,6 +5033,7 @@
 	{
 		"id": 1855694,
 		"name": "Namerikawa",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 137.333328,
@@ -4685,6 +5053,7 @@
 	{
 		"id": 1856426,
 		"name": "Muramatsu",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.183334,
@@ -4694,6 +5063,7 @@
 	{
 		"id": 1857209,
 		"name": "Minakuchi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 136.166672,
@@ -4703,6 +5073,7 @@
 	{
 		"id": 1857260,
 		"name": "Mikuni",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 136.151855,
@@ -4712,6 +5083,7 @@
 	{
 		"id": 1857560,
 		"name": "Matsubase",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 130.666672,
@@ -4721,6 +5093,7 @@
 	{
 		"id": 1857751,
 		"name": "Maki",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 138.883331,
@@ -4730,6 +5103,7 @@
 	{
 		"id": 1858695,
 		"name": "Kosugi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 137.100006,
@@ -4749,6 +5123,7 @@
 	{
 		"id": 1860176,
 		"name": "Kannabe",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 133.383331,
@@ -4758,6 +5133,7 @@
 	{
 		"id": 1861280,
 		"name": "Itoman",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 127.669441,
@@ -4777,6 +5153,7 @@
 	{
 		"id": 1861393,
 		"name": "Ishikawa",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 127.821388,
@@ -4786,6 +5163,7 @@
 	{
 		"id": 1861586,
 		"name": "Innoshima",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 133.183334,
@@ -4805,6 +5183,7 @@
 	{
 		"id": 1865207,
 		"name": "Arai",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 138.25,
@@ -4814,6 +5193,7 @@
 	{
 		"id": 1926101,
 		"name": "Masaki-cho",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 132.711243,
@@ -4823,6 +5203,7 @@
 	{
 		"id": 1926116,
 		"name": "Kawanoe",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 133.566666,
@@ -4832,6 +5213,7 @@
 	{
 		"id": 1926142,
 		"name": "Hojo",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 132.777664,
@@ -4841,6 +5223,7 @@
 	{
 		"id": 2110541,
 		"name": "Yamoto",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 141.214874,
@@ -4850,6 +5233,7 @@
 	{
 		"id": 2111435,
 		"name": "Omagari",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.483337,
@@ -4859,6 +5243,7 @@
 	{
 		"id": 2111568,
 		"name": "Oami",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.316666,
@@ -4868,6 +5253,7 @@
 	{
 		"id": 2111677,
 		"name": "Naruto",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.416672,
@@ -4897,6 +5283,7 @@
 	{
 		"id": 2127910,
 		"name": "Takanosu",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.369446,
@@ -4906,6 +5293,7 @@
 	{
 		"id": 2129324,
 		"name": "Makubetsu",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 141.821106,
@@ -4925,6 +5313,7 @@
 	{
 		"id": 7279571,
 		"name": "Kunisaki-shi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 131.731567,
@@ -4934,6 +5323,7 @@
 	{
 		"id": 7281819,
 		"name": "Fujikawaguchiko",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 138.688324,
@@ -4943,6 +5333,7 @@
 	{
 		"id": 1857906,
 		"name": "Kyōto-shi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 135.724014,
@@ -4952,6 +5343,7 @@
 	{
 		"id": 1864660,
 		"name": "Buzen-shi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 131.085785,
@@ -4981,6 +5373,7 @@
 	{
 		"id": 2129752,
 		"name": "Kamikitakōzan",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.956116,
@@ -5000,6 +5393,7 @@
 	{
 		"id": 1852775,
 		"name": "Sekimachi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 136.916672,
@@ -5019,6 +5413,7 @@
 	{
 		"id": 1858937,
 		"name": "Komagata",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.133331,
@@ -5058,6 +5453,7 @@
 	{
 		"id": 1848200,
 		"name": "Yoshie",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 136.172287,
@@ -5077,6 +5473,7 @@
 	{
 		"id": 1852915,
 		"name": "Sasaguri",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 130.533325,
@@ -5086,6 +5483,7 @@
 	{
 		"id": 2112571,
 		"name": "Ishioka",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.266663,
@@ -5095,6 +5493,7 @@
 	{
 		"id": 2112518,
 		"name": "Iwate-ken",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 141.359711,
@@ -5104,6 +5503,7 @@
 	{
 		"id": 2111488,
 		"name": "Ōhasama",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 141.283325,
@@ -5133,6 +5533,7 @@
 	{
 		"id": 1852685,
 		"name": "Sesekushi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 130.516663,
@@ -5152,6 +5553,7 @@
 	{
 		"id": 1852427,
 		"name": "Shimbashichō",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.516663,
@@ -5171,6 +5573,7 @@
 	{
 		"id": 1852272,
 		"name": "Shimoku",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 135.600006,
@@ -5190,6 +5593,7 @@
 	{
 		"id": 1849168,
 		"name": "Usa",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 133.449997,
@@ -5209,6 +5613,7 @@
 	{
 		"id": 1849796,
 		"name": "Tsu-shi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 136.508606,
@@ -5218,6 +5623,7 @@
 	{
 		"id": 2111888,
 		"name": "Miyagi-ken",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.926239,
@@ -5227,6 +5633,7 @@
 	{
 		"id": 2111277,
 		"name": "Rifu",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.974442,
@@ -5246,6 +5653,7 @@
 	{
 		"id": 1853024,
 		"name": "Sammyō",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 131.350006,
@@ -5265,6 +5673,7 @@
 	{
 		"id": 1851497,
 		"name": "Suguri",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 138.149994,
@@ -5284,6 +5693,7 @@
 	{
 		"id": 1856531,
 		"name": "Motogoe",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 129.800003,
@@ -5303,6 +5713,7 @@
 	{
 		"id": 1863077,
 		"name": "Hashio",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 135.75,
@@ -5322,6 +5733,7 @@
 	{
 		"id": 1861006,
 		"name": "Jizōdō",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 138.850006,
@@ -5341,6 +5753,7 @@
 	{
 		"id": 1861314,
 		"name": "Itakura",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 133.833328,
@@ -5360,6 +5773,7 @@
 	{
 		"id": 1854656,
 		"name": "Ogi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 130.201111,
@@ -5379,6 +5793,7 @@
 	{
 		"id": 1862539,
 		"name": "Hirakata",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.550003,
@@ -5398,6 +5813,7 @@
 	{
 		"id": 1864237,
 		"name": "Egashira",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 136.050003,
@@ -5417,6 +5833,7 @@
 	{
 		"id": 1852201,
 		"name": "Shimo-satsume",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 132.649994,
@@ -5436,6 +5853,7 @@
 	{
 		"id": 1863218,
 		"name": "Hanazawa",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 138.333328,
@@ -5445,6 +5863,7 @@
 	{
 		"id": 6419747,
 		"name": "Mihama",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.059998,
@@ -5454,6 +5873,7 @@
 	{
 		"id": 6419751,
 		"name": "Inage",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.083328,
@@ -5473,6 +5893,7 @@
 	{
 		"id": 1861950,
 		"name": "Ichinomiya",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 134.466675,
@@ -5492,6 +5913,7 @@
 	{
 		"id": 1848049,
 		"name": "Yura",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 133.75,
@@ -5511,6 +5933,7 @@
 	{
 		"id": 1859363,
 		"name": "Kitadai",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 137.166672,
@@ -5530,6 +5953,7 @@
 	{
 		"id": 1861189,
 		"name": "Iwanogawa",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 135.333328,
@@ -5559,6 +5983,7 @@
 	{
 		"id": 7303469,
 		"name": "tsuruhashi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 135.53009,
@@ -5588,6 +6013,7 @@
 	{
 		"id": 1853150,
 		"name": "Sakanashi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 131.133331,
@@ -5597,6 +6023,7 @@
 	{
 		"id": 1857357,
 		"name": "Mie",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 131.583328,
@@ -5606,6 +6033,7 @@
 	{
 		"id": 1851937,
 		"name": "Shirahama",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 129.733337,
@@ -5615,6 +6043,7 @@
 	{
 		"id": 1862732,
 		"name": "Higashi-suminoe",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 130.199997,
@@ -5624,6 +6053,7 @@
 	{
 		"id": 1863385,
 		"name": "Hainuzuka",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 130.5,
@@ -5633,6 +6063,7 @@
 	{
 		"id": 1898149,
 		"name": "Mirukashi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 129.938324,
@@ -5642,6 +6073,7 @@
 	{
 		"id": 1862633,
 		"name": "Hikosan",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 130.899994,
@@ -5651,6 +6083,7 @@
 	{
 		"id": 6822147,
 		"name": "Kasuga",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 130.48703,
@@ -5660,6 +6093,7 @@
 	{
 		"id": 1852195,
 		"name": "Shimo-shirōzu",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 130.433334,
@@ -5669,6 +6103,7 @@
 	{
 		"id": 1864572,
 		"name": "Chikushino-shi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 130.515594,
@@ -5678,6 +6113,7 @@
 	{
 		"id": 1849299,
 		"name": "Umi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 130.5,
@@ -5697,6 +6133,7 @@
 	{
 		"id": 1855973,
 		"name": "Naka-gōchi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 131.333328,
@@ -5706,6 +6143,7 @@
 	{
 		"id": 1858486,
 		"name": "Kuga",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 132.083328,
@@ -5725,6 +6163,7 @@
 	{
 		"id": 1859914,
 		"name": "Kashiwano",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 136.399994,
@@ -5734,6 +6173,7 @@
 	{
 		"id": 1851426,
 		"name": "Sumoto",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 134.899994,
@@ -5743,6 +6183,7 @@
 	{
 		"id": 1861049,
 		"name": "Jigozen",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 132.316666,
@@ -5762,6 +6203,7 @@
 	{
 		"id": 1854255,
 		"name": "Ō-kubo",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 135.350006,
@@ -5781,6 +6223,7 @@
 	{
 		"id": 1862782,
 		"name": "Higashimachi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 133.083328,
@@ -5790,6 +6233,7 @@
 	{
 		"id": 1848409,
 		"name": "Yobimatsu",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 133.766663,
@@ -5799,6 +6243,7 @@
 	{
 		"id": 1850034,
 		"name": "Tondabayashi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 135.600006,
@@ -5808,6 +6253,7 @@
 	{
 		"id": 1861797,
 		"name": "Ikeda",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 137.816666,
@@ -5817,6 +6263,7 @@
 	{
 		"id": 1857213,
 		"name": "Minagi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 133.649994,
@@ -5826,6 +6273,7 @@
 	{
 		"id": 7302982,
 		"name": "御影",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 135.252426,
@@ -5835,6 +6283,7 @@
 	{
 		"id": 1860293,
 		"name": "Kanagawa",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 133.933334,
@@ -5844,6 +6293,7 @@
 	{
 		"id": 1861036,
 		"name": "Jinai",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 135.533325,
@@ -5853,6 +6303,7 @@
 	{
 		"id": 1855566,
 		"name": "Nashizukuri",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 135.666672,
@@ -5862,6 +6313,7 @@
 	{
 		"id": 1863516,
 		"name": "Goyuchō",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 137.316666,
@@ -5871,6 +6323,7 @@
 	{
 		"id": 1855756,
 		"name": "Nakatsu",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 137.716675,
@@ -5880,6 +6333,7 @@
 	{
 		"id": 1848899,
 		"name": "Warabo",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139,
@@ -5899,6 +6353,7 @@
 	{
 		"id": 1855512,
 		"name": "Nemoto",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.833328,
@@ -5908,6 +6363,7 @@
 	{
 		"id": 1862292,
 		"name": "Hōjō",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 134.833328,
@@ -5927,6 +6383,7 @@
 	{
 		"id": 1851114,
 		"name": "Takajōmachi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 138.383331,
@@ -5936,6 +6393,7 @@
 	{
 		"id": 1851632,
 		"name": "Shuzenji",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 138.933334,
@@ -5945,6 +6403,7 @@
 	{
 		"id": 1855416,
 		"name": "Niimi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 133.466675,
@@ -5954,6 +6413,7 @@
 	{
 		"id": 1855947,
 		"name": "Nakai",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 134.533325,
@@ -5963,6 +6423,7 @@
 	{
 		"id": 1865404,
 		"name": "Akuchi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 133.633331,
@@ -5972,6 +6433,7 @@
 	{
 		"id": 1854762,
 		"name": "Ōdaka",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 136.933334,
@@ -6001,6 +6463,7 @@
 	{
 		"id": 1850940,
 		"name": "Takatachō",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 136.933334,
@@ -6010,6 +6473,7 @@
 	{
 		"id": 6822209,
 		"name": "Nisshin",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 136.963974,
@@ -6019,6 +6483,7 @@
 	{
 		"id": 6698269,
 		"name": "owariasahi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 137.029999,
@@ -6028,6 +6493,7 @@
 	{
 		"id": 1864263,
 		"name": "Echigawa",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 136.199997,
@@ -6037,6 +6503,7 @@
 	{
 		"id": 1857672,
 		"name": "Manzawa",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 138.516663,
@@ -6046,6 +6513,7 @@
 	{
 		"id": 1850177,
 		"name": "Tokuda",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 136.583328,
@@ -6055,6 +6523,7 @@
 	{
 		"id": 1861602,
 		"name": "Inazawa",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 136.783325,
@@ -6064,6 +6533,7 @@
 	{
 		"id": 1855380,
 		"name": "Ninomiya",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.253326,
@@ -6073,6 +6543,7 @@
 	{
 		"id": 1860380,
 		"name": "Kami-yamasa",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 133.116669,
@@ -6082,6 +6553,7 @@
 	{
 		"id": 1907243,
 		"name": "Takata",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.423065,
@@ -6091,6 +6563,7 @@
 	{
 		"id": 1860244,
 		"name": "Kanazawa",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.633331,
@@ -6100,6 +6573,7 @@
 	{
 		"id": 1849423,
 		"name": "Ueki",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.516663,
@@ -6109,6 +6583,7 @@
 	{
 		"id": 1849897,
 		"name": "Totsukachō",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.533325,
@@ -6118,6 +6593,7 @@
 	{
 		"id": 1861449,
 		"name": "Isehara",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.307785,
@@ -6127,6 +6603,7 @@
 	{
 		"id": 6419789,
 		"name": "Kitasode",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.008331,
@@ -6136,6 +6613,7 @@
 	{
 		"id": 1907225,
 		"name": "Kawara",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.272781,
@@ -6145,6 +6623,7 @@
 	{
 		"id": 1859479,
 		"name": "Kikuna",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.633331,
@@ -6154,6 +6633,7 @@
 	{
 		"id": 1855114,
 		"name": "Nishizu",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 135.752304,
@@ -6173,6 +6653,7 @@
 	{
 		"id": 1907190,
 		"name": "Minawa",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.319443,
@@ -6192,6 +6673,7 @@
 	{
 		"id": 1858480,
 		"name": "Kugayama",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.600006,
@@ -6201,6 +6683,7 @@
 	{
 		"id": 1862599,
 		"name": "Hino",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.400284,
@@ -6210,6 +6693,7 @@
 	{
 		"id": 1855730,
 		"name": "Nakayama",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.949997,
@@ -6229,6 +6713,7 @@
 	{
 		"id": 1852502,
 		"name": "Shiki",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.583328,
@@ -6238,6 +6723,7 @@
 	{
 		"id": 1851604,
 		"name": "Soka",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.804443,
@@ -6247,6 +6733,7 @@
 	{
 		"id": 1907125,
 		"name": "Kamifukuoka",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.50972,
@@ -6256,6 +6743,7 @@
 	{
 		"id": 6822108,
 		"name": "Inashiki",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.323563,
@@ -6275,6 +6763,7 @@
 	{
 		"id": 1856435,
 		"name": "Muraimachi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 137.966675,
@@ -6284,6 +6773,7 @@
 	{
 		"id": 1860239,
 		"name": "Kanazu",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 136.230804,
@@ -6293,6 +6783,7 @@
 	{
 		"id": 2111846,
 		"name": "Momiyama",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.550003,
@@ -6302,6 +6793,7 @@
 	{
 		"id": 2111756,
 		"name": "Nagasu",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.516663,
@@ -6321,6 +6813,7 @@
 	{
 		"id": 2112176,
 		"name": "Koibuchi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.366669,
@@ -6330,6 +6823,7 @@
 	{
 		"id": 2110964,
 		"name": "Sugisaki",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.350006,
@@ -6339,6 +6833,7 @@
 	{
 		"id": 2111862,
 		"name": "Mizuki",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.633331,
@@ -6348,6 +6843,7 @@
 	{
 		"id": 2111594,
 		"name": "Noguchi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.333328,
@@ -6357,6 +6853,7 @@
 	{
 		"id": 2110944,
 		"name": "Suwa",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.633331,
@@ -6366,6 +6863,7 @@
 	{
 		"id": 1848211,
 		"name": "Yoshida",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 138.216675,
@@ -6375,6 +6873,7 @@
 	{
 		"id": 1856845,
 		"name": "Miwa",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 138.199997,
@@ -6384,6 +6883,7 @@
 	{
 		"id": 1850837,
 		"name": "Takenouchi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 137.300003,
@@ -6393,6 +6893,7 @@
 	{
 		"id": 2112216,
 		"name": "Kitakubo",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.716675,
@@ -6422,6 +6923,7 @@
 	{
 		"id": 2110661,
 		"name": "Tsuzura",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.850006,
@@ -6441,6 +6943,7 @@
 	{
 		"id": 1851951,
 		"name": "Shiozawa",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.933334,
@@ -6450,6 +6953,7 @@
 	{
 		"id": 2110959,
 		"name": "Sukagawa",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.383331,
@@ -6459,6 +6963,7 @@
 	{
 		"id": 2113136,
 		"name": "Akanuma",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.433334,
@@ -6478,6 +6983,7 @@
 	{
 		"id": 2111540,
 		"name": "Odaka",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.983337,
@@ -6497,6 +7003,7 @@
 	{
 		"id": 2111154,
 		"name": "Sembokuchō",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 141.149994,
@@ -6506,6 +7013,7 @@
 	{
 		"id": 2129211,
 		"name": "Misawa",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 141.359726,
@@ -6515,6 +7023,7 @@
 	{
 		"id": 2128852,
 		"name": "Nubinai",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 143.149994,
@@ -6524,6 +7033,7 @@
 	{
 		"id": 2128922,
 		"name": "Nishikioka",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 141.483337,
@@ -6533,6 +7043,7 @@
 	{
 		"id": 2130452,
 		"name": "Chitose",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 141.652222,
@@ -6542,6 +7053,7 @@
 	{
 		"id": 2129365,
 		"name": "Kutchan",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.740555,
@@ -6551,6 +7063,7 @@
 	{
 		"id": 2128690,
 		"name": "Ōmagari",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 141.473892,
@@ -6560,6 +7073,7 @@
 	{
 		"id": 2129176,
 		"name": "Moiwashita",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 141.350006,
@@ -6569,6 +7083,7 @@
 	{
 		"id": 2130209,
 		"name": "Hachimanchō",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 141.366669,
@@ -6578,6 +7093,7 @@
 	{
 		"id": 2129349,
 		"name": "Kyōritsu",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 144.053894,
@@ -6587,6 +7103,7 @@
 	{
 		"id": 2129379,
 		"name": "Kusanru",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 141.683334,
@@ -6596,6 +7113,7 @@
 	{
 		"id": 2130557,
 		"name": "Bentendōri",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 141.683334,
@@ -6615,6 +7133,7 @@
 	{
 		"id": 2130116,
 		"name": "Hidaka",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 142.440567,
@@ -6624,6 +7143,7 @@
 	{
 		"id": 2113164,
 		"name": "Abiko",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.016663,
@@ -6633,6 +7153,7 @@
 	{
 		"id": 1863945,
 		"name": "Fukuroi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 137.916672,
@@ -6682,6 +7203,7 @@
 	{
 		"id": 1860887,
 		"name": "Kachikawa",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 136.949997,
@@ -6691,6 +7213,7 @@
 	{
 		"id": 1858756,
 		"name": "Kosai-shi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 137.531754,
@@ -6700,6 +7223,7 @@
 	{
 		"id": 1863834,
 		"name": "Furuichi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 132.466675,
@@ -6709,6 +7233,7 @@
 	{
 		"id": 1863788,
 		"name": "Fushimi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 135.761322,
@@ -6718,6 +7243,7 @@
 	{
 		"id": 2128558,
 		"name": "Otofuke",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 143.200287,
@@ -6727,6 +7253,7 @@
 	{
 		"id": 1864815,
 		"name": "Banchō",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.75,
@@ -6756,6 +7283,7 @@
 	{
 		"id": 2111749,
 		"name": "Naka",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.166672,
@@ -6825,6 +7353,7 @@
 	{
 		"id": 1864154,
 		"name": "Fuchu",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.483337,
@@ -6844,6 +7373,7 @@
 	{
 		"id": 1864624,
 		"name": "Chigasaki",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.403885,
@@ -6863,6 +7393,7 @@
 	{
 		"id": 1848254,
 		"name": "Yono",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.633331,
@@ -6882,6 +7413,7 @@
 	{
 		"id": 1907300,
 		"name": "Wako",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.623337,
@@ -6891,6 +7423,7 @@
 	{
 		"id": 1864518,
 		"name": "Chofu",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.552216,
@@ -6900,6 +7433,7 @@
 	{
 		"id": 1860234,
 		"name": "Kanda",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 130.983337,
@@ -6909,6 +7443,7 @@
 	{
 		"id": 1850910,
 		"name": "Takatsuki",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 135.616776,
@@ -6918,6 +7453,7 @@
 	{
 		"id": 7303136,
 		"name": "kagoshima",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 130.556717,
@@ -6927,6 +7463,7 @@
 	{
 		"id": 1864529,
 		"name": "Chiyoda-ku",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.753632,
@@ -6936,6 +7473,7 @@
 	{
 		"id": 1857654,
 		"name": "Marunouchi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.766663,
@@ -6945,6 +7483,7 @@
 	{
 		"id": 1859129,
 		"name": "Kochino",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 136.866669,
@@ -6954,6 +7493,7 @@
 	{
 		"id": 2110891,
 		"name": "Takahata",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.191116,
@@ -6963,6 +7503,7 @@
 	{
 		"id": 2110556,
 		"name": "Yamagata-shi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.363327,
@@ -6972,6 +7513,7 @@
 	{
 		"id": 2112328,
 		"name": "Kasumichō",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.333328,
@@ -6981,6 +7523,7 @@
 	{
 		"id": 7303001,
 		"name": "松山市",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 132.756729,
@@ -6990,6 +7533,7 @@
 	{
 		"id": 2110584,
 		"name": "Yabase",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.100006,
@@ -6999,6 +7543,7 @@
 	{
 		"id": 1864092,
 		"name": "Fujisawa",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.470001,
@@ -7008,6 +7553,7 @@
 	{
 		"id": 1860437,
 		"name": "Kami-renjaku",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.550003,
@@ -7037,6 +7583,7 @@
 	{
 		"id": 1850693,
 		"name": "Tanashi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.522217,
@@ -7056,6 +7603,7 @@
 	{
 		"id": 1848004,
 		"name": "Zama",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.388611,
@@ -7075,6 +7623,7 @@
 	{
 		"id": 1907299,
 		"name": "Asaka",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.601944,
@@ -7094,6 +7643,7 @@
 	{
 		"id": 1865714,
 		"name": "Ageo",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.588608,
@@ -7113,6 +7663,7 @@
 	{
 		"id": 1860095,
 		"name": "Kanzaki",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 130.366669,
@@ -7172,6 +7723,7 @@
 	{
 		"id": 1857276,
 		"name": "Miki",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 134.983337,
@@ -7201,6 +7753,7 @@
 	{
 		"id": 1848903,
 		"name": "Warabi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.704437,
@@ -7220,6 +7773,7 @@
 	{
 		"id": 1859730,
 		"name": "Kawaguchi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.720566,
@@ -7229,6 +7783,7 @@
 	{
 		"id": 1850311,
 		"name": "Tochigi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.733337,
@@ -7238,6 +7793,7 @@
 	{
 		"id": 1856586,
 		"name": "Mori",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 137.933334,
@@ -7267,6 +7823,7 @@
 	{
 		"id": 1857496,
 		"name": "Matsuzaka",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 136.533325,
@@ -7296,6 +7853,7 @@
 	{
 		"id": 1849183,
 		"name": "Ureshino",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 129.983337,
@@ -7335,6 +7893,7 @@
 	{
 		"id": 1861464,
 		"name": "Isahaya",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 130.04306,
@@ -7364,6 +7923,7 @@
 	{
 		"id": 1864416,
 		"name": "Daito",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 135.616669,
@@ -7383,6 +7943,7 @@
 	{
 		"id": 1854665,
 		"name": "Ogawa",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.266663,
@@ -7452,6 +8013,7 @@
 	{
 		"id": 1857968,
 		"name": "Kuwana",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 136.699997,
@@ -7471,6 +8033,7 @@
 	{
 		"id": 1860034,
 		"name": "Kariya",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 136.983337,
@@ -7520,6 +8083,7 @@
 	{
 		"id": 1857871,
 		"name": "Machida",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.450836,
@@ -7539,6 +8103,7 @@
 	{
 		"id": 1860098,
 		"name": "Kanuma",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.733337,
@@ -7568,6 +8133,7 @@
 	{
 		"id": 1850499,
 		"name": "Tatsuno",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 134.550003,
@@ -7587,6 +8153,7 @@
 	{
 		"id": 1853483,
 		"name": "Oyama",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.800003,
@@ -7606,6 +8173,7 @@
 	{
 		"id": 1859307,
 		"name": "Kitakyushu",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 130.833328,
@@ -7615,6 +8183,7 @@
 	{
 		"id": 1861968,
 		"name": "Ichikawa",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.924713,
@@ -7654,6 +8223,7 @@
 	{
 		"id": 1850091,
 		"name": "Tomioka",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 138.899994,
@@ -7673,6 +8243,7 @@
 	{
 		"id": 2130534,
 		"name": "Bibai",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 141.858612,
@@ -7702,6 +8273,7 @@
 	{
 		"id": 1859675,
 		"name": "Kawanishi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 135.416672,
@@ -7711,6 +8283,7 @@
 	{
 		"id": 1848573,
 		"name": "Yanagawa",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 130.399994,
@@ -7720,6 +8293,7 @@
 	{
 		"id": 1861107,
 		"name": "Izumi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 135.433334,
@@ -7729,6 +8303,7 @@
 	{
 		"id": 1855078,
 		"name": "Noda",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.858063,
@@ -7738,6 +8313,7 @@
 	{
 		"id": 1847968,
 		"name": "Zushi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.585556,
@@ -7747,6 +8323,7 @@
 	{
 		"id": 1907301,
 		"name": "Toda",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.692505,
@@ -7756,6 +8333,7 @@
 	{
 		"id": 1859094,
 		"name": "Koga",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 130.466675,
@@ -7765,6 +8343,7 @@
 	{
 		"id": 1855189,
 		"name": "Nishio",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 137.050003,
@@ -7774,6 +8353,7 @@
 	{
 		"id": 1860871,
 		"name": "Kadoma",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 135.583328,
@@ -7783,6 +8363,7 @@
 	{
 		"id": 1861095,
 		"name": "Izumiotsu",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 135.399994,
@@ -7792,6 +8373,7 @@
 	{
 		"id": 1858926,
 		"name": "Komaki",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 136.916672,
@@ -7811,6 +8393,7 @@
 	{
 		"id": 1848188,
 		"name": "Yoshikawa",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.839447,
@@ -7830,6 +8413,7 @@
 	{
 		"id": 1857568,
 		"name": "Matsubara",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 135.550003,
@@ -7849,6 +8433,7 @@
 	{
 		"id": 1856367,
 		"name": "Musashino",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.559433,
@@ -7868,6 +8453,7 @@
 	{
 		"id": 1861528,
 		"name": "Inuyama",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 136.942947,
@@ -7907,6 +8493,7 @@
 	{
 		"id": 1861400,
 		"name": "Ishii",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 134.433334,
@@ -7926,6 +8513,7 @@
 	{
 		"id": 1850600,
 		"name": "Tarui",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 136.533325,
@@ -7935,6 +8523,7 @@
 	{
 		"id": 1863611,
 		"name": "Godo",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 136.600006,
@@ -7954,6 +8543,7 @@
 	{
 		"id": 1849661,
 		"name": "Tsukumi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 131.857224,
@@ -7993,6 +8583,7 @@
 	{
 		"id": 1850746,
 		"name": "Tamamura",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.116669,
@@ -8002,6 +8593,7 @@
 	{
 		"id": 1852595,
 		"name": "Shibukawa",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139,
@@ -8011,6 +8603,7 @@
 	{
 		"id": 2129218,
 		"name": "Yoichi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.770279,
@@ -8020,6 +8613,7 @@
 	{
 		"id": 1859116,
 		"name": "Kodaira",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.483887,
@@ -8029,6 +8623,7 @@
 	{
 		"id": 1852964,
 		"name": "Sano",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.583328,
@@ -8038,6 +8633,7 @@
 	{
 		"id": 1858964,
 		"name": "Kokubunji",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.475555,
@@ -8067,6 +8663,7 @@
 	{
 		"id": 1853081,
 		"name": "Saku",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 138.483337,
@@ -8076,6 +8673,7 @@
 	{
 		"id": 2110480,
 		"name": "Yotsukaido",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.166672,
@@ -8085,6 +8683,7 @@
 	{
 		"id": 1851883,
 		"name": "Shiraoka",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.666672,
@@ -8094,6 +8693,7 @@
 	{
 		"id": 1856977,
 		"name": "Mishima",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 138.916672,
@@ -8123,6 +8723,7 @@
 	{
 		"id": 1852472,
 		"name": "Shimada",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 138.183334,
@@ -8132,6 +8733,7 @@
 	{
 		"id": 1848774,
 		"name": "Yaizu",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 138.333328,
@@ -8171,6 +8773,7 @@
 	{
 		"id": 1854384,
 		"name": "Okaya",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 138.045105,
@@ -8180,6 +8783,7 @@
 	{
 		"id": 1858866,
 		"name": "Komono",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 136.516663,
@@ -8189,6 +8793,7 @@
 	{
 		"id": 1849788,
 		"name": "Tsubame",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 138.933334,
@@ -8208,6 +8813,7 @@
 	{
 		"id": 1860341,
 		"name": "Kamo",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.050003,
@@ -8227,6 +8833,7 @@
 	{
 		"id": 1851259,
 		"name": "Tahara",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 137.266663,
@@ -8246,6 +8853,7 @@
 	{
 		"id": 2110744,
 		"name": "Tomiya",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.886108,
@@ -8255,6 +8863,7 @@
 	{
 		"id": 1864549,
 		"name": "Chiryu",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 137.033325,
@@ -8284,6 +8893,7 @@
 	{
 		"id": 1907165,
 		"name": "Kunitachi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.434998,
@@ -8303,6 +8913,7 @@
 	{
 		"id": 2111310,
 		"name": "Otsuchi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 141.899994,
@@ -8312,6 +8923,7 @@
 	{
 		"id": 2112823,
 		"name": "Hanamaki",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 141.116669,
@@ -8321,6 +8933,7 @@
 	{
 		"id": 1854626,
 		"name": "Ogose",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.289993,
@@ -8330,6 +8943,7 @@
 	{
 		"id": 1851125,
 		"name": "Takaishi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 135.433334,
@@ -8339,6 +8953,7 @@
 	{
 		"id": 1852663,
 		"name": "Seto",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 137.100006,
@@ -8348,6 +8963,7 @@
 	{
 		"id": 1849782,
 		"name": "Tsubata",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 136.733337,
@@ -8357,6 +8973,7 @@
 	{
 		"id": 1850860,
 		"name": "Takehara",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 132.916672,
@@ -8376,6 +8993,7 @@
 	{
 		"id": 1860626,
 		"name": "Kameyama",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 136.449997,
@@ -8385,6 +9003,7 @@
 	{
 		"id": 2111008,
 		"name": "Shisui",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.266663,
@@ -8394,6 +9013,7 @@
 	{
 		"id": 1862462,
 		"name": "Hiratsuka",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.342224,
@@ -8413,6 +9033,7 @@
 	{
 		"id": 2112758,
 		"name": "Higashine",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.400558,
@@ -8422,6 +9043,7 @@
 	{
 		"id": 1907307,
 		"name": "Kimitsu",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.891113,
@@ -8431,6 +9053,7 @@
 	{
 		"id": 1851282,
 		"name": "Tadotsu",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 133.75,
@@ -8440,6 +9063,7 @@
 	{
 		"id": 2111827,
 		"name": "Motegi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.183334,
@@ -8459,6 +9083,7 @@
 	{
 		"id": 1897590,
 		"name": "Kaita",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 132.550003,
@@ -8478,6 +9103,7 @@
 	{
 		"id": 1865401,
 		"name": "Akune",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 130.199997,
@@ -8497,6 +9123,7 @@
 	{
 		"id": 1858041,
 		"name": "Kushikino",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 130.266663,
@@ -8526,6 +9153,7 @@
 	{
 		"id": 1859088,
 		"name": "Koganei",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.501114,
@@ -8535,6 +9163,7 @@
 	{
 		"id": 1853008,
 		"name": "Sanda",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 135.233337,
@@ -8544,6 +9173,7 @@
 	{
 		"id": 1863482,
 		"name": "Gyoda",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.449997,
@@ -8563,6 +9193,7 @@
 	{
 		"id": 1854405,
 		"name": "Okawa",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 130.350006,
@@ -8572,6 +9203,7 @@
 	{
 		"id": 1862513,
 		"name": "Hirao",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 132.071671,
@@ -8581,6 +9213,7 @@
 	{
 		"id": 1848096,
 		"name": "Yuki",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.883331,
@@ -8590,6 +9223,7 @@
 	{
 		"id": 1856569,
 		"name": "Moriyama",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 135.983337,
@@ -8599,6 +9233,7 @@
 	{
 		"id": 1850396,
 		"name": "Tenri",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 135.833328,
@@ -8608,6 +9243,7 @@
 	{
 		"id": 1855670,
 		"name": "Nanao",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 136.966675,
@@ -8627,6 +9263,7 @@
 	{
 		"id": 1851383,
 		"name": "Susami",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 135.5,
@@ -8656,6 +9293,7 @@
 	{
 		"id": 1860785,
 		"name": "Kainan",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 135.199997,
@@ -8665,6 +9303,7 @@
 	{
 		"id": 2130337,
 		"name": "Fujisaki",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.491394,
@@ -8684,6 +9323,7 @@
 	{
 		"id": 2110629,
 		"name": "Ushiku",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.133331,
@@ -8703,6 +9343,7 @@
 	{
 		"id": 1860672,
 		"name": "Kamakura",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.550278,
@@ -8722,6 +9363,7 @@
 	{
 		"id": 1854979,
 		"name": "Nonoichi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 136.616669,
@@ -8731,6 +9373,7 @@
 	{
 		"id": 2129870,
 		"name": "Iwamizawa",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 141.75972,
@@ -8770,6 +9413,7 @@
 	{
 		"id": 1852588,
 		"name": "Shibushi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 131.104996,
@@ -8779,6 +9423,7 @@
 	{
 		"id": 1857712,
 		"name": "Makurazaki",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 130.316666,
@@ -8798,6 +9443,7 @@
 	{
 		"id": 1907116,
 		"name": "Nakai",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.158615,
@@ -8807,6 +9453,7 @@
 	{
 		"id": 1851273,
 		"name": "Tagawa",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 130.800003,
@@ -8816,6 +9463,7 @@
 	{
 		"id": 1855134,
 		"name": "Nishiwaki",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 134.966675,
@@ -8825,6 +9473,7 @@
 	{
 		"id": 2111831,
 		"name": "Moriya",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140,
@@ -8834,6 +9483,7 @@
 	{
 		"id": 2127931,
 		"name": "Taiki",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 143.274719,
@@ -8843,6 +9493,7 @@
 	{
 		"id": 2112664,
 		"name": "Ichihara",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.083328,
@@ -8852,6 +9503,7 @@
 	{
 		"id": 1862992,
 		"name": "Hayama",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.583328,
@@ -8871,6 +9523,7 @@
 	{
 		"id": 2112473,
 		"name": "Kadonowaki",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 141.300003,
@@ -8890,6 +9543,7 @@
 	{
 		"id": 2112555,
 		"name": "Itako",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.550003,
@@ -8899,6 +9553,7 @@
 	{
 		"id": 1856881,
 		"name": "Mitsukaido",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.983337,
@@ -8928,6 +9583,7 @@
 	{
 		"id": 1850818,
 		"name": "Taketoyo",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 136.916672,
@@ -8937,6 +9593,7 @@
 	{
 		"id": 1863023,
 		"name": "Hatogaya",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.736389,
@@ -8946,6 +9603,7 @@
 	{
 		"id": 2112802,
 		"name": "Hasaki",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.833328,
@@ -8995,6 +9653,7 @@
 	{
 		"id": 1850213,
 		"name": "Tokashiki",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 127.358612,
@@ -9004,6 +9663,7 @@
 	{
 		"id": 1862505,
 		"name": "Hirara",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 125.283333,
@@ -9013,6 +9673,7 @@
 	{
 		"id": 1850924,
 		"name": "Takatorichō",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 135.133331,
@@ -9022,6 +9683,7 @@
 	{
 		"id": 2112551,
 		"name": "Iwada",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.366669,
@@ -9031,6 +9693,7 @@
 	{
 		"id": 1864873,
 		"name": "Ayabe",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 135.25,
@@ -9040,6 +9703,7 @@
 	{
 		"id": 2112144,
 		"name": "Koori",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.516663,
@@ -9049,6 +9713,7 @@
 	{
 		"id": 1852003,
 		"name": "Shiojiri",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 137.966675,
@@ -9058,6 +9723,7 @@
 	{
 		"id": 1862971,
 		"name": "Hayashima",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 133.833328,
@@ -9077,6 +9743,7 @@
 	{
 		"id": 1862198,
 		"name": "Honjo",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.183334,
@@ -9106,6 +9773,7 @@
 	{
 		"id": 1851898,
 		"name": "Shirako",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.633331,
@@ -9115,6 +9783,7 @@
 	{
 		"id": 2127896,
 		"name": "Takikawa",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 141.906387,
@@ -9124,6 +9793,7 @@
 	{
 		"id": 1894628,
 		"name": "Haebaru",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 127.722504,
@@ -9133,6 +9803,7 @@
 	{
 		"id": 1848281,
 		"name": "Yonabaru",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 127.753891,
@@ -9142,6 +9813,7 @@
 	{
 		"id": 6418686,
 		"name": "Tsumuura",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 134.001663,
@@ -9151,6 +9823,7 @@
 	{
 		"id": 1864105,
 		"name": "Fujinomiya",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 138.616669,
@@ -9160,6 +9833,7 @@
 	{
 		"id": 1854128,
 		"name": "Ōmiya",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 138.616669,
@@ -9169,6 +9843,7 @@
 	{
 		"id": 1863209,
 		"name": "Handa",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 136.933334,
@@ -9178,6 +9853,7 @@
 	{
 		"id": 2111018,
 		"name": "Shiroi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.066666,
@@ -9197,6 +9873,7 @@
 	{
 		"id": 1861903,
 		"name": "Ifukugata",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 131.666672,
@@ -9206,6 +9883,7 @@
 	{
 		"id": 1858902,
 		"name": "Komatsushima",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 134.583328,
@@ -9225,6 +9903,7 @@
 	{
 		"id": 1858498,
 		"name": "Kudamatsu",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 131.866669,
@@ -9234,6 +9913,7 @@
 	{
 		"id": 1851323,
 		"name": "Tabuse",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 132.066666,
@@ -9263,6 +9943,7 @@
 	{
 		"id": 1849274,
 		"name": "Uno",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 133.949997,
@@ -9302,6 +9983,7 @@
 	{
 		"id": 2129984,
 		"name": "Horonobe",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 141.851395,
@@ -9331,6 +10013,7 @@
 	{
 		"id": 1849588,
 		"name": "Tsurugasaki",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 136.983337,
@@ -9340,6 +10023,7 @@
 	{
 		"id": 1858373,
 		"name": "Kunigami",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 128.683334,
@@ -9349,6 +10033,7 @@
 	{
 		"id": 2127635,
 		"name": "Tsubetsu",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 144.021103,
@@ -9358,6 +10043,7 @@
 	{
 		"id": 1851483,
 		"name": "Suita",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 135.515671,
@@ -9367,6 +10053,7 @@
 	{
 		"id": 1857553,
 		"name": "Matsudo",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.899994,
@@ -9376,6 +10063,7 @@
 	{
 		"id": 1853564,
 		"name": "Otsuki",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 138.933334,
@@ -9385,6 +10073,7 @@
 	{
 		"id": 1854492,
 		"name": "Oiso",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.30278,
@@ -9404,6 +10093,7 @@
 	{
 		"id": 1856667,
 		"name": "Mizunami",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 137.25,
@@ -9413,6 +10103,7 @@
 	{
 		"id": 1850207,
 		"name": "Toki",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 137.183334,
@@ -9422,6 +10113,7 @@
 	{
 		"id": 1859998,
 		"name": "Kasamatsucho",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 136.766663,
@@ -9431,6 +10123,7 @@
 	{
 		"id": 2111687,
 		"name": "Narashino",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.033325,
@@ -9450,6 +10143,7 @@
 	{
 		"id": 1907123,
 		"name": "Hasuda",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.650833,
@@ -9459,6 +10153,7 @@
 	{
 		"id": 2127478,
 		"name": "Yakumo",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.269165,
@@ -9468,6 +10163,7 @@
 	{
 		"id": 1857379,
 		"name": "Mibu",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.800003,
@@ -9477,6 +10173,7 @@
 	{
 		"id": 1860458,
 		"name": "Kaminokawa",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.916672,
@@ -9496,6 +10193,7 @@
 	{
 		"id": 1852849,
 		"name": "Satte",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.716675,
@@ -9505,6 +10203,7 @@
 	{
 		"id": 1856184,
 		"name": "Nagareyama",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.902664,
@@ -9514,6 +10213,7 @@
 	{
 		"id": 2127419,
 		"name": "Yūbari",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 141.957779,
@@ -9523,6 +10223,7 @@
 	{
 		"id": 1849186,
 		"name": "Urayasu",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.888611,
@@ -9532,6 +10233,7 @@
 	{
 		"id": 1862689,
 		"name": "Hiji",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 131.533325,
@@ -9541,6 +10243,7 @@
 	{
 		"id": 1848991,
 		"name": "Wadayama",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 134.866669,
@@ -9550,6 +10253,7 @@
 	{
 		"id": 2128095,
 		"name": "Shintoku",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 142.834717,
@@ -9569,6 +10273,7 @@
 	{
 		"id": 1851751,
 		"name": "Shitara",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 137.566666,
@@ -9588,6 +10293,7 @@
 	{
 		"id": 1865294,
 		"name": "Anjo",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 137.080536,
@@ -9617,6 +10323,7 @@
 	{
 		"id": 1863495,
 		"name": "Gushikawa",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 127.868607,
@@ -9626,6 +10333,7 @@
 	{
 		"id": 1854868,
 		"name": "Nyuzen",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 137.5,
@@ -9635,6 +10343,7 @@
 	{
 		"id": 1861336,
 		"name": "Isoshi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 135.355606,
@@ -9664,6 +10373,7 @@
 	{
 		"id": 1857692,
 		"name": "Manazuru",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.135559,
@@ -9673,6 +10383,7 @@
 	{
 		"id": 2110812,
 		"name": "Tateishi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 141.116669,
@@ -9692,6 +10403,7 @@
 	{
 		"id": 1851842,
 		"name": "Shirayama",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 136.633331,
@@ -9701,6 +10413,7 @@
 	{
 		"id": 2129003,
 		"name": "Nanae",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.683334,
@@ -9710,6 +10423,7 @@
 	{
 		"id": 2128186,
 		"name": "Shihoro",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 143.25,
@@ -9719,6 +10433,7 @@
 	{
 		"id": 1864099,
 		"name": "Fujioka",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.083328,
@@ -9748,6 +10463,7 @@
 	{
 		"id": 1856878,
 		"name": "Mitsuke",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 138.933334,
@@ -9757,6 +10473,7 @@
 	{
 		"id": 1863540,
 		"name": "Gosen",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.166672,
@@ -9766,6 +10483,7 @@
 	{
 		"id": 1852901,
 		"name": "Sasayama",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 135.216675,
@@ -9775,6 +10493,7 @@
 	{
 		"id": 1864338,
 		"name": "Dōshi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.216675,
@@ -9784,6 +10503,7 @@
 	{
 		"id": 1854371,
 		"name": "Okegawa",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.55722,
@@ -9793,6 +10513,7 @@
 	{
 		"id": 1860728,
 		"name": "Kakegawa",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 138.016663,
@@ -9802,6 +10523,7 @@
 	{
 		"id": 2111999,
 		"name": "Mashiko",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.100006,
@@ -9831,6 +10553,7 @@
 	{
 		"id": 2129909,
 		"name": "Ishikari",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 141.353897,
@@ -9840,6 +10563,7 @@
 	{
 		"id": 1860735,
 		"name": "Kakamigahara",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 136.866669,
@@ -9849,6 +10573,7 @@
 	{
 		"id": 1852831,
 		"name": "Sayō",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 134.366669,
@@ -9858,6 +10583,7 @@
 	{
 		"id": 1865290,
 		"name": "Annaka",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 138.899994,
@@ -9867,6 +10593,7 @@
 	{
 		"id": 1907306,
 		"name": "Komae",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.574432,
@@ -9876,6 +10603,7 @@
 	{
 		"id": 1849706,
 		"name": "Tsukawaki",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 131.149994,
@@ -9895,6 +10623,7 @@
 	{
 		"id": 2038715,
 		"name": "Setana",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.851395,
@@ -9904,6 +10633,7 @@
 	{
 		"id": 2127985,
 		"name": "Sōbetsu",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.886108,
@@ -9913,6 +10643,7 @@
 	{
 		"id": 2130001,
 		"name": "Horokanai",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 142.154434,
@@ -9922,6 +10653,7 @@
 	{
 		"id": 2131651,
 		"name": "Hamatonbetsu",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 142.383331,
@@ -9931,6 +10663,7 @@
 	{
 		"id": 2127500,
 		"name": "Wassamu",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 142.417786,
@@ -9940,6 +10673,7 @@
 	{
 		"id": 2127626,
 		"name": "Tsukigata",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 141.669434,
@@ -9949,6 +10683,7 @@
 	{
 		"id": 2130732,
 		"name": "Abira",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 141.833328,
@@ -9958,6 +10693,7 @@
 	{
 		"id": 2130723,
 		"name": "Aibetsu",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 142.577484,
@@ -9967,6 +10703,7 @@
 	{
 		"id": 2128277,
 		"name": "Sarufutsu",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 142.200287,
@@ -9976,6 +10713,7 @@
 	{
 		"id": 2128112,
 		"name": "Shimukappu",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 142.416672,
@@ -9985,6 +10723,7 @@
 	{
 		"id": 2111461,
 		"name": "Okawara",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.733612,
@@ -9994,6 +10733,7 @@
 	{
 		"id": 2130558,
 		"name": "Mashike",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 141.521393,
@@ -10003,6 +10743,7 @@
 	{
 		"id": 2110793,
 		"name": "Tendo",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.36972,
@@ -10012,6 +10753,7 @@
 	{
 		"id": 1856560,
 		"name": "Morohongo",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.304443,
@@ -10021,6 +10763,7 @@
 	{
 		"id": 1861749,
 		"name": "Ikoma",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 135.699997,
@@ -10040,6 +10783,7 @@
 	{
 		"id": 2112008,
 		"name": "Marumori",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.766663,
@@ -10049,6 +10793,7 @@
 	{
 		"id": 1848988,
 		"name": "Wadomari",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 128.649994,
@@ -10058,6 +10803,7 @@
 	{
 		"id": 2111943,
 		"name": "Miharu",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.483337,
@@ -10077,6 +10823,7 @@
 	{
 		"id": 1863625,
 		"name": "Ginoza",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 127.973061,
@@ -10086,6 +10833,7 @@
 	{
 		"id": 1898046,
 		"name": "Seirō",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.255005,
@@ -10095,6 +10843,7 @@
 	{
 		"id": 1854018,
 		"name": "Onoda",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 131.183609,
@@ -10104,6 +10853,7 @@
 	{
 		"id": 2129961,
 		"name": "Ichinohe",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 141.301666,
@@ -10113,6 +10863,7 @@
 	{
 		"id": 1864652,
 		"name": "Chatan",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 127.770279,
@@ -10122,6 +10873,7 @@
 	{
 		"id": 1894388,
 		"name": "Motobu",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 127.890282,
@@ -10131,6 +10883,7 @@
 	{
 		"id": 2110579,
 		"name": "Yachimata",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.316666,
@@ -10140,6 +10893,7 @@
 	{
 		"id": 2110586,
 		"name": "Watari",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.851105,
@@ -10149,6 +10903,7 @@
 	{
 		"id": 2110596,
 		"name": "Wakuya",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 141.133331,
@@ -10158,6 +10913,7 @@
 	{
 		"id": 2129405,
 		"name": "Kunneppu",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 143.737213,
@@ -10167,6 +10923,7 @@
 	{
 		"id": 2128730,
 		"name": "Oketo",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 143.589172,
@@ -10176,6 +10933,7 @@
 	{
 		"id": 2130404,
 		"name": "Ebetsu",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 141.550568,
@@ -10215,6 +10973,7 @@
 	{
 		"id": 2128407,
 		"name": "Rikubetsu",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 143.738068,
@@ -10224,6 +10983,7 @@
 	{
 		"id": 2128430,
 		"name": "Rausu",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 145.191971,
@@ -10233,6 +10993,7 @@
 	{
 		"id": 2128180,
 		"name": "Shikabe",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.821106,
@@ -10242,6 +11003,7 @@
 	{
 		"id": 2129327,
 		"name": "Makkari",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.802505,
@@ -10251,6 +11013,7 @@
 	{
 		"id": 1926136,
 		"name": "Ikazaki",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 132.654373,
@@ -10270,6 +11033,7 @@
 	{
 		"id": 1926027,
 		"name": "Tsuitachi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 133.183334,
@@ -10279,6 +11043,7 @@
 	{
 		"id": 1865720,
 		"name": "Agematsu",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 137.692673,
@@ -10288,6 +11053,7 @@
 	{
 		"id": 2127746,
 		"name": "Tokoro",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 144.073608,
@@ -10297,6 +11063,7 @@
 	{
 		"id": 2112409,
 		"name": "Kaminoyama",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.273605,
@@ -10336,6 +11103,7 @@
 	{
 		"id": 1863521,
 		"name": "Gotsu",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 132.216675,
@@ -10365,6 +11133,7 @@
 	{
 		"id": 2111656,
 		"name": "Nihommatsu",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.433334,
@@ -10394,6 +11163,7 @@
 	{
 		"id": 1850472,
 		"name": "Tawaramoto",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 135.800003,
@@ -10403,6 +11173,7 @@
 	{
 		"id": 1863018,
 		"name": "Hatsukaichi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 132.333328,
@@ -10412,6 +11183,7 @@
 	{
 		"id": 1851504,
 		"name": "Sugito",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.733337,
@@ -10431,6 +11203,7 @@
 	{
 		"id": 2130612,
 		"name": "Ashibetsu",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 142.185562,
@@ -10440,6 +11213,7 @@
 	{
 		"id": 1850004,
 		"name": "Tonosho",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 134.183334,
@@ -10449,6 +11223,7 @@
 	{
 		"id": 2111706,
 		"name": "Namekawa",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.350006,
@@ -10458,6 +11233,7 @@
 	{
 		"id": 2111530,
 		"name": "Ofunato",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 141.716675,
@@ -10477,6 +11253,7 @@
 	{
 		"id": 2129350,
 		"name": "Kyōgoku",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.886932,
@@ -10486,6 +11263,7 @@
 	{
 		"id": 1850108,
 		"name": "Tomigusuku",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 127.675003,
@@ -10525,6 +11303,7 @@
 	{
 		"id": 2127802,
 		"name": "Tobetsu",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 141.516937,
@@ -10534,8 +11313,8 @@
 	{
 		"id": 1863592,
 		"name": "Gojo",
-		"country": "JP",
 		"name_ja": "五條",
+		"country": "JP",
 		"coord": {
 			"lon": 135.699997,
 			"lat": 34.349998
@@ -10544,6 +11323,7 @@
 	{
 		"id": 2038728,
 		"name": "Okushiri",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.518326,
@@ -10553,6 +11333,7 @@
 	{
 		"id": 2130032,
 		"name": "Hokuryū",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 141.916672,
@@ -10562,6 +11343,7 @@
 	{
 		"id": 2127383,
 		"name": "Bihoro",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 144.104446,
@@ -10571,6 +11353,7 @@
 	{
 		"id": 2127574,
 		"name": "Uryū",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 141.887787,
@@ -10580,6 +11363,7 @@
 	{
 		"id": 2129282,
 		"name": "Matsumae",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.104996,
@@ -10589,6 +11373,7 @@
 	{
 		"id": 2112917,
 		"name": "Funagata",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.319443,
@@ -10598,6 +11383,7 @@
 	{
 		"id": 2129395,
 		"name": "Kuroishi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.592224,
@@ -10607,6 +11393,7 @@
 	{
 		"id": 2110518,
 		"name": "Yokaichiba",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.550003,
@@ -10616,6 +11403,7 @@
 	{
 		"id": 1855203,
 		"name": "Nishinoomote",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 131,
@@ -10635,6 +11423,7 @@
 	{
 		"id": 2129562,
 		"name": "Kikonai",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.437225,
@@ -10644,6 +11433,7 @@
 	{
 		"id": 1859224,
 		"name": "Kiyama",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 130.816666,
@@ -10663,6 +11453,7 @@
 	{
 		"id": 1854186,
 		"name": "Omachi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 137.866669,
@@ -10672,6 +11463,7 @@
 	{
 		"id": 1849584,
 		"name": "Tsurugi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 136.633331,
@@ -10691,6 +11483,7 @@
 	{
 		"id": 1856584,
 		"name": "Moriguchi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 135.566666,
@@ -10710,6 +11503,7 @@
 	{
 		"id": 1854530,
 		"name": "Oi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.516663,
@@ -10719,6 +11513,7 @@
 	{
 		"id": 1848113,
 		"name": "Yugawara",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.066666,
@@ -10728,6 +11523,7 @@
 	{
 		"id": 1853192,
 		"name": "Sakai",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.25,
@@ -10747,6 +11543,7 @@
 	{
 		"id": 1858794,
 		"name": "Konosu",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.516663,
@@ -10756,6 +11553,7 @@
 	{
 		"id": 1865412,
 		"name": "Ako",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 134.399994,
@@ -10765,6 +11563,7 @@
 	{
 		"id": 1848522,
 		"name": "Yao",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 135.600006,
@@ -10784,6 +11583,7 @@
 	{
 		"id": 2128072,
 		"name": "Shiraoi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 141.350006,
@@ -10803,6 +11603,7 @@
 	{
 		"id": 1855852,
 		"name": "Nakanojo",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 138.850006,
@@ -10822,6 +11623,7 @@
 	{
 		"id": 1863713,
 		"name": "Futtsu",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.818604,
@@ -10841,6 +11643,7 @@
 	{
 		"id": 2113115,
 		"name": "Ami",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.199997,
@@ -10860,6 +11663,7 @@
 	{
 		"id": 1863541,
 		"name": "Gose",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 135.733337,
@@ -10869,6 +11673,7 @@
 	{
 		"id": 1850498,
 		"name": "Tatsuno",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 137.997208,
@@ -10938,6 +11743,7 @@
 	{
 		"id": 1857046,
 		"name": "Mino",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 135.470566,
@@ -10957,6 +11763,7 @@
 	{
 		"id": 1859462,
 		"name": "Kin",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 127.917778,
@@ -10966,6 +11773,7 @@
 	{
 		"id": 1855713,
 		"name": "Nakijin",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 127.971672,
@@ -10975,6 +11783,7 @@
 	{
 		"id": 2110583,
 		"name": "Yabuki",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.316666,
@@ -10984,6 +11793,7 @@
 	{
 		"id": 1856212,
 		"name": "Naganohara",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 138.633331,
@@ -10993,6 +11803,7 @@
 	{
 		"id": 1860875,
 		"name": "Kadogawa",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 131.649994,
@@ -11002,6 +11813,7 @@
 	{
 		"id": 1854788,
 		"name": "Ochiai",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 138.833328,
@@ -11011,6 +11823,7 @@
 	{
 		"id": 1850718,
 		"name": "Tamba",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 135.066666,
@@ -11020,6 +11833,7 @@
 	{
 		"id": 1849344,
 		"name": "Uki",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 130.083328,
@@ -11029,6 +11843,7 @@
 	{
 		"id": 2112913,
 		"name": "Funaishikawa",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.566666,
@@ -11038,6 +11853,7 @@
 	{
 		"id": 1850736,
 		"name": "Tamarai",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 131.383331,
@@ -11047,6 +11863,7 @@
 	{
 		"id": 1850878,
 		"name": "Takedamachi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 131.399994,
@@ -11056,6 +11873,7 @@
 	{
 		"id": 1848518,
 		"name": "Yaotsu",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 137.149994,
@@ -11075,6 +11893,7 @@
 	{
 		"id": 2110837,
 		"name": "Tanagura",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.383331,
@@ -11084,6 +11903,7 @@
 	{
 		"id": 1854037,
 		"name": "Onna",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 127.85083,
@@ -11093,6 +11913,7 @@
 	{
 		"id": 1864874,
 		"name": "Aya",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 131.266663,
@@ -11102,6 +11923,7 @@
 	{
 		"id": 1857105,
 		"name": "Minato",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.887497,
@@ -11111,6 +11933,7 @@
 	{
 		"id": 1853202,
 		"name": "Sakaguchi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.033325,
@@ -11120,6 +11943,7 @@
 	{
 		"id": 2128372,
 		"name": "Rusutsu",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.872787,
@@ -11129,6 +11953,7 @@
 	{
 		"id": 1856033,
 		"name": "Nahari",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 134.016663,
@@ -11138,6 +11963,7 @@
 	{
 		"id": 1854742,
 		"name": "Ōdera",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.983337,
@@ -11147,6 +11973,7 @@
 	{
 		"id": 1856826,
 		"name": "Miyada",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 137.949997,
@@ -11156,6 +11983,7 @@
 	{
 		"id": 1853071,
 		"name": "Sakurachō",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.466675,
@@ -11165,6 +11993,7 @@
 	{
 		"id": 1857736,
 		"name": "Makinohara",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 138.116669,
@@ -11174,6 +12003,7 @@
 	{
 		"id": 2130708,
 		"name": "Ajigasawa",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.203064,
@@ -11183,6 +12013,7 @@
 	{
 		"id": 2127822,
 		"name": "Teshikaga",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 144.456116,
@@ -11192,6 +12023,7 @@
 	{
 		"id": 1850617,
 		"name": "Taragi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 130.933334,
@@ -11201,6 +12033,7 @@
 	{
 		"id": 1850040,
 		"name": "Tonami",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 137.727203,
@@ -11210,6 +12043,7 @@
 	{
 		"id": 2111543,
 		"name": "Ōdaira",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.283325,
@@ -11219,6 +12053,7 @@
 	{
 		"id": 1865256,
 		"name": "Aoki",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 138.133331,
@@ -11228,6 +12063,7 @@
 	{
 		"id": 1859687,
 		"name": "Kawamoto",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 132.5,
@@ -11237,6 +12073,7 @@
 	{
 		"id": 1849633,
 		"name": "Tsunagi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 130.449997,
@@ -11246,6 +12083,7 @@
 	{
 		"id": 2129073,
 		"name": "Naie",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 141.887787,
@@ -11255,6 +12093,7 @@
 	{
 		"id": 1861642,
 		"name": "Ina",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.25,
@@ -11264,6 +12103,7 @@
 	{
 		"id": 2129868,
 		"name": "Iwanai",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.508896,
@@ -11273,6 +12113,7 @@
 	{
 		"id": 1853433,
 		"name": "Ozu",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 130.866669,
@@ -11282,6 +12123,7 @@
 	{
 		"id": 2128194,
 		"name": "Shichinohe",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 141.154724,
@@ -11291,6 +12133,7 @@
 	{
 		"id": 1854156,
 		"name": "Omi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 137.383331,
@@ -11300,6 +12143,7 @@
 	{
 		"id": 1851319,
 		"name": "Tachiarai",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 130.616669,
@@ -11309,6 +12153,7 @@
 	{
 		"id": 1861584,
 		"name": "Ino",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 133.433334,
@@ -11318,6 +12163,7 @@
 	{
 		"id": 1854798,
 		"name": "Obuse",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 138.316666,
@@ -11327,6 +12173,7 @@
 	{
 		"id": 1848612,
 		"name": "Yamata",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.816666,
@@ -11336,6 +12183,7 @@
 	{
 		"id": 1861793,
 		"name": "Ikeda",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 137.883331,
@@ -11345,6 +12193,7 @@
 	{
 		"id": 1865086,
 		"name": "Asahi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 136.662796,
@@ -11354,6 +12203,7 @@
 	{
 		"id": 1857036,
 		"name": "Minowa",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 138.949997,
@@ -11363,6 +12213,7 @@
 	{
 		"id": 1849729,
 		"name": "Tsuiki",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 131.037415,
@@ -11372,6 +12223,7 @@
 	{
 		"id": 2129262,
 		"name": "Memuro",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 143.050568,
@@ -11381,6 +12233,7 @@
 	{
 		"id": 1849410,
 		"name": "Ueno",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 138.75,
@@ -11400,6 +12253,7 @@
 	{
 		"id": 1863161,
 		"name": "Hara",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 138.550003,
@@ -11409,6 +12263,7 @@
 	{
 		"id": 2129063,
 		"name": "Nakagawa",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 142.057785,
@@ -11418,6 +12273,7 @@
 	{
 		"id": 2130518,
 		"name": "Biratori",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 142.133331,
@@ -11427,6 +12283,7 @@
 	{
 		"id": 2129464,
 		"name": "Hiranai",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.955566,
@@ -11436,6 +12293,7 @@
 	{
 		"id": 1859420,
 		"name": "Kiragawa",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 134.100006,
@@ -11445,6 +12303,7 @@
 	{
 		"id": 2111471,
 		"name": "Ōishida",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.371384,
@@ -11454,6 +12313,7 @@
 	{
 		"id": 1861124,
 		"name": "Izena",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 127.933563,
@@ -11463,6 +12323,7 @@
 	{
 		"id": 1862739,
 		"name": "Higashi-Shinaga",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.733337,
@@ -11472,6 +12333,7 @@
 	{
 		"id": 2127820,
 		"name": "Teshio",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 141.743057,
@@ -11481,6 +12343,7 @@
 	{
 		"id": 1854461,
 		"name": "Ōji",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 135.616669,
@@ -11490,6 +12353,7 @@
 	{
 		"id": 2128207,
 		"name": "Shibecha",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 144.600555,
@@ -11499,6 +12363,7 @@
 	{
 		"id": 2129757,
 		"name": "Kami-kawakami",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 143.716675,
@@ -11508,6 +12373,7 @@
 	{
 		"id": 1857173,
 		"name": "Minami-kasagi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 135.933334,
@@ -11517,6 +12383,7 @@
 	{
 		"id": 2110850,
 		"name": "Tako",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.466675,
@@ -11526,6 +12393,7 @@
 	{
 		"id": 2127949,
 		"name": "Suttsu",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.225555,
@@ -11535,6 +12403,7 @@
 	{
 		"id": 1857117,
 		"name": "Minano",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.100006,
@@ -11544,6 +12413,7 @@
 	{
 		"id": 1849621,
 		"name": "Tsunō",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 131.566666,
@@ -11563,6 +12433,7 @@
 	{
 		"id": 1862588,
 		"name": "Hinokage",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 131.399994,
@@ -11592,6 +12463,7 @@
 	{
 		"id": 1862855,
 		"name": "Higashi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 127.22139,
@@ -11601,6 +12473,7 @@
 	{
 		"id": 2128327,
 		"name": "Sambongi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 141.216675,
@@ -11610,6 +12483,7 @@
 	{
 		"id": 1849798,
 		"name": "Tozawa",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.683334,
@@ -11619,6 +12493,7 @@
 	{
 		"id": 1851597,
 		"name": "Someda",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 130.983337,
@@ -11628,6 +12503,7 @@
 	{
 		"id": 2127883,
 		"name": "Takko",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 141.151672,
@@ -11637,6 +12513,7 @@
 	{
 		"id": 2112818,
 		"name": "Hanawa",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.416672,
@@ -11646,6 +12523,7 @@
 	{
 		"id": 2111713,
 		"name": "Nakayama",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.218323,
@@ -11655,6 +12533,7 @@
 	{
 		"id": 1862363,
 		"name": "Hitoegane",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 137.533325,
@@ -11664,6 +12543,7 @@
 	{
 		"id": 1857838,
 		"name": "Maeda",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 130.966675,
@@ -11673,6 +12553,7 @@
 	{
 		"id": 1863051,
 		"name": "Hatabu",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 130.933334,
@@ -11682,6 +12563,7 @@
 	{
 		"id": 1853394,
 		"name": "Ronji",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 130.716675,
@@ -11691,6 +12573,7 @@
 	{
 		"id": 1864655,
 		"name": "Chabana",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 128.416672,
@@ -11700,6 +12583,7 @@
 	{
 		"id": 7533595,
 		"name": "shimochi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 125.149467,
@@ -11709,6 +12593,7 @@
 	{
 		"id": 1855847,
 		"name": "Nakanoku",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 131.310883,
@@ -11718,6 +12603,7 @@
 	{
 		"id": 1855357,
 		"name": "Nishi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 127.23333,
@@ -11727,6 +12613,7 @@
 	{
 		"id": 1852579,
 		"name": "Nanabari",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 125.308693,
@@ -11736,6 +12623,7 @@
 	{
 		"id": 1852038,
 		"name": "Shinhigashi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 131.259277,
@@ -11745,6 +12633,7 @@
 	{
 		"id": 1854588,
 		"name": "Ōhama",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 124.19706,
@@ -11754,6 +12643,7 @@
 	{
 		"id": 1854964,
 		"name": "Nosato",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 127.76667,
@@ -11763,6 +12653,7 @@
 	{
 		"id": 1860847,
 		"name": "Kaganji",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 127.650002,
@@ -11772,6 +12663,7 @@
 	{
 		"id": 1863356,
 		"name": "Hakonegasaki",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.351105,
@@ -11781,6 +12673,7 @@
 	{
 		"id": 1849771,
 		"name": "Tsubota",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.533325,
@@ -11790,6 +12683,7 @@
 	{
 		"id": 1854431,
 		"name": "Okata",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.383331,
@@ -11799,6 +12693,7 @@
 	{
 		"id": 1854372,
 		"name": "Okazato",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.783325,
@@ -11808,6 +12703,7 @@
 	{
 		"id": 1848598,
 		"name": "Yamato-minami",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.456116,
@@ -11817,6 +12713,7 @@
 	{
 		"id": 1863282,
 		"name": "Hamanaka",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.783325,
@@ -11826,6 +12723,7 @@
 	{
 		"id": 2112234,
 		"name": "Kitagama",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.935287,
@@ -11835,6 +12733,7 @@
 	{
 		"id": 6822204,
 		"name": "Kita-Akita",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.393875,
@@ -11844,6 +12743,7 @@
 	{
 		"id": 1857533,
 		"name": "Matsugasakihama",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.133331,
@@ -11853,6 +12753,7 @@
 	{
 		"id": 2112761,
 		"name": "Higashi-miyanome",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 141.133331,
@@ -11862,6 +12763,7 @@
 	{
 		"id": 2129530,
 		"name": "Kitanuma",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 141.483337,
@@ -11871,6 +12773,7 @@
 	{
 		"id": 2111541,
 		"name": "Odaka",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.416672,
@@ -11880,6 +12783,7 @@
 	{
 		"id": 1848193,
 		"name": "Yoshii",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 138.399994,
@@ -11889,6 +12793,7 @@
 	{
 		"id": 2112498,
 		"name": "Jimmachi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.383331,
@@ -11898,6 +12803,7 @@
 	{
 		"id": 2129653,
 		"name": "Kareizawa",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.649994,
@@ -11907,6 +12813,7 @@
 	{
 		"id": 1850916,
 		"name": "Takatsu",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 131.783325,
@@ -11916,6 +12823,7 @@
 	{
 		"id": 1856801,
 		"name": "Miyaji",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 133.983337,
@@ -11925,6 +12833,7 @@
 	{
 		"id": 1860841,
 		"name": "Kagasuno",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 134.583328,
@@ -11934,6 +12843,7 @@
 	{
 		"id": 1860031,
 		"name": "Karochō",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 134.183334,
@@ -11943,6 +12853,7 @@
 	{
 		"id": 1858025,
 		"name": "Kushiro",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 135.416672,
@@ -11952,6 +12863,7 @@
 	{
 		"id": 1857829,
 		"name": "Maehama",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 133.666672,
@@ -11961,6 +12873,7 @@
 	{
 		"id": 1858707,
 		"name": "Ko-shinozu",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 133.25,
@@ -11970,6 +12883,7 @@
 	{
 		"id": 1852097,
 		"name": "Shinji",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 132.899994,
@@ -11979,6 +12893,7 @@
 	{
 		"id": 1860876,
 		"name": "Kado",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 133.850006,
@@ -11988,6 +12903,7 @@
 	{
 		"id": 1848364,
 		"name": "Yokodaidō",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 132.899994,
@@ -11997,6 +12913,7 @@
 	{
 		"id": 1848230,
 		"name": "Yoromi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 136.966675,
@@ -12006,6 +12923,7 @@
 	{
 		"id": 1863410,
 		"name": "Hagiwara",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 137.199997,
@@ -12015,6 +12933,7 @@
 	{
 		"id": 1861661,
 		"name": "Imazu",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 133.316666,
@@ -12024,6 +12943,7 @@
 	{
 		"id": 1859262,
 		"name": "Kita-toyama",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 136.916672,
@@ -12033,6 +12953,7 @@
 	{
 		"id": 1864948,
 		"name": "Ataka-shimmachi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 136.407196,
@@ -12042,6 +12963,7 @@
 	{
 		"id": 1864240,
 		"name": "Edome-naka",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 136.212357,
@@ -12051,6 +12973,7 @@
 	{
 		"id": 1848906,
 		"name": "Wano",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 129.699997,
@@ -12060,6 +12983,7 @@
 	{
 		"id": 6941611,
 		"name": "Babagasu",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 130.847504,
@@ -12069,6 +12993,7 @@
 	{
 		"id": 1863836,
 		"name": "Furuichi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 131.716675,
@@ -12078,6 +13003,7 @@
 	{
 		"id": 1860941,
 		"name": "Jūrokuban",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 130.983337,
@@ -12087,6 +13013,7 @@
 	{
 		"id": 1861296,
 		"name": "Itazuke",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 130.449997,
@@ -12096,6 +13023,7 @@
 	{
 		"id": 1854585,
 		"name": "Hama",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 128.816666,
@@ -12105,6 +13033,7 @@
 	{
 		"id": 2130019,
 		"name": "Hontomari",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 141.183334,
@@ -12114,6 +13043,7 @@
 	{
 		"id": 2045397,
 		"name": "Buhama",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.424438,
@@ -12123,6 +13053,7 @@
 	{
 		"id": 2128925,
 		"name": "Nishi-kagura",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 142.399994,
@@ -12132,6 +13063,7 @@
 	{
 		"id": 2129052,
 		"name": "Naka-mobetsu",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 143.366669,
@@ -12141,6 +13073,7 @@
 	{
 		"id": 1854712,
 		"name": "Ōfunakoshi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 129.354721,
@@ -12150,6 +13083,7 @@
 	{
 		"id": 1861598,
 		"name": "Indōji",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 129.75,
@@ -12159,6 +13093,7 @@
 	{
 		"id": 2129501,
 		"name": "Koetoi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 141.752777,
@@ -12168,6 +13103,7 @@
 	{
 		"id": 2130316,
 		"name": "Funadomari",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 141.039719,
@@ -12177,6 +13113,7 @@
 	{
 		"id": 2128412,
 		"name": "Retsureppu",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 141.366669,
@@ -12186,6 +13123,7 @@
 	{
 		"id": 2129791,
 		"name": "Kaiyō",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 144.916672,
@@ -12195,6 +13133,7 @@
 	{
 		"id": 2130024,
 		"name": "Hongō",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 144.138733,
@@ -12204,6 +13143,7 @@
 	{
 		"id": 2129072,
 		"name": "Naitōbokujō",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 144.216675,
@@ -12213,6 +13153,7 @@
 	{
 		"id": 2127386,
 		"name": "Zenikame",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.833328,
@@ -12232,6 +13173,7 @@
 	{
 		"id": 2128141,
 		"name": "Shimo-ihira",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 143.266663,
@@ -12241,6 +13183,7 @@
 	{
 		"id": 1860250,
 		"name": "Kanayama",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 135.350006,
@@ -12250,6 +13193,7 @@
 	{
 		"id": 2111937,
 		"name": "Minami",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 141.316666,
@@ -12259,6 +13203,7 @@
 	{
 		"id": 1855882,
 		"name": "Nakamura",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 137.916672,
@@ -12268,6 +13213,7 @@
 	{
 		"id": 1848499,
 		"name": "Yashio-shi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.83905,
@@ -12277,6 +13223,7 @@
 	{
 		"id": 1849407,
 		"name": "Uenohara",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.116669,
@@ -12286,6 +13233,7 @@
 	{
 		"id": 1850692,
 		"name": "Nishi-Tokyo-shi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.5383,
@@ -12295,6 +13243,7 @@
 	{
 		"id": 1852140,
 		"name": "Shinagawa-ku",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.730164,
@@ -12304,6 +13253,7 @@
 	{
 		"id": 1852736,
 		"name": "Sendai",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 130.300003,
@@ -12323,6 +13273,7 @@
 	{
 		"id": 1855207,
 		"name": "Nishinomiya",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 135.333328,
@@ -12352,6 +13303,7 @@
 	{
 		"id": 1856942,
 		"name": "Mitaka-shi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.559631,
@@ -12361,6 +13313,7 @@
 	{
 		"id": 1857144,
 		"name": "Minami-rinkan",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.449997,
@@ -12380,6 +13333,7 @@
 	{
 		"id": 1860765,
 		"name": "Kaizuka",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 135.350006,
@@ -12399,6 +13353,7 @@
 	{
 		"id": 1861164,
 		"name": "Iwatsuki",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.69194,
@@ -12408,6 +13363,7 @@
 	{
 		"id": 1861261,
 		"name": "Itsukaichi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.217773,
@@ -12417,6 +13373,7 @@
 	{
 		"id": 1861310,
 		"name": "Itami",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 135.40126,
@@ -12426,6 +13383,7 @@
 	{
 		"id": 1864985,
 		"name": "A`shiy`a",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 135.302643,
@@ -12435,6 +13393,7 @@
 	{
 		"id": 1907146,
 		"name": "Sayama",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.412125,
@@ -12444,6 +13403,7 @@
 	{
 		"id": 1907148,
 		"name": "Fussa",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.323608,
@@ -12453,6 +13413,7 @@
 	{
 		"id": 1907309,
 		"name": "Miura",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.619171,
@@ -12472,6 +13433,7 @@
 	{
 		"id": 2111567,
 		"name": "Oarai",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.600006,
@@ -12491,6 +13453,7 @@
 	{
 		"id": 2112312,
 		"name": "Katsuta",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.533325,
@@ -12510,6 +13473,7 @@
 	{
 		"id": 2128025,
 		"name": "Shizunai",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 142.366943,
@@ -12529,6 +13493,7 @@
 	{
 		"id": 2129005,
 		"name": "Namioka",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.589447,
@@ -12538,6 +13503,7 @@
 	{
 		"id": 2129513,
 		"name": "Kizukuri",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.386108,
@@ -12547,6 +13513,7 @@
 	{
 		"id": 2130054,
 		"name": "Kitahiroshima",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 141.567215,
@@ -12556,6 +13523,7 @@
 	{
 		"id": 2130203,
 		"name": "Hachinohe",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 141.5,
@@ -12575,6 +13543,7 @@
 	{
 		"id": 6696932,
 		"name": "Kawage",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 136.546448,
@@ -12584,6 +13553,7 @@
 	{
 		"id": 6697563,
 		"name": "Neyagawa",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 135.627594,
@@ -12593,6 +13563,7 @@
 	{
 		"id": 6822096,
 		"name": "Hitachi-Naka",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.53479,
@@ -12602,6 +13573,7 @@
 	{
 		"id": 6822131,
 		"name": "Akiruno-shi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.294144,
@@ -12611,6 +13583,7 @@
 	{
 		"id": 6822146,
 		"name": "Onojo",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 130.478607,
@@ -12620,6 +13593,7 @@
 	{
 		"id": 6822181,
 		"name": "Kamagaya-shi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.000748,
@@ -12649,6 +13623,7 @@
 	{
 		"id": 7279570,
 		"name": "Higashimurayama-shi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.468521,
@@ -12658,6 +13633,7 @@
 	{
 		"id": 8198709,
 		"name": "Buzen",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 131.13002,
@@ -12687,6 +13663,7 @@
 	{
 		"id": 1852534,
 		"name": "Shiida",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 131.057968,
@@ -12696,6 +13673,7 @@
 	{
 		"id": 1856798,
 		"name": "Miyajima",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 132.326126,
@@ -12705,6 +13683,7 @@
 	{
 		"id": 1862944,
 		"name": "Heda",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 138.766663,
@@ -12714,6 +13693,7 @@
 	{
 		"id": 2112454,
 		"name": "Kakudate",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.566666,
@@ -12723,6 +13703,7 @@
 	{
 		"id": 2129761,
 		"name": "Kamikawa",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 142.771103,
@@ -12732,6 +13713,7 @@
 	{
 		"id": 6417596,
 		"name": "Koya",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 135.622437,
@@ -12741,6 +13723,7 @@
 	{
 		"id": 6691616,
 		"name": "Kihoku-cho",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 132.683426,
@@ -12750,6 +13733,7 @@
 	{
 		"id": 6697514,
 		"name": "Asahi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 136.124557,
@@ -12759,6 +13743,7 @@
 	{
 		"id": 6822212,
 		"name": "Aisai",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 136.732224,
@@ -12768,6 +13753,7 @@
 	{
 		"id": 6941783,
 		"name": "Niseko Town",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.669037,
@@ -12777,6 +13763,7 @@
 	{
 		"id": 7303387,
 		"name": "Rishiri Town",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 141.196289,
@@ -12786,6 +13773,7 @@
 	{
 		"id": 8198710,
 		"name": "Yoshitomi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 131.175995,
@@ -12795,6 +13783,7 @@
 	{
 		"id": 1856239,
 		"name": "Nagahamamachi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 131.616669,
@@ -12804,6 +13793,7 @@
 	{
 		"id": 1855933,
 		"name": "Nakajima",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 137.216675,
@@ -12813,6 +13803,7 @@
 	{
 		"id": 1851099,
 		"name": "Takamatsu",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 136.716675,
@@ -12822,6 +13813,7 @@
 	{
 		"id": 2112209,
 		"name": "Kita-sannomaru",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.483337,
@@ -12831,6 +13823,7 @@
 	{
 		"id": 1856685,
 		"name": "Mizoguchi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 133.433334,
@@ -12840,6 +13833,7 @@
 	{
 		"id": 1848919,
 		"name": "Wakinohamachō",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 135.216675,
@@ -12849,6 +13843,7 @@
 	{
 		"id": 1857706,
 		"name": "Mameda-shimmachi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 136.633331,
@@ -12858,6 +13853,7 @@
 	{
 		"id": 1849708,
 		"name": "Tsukasamachi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 136.766663,
@@ -12867,6 +13863,7 @@
 	{
 		"id": 1848739,
 		"name": "Yakuin-Horibata",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 130.399994,
@@ -12876,6 +13873,7 @@
 	{
 		"id": 1853908,
 		"name": "Osaka",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 137.266663,
@@ -12885,6 +13883,7 @@
 	{
 		"id": 1852679,
 		"name": "Seta",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 135.916672,
@@ -12894,6 +13893,7 @@
 	{
 		"id": 1847979,
 		"name": "Zeze-Awazumachi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 135.899994,
@@ -12903,6 +13903,7 @@
 	{
 		"id": 2112034,
 		"name": "Maebara",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.100006,
@@ -12912,6 +13913,7 @@
 	{
 		"id": 6419719,
 		"name": "Chuo",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.126663,
@@ -12921,6 +13923,7 @@
 	{
 		"id": 1853072,
 		"name": "Sakurabashidōri",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 137.216675,
@@ -12930,6 +13933,7 @@
 	{
 		"id": 2114128,
 		"name": "Motodate",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 140.290283,
@@ -12939,6 +13943,7 @@
 	{
 		"id": 1898186,
 		"name": "Yakataishi",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 129.925003,
@@ -12948,6 +13953,7 @@
 	{
 		"id": 2129048,
 		"name": "Nakanosawa",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 141.550003,
@@ -12957,6 +13963,7 @@
 	{
 		"id": 1848575,
 		"name": "Yanada",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 139.483337,
@@ -12966,6 +13973,7 @@
 	{
 		"id": 2127436,
 		"name": "Yokohama",
+		"name_ja": "",
 		"country": "JP",
 		"coord": {
 			"lon": 141.25,
