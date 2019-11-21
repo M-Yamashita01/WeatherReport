@@ -145,7 +145,8 @@ export default {
             "@2x.png",
           width: 32,
           height: 32,
-          label: weather.city_name
+          // label: weather.city_name
+          label: weather.city_name_ja
         });
       });
     },

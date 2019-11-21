@@ -28,6 +28,12 @@ class DBAccess
     statement.execute(city_id, latitude, longitude, city_name, current_datetime, current_datetime)
   end
 
+  def update_weathermap_location(city_id, latitude, longitude, city_name, city_name_ja)
+    current_datetime = Time.now.strftime('%Y-%m-%d %H:%M:%S')
+    statement = @client.prepare('UPDATE weathermap_locations SET latitude=?, longitude=?, city_name=?, city_name_ja=?, updated_at=? WHERE city_id=?')
+    statement.execute(latitude, longitude, city_name, city_name_ja, current_datetime, city_id);
+  end
+
   def insert_weather_group(weather_group_id, weather_icon, weather_main, weather_description)
     current_datetime = Time.now.strftime('%Y-%m-%d %H:%M:%S')
     statement = @client.prepare('INSERT INTO weather_groups (weather_group_id, weather_icon, weather_main, weather_description, created_at, updated_at) VALUES(?, ?, ?, ?, ?, ?)')

@@ -3,6 +3,7 @@ class CurrentWeather
   attr_accessor :latitude
   attr_accessor :city_id
   attr_accessor :city_name
+  attr_accessor :city_name_ja
 
   attr_accessor :weather_group_id
   attr_accessor :weather_icon
@@ -30,6 +31,7 @@ class CurrentWeather
     @latitude = 0
     @city_id = 0
     @city_name = ''
+    @city_name_ja = ''
     @weather_group_id = 0
     @weather_icon = 0
     @weather_main = ''
