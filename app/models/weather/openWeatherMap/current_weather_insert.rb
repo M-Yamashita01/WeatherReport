@@ -12,7 +12,7 @@ def insert_weathermap_location(db_access, current_weather, city_name_ja)
   results = db_access.execute_query(query)
 
   if results.size.zero?
-    db_access.insert_weathermap_location(current_weather.city_id, current_weather.latitude, current_weather.longitude, current_weather.city_name)
+    db_access.insert_weathermap_location(current_weather.city_id, current_weather.latitude, current_weather.longitude, current_weather.city_name, city_name_ja);
     results = db_access.execute_query(query)
   else
     # 既にDBにある地名や緯度、軽度が変わっている可能性があるため更新

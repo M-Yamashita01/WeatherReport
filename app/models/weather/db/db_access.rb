@@ -22,10 +22,10 @@ class DBAccess
     return @client.last_id
   end
 
-  def insert_weathermap_location(city_id, latitude, longitude, city_name)
+  def insert_weathermap_location(city_id, latitude, longitude, city_name, city_name_ja)
     current_datetime = Time.now.strftime('%Y-%m-%d %H:%M:%S')
-    statement = @client.prepare('INSERT INTO weathermap_locations (city_id, latitude, longitude, city_name, created_at, updated_at) VALUES(?, ?, ?, ?, ?, ?)')
-    statement.execute(city_id, latitude, longitude, city_name, current_datetime, current_datetime)
+    statement = @client.prepare('INSERT INTO weathermap_locations (city_id, latitude, longitude, city_name, created_at, updated_at, city_name_ja) VALUES(?, ?, ?, ?, ?, ?, ?)')
+    statement.execute(city_id, latitude, longitude, city_name, current_datetime, current_datetime, city_name_ja)
   end
 
   def update_weathermap_location(city_id, latitude, longitude, city_name, city_name_ja)
