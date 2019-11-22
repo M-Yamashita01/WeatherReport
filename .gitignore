@@ -37,7 +37,7 @@ build-iPhoneSimulator/
 
 ## Environment normalization:
 /.bundle/
-/vendor/bundle
+/vendor/
 /lib/bundler/man/
 
 # for a library or gem, you might want to ignore these files since the code is
@@ -52,3 +52,15 @@ build-iPhoneSimulator/
 log/
 RailsLaunch.sh
 TestExecution.sh
+
+/public/packs
+/public/packs-test
+/node_modules
+/yarn-error.log
+yarn-debug.log*
+.yarn-integrity
+*.DS_Store
+.env
+
+# data directory for docker
+/data

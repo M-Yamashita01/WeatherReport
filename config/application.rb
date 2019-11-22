@@ -8,6 +8,8 @@ Bundler.require(*Rails.groups)
 
 module Blog
   class Application < Rails::Application
+    config.api_only = true
+
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.2
 
@@ -15,5 +17,10 @@ module Blog
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
+
+    config.i18n.default_locale = :ja
+
+    config.active_record.default_timezone = :local
+    config.time_zone = 'Tokyo'
   end
 end

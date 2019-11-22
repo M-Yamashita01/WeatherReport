@@ -1,0 +1,12 @@
+.bundle
+.circleci
+.git
+.gitignore
+.vscode
+data
+log
+node_modules
+public/packs
+test
+tmp
+vendor

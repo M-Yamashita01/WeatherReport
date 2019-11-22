@@ -1,0 +1,71 @@
+version: '3.7'
+
+x-web-container: &web-container
+  environment:
+    MYSQL_PASS: mysql_user
+    MYSQL_USER: mysql_user
+    RAILS_SERVE_STATIC_FILES: 'true'
+    DB_SERVICE_NAME: 'db'
+    OPENWEATHERMAP_API_KEY:
+    MYSQL_DATABASE: weather_report_development
+
+services:
+  db:
+    image: mysql:5.7
+    command: mysqld --character-set-server=utf8 --collation-server=utf8_unicode_ci
+    environment:
+      MYSQL_DATABASE: weather_report_development
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_USER: mysql_user
+      MYSQL_PASSWORD: mysql_user
+      TZ: 'Asia/Tokyo'
+    volumes:
+      - ./data/db:/var/lib/mysql
+    ports:
+      - "3306:3306"
+
+  # db migration after mysql startup
+  db-migrate:
+    << : *web-container
+    build: .
+    depends_on:
+      - db
+    command: sh -c './wait-for-it.sh -t 60 -h db -p 3306 -- bin/rails db:migrate RAILS_ENV=development'
+    ports:
+      - "3307:3307"
+
+  db-openweathermap:
+    << : *web-container
+    build:
+      context: .
+      dockerfile: Dockerfile.openWeatherMap
+    depends_on: 
+      - db-migrate
+    command: sh -c "./wait-for-it.sh -t 60 -h db -p 3306 && ruby current_weather_insert.rb"
+
+  server:
+    << : *web-container
+    build: .
+    command: sh -c "rm -rf tmp && bundle exec rails s -p 3000 -b '0.0.0.0'"
+    ports:
+      - '3000:3000'
+    volumes:
+      - ./app/javascript:/weather_report/app/javascript
+      - ./app/controllers:/weather_report/app/controllers
+      - ./app/models:/weather_report/app/models
+      - ./app/views:/weather_report/app/views
+    depends_on:
+      - db-migrate
+
+  client:
+    build: 
+      context: .
+      dockerfile: Dockerfile.frontend
+    ports:
+      - '8080:8080'
+    volumes:
+      - ./frontend/src:/app/src
+      - ./frontend/static:/app/static
+      - ./frontend/public:/app/public
+    depends_on:
+      - server
