@@ -41,7 +41,7 @@ jobs:
       - run:
           name: sleep for waiting launch db
           command: |
-            sleep 10
+            sleep 30
 
       - run:
           name: run tests
