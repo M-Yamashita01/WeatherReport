@@ -16,6 +16,11 @@ class Api::MicropostsController < ApplicationController
     end
   end
 
+  def destroy
+    post = Micropost.find_by(id: params[:id])
+    post.destroy
+  end
+
   private
 
   def search_params
