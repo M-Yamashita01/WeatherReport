@@ -29,4 +29,18 @@ RSpec.describe 'Micropost', type: :request do
       expect(json['micropost'].length).to eq 10
     end
   end
+
+  describe "DELETE /api/micropost/id" do
+    it "指定した記事の削除ができること" do
+      rainy_post = FactoryBot.create(:rainy_comment, user: @user)
+      api = '/api/microposts/' + rainy_post.id.to_s
+      expect {
+        delete api
+      }.to change { Micropost.count }.by(-1)
+      
+      expect(response.status).to eq 204
+
+      
+    end
+  end
 end
