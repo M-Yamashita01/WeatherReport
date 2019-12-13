@@ -26,6 +26,15 @@
             <div>
               {{ post.content }}
             </div>
+            <div>
+              <button
+                type="button"
+                class="btn btn-sm"
+                @click="$bvModal.show('confirmDeleteModal')"
+              >
+                <span aria-hidden="true">削除</span>
+              </button>
+            </div>
           </div>
         </div>
       </div>
