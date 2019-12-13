@@ -3,7 +3,7 @@ version: 2
 aliases:
   - &default_env
     environment:
-      SUDO_COMMAND: ''
+      SUDO_COMMAND: ""
   - &change_command
     run:
       name: change sudo command
@@ -20,9 +20,9 @@ jobs:
     working_directory: ~/WeatherReport
     steps:
       - checkout
- 
+
       - setup_remote_docker
-  
+
       - run:
           command: |
             if [[ -e ~/caches/images.tar ]]; then
@@ -37,7 +37,7 @@ jobs:
           command: |
             set -x
             ${SUDO_COMMAND} docker-compose -f docker-compose.test.yml up --force-recreate --build -d
-            
+
       - run:
           name: sleep for waiting launch db
           command: |
@@ -51,8 +51,8 @@ jobs:
             ${SUDO_COMMAND} docker-compose -f docker-compose.test.yml exec server bundle exec rspec --format progress \
                                                                   --format RspecJunitFormatter \
                                                                   --out /tmp/test-results/rspec.xml \
-                                                                  $TEST_FILES            
-            
+                                                                  $TEST_FILES
+
       # Save test results for timing analysis
       - store_test_results:
           path: /tmp/test-results
@@ -61,4 +61,4 @@ jobs:
           name: docker-compose down
           command: |
             set -x
-            ${SUDO_COMMAND} docker-compose down
+            ${SUDO_COMMAND} docker-compose -f docker-compose.test.yml down
