@@ -30,6 +30,15 @@ jobs:
             fi
           name: docker load
 
+      - setup_remote_docker
+
+      - run:
+          command: |
+            if [[ -e ~/caches/images.tar ]]; then
+              docker load -i ~/caches/images.tar
+            fi
+          name: docker load
+
       - *change_command
 
       - run:
@@ -37,7 +46,6 @@ jobs:
           command: |
             set -x
             ${SUDO_COMMAND} docker-compose -f docker-compose.test.yml up --force-recreate --build -d
-
       - run:
           name: sleep for waiting launch db
           command: |

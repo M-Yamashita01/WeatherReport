@@ -1,8 +1,8 @@
 FactoryBot.define do
-  factory :weather_sunny, class: WeatherGroup do
+  factory :weather_group do
     weather_group_id { 1 }
-    weather_icon { '01d.png' }
-    weather_main { 'Clear' }
-    weather_description { 'clear skyd' }
+    weather_icon { "MyString" }
+    weather_main { "MyString" }
+    weather_description { "MyString" }
   end
 end
