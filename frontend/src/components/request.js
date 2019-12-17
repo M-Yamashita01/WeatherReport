@@ -135,6 +135,11 @@ async function postComment(id, content) {
     });
   return resultPost;
 }
+
+async function deleteComment() {
+  await axios.delete("/api/micropost", {});
+}
+
 /**
  * @param {*} error
  */
