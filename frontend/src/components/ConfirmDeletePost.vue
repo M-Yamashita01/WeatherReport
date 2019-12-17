@@ -1,11 +1,11 @@
 <template>
-  <b-modal id="confirmDeleteModal" @show="resetModal" @hidden="resetModal">
+  <b-modal id="confirmDeletePost" @show="resetModal" @hidden="resetModal">
     <template v-slot:modal-title>
       コメント削除
     </template>
-<!--    <template v-slot:modal-body>
+    <template v-slot:modal-body>
       コメントを削除します。よろしいですか？
-    </template>-->
+    </template>
     <template v-slot:modal-footer="{ ok, cancel }">
       <b-button size="sm" variant="primary" @click="deleteComment()">
         はい
@@ -29,9 +29,7 @@ export default {
     };
   },
   methods: {
-    deleteComment() {
-
-    },
+    deleteComment() {},
     postComment() {
       if (this.comment == "") {
         return;
@@ -49,7 +47,7 @@ export default {
           return;
         });
 
-      this.$bvModal.hide("commentModal");
+      this.$bvModal.hide("confirmDeletePost");
       this.resetModal();
       this.$emit("updatePosts");
     },
