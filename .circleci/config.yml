@@ -1,4 +1,9 @@
-version: 2
+version: 2.1
+
+orbs:
+  aws-cli: circleci/aws-cli@0.1.13
+  aws-ecr: circleci/aws-ecr@6.2.0
+  aws-ecs: circleci/aws-ecs@0.0.11
 
 aliases:
   - &default_env
@@ -12,12 +17,115 @@ aliases:
           echo 'export SUDO_COMMAND=sudo' >> $BASH_ENV
         fi
 
+executor:
+  default:
+    working_directory: ~/WeatherReport
+
+commands:
+  restore_server_db_migrate_pkg:
+    steps:
+      - restore_cache:
+        name: Restore server db-migrate container
+        key: docker-{{ .Branch }}--{{ checksum ".circleci/config.yml" }}--{{ checksum "docker-compose.yml"}}--{{ checksum "Dockerfile" }}
+
+  restore_client_pkg:
+    steps:
+      - restre_cache:
+        name: Restore client container
+        key: docker-{{ .Branch }}--{{ checksum ".circleci/config.yml" }}--{{ checksum "docker-compose.yml"}}--{{ checksum "Dockerfile.frontend" }}
+
+  save_server_db_migrate_pkg:
+    steps:
+      - save_cache:
+        name: Save server db-migrate container
+        key: docker-{{ .Branch }}--{{ checksum ".circleci/config.yml" }}--{{ checksum "docker-compose.yml"}}--{{ checksum "Dockerfile" }}
+        paths:
+          - ~/WeatherReport/
+
+  save_client_pkg:
+    steps:
+      - save_cache:
+        name: Save client container
+        key: docker-{{ .Branch }}--{{ checksum ".circleci/config.yml" }}--{{ checksum "docker-compose.yml"}}--{{ checksum "Dockerfile.frontend" }}
+        paths:
+          - ~/WeatherReport/frontend/
+
+  build_container:
+    steps:
+      - *change_command
+
+      - run:
+          name: docker-compose up
+          command: |
+            set -x
+            ${SUDO_COMMAND} docker-compose -f docker-compose.test.yml up --force-recreate --build -d
+
+      - run:
+          name: sleep for waiting launch db
+          command: |
+            sleep 30
+  test_container:
+    steps:
+      - run:
+          name: run tests
+          command: |
+            mkdir -p /tmp/test-results
+            TEST_FILES="$(circleci tests glob 'spec/**/*_spec.rb' | circleci tests split --split-by=timings)"
+            ${SUDO_COMMAND} docker-compose -f docker-compose.test.yml exec server bundle exec rspec --format progress \
+                                                                  --format RspecJunitFormatter \
+                                                                  --out /tmp/test-results/rspec.xml \
+                                                                  $TEST_FILES
+
+      # Save test results for timing analysis
+      - store_test_results:
+          path: /tmp/test-results
+
 jobs:
+  setup:
+    executor:
+      name: default
+    environment:
+      AWS_DEFAULT_OUTPUT: json
+    steps:
+      - checkout
+      - setup_remote_docker
+      - attach_workspace:
+          at: WeatherReport
+      - aws-cli/install
+      - aws-cli/configure:
+          aws-access-key-id: AWS_ACCESS_KEY_ID
+          aws-region: AWS_REGION
+      - restore_server_db_migrate_pkg
+      - restore_client_pkg
+      - build_container
+      - save_server_db_migrate_pkg
+      - restore_client_pkg
+
+  test:
+    executor:
+      name: default
+    steps:
+      - checkout
+      - restore_server_db_migrate_pkg
+      - restore_client_pkg
+      - test_container
+
+  build:
+    parameters:
+      executor:
+        name: default
+    steps:
+      - checkout
+      - restore_server_db_migrate_pkg
+      - restore_client_pkg
+      - build_container
+
   build:
     docker:
       - image: circleci/ruby:2.6.5
     <<: *default_env
-    working_directory: ~/WeatherReport
+    executor:
+      name: default
     steps:
       - checkout
 
