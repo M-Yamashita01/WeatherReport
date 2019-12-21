@@ -13,7 +13,12 @@
                 <!--Card content-->
                 <div class="card-body">
                   <router-link class="text-body" to="/profile-edit">
-                    <button type="button" class="btn btn-sm waves-effect profile-edit">編集</button>
+                    <button
+                      type="button"
+                      class="btn btn-sm waves-effect profile-edit"
+                    >
+                      編集
+                    </button>
                   </router-link>
                   <img :src="assetsImage" width="100" height="100" />
                   <div>{{ userName }}</div>
@@ -40,10 +45,16 @@
                 </div>
                 <!--Card content-->
                 <div class="card-body">
-                  <div class="list-group list-group-flush" v-for="(post, i) in getPosts" :key="i">
+                  <div
+                    class="list-group list-group-flush"
+                    v-for="(post, i) in getPosts"
+                    :key="i"
+                  >
                     <div class="list-group-item list-group-item-action">
                       <div></div>
-                      <div>{{ post.name }} | {{ post.created_at | moment }}</div>
+                      <div>
+                        {{ post.name }} | {{ post.created_at | moment }}
+                      </div>
                       <div>{{ post.content }}</div>
                       <div>
                         <button
@@ -53,7 +64,10 @@
                         >
                           <span aria-hidden="true">削除</span>
                         </button>
-                        <confirm-delete-post></confirm-delete-post>
+                        <div>post id is {{ post.micropost_id }}</div>
+                        <confirm-delete-post
+                          v-bind:postId="post.micropost_id"
+                        ></confirm-delete-post>
                       </div>
                     </div>
                   </div>

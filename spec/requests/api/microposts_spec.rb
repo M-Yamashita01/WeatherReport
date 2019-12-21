@@ -38,7 +38,7 @@ RSpec.describe 'Micropost', type: :request do
         delete api
       }.to change { Micropost.count }.by(-1)
       
-      expect(response.status).to eq 204
+      expect(response.status).to eq 200
 
       
     end

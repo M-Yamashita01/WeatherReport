@@ -1,10 +1,18 @@
 <template>
   <b-modal id="confirmDeletePost" @show="resetModal" @hidden="resetModal">
-    <template v-slot:modal-title>コメント削除</template>
-    <template v-slot:modal-body>コメントを削除します。よろしいですか？</template>
+    <template v-slot:modal-title>
+      コメント削除
+    </template>
+    <div>
+      コメントを削除します。よろしいですか？
+    </div>
     <template v-slot:modal-footer="{ ok, cancel }">
-      <b-button size="sm" variant="primary" @click="deleteComment()">はい</b-button>
-      <b-button size="sm" variant="light" @click="cancel()">キャンセル</b-button>
+      <b-button size="sm" variant="primary" @click="deleteComment()"
+        >はい</b-button
+      >
+      <b-button size="sm" variant="light" @click="cancel()"
+        >キャンセル</b-button
+      >
     </template>
   </b-modal>
 </template>
@@ -25,13 +33,14 @@ export default {
   },
   methods: {
     deleteComment() {
+      console.log("delete post id is :" + this.postId);
       request
         .deleteComment(this.postId)
         .then(resultDelete => {
           // nothing
         })
         .catch(error => {
-          console.log("postComment failed.");
+          console.log("deleteComment failed.");
           console.log(error);
           alert("削除できませんでした。もう一度試してみてください。");
           return;

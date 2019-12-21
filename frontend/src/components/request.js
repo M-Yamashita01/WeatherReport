@@ -140,11 +140,12 @@ async function postComment(id, content) {
  * @param {*} id
  */
 async function deleteComment(id) {
-  const deleteApi = "/api/micropost/" + micropostId;
+  const deleteApi = "/api/microposts/" + id;
+  const params = {};
   await axios
-    .delete(deleteApi)
+    .delete(deleteApi, { data: params })
     .then(response => {
-      resultDelete = response;
+      // nothing
     })
     .catch(error => {
       printResponseErrorLog(error);
