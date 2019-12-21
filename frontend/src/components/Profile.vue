@@ -21,9 +21,7 @@
                     </button>
                   </router-link>
                   <img :src="assetsImage" width="100" height="100" />
-                  <div>
-                    {{ userName }}
-                  </div>
+                  <div>{{ userName }}</div>
                 </div>
               </div>
               <!--/.Card-->
@@ -41,7 +39,7 @@
                     class="btn btn-sm waves-effect float-right"
                     @click="$bvModal.show('commentModal')"
                   >
-                    <span class="fas fa-pen fa-lg" aria-hidden="true"> </span>
+                    <span class="fas fa-pen fa-lg" aria-hidden="true"></span>
                   </button>
                   <comment-modal @updatePosts="onUpdatePosts" />
                 </div>
@@ -57,8 +55,19 @@
                       <div>
                         {{ post.name }} | {{ post.created_at | moment }}
                       </div>
+                      <div>{{ post.content }}</div>
                       <div>
-                        {{ post.content }}
+                        <button
+                          type="button"
+                          class="btn btn-sm float-right"
+                          @click="$bvModal.show('confirmDeletePost')"
+                        >
+                          <span aria-hidden="true">削除</span>
+                        </button>
+                        <confirm-delete-post
+                          v-bind:postId="post.micropost_id"
+                          @updatePosts="onUpdatePosts"
+                        ></confirm-delete-post>
                       </div>
                     </div>
                   </div>
@@ -76,8 +85,7 @@
                     :prev-link-class="'page-link'"
                     :next-link-class="'page-link'"
                     :active-class="'active'"
-                  >
-                  </paginate>
+                  ></paginate>
                 </div>
               </div>
               <!--/.Card-->
@@ -97,6 +105,7 @@ import moment from "moment";
 import store from "./store/index";
 import request from "./request";
 import CommentModal from "./CommentModal";
+import confirmDeletePost from "./ConfirmDeletePost";
 import assetsImage from "@/assets/logo.png";
 
 export default {
@@ -112,7 +121,8 @@ export default {
     };
   },
   components: {
-    CommentModal
+    CommentModal,
+    confirmDeletePost
   },
   filters: {
     moment: function(date) {
