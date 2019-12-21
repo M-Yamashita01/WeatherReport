@@ -34,7 +34,10 @@
               >
                 <span aria-hidden="true">削除</span>
               </button>
-              <confirm-delete-post></confirm-delete-post>
+              <confirm-delete-post
+                v-bind:postId="post.micropost_id"
+                @updatePosts="onUpdatePosts"
+              ></confirm-delete-post>
             </div>
           </div>
         </div>

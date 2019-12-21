@@ -64,9 +64,9 @@
                         >
                           <span aria-hidden="true">削除</span>
                         </button>
-                        <div>post id is {{ post.micropost_id }}</div>
                         <confirm-delete-post
                           v-bind:postId="post.micropost_id"
+                          @updatePosts="onUpdatePosts"
                         ></confirm-delete-post>
                       </div>
                     </div>
