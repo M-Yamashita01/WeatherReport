@@ -52,22 +52,20 @@ commands:
           paths:
             - ~/WeatherReport/frontend/
 
-  build_container:
+  test_container:
     steps:
       - *change_command
-
       - run:
           name: docker-compose up
           command: |
             set -x
-            ${SUDO_COMMAND} docker-compose -f docker-compose.test.yml up --force-recreate --build -d
+            ${SUDO_COMMAND} docker-compose -f docker-compose.test.yml up --build -d
 
       - run:
           name: sleep for waiting launch db
           command: |
             sleep 30
-  test_container:
-    steps:
+
       - run:
           name: run tests
           command: |
@@ -104,11 +102,6 @@ jobs:
           aws-access-key-id: AWS_ACCESS_KEY_ID
           aws-secret-access-key: AWS_SECRET_ACCESS_KEY
           aws-region: AWS_REGION
-      - restore_server_db_migrate_pkg
-      - restore_client_pkg
-      - build_container
-      - save_server_db_migrate_pkg
-      - restore_client_pkg
 
   test:
     executor: default
@@ -119,8 +112,10 @@ jobs:
       - restore_server_db_migrate_pkg
       - restore_client_pkg
       - test_container
+      - save_server_db_migrate_pkg
+      - save_client_pkg
 
-  build:
+  build_for_aws:
     executor: default
     steps:
       - checkout
@@ -157,7 +152,7 @@ workflows:
       - test:
           requires:
             - setup
-      - build:
+      - build_for_aws:
           requires:
             - test
       
