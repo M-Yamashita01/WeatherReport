@@ -93,7 +93,8 @@ jobs:
       AWS_DEFAULT_OUTPUT: json
     steps:
       - checkout
-      - setup_remote_docker
+      - setup_remote_docker:
+          docker_layer_caching: true
       - attach_workspace:
           at: WeatherReport
       - aws-cli/install
@@ -108,7 +109,8 @@ jobs:
     steps:
       - checkout
       - *change_command      
-      - setup_remote_docker
+      - setup_remote_docker:
+          docker_layer_caching: true
       - restore_server_db_migrate_pkg
       - restore_client_pkg
       - test_container
@@ -120,7 +122,8 @@ jobs:
     steps:
       - checkout
       - *change_command
-      - setup_remote_docker
+      - setup_remote_docker:
+          docker_layer_caching: true
       - restore_server_db_migrate_pkg
       - restore_client_pkg
       - run:
