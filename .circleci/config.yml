@@ -17,38 +17,40 @@ aliases:
           echo 'export SUDO_COMMAND=sudo' >> $BASH_ENV
         fi
 
-executor:
+executors:
   default:
     working_directory: ~/WeatherReport
+    docker:
+      - image: circleci/ruby:2.6.5
 
 commands:
   restore_server_db_migrate_pkg:
     steps:
       - restore_cache:
-        name: Restore server db-migrate container
-        key: docker-{{ .Branch }}--{{ checksum ".circleci/config.yml" }}--{{ checksum "docker-compose.yml"}}--{{ checksum "Dockerfile" }}
+          name: Restore server db-migrate container
+          key: docker-{{ .Branch }}--{{ checksum ".circleci/config.yml" }}--{{ checksum "docker-compose.test.yml"}}--{{ checksum "Dockerfile" }}
 
   restore_client_pkg:
     steps:
-      - restre_cache:
-        name: Restore client container
-        key: docker-{{ .Branch }}--{{ checksum ".circleci/config.yml" }}--{{ checksum "docker-compose.yml"}}--{{ checksum "Dockerfile.frontend" }}
+      - restore_cache:
+          name: Restore client container
+          key: docker-{{ .Branch }}--{{ checksum ".circleci/config.yml" }}--{{ checksum "docker-compose.test.yml"}}--{{ checksum "Dockerfile.frontend" }}
 
   save_server_db_migrate_pkg:
     steps:
       - save_cache:
-        name: Save server db-migrate container
-        key: docker-{{ .Branch }}--{{ checksum ".circleci/config.yml" }}--{{ checksum "docker-compose.yml"}}--{{ checksum "Dockerfile" }}
-        paths:
-          - ~/WeatherReport/
+          name: Save server db-migrate container
+          key: docker-{{ .Branch }}--{{ checksum ".circleci/config.yml" }}--{{ checksum "docker-compose.test.yml"}}--{{ checksum "Dockerfile" }}
+          paths:
+            - ~/WeatherReport/
 
   save_client_pkg:
     steps:
       - save_cache:
-        name: Save client container
-        key: docker-{{ .Branch }}--{{ checksum ".circleci/config.yml" }}--{{ checksum "docker-compose.yml"}}--{{ checksum "Dockerfile.frontend" }}
-        paths:
-          - ~/WeatherReport/frontend/
+          name: Save client container
+          key: docker-{{ .Branch }}--{{ checksum ".circleci/config.yml" }}--{{ checksum "docker-compose.test.yml"}}--{{ checksum "Dockerfile.frontend" }}
+          paths:
+            - ~/WeatherReport/frontend/
 
   build_container:
     steps:
@@ -80,10 +82,15 @@ commands:
       - store_test_results:
           path: /tmp/test-results
 
+      - run:
+          name: docker-compose down
+          command: |
+            set -x
+            ${SUDO_COMMAND} docker-compose -f docker-compose.test.yml down
+
 jobs:
   setup:
-    executor:
-      name: default
+    executor: default
     environment:
       AWS_DEFAULT_OUTPUT: json
     steps:
@@ -93,7 +100,9 @@ jobs:
           at: WeatherReport
       - aws-cli/install
       - aws-cli/configure:
+          profile-name: my-profile-name
           aws-access-key-id: AWS_ACCESS_KEY_ID
+          aws-secret-access-key: AWS_SECRET_ACCESS_KEY
           aws-region: AWS_REGION
       - restore_server_db_migrate_pkg
       - restore_client_pkg
@@ -102,71 +111,56 @@ jobs:
       - restore_client_pkg
 
   test:
-    executor:
-      name: default
+    executor: default
     steps:
       - checkout
+      - *change_command      
+      - setup_remote_docker
       - restore_server_db_migrate_pkg
       - restore_client_pkg
       - test_container
 
   build:
-    parameters:
-      executor:
-        name: default
+    executor: default
     steps:
       - checkout
+      - *change_command
+      - setup_remote_docker
       - restore_server_db_migrate_pkg
       - restore_client_pkg
-      - build_container
-
-  build:
-    docker:
-      - image: circleci/ruby:2.6.5
-    <<: *default_env
-    executor:
-      name: default
-    steps:
-      - checkout
-
-      - setup_remote_docker
-
       - run:
-          command: |
-            if [[ -e ~/caches/images.tar ]]; then
-              docker load -i ~/caches/images.tar
-            fi
-          name: docker load
-
-      - *change_command
-
+          name: docker client build
+          command: ${SUDO_COMMAND} docker build -t ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/${CONTAINER_REPOSITORY}:client-${CONTAINER_IMAGE_TAG} -f Dockerfile.frontend .
       - run:
-          name: docker-compose up
-          command: |
-            set -x
-            ${SUDO_COMMAND} docker-compose -f docker-compose.test.yml up --force-recreate --build -d
-
+          name: docker server build
+          command: ${SUDO_COMMAND} docker build -t ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/${CONTAINER_REPOSITORY}:server-${CONTAINER_IMAGE_TAG} -f Dockerfile .
       - run:
-          name: sleep for waiting launch db
-          command: |
-            sleep 30
-
+          name: docker db-migration build
+          command: ${SUDO_COMMAND} docker build -t ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/${CONTAINER_REPOSITORY}:db-migration-${CONTAINER_IMAGE_TAG} -f Dockerfile .
       - run:
-          name: run tests
-          command: |
-            mkdir -p /tmp/test-results
-            TEST_FILES="$(circleci tests glob 'spec/**/*_spec.rb' | circleci tests split --split-by=timings)"
-            ${SUDO_COMMAND} docker-compose -f docker-compose.test.yml exec server bundle exec rspec --format progress \
-                                                                  --format RspecJunitFormatter \
-                                                                  --out /tmp/test-results/rspec.xml \
-                                                                  $TEST_FILES
+          name: docker db-openweathermap build
+          command: ${SUDO_COMMAND} docker build -t ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/${CONTAINER_REPOSITORY}:db-openweathermap-${CONTAINER_IMAGE_TAG} -f Dockerfile.openWeatherMap .
 
-      # Save test results for timing analysis
-      - store_test_results:
-          path: /tmp/test-results
+#  deploy:
+#    executor:
+#      name: default
+#    steps:
+#      - checkout
+#      - restore_client_pkg
+#      - restore_server_db_migrate_pkg
+#      - setup_remote_docker
 
-      - run:
-          name: docker-compose down
-          command: |
-            set -x
-            ${SUDO_COMMAND} docker-compose -f docker-compose.test.yml down
+workflows:
+  setup_and_build:
+    jobs:
+      - setup
+      - test:
+          requires:
+            - setup
+      - build:
+          requires:
+            - test
+      
+
+
+          
