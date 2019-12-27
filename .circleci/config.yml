@@ -183,15 +183,15 @@ workflows:
       - build_for_aws:
           requires:
             - test
-          filters:
-            branches:
-              only: release
+          #filters:
+            #branches:
+              #only: release
       - deploy:
-          #requires:
-          #  - build_for_aws
-          filters:
-            branches:
-              only: release
+          requires:
+            - build_for_aws
+          #filters:
+            #branches:
+              #only: release
           
 
 
