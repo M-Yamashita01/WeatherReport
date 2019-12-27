@@ -93,8 +93,7 @@ jobs:
       AWS_DEFAULT_OUTPUT: json
     steps:
       - checkout
-      - setup_remote_docker:
-          docker_layer_caching: true
+      - setup_remote_docker
       - attach_workspace:
           at: WeatherReport
       - aws-cli/install
@@ -109,8 +108,7 @@ jobs:
     steps:
       - checkout
       - *change_command      
-      - setup_remote_docker:
-          docker_layer_caching: true
+      - setup_remote_docker
       - restore_server_db_migrate_pkg
       - restore_client_pkg
       - test_container
@@ -122,8 +120,7 @@ jobs:
     steps:
       - checkout
       - *change_command
-      - setup_remote_docker:
-          docker_layer_caching: true
+      - setup_remote_docker
       - restore_server_db_migrate_pkg
       - restore_client_pkg
       - run:
@@ -146,7 +143,6 @@ jobs:
       - restore_server_db_migrate_pkg
       - restore_client_pkg      
       - setup_remote_docker
-          #docker_layer_caching: true
 
       #- aws-ecr/build-and-push-image:
          #account-url: AWS_ECR_ACCOUNT_URL
