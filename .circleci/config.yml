@@ -170,7 +170,7 @@ jobs:
           dockerfile: Dockerfile.frontend
           profile-name: my-profile-name
           region: AWS_REGION
-          repo: AWS_ECR_REPOSITORY
+          repo: $AWS_ECR_REPOSITORY
           tag: 'frontend-${CIRCLE_SHA1}'         
 
 workflows:
