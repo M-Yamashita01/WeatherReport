@@ -172,7 +172,13 @@ jobs:
           region: AWS_REGION
           repo: $AWS_ECR_REPOSITORY
           tag: 'frontend-${CIRCLE_SHA1}'         
-
+      - aws-ecs/deploy-service-update:
+          requires:
+            - aws-ecr/build-and-push-image
+          family: '${MY_APP_PREFIX}'
+          cluster-name: '${MY_APP_PREFIX}'
+          service-name: '${MY_APP_PREFIX}'
+          container-image-name-updates: 'container=client,tag=frontend-${CIRCLE_SHA1}'
 workflows:
   setup_and_build:
     jobs:
