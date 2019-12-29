@@ -3,7 +3,7 @@ version: 2.1
 orbs:
   aws-cli: circleci/aws-cli@0.1.13
   aws-ecr: circleci/aws-ecr@6.2.0
-  aws-ecs: circleci/aws-ecs@0.0.11
+  aws-ecs: circleci/aws-ecs@1.0.4
 
 aliases:
   - &default_env
@@ -172,13 +172,6 @@ jobs:
           region: AWS_REGION
           repo: $AWS_ECR_REPOSITORY
           tag: 'frontend-${CIRCLE_SHA1}'         
-      - aws-ecs/deploy-service-update:
-          requires:
-            - aws-ecr/build-and-push-image
-          family: '${MY_APP_PREFIX}'
-          cluster-name: '${MY_APP_PREFIX}'
-          service-name: '${MY_APP_PREFIX}'
-          container-image-name-updates: 'container=client,tag=frontend-${CIRCLE_SHA1}'
 workflows:
   setup_and_build:
     jobs:
@@ -198,7 +191,11 @@ workflows:
           #filters:
             #branches:
               #only: release
-          
-
-
-          
+      - aws-ecs/deploy-service-update:
+          requires:
+            - deploy
+          aws-region: ${AWS_REGION}
+          family: '${MY_APP_PREFIX}'
+          cluster-name: '${MY_APP_PREFIX}'
+          service-name: '${MY_APP_PREFIX}'
+          container-image-name-updates: 'container=client,tag=frontend-${CIRCLE_SHA1}'
