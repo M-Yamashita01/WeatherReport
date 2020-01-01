@@ -171,7 +171,7 @@ jobs:
           profile-name: my-profile-name
           region: AWS_REGION
           repo: $AWS_ECR_REPOSITORY
-          tag: 'frontend-${CIRCLE_SHA1}'         
+          tag: 'client-0.0.1'         
 workflows:
   setup_and_build:
     jobs:
@@ -198,4 +198,4 @@ workflows:
           family: '${MY_APP_PREFIX}'
           cluster-name: '${MY_APP_PREFIX}'
           service-name: '${MY_APP_PREFIX}'
-          container-image-name-updates: 'container=client,tag=client-0.0.1'
+          container-image-name-updates: 'container=client-0.0.1,tag=client-latest'
