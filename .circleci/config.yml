@@ -198,4 +198,4 @@ workflows:
           family: '${MY_APP_PREFIX}'
           cluster-name: '${MY_APP_PREFIX}'
           service-name: '${MY_APP_PREFIX}'
-          container-image-name-updates: 'container=client,tag=frontend-${CIRCLE_SHA1}'
+          container-image-name-updates: 'container=client,tag=client-0.0.1'
