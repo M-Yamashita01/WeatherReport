@@ -171,7 +171,7 @@ jobs:
           profile-name: my-profile-name
           region: AWS_REGION
           repo: $AWS_ECR_REPOSITORY
-          tag: 'client-0.0.1'         
+          tag: 'client_latest'         
 workflows:
   setup_and_build:
     jobs:
