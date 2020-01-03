@@ -198,4 +198,4 @@ workflows:
           family: '${MY_APP_PREFIX}'
           cluster-name: '${MY_APP_PREFIX}'
           service-name: '${MY_APP_PREFIX}'
-          container-image-name-updates: 'container=client-0.0.1,tag=client-latest'
+          container-image-name-updates: 'container=client_latest,tag=client-latest'
