@@ -1,4 +1,9 @@
-version: 2
+version: 2.1
+
+orbs:
+  aws-cli: circleci/aws-cli@0.1.13
+  aws-ecr: circleci/aws-ecr@6.2.0
+  aws-ecs: circleci/aws-ecs@1.0.4
 
 aliases:
   - &default_env
@@ -12,31 +17,49 @@ aliases:
           echo 'export SUDO_COMMAND=sudo' >> $BASH_ENV
         fi
 
-jobs:
-  build:
+executors:
+  default:
+    working_directory: ~/WeatherReport
     docker:
       - image: circleci/ruby:2.6.5
-    <<: *default_env
-    working_directory: ~/WeatherReport
+
+commands:
+  restore_server_db_migrate_pkg:
     steps:
-      - checkout
+      - restore_cache:
+          name: Restore server db-migrate container
+          key: docker-{{ .Branch }}--{{ checksum ".circleci/config.yml" }}--{{ checksum "docker-compose.test.yml"}}--{{ checksum "Dockerfile" }}
 
-      - setup_remote_docker
+  restore_client_pkg:
+    steps:
+      - restore_cache:
+          name: Restore client container
+          key: docker-{{ .Branch }}--{{ checksum ".circleci/config.yml" }}--{{ checksum "docker-compose.test.yml"}}--{{ checksum "Dockerfile.frontend" }}
 
-      - run:
-          command: |
-            if [[ -e ~/caches/images.tar ]]; then
-              docker load -i ~/caches/images.tar
-            fi
-          name: docker load
+  save_server_db_migrate_pkg:
+    steps:
+      - save_cache:
+          name: Save server db-migrate container
+          key: docker-{{ .Branch }}--{{ checksum ".circleci/config.yml" }}--{{ checksum "docker-compose.test.yml"}}--{{ checksum "Dockerfile" }}
+          paths:
+            - ~/WeatherReport/
 
+  save_client_pkg:
+    steps:
+      - save_cache:
+          name: Save client container
+          key: docker-{{ .Branch }}--{{ checksum ".circleci/config.yml" }}--{{ checksum "docker-compose.test.yml"}}--{{ checksum "Dockerfile.frontend" }}
+          paths:
+            - ~/WeatherReport/frontend/
+
+  test_container:
+    steps:
       - *change_command
-
       - run:
           name: docker-compose up
           command: |
             set -x
-            ${SUDO_COMMAND} docker-compose -f docker-compose.test.yml up --force-recreate --build -d
+            ${SUDO_COMMAND} docker-compose -f docker-compose.test.yml up --build -d
 
       - run:
           name: sleep for waiting launch db
@@ -62,3 +85,93 @@ jobs:
           command: |
             set -x
             ${SUDO_COMMAND} docker-compose -f docker-compose.test.yml down
+
+jobs:
+  setup:
+    executor: default
+    environment:
+      AWS_DEFAULT_OUTPUT: json
+    steps:
+      - checkout
+      - setup_remote_docker
+      - attach_workspace:
+          at: WeatherReport
+      - aws-cli/install
+      - aws-cli/configure:
+          profile-name: my-profile-name
+          aws-access-key-id: AWS_ACCESS_KEY_ID
+          aws-secret-access-key: AWS_SECRET_ACCESS_KEY
+          aws-region: AWS_REGION
+
+  test:
+    executor: default
+    steps:
+      - checkout
+      - *change_command      
+      - setup_remote_docker
+      - restore_server_db_migrate_pkg
+      - restore_client_pkg
+      - test_container
+      - save_server_db_migrate_pkg
+      - save_client_pkg
+
+  deploy:
+    executor: default
+    steps:
+      - checkout
+      - restore_server_db_migrate_pkg
+      - restore_client_pkg      
+      - setup_remote_docker
+
+      #- aws-ecr/build-and-push-image:
+         #account-url: AWS_ECR_ACCOUNT_URL
+         #dockerfile: Dockerfile
+         #profile-name: my-profile-name
+         #region: AWS_REGION
+         #repo: AWS_ECR_REPOSITORY
+         #tag: 'server-${CIRCLE_SHA1}'
+      #- aws-ecr/build-and-push-image:
+         #account-url: AWS_ECR_ACCOUNT_URL
+         #dockerfile: Dockerfile
+         #profile-name: my-profile-name
+         #region: AWS_REGION
+         #repo: AWS_ECR_REPOSITORY
+         #tag: 'db-migration-${CIRCLE_SHA1}'
+      #- aws-ecr/build-and-push-image:
+         #account-url: AWS_ECR_ACCOUNT_URL
+         # dockerfile: Dockerfile.openWeatherMap
+         # profile-name: my-profile-name
+         # region: AWS_REGION
+         # repo: AWS_ECR_REPOSITORY
+         # tag: 'db-openweathermap-${CIRCLE_SHA1}' 
+      - aws-ecr/build-and-push-image:
+          account-url: AWS_ECR_ACCOUNT_URL
+          dockerfile: Dockerfile.frontend
+          profile-name: my-profile-name
+          region: AWS_REGION
+          repo: $AWS_ECR_REPOSITORY
+          tag: 'client_latest'         
+workflows:
+  setup_and_build:
+    jobs:
+      - setup
+      - test:
+          requires:
+            - setup
+      - deploy:
+          requires:
+            - test
+          filters:
+            branches:
+              only: release
+      - aws-ecs/deploy-service-update:
+          requires:
+            - deploy
+          aws-region: ${AWS_REGION}
+          family: '${MY_APP_PREFIX}'
+          cluster-name: '${MY_APP_PREFIX}'
+          service-name: '${MY_APP_PREFIX}'
+          container-image-name-updates: 'container=client_latest,tag=client_latest'
+          filters:
+            branches:
+              only: release
