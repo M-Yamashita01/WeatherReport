@@ -157,9 +157,9 @@ workflows:
       #- test:
           #requires:
             #- setup
-      - deploy:
-          requires:
-            - test
+      - deploy
+          #requires:
+            #- test
           #filters:
             #branches:
               #only: release
