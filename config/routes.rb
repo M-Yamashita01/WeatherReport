@@ -4,7 +4,7 @@ Rails.application.routes.draw do
     resources :current_weather_datas, only: %i[index]
     resources :locations, only: %i[index]
     resources :main_city_locations, only: %i[index]
-    resources :microposts, only: %i[index create]
+    resources :microposts, only: %i[index create destroy]
   end
 
   namespace :api do
