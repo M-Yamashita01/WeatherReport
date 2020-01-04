@@ -127,7 +127,7 @@ jobs:
          account-url: AWS_ECR_ACCOUNT_URL
          dockerfile: Dockerfile.server
          region: AWS_REGION
-         repo: AWS_ECR_REPOSITORY
+         repo: $AWS_ECR_REPOSITORY
          tag: 'server_latest'
       #- aws-ecr/build-and-push-image:
          #account-url: AWS_ECR_ACCOUNT_URL
