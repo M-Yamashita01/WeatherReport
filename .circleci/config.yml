@@ -174,3 +174,14 @@ workflows:
           filters:
             branches:
               only: release
+      - aws-ecs/deploy-service-update:
+          requires:
+            - deploy
+          aws-region: ${AWS_REGION}
+          family: '${MY_APP_PREFIX}'
+          cluster-name: '${MY_APP_PREFIX}'
+          service-name: '${MY_APP_PREFIX}'
+          container-image-name-updates: 'container=server_latest,tag=server_latest'
+          #filters:
+            #branches:
+              #only: release
