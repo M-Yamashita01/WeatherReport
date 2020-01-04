@@ -4,8 +4,15 @@ ARG rails_env="development"
 
 # 必要なパッケージのインストール（基本的に必要になってくるものだと思うので削らないこと）
 RUN apk update && \
-    apk --no-cache add curl \
-                       bash
+    apk --no-cache add build-base \
+                       mysql-dev \
+                       curl \
+                       bash \
+                       nodejs \
+                       tzdata && \
+    cp /usr/share/zoneinfo/Asia/Tokyo /etc/localtime && \
+    echo "Asia/Tokyo" > /etc/timezone && \
+    apk del tzdata
 
 # 作業ディレクトリの作成、設定
 WORKDIR /weather_report
