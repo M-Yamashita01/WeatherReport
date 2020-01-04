@@ -27,10 +27,13 @@ services:
   # db migration after mysql startup
   db-migrate:
     << : *web-container
-    build: .
+    build: 
+      context: .
+      args:
+        rails_env: development
+      dockerfile: Dockerfile.migration
     depends_on:
       - db
-    command: sh -c './wait-for-it.sh -t 60 -h db -p 3306 -- bin/rails db:migrate RAILS_ENV=development'
     ports:
       - "3307:3307"
 
@@ -45,8 +48,9 @@ services:
 
   server:
     << : *web-container
-    build: .
-    command: sh -c "rm -rf tmp && bundle exec rails s -p 3000 -b '0.0.0.0'"
+    build:
+      context: .
+      dockerfile: Dockerfile.server
     ports:
       - '3000:3000'
     volumes:

@@ -1,16 +1,11 @@
 FROM ruby:2.6.5-alpine3.9
 
+ARG rails_env="development"
+
 # 必要なパッケージのインストール（基本的に必要になってくるものだと思うので削らないこと）
 RUN apk update && \
-    apk --no-cache add build-base \
-                       mysql-dev \
-                       curl \
-                       bash \
-                       nodejs \
-                       tzdata && \
-    cp /usr/share/zoneinfo/Asia/Tokyo /etc/localtime && \
-    echo "Asia/Tokyo" > /etc/timezone && \
-    apk del tzdata
+    apk --no-cache add curl \
+                       bash
 
 # 作業ディレクトリの作成、設定
 WORKDIR /weather_report
@@ -27,3 +22,5 @@ RUN gem install bundler:2.0.1 && \
     bundle install
 
 COPY . ./
+
+CMD ./wait-for-it.sh -t 60 -h db -p 3306 -- bin/rails db:migrate RAILS_ENV=$rails_env
