@@ -123,13 +123,12 @@ jobs:
       - restore_client_pkg      
       - setup_remote_docker
 
-      #- aws-ecr/build-and-push-image:
-         #account-url: AWS_ECR_ACCOUNT_URL
-         #dockerfile: Dockerfile
-         #profile-name: my-profile-name
-         #region: AWS_REGION
-         #repo: AWS_ECR_REPOSITORY
-         #tag: 'server-${CIRCLE_SHA1}'
+      - aws-ecr/build-and-push-image:
+         account-url: AWS_ECR_ACCOUNT_URL
+         dockerfile: Dockerfile
+         region: AWS_REGION
+         repo: AWS_ECR_REPOSITORY
+         tag: 'server_latest'
       #- aws-ecr/build-and-push-image:
          #account-url: AWS_ECR_ACCOUNT_URL
          #dockerfile: Dockerfile
@@ -155,15 +154,15 @@ workflows:
   setup_and_build:
     jobs:
       - setup
-      - test:
-          requires:
-            - setup
+      #- test:
+          #requires:
+            #- setup
       - deploy:
           requires:
             - test
-          filters:
-            branches:
-              only: release
+          #filters:
+            #branches:
+              #only: release
       - aws-ecs/deploy-service-update:
           requires:
             - deploy
