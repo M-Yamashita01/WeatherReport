@@ -22,7 +22,6 @@ module WeatherReport
 
     config.active_record.default_timezone = :local
     config.time_zone = 'Tokyo'
-
     config.middleware.use ActionDispatch::Flash
   end
 end
