@@ -61,6 +61,7 @@ yarn-debug.log*
 .yarn-integrity
 *.DS_Store
 .env
+local_circleci_executer.sh
 
 # data directory for docker
 /data

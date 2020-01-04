@@ -135,6 +135,24 @@ async function postComment(id, content) {
     });
   return resultPost;
 }
+
+/**
+ * @param {*} id
+ */
+async function deleteComment(id) {
+  const deleteApi = "/api/microposts/" + id;
+  const params = {};
+  await axios
+    .delete(deleteApi, { data: params })
+    .then(response => {
+      // nothing
+    })
+    .catch(error => {
+      printResponseErrorLog(error);
+      throw error;
+    });
+}
+
 /**
  * @param {*} error
  */
@@ -158,5 +176,6 @@ export default {
   postLogin,
   postSignIn,
   getUserPosts,
-  postComment
+  postComment,
+  deleteComment
 };
