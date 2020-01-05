@@ -32,7 +32,6 @@ services:
       args:
         rails_env: test
       dockerfile: Dockerfile.migration
-    #tty: true
     depends_on:
       - db
 
