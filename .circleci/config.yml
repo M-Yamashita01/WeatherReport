@@ -35,7 +35,6 @@ commands:
       - restore_cache:
           name: Restore db-migrate container
           key: docker-{{ .Branch }}--{{ checksum ".circleci/config.yml" }}--{{ checksum "Dockerfile.migration" }}
-
   restore_client_pkg:
     steps:
       - restore_cache:
