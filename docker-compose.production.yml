@@ -11,14 +11,11 @@ x-web-container: &web-container
 
 services:
   db:
-    image: mysql:5.7
-    command: mysqld --character-set-server=utf8 --collation-server=utf8_unicode_ci
-    environment:
-      MYSQL_DATABASE: weather_report_production
-      MYSQL_ROOT_PASSWORD: password
-      MYSQL_USER: mysql_user
-      MYSQL_PASSWORD: mysql_user
-      TZ: 'Asia/Tokyo'
+    build:
+      context: .
+      args:
+        env_database: production
+      dockerfile: Dockerfile.db
     volumes:
       - ./data/db:/var/lib/mysql
     ports:
