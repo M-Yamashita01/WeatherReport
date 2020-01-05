@@ -1,6 +1,6 @@
 FROM ruby:2.6.5-alpine3.9
 
-ARG rails_env="development"
+ARG rails_env
 
 # 必要なパッケージのインストール（基本的に必要になってくるものだと思うので削らないこと）
 RUN apk update && \
@@ -30,4 +30,4 @@ RUN gem install bundler:2.0.1 && \
 
 COPY . ./
 
-CMD ./wait-for-it.sh -t 60 -h db -p 3306 -- bin/rails db:migrate RAILS_ENV=$rails_env
+CMD ./wait-for-it.sh -t 60 -h db -p 3306 && bin/rails db:migrate RAILS_ENV=$rails_env
