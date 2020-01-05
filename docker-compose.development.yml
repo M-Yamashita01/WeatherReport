@@ -46,7 +46,7 @@ services:
       - db-migrate
     command: sh -c "./wait-for-it.sh -t 60 -h db -p 3306 && ruby current_weather_insert.rb"
 
-  server:
+  server_latest:
     << : *web-container
     build:
       context: .
@@ -61,7 +61,7 @@ services:
     depends_on:
       - db-migrate
 
-  client:
+  client_latest:
     build: 
       context: .
       dockerfile: Dockerfile.frontend
@@ -72,4 +72,4 @@ services:
       - ./frontend/static:/app/static
       - ./frontend/public:/app/public
     depends_on:
-      - server
+      - server_latest

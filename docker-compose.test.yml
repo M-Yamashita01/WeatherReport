@@ -35,7 +35,7 @@ services:
     depends_on:
       - db
 
-  server:
+  server_latest:
     <<: *test-web-container
     build:
       context: .
@@ -45,11 +45,11 @@ services:
     depends_on:
       - db-migrate
 
-  client:
+  client_latest:
     build:
       context: .
       dockerfile: Dockerfile.frontend
     ports:
       - "8080:8080"
     depends_on:
-      - server
+      - server_latest

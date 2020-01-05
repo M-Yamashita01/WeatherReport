@@ -71,7 +71,7 @@ commands:
           command: |
             mkdir -p /tmp/test-results
             TEST_FILES="$(circleci tests glob 'spec/**/*_spec.rb' | circleci tests split --split-by=timings)"
-            ${SUDO_COMMAND} docker-compose -f docker-compose.test.yml exec server bundle exec rspec --format progress \
+            ${SUDO_COMMAND} docker-compose -f docker-compose.test.yml exec server_latest bundle exec rspec --format progress \
                                                                   --format RspecJunitFormatter \
                                                                   --out /tmp/test-results/rspec.xml \
                                                                   $TEST_FILES
@@ -154,15 +154,15 @@ workflows:
   setup_and_build:
     jobs:
       - setup
-      #- test:
-          #requires:
-            #- setup
-      - deploy
-          #requires:
-            #- test
-          #filters:
-            #branches:
-              #only: release
+      - test:
+          requires:
+            - setup
+      - deploy:
+          requires:
+            - test
+          filters:
+            branches:
+              only: release
       - aws-ecs/deploy-service-update:
           requires:
             - deploy
@@ -182,6 +182,6 @@ workflows:
           cluster-name: '${MY_APP_PREFIX}'
           service-name: '${MY_APP_PREFIX}'
           container-image-name-updates: 'container=server_latest,tag=server_latest'
-          #filters:
-            #branches:
-              #only: release
+          filters:
+            branches:
+              only: release
