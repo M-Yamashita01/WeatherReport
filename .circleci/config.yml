@@ -146,13 +146,12 @@ jobs:
          region: AWS_REGION
          repo: $AWS_ECR_REPOSITORY
          tag: 'server_latest'
-      #- aws-ecr/build-and-push-image:
-         #account-url: AWS_ECR_ACCOUNT_URL
-         #dockerfile: Dockerfile
-         #profile-name: my-profile-name
-         #region: AWS_REGION
-         #repo: AWS_ECR_REPOSITORY
-         #tag: 'db-migration-${CIRCLE_SHA1}'
+      - aws-ecr/build-and-push-image:
+         account-url: AWS_ECR_ACCOUNT_URL
+         dockerfile: Dockerfile.migration
+         region: AWS_REGION
+         repo: $AWS_ECR_REPOSITORY
+         tag: 'db-migrate_latest'
       #- aws-ecr/build-and-push-image:
          #account-url: AWS_ECR_ACCOUNT_URL
          # dockerfile: Dockerfile.openWeatherMap
@@ -177,9 +176,9 @@ workflows:
       - deploy:
           requires:
             - test
-          filters:
-            branches:
-              only: release
+          #filters:
+            #branches:
+              #only: release
       - aws-ecs/deploy-service-update:
           requires:
             - deploy
