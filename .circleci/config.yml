@@ -24,31 +24,44 @@ executors:
       - image: circleci/ruby:2.6.5
 
 commands:
-  restore_server_db_migrate_pkg:
+  restore_server_pkg:
     steps:
       - restore_cache:
-          name: Restore server db-migrate container
-          key: docker-{{ .Branch }}--{{ checksum ".circleci/config.yml" }}--{{ checksum "docker-compose.test.yml"}}--{{ checksum "Dockerfile" }}
+          name: Restore server container
+          key: docker-{{ .Branch }}--{{ checksum ".circleci/config.yml" }}--{{ checksum "Dockerfile.server" }}
 
+  restore_db_migrate_pkg:
+    steps:
+      - restore_cache:
+          name: Restore db-migrate container
+          key: docker-{{ .Branch }}--{{ checksum ".circleci/config.yml" }}--{{ checksum "Dockerfile.migration" }}
   restore_client_pkg:
     steps:
       - restore_cache:
           name: Restore client container
-          key: docker-{{ .Branch }}--{{ checksum ".circleci/config.yml" }}--{{ checksum "docker-compose.test.yml"}}--{{ checksum "Dockerfile.frontend" }}
+          key: docker-{{ .Branch }}--{{ checksum ".circleci/config.yml" }}--{{ checksum "Dockerfile.frontend" }}
 
-  save_server_db_migrate_pkg:
+  save_server_pkg:
     steps:
       - save_cache:
-          name: Save server db-migrate container
-          key: docker-{{ .Branch }}--{{ checksum ".circleci/config.yml" }}--{{ checksum "docker-compose.test.yml"}}--{{ checksum "Dockerfile" }}
+          name: Save server container
+          key: docker-{{ .Branch }}--{{ checksum ".circleci/config.yml" }}--{{ checksum "Dockerfile.server" }}
           paths:
             - ~/WeatherReport/
 
+  save_db_migrate_pkg:
+    steps:
+      - save_cache:
+          name: Save db-migrate container
+          key: docker-{{ .Branch }}--{{ checksum ".circleci/config.yml" }}--{{ checksum "Dockerfile.migration" }}
+          paths:
+            - ~/WeatherReport/
+            
   save_client_pkg:
     steps:
       - save_cache:
           name: Save client container
-          key: docker-{{ .Branch }}--{{ checksum ".circleci/config.yml" }}--{{ checksum "docker-compose.test.yml"}}--{{ checksum "Dockerfile.frontend" }}
+          key: docker-{{ .Branch }}--{{ checksum ".circleci/config.yml" }}--{{ checksum "Dockerfile.frontend" }}
           paths:
             - ~/WeatherReport/frontend/
 
@@ -71,7 +84,7 @@ commands:
           command: |
             mkdir -p /tmp/test-results
             TEST_FILES="$(circleci tests glob 'spec/**/*_spec.rb' | circleci tests split --split-by=timings)"
-            ${SUDO_COMMAND} docker-compose -f docker-compose.test.yml exec server bundle exec rspec --format progress \
+            ${SUDO_COMMAND} docker-compose -f docker-compose.test.yml exec server_latest bundle exec rspec --format progress \
                                                                   --format RspecJunitFormatter \
                                                                   --out /tmp/test-results/rspec.xml \
                                                                   $TEST_FILES
@@ -109,27 +122,29 @@ jobs:
       - checkout
       - *change_command      
       - setup_remote_docker
-      - restore_server_db_migrate_pkg
+      - restore_server_pkg
+      - restore_db_migrate_pkg
       - restore_client_pkg
       - test_container
-      - save_server_db_migrate_pkg
+      - save_server_pkg
+      - save_db_migrate_pkg
       - save_client_pkg
 
   deploy:
     executor: default
     steps:
       - checkout
-      - restore_server_db_migrate_pkg
+      - restore_server_pkg
+      - restore_db_migrate_pkg
       - restore_client_pkg      
       - setup_remote_docker
 
-      #- aws-ecr/build-and-push-image:
-         #account-url: AWS_ECR_ACCOUNT_URL
-         #dockerfile: Dockerfile
-         #profile-name: my-profile-name
-         #region: AWS_REGION
-         #repo: AWS_ECR_REPOSITORY
-         #tag: 'server-${CIRCLE_SHA1}'
+      - aws-ecr/build-and-push-image:
+         account-url: AWS_ECR_ACCOUNT_URL
+         dockerfile: Dockerfile.server
+         region: AWS_REGION
+         repo: $AWS_ECR_REPOSITORY
+         tag: 'server_latest'
       #- aws-ecr/build-and-push-image:
          #account-url: AWS_ECR_ACCOUNT_URL
          #dockerfile: Dockerfile
@@ -172,6 +187,17 @@ workflows:
           cluster-name: '${MY_APP_PREFIX}'
           service-name: '${MY_APP_PREFIX}'
           container-image-name-updates: 'container=client_latest,tag=client_latest'
+          filters:
+            branches:
+              only: release
+      - aws-ecs/deploy-service-update:
+          requires:
+            - deploy
+          aws-region: ${AWS_REGION}
+          family: '${MY_APP_PREFIX}'
+          cluster-name: '${MY_APP_PREFIX}'
+          service-name: '${MY_APP_PREFIX}'
+          container-image-name-updates: 'container=server_latest,tag=server_latest'
           filters:
             branches:
               only: release

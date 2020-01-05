@@ -27,3 +27,5 @@ RUN gem install bundler:2.0.1 && \
     bundle install
 
 COPY . ./
+
+CMD rm -rf tmp && bundle exec rails s -p 3000 -b '0.0.0.0'
