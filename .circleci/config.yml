@@ -139,7 +139,20 @@ jobs:
       - restore_db_migrate_pkg
       - restore_client_pkg      
       - setup_remote_docker
-
+      - aws-ecr/build-and-push-image:
+         account-url: AWS_ECR_ACCOUNT_URL
+         dockerfile: Dockerfile.db
+         region: AWS_REGION
+         repo: $AWS_ECR_REPOSITORY
+         extra-build-args: '--build-arg env_database=production'
+         tag: 'db_latest'
+      - aws-ecr/build-and-push-image:
+         account-url: AWS_ECR_ACCOUNT_URL
+         dockerfile: Dockerfile.migration
+         region: AWS_REGION
+         repo: $AWS_ECR_REPOSITORY
+         extra-build-args: '--build-arg rails_env=production'
+         tag: 'db-migrate_latest'
       - aws-ecr/build-and-push-image:
          account-url: AWS_ECR_ACCOUNT_URL
          dockerfile: Dockerfile.server
@@ -147,22 +160,8 @@ jobs:
          repo: $AWS_ECR_REPOSITORY
          tag: 'server_latest'
       - aws-ecr/build-and-push-image:
-         account-url: AWS_ECR_ACCOUNT_URL
-         dockerfile: Dockerfile.migration
-         region: AWS_REGION
-         repo: $AWS_ECR_REPOSITORY
-         tag: 'db-migrate_latest'
-      #- aws-ecr/build-and-push-image:
-         #account-url: AWS_ECR_ACCOUNT_URL
-         # dockerfile: Dockerfile.openWeatherMap
-         # profile-name: my-profile-name
-         # region: AWS_REGION
-         # repo: AWS_ECR_REPOSITORY
-         # tag: 'db-openweathermap-${CIRCLE_SHA1}' 
-      - aws-ecr/build-and-push-image:
           account-url: AWS_ECR_ACCOUNT_URL
           dockerfile: Dockerfile.frontend
-          profile-name: my-profile-name
           region: AWS_REGION
           repo: $AWS_ECR_REPOSITORY
           tag: 'client_latest'         
@@ -186,10 +185,21 @@ workflows:
           family: '${MY_APP_PREFIX}'
           cluster-name: '${MY_APP_PREFIX}'
           service-name: '${MY_APP_PREFIX}'
-          container-image-name-updates: 'container=client_latest,tag=client_latest'
-          filters:
-            branches:
-              only: release
+          container-image-name-updates: 'container=db_latest,tag=db_latest'
+          #filters:
+            #branches:
+              #only: release  
+      - aws-ecs/deploy-service-update:
+          requires:
+            - deploy
+          aws-region: ${AWS_REGION}
+          family: '${MY_APP_PREFIX}'
+          cluster-name: '${MY_APP_PREFIX}'
+          service-name: '${MY_APP_PREFIX}'
+          container-image-name-updates: 'container=db-migrate_latest,tag=db-migrate_latest'
+          #filters:
+            #branches:
+              #only: release
       - aws-ecs/deploy-service-update:
           requires:
             - deploy
@@ -201,3 +211,14 @@ workflows:
           filters:
             branches:
               only: release
+      - aws-ecs/deploy-service-update:
+          requires:
+            - deploy
+          aws-region: ${AWS_REGION}
+          family: '${MY_APP_PREFIX}'
+          cluster-name: '${MY_APP_PREFIX}'
+          service-name: '${MY_APP_PREFIX}'
+          container-image-name-updates: 'container=client_latest,tag=client_latest'
+          filters:
+            branches:
+              only: release         
