@@ -11,7 +11,7 @@ x-web-container: &test-web-container
     MYSQL_DATABASE: weather_report_test
 
 services:
-  db:
+  db_latest:
     build:
       context: .
       args:
@@ -31,7 +31,7 @@ services:
         rails_env: test
       dockerfile: Dockerfile.migration
     depends_on:
-      - db
+      - db_latest
 
   server_latest:
     <<: *test-web-container
