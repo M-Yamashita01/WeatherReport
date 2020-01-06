@@ -12,7 +12,6 @@ x-web-container: &test-web-container
 
 services:
   db:
-  db:
     build:
       context: .
       args:

@@ -10,7 +10,7 @@ x-web-container: &web-container
     MYSQL_DATABASE: weather_report_production
 
 services:
-  db:
+  db_latest:
     build:
       context: .
       args:
@@ -30,7 +30,7 @@ services:
         rails_env: production
       dockerfile: Dockerfile.migration
     depends_on:
-      - db
+      - db_latest
     ports:
       - "3307:3307"
 
@@ -41,7 +41,7 @@ services:
       dockerfile: Dockerfile.openWeatherMap
     depends_on: 
       - db-migrate
-    command: sh -c "./wait-for-it.sh -t 60 -h db -p 3306 && ruby current_weather_insert.rb"
+    command: sh -c "./wait-for-it.sh -t 60 -h db_latest -p 3306 && ruby current_weather_insert.rb"
 
   server_latest:
     << : *web-container
