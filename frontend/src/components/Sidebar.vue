@@ -26,6 +26,19 @@
             <div>
               {{ post.content }}
             </div>
+            <div>
+              <button
+                type="button"
+                class="btn btn-sm float-right"
+                @click="$bvModal.show('confirmDeletePost')"
+              >
+                <span aria-hidden="true">削除</span>
+              </button>
+              <confirm-delete-post
+                v-bind:postId="post.micropost_id"
+                @updatePosts="onUpdatePosts"
+              ></confirm-delete-post>
+            </div>
           </div>
         </div>
       </div>
@@ -55,12 +68,14 @@ import TimeLine from "vue-tweet-embed/src/timeline";
 import moment from "moment";
 import request from "./request";
 import CommentModal from "./CommentModal";
+import ConfirmDeletePost from "./ConfirmDeletePost";
 import store from "./store/index";
 
 export default {
   components: {
     timeline: TimeLine,
-    CommentModal
+    CommentModal,
+    ConfirmDeletePost
   },
   data() {
     return {

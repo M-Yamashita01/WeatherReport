@@ -1,8 +1,9 @@
 FactoryBot.define do
-  factory :weathermap_location do
+  factory :city, class: WeathermapLocation do
     city_id { 1 }
-    latitude { 1.5 }
-    longitude { 1.5 }
-    city_name { "MyString" }
+    latitude { 135.00}
+    longitude { 35.00 }
+    city_name { 'tokyo' }
+    city_name_ja { '東京' }
   end
 end

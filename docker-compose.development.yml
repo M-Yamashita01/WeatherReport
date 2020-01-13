@@ -10,29 +10,30 @@ x-web-container: &web-container
     MYSQL_DATABASE: weather_report_development
 
 services:
-  db:
-    image: mysql:5.7
-    command: mysqld --character-set-server=utf8 --collation-server=utf8_unicode_ci
-    environment:
-      MYSQL_DATABASE: weather_report_development
-      MYSQL_ROOT_PASSWORD: password
-      MYSQL_USER: mysql_user
-      MYSQL_PASSWORD: mysql_user
-      TZ: 'Asia/Tokyo'
+  db_latest:
+    build:
+      context: .
+      args:
+        env_database: development
+      dockerfile: Dockerfile.db
     volumes:
       - ./data/db:/var/lib/mysql
     ports:
       - "3306:3306"
 
   # db migration after mysql startup
-  db-migrate:
+  db-migrate_latest:
     << : *web-container
-    build: .
+    build: 
+      context: .
+      args:
+        rails_env: development
+      dockerfile: Dockerfile.migration
     depends_on:
-      - db
-    command: sh -c './wait-for-it.sh -t 60 -h db -p 3306 -- bin/rails db:migrate RAILS_ENV=development'
+      - db_latest
     ports:
       - "3307:3307"
+    tty: true
 
   db-openweathermap:
     << : *web-container
@@ -40,13 +41,14 @@ services:
       context: .
       dockerfile: Dockerfile.openWeatherMap
     depends_on: 
-      - db-migrate
-    command: sh -c "./wait-for-it.sh -t 60 -h db -p 3306 && ruby current_weather_insert.rb"
+      - db-migrate_latest
+    command: sh -c "./wait-for-it.sh -t 60 -h db_latest -p 3306 && ruby current_weather_insert.rb"
 
-  server:
+  server_latest:
     << : *web-container
-    build: .
-    command: sh -c "rm -rf tmp && bundle exec rails s -p 3000 -b '0.0.0.0'"
+    build:
+      context: .
+      dockerfile: Dockerfile.server
     ports:
       - '3000:3000'
     volumes:
@@ -55,9 +57,9 @@ services:
       - ./app/models:/weather_report/app/models
       - ./app/views:/weather_report/app/views
     depends_on:
-      - db-migrate
+      - db-migrate_latest
 
-  client:
+  client_latest:
     build: 
       context: .
       dockerfile: Dockerfile.frontend
@@ -68,4 +70,4 @@ services:
       - ./frontend/static:/app/static
       - ./frontend/public:/app/public
     depends_on:
-      - server
+      - server_latest
