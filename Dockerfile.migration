@@ -31,4 +31,4 @@ RUN gem install bundler:2.0.1 && \
 
 COPY . ./
 
-CMD ./wait-for-it.sh -t 60 -h db -p 3306 && bin/rails db:migrate
+CMD ./wait-for-it.sh -t 60 -h db_latest -p 3306 && bin/rails db:migrate && /bin/bash

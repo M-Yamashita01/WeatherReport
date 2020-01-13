@@ -10,7 +10,7 @@ default: &default
   pool: 5
   username: mysql_user
   password: mysql_user
-  host: db
+  host: db_latest
   socket: /tmp/mysql.sock
 
 development:
