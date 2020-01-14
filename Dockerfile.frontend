@@ -1,11 +1,11 @@
-FROM node:12.13.0-alpine
+# ビルド環境
+FROM node:12.13.0-alpine as build-stage
 
 # 時刻を日本時間に合わせる
 RUN apk --no-cache add tzdata && \
     cp /usr/share/zoneinfo/Asia/Tokyo /etc/localtime && \
     echo "Asia/Tokyo" > /etc/timezone && \
     apk del tzdata
-
 
 # カレントワーキングディレクトリとして 'app' フォルダを指定する
 WORKDIR /app
@@ -21,6 +21,25 @@ COPY ./frontend/ .
 
 # 本番向けに圧縮しながらアプリケーションをビルドする
 RUN yarn build
+
+
+# 本番環境
+FROM node:12.13.0-alpine as production-stage
+
+# カレントワーキングディレクトリとして 'app' フォルダを指定する
+WORKDIR /app
+
+COPY --from=build-stage /app/dist /app/dist
+
+COPY --from=build-stage /app/node_modules /app/node_modules
+
+COPY --from=build-stage /app/.eslintrc.js /app
+
+COPY --from=build-stage /app/package.json /app/
+
+COPY --from=build-stage /etc/localtime /etc/localtime
+
+COPY --from=build-stage /etc/timezone /etc/timezone
 
 EXPOSE 8080
 
