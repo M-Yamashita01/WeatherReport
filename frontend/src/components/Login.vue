@@ -68,7 +68,7 @@ export default {
   },
 
   methods: {
-    postUser: async function(params, callback) {
+    postUser: async function(params) {
       await request
         .postLogin(params.email, params.password)
         .then(response => {
@@ -96,7 +96,7 @@ export default {
 
     loginUser: function() {
       this.postUser(this.user)
-        .then(response => {
+        .then(() => {
           this.error = null;
           this.user = this.defautUser();
           alert("ログインしました");

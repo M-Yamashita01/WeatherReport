@@ -156,7 +156,7 @@ export default {
         });
     },
     updateUser: function() {
-      this.putUser(this.user, function(err, user) {
+      this.putUser(this.user, function(err) {
         if (err) {
           alert(
             "更新できませんでした。ユーザ名、メールアドレスに間違いがあります。"

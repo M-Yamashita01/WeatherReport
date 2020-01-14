@@ -26,13 +26,9 @@ export default {
         evt.zoomLevel,
         evt.longitude,
         evt.latitude
-      )
-        .then(weathers => {
-          this.weathers = weathers;
-        })
-        .catch(error => {
-          this.weathers = [];
-        });
+      ).then(weathers => {
+        this.weathers = weathers;
+      });
     }
   }
 };

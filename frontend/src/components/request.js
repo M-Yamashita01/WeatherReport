@@ -144,7 +144,7 @@ async function deleteComment(id) {
   const params = {};
   await axios
     .delete(deleteApi, { data: params })
-    .then(response => {
+    .then(() => {
       // nothing
     })
     .catch(error => {
