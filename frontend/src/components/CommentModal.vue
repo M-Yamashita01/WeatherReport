@@ -34,7 +34,7 @@ export default {
 
       request
         .postComment(store.getters.getId, this.comment)
-        .then(resultPost => {
+        .then(() => {
           // nothing
         })
         .catch(error => {
