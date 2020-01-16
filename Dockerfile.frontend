@@ -37,6 +37,8 @@ COPY --from=build-stage /app/.eslintrc.js /app
 
 COPY --from=build-stage /app/package.json /app/
 
+COPY --from=build-stage /app/vue.config.js /app/
+
 COPY --from=build-stage /etc/localtime /etc/localtime
 
 COPY --from=build-stage /etc/timezone /etc/timezone
