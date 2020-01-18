@@ -168,9 +168,9 @@ workflows:
   setup_and_build:
     jobs:
       - setup
-      - test:
-          requires:
-            - setup
+      #- test:
+      #    requires:
+      #      - setup
       - deploy:
           requires:
             - test
