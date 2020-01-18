@@ -171,12 +171,12 @@ workflows:
       #- test:
       #    requires:
       #      - setup
-      - deploy:
+      - deploy
           #requires:
           #  - test
-          filters:
-            branches:
-              only: release
+          #filters:
+          #  branches:
+          #    only: release
       - aws-ecs/deploy-service-update:
           requires:
             - deploy
