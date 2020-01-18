@@ -218,6 +218,6 @@ workflows:
           cluster-name: '${MY_APP_PREFIX}'
           service-name: '${MY_APP_PREFIX}'
           container-image-name-updates: 'container=client_latest,tag=client_latest'
-          filters:
-            branches:
-              only: release         
+          #filters:
+            #branches:
+              #only: release         
