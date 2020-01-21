@@ -1,5 +1,5 @@
 # ビルド環境
-FROM node:12.13.0-alpine
+FROM node:12.13.0-alpine as build-stage
 
 # 時刻を日本時間に合わせる
 RUN apk --no-cache add tzdata && \
@@ -22,6 +22,19 @@ COPY ./frontend/ .
 # 本番向けに圧縮しながらアプリケーションをビルドする
 RUN yarn build
 
-EXPOSE 8080
+FROM nginx:stable-alpine as production-stage
+ 
+# build-stageで作成した/app/dist　を /usr/share/nginx/html にコピーする
+COPY --from=build-stage /app/dist /usr/share/nginx/html
 
-CMD ["yarn", "run", "serve"]
+COPY --from=build-stage /app/server.conf /etc/nginx/conf.d
+ 
+EXPOSE 80
+
+CMD [ "nginx", "-g", "daemon off;" ]
+
+# EXPOSE 8080
+
+# CMD ["yarn", "run", "serve"]
+
+
