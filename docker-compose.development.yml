@@ -5,7 +5,7 @@ x-web-container: &web-container
     MYSQL_PASS: mysql_user
     MYSQL_USER: mysql_user
     RAILS_SERVE_STATIC_FILES: 'true'
-    DB_SERVICE_NAME: 'db'
+    DB_SERVICE_NAME: 'db_latest'
     OPENWEATHERMAP_API_KEY:
     MYSQL_DATABASE: weather_report_development
 
@@ -64,7 +64,7 @@ services:
       context: .
       dockerfile: Dockerfile.frontend
     ports:
-      - '8080:8080'
+      - '8080:80'
     volumes:
       - ./frontend/src:/app/src
       - ./frontend/static:/app/static

@@ -78,7 +78,7 @@ export default {
   },
 
   methods: {
-    postUser: async function(params, callback) {
+    postUser: async function(params) {
       await request
         .postSignIn(params.name, params.email, params.password)
         .then(response => {
@@ -120,7 +120,7 @@ export default {
       }
 
       this.postUser(this.user)
-        .then(response => {
+        .then(() => {
           this.error = null;
           alert("新規ユーザが登録されました。ユーザ名 : " + this.user.name);
           this.user = this.defaultUser();

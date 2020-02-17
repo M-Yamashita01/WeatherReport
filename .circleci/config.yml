@@ -56,7 +56,7 @@ commands:
           key: docker-{{ .Branch }}--{{ checksum ".circleci/config.yml" }}--{{ checksum "Dockerfile.migration" }}
           paths:
             - ~/WeatherReport/
- 
+
   save_client_pkg:
     steps:
       - save_cache:
@@ -168,15 +168,15 @@ workflows:
   setup_and_build:
     jobs:
       - setup
-      - test:
-          requires:
-            - setup
-      - deploy:
-          requires:
-            - test
-          filters:
-            branches:
-              only: release
+      #- test:
+      #    requires:
+      #      - setup
+      - deploy
+          #requires:
+          #  - test
+          #filters:
+          #  branches:
+          #    only: release
       - aws-ecs/deploy-service-update:
           requires:
             - deploy
@@ -218,6 +218,6 @@ workflows:
           cluster-name: '${MY_APP_PREFIX}'
           service-name: '${MY_APP_PREFIX}'
           container-image-name-updates: 'container=client_latest,tag=client_latest'
-          filters:
-            branches:
-              only: release         
+          #filters:
+            #branches:
+              #only: release         
