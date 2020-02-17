@@ -64,7 +64,7 @@ services:
       context: .
       dockerfile: Dockerfile.frontend
     ports:
-      - '8080:8080'
+      - '8080:80'
     volumes:
       - ./frontend/src:/app/src
       - ./frontend/static:/app/static
