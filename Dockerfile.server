@@ -1,5 +1,8 @@
 FROM ruby:2.6.5-alpine3.9
 
+ARG rails_env
+ENV RAILS_ENV $rails_env
+
 # 必要なパッケージのインストール（基本的に必要になってくるものだと思うので削らないこと）
 RUN apk update && \
     apk --no-cache add build-base \
@@ -26,6 +29,24 @@ COPY Gemfile* ./
 RUN gem install bundler:2.0.1 && \
     bundle install
 
-COPY . ./
+RUN rm -rf ./tmp
 
-CMD rm -rf tmp && bundle exec rails s -p 3000 -b '0.0.0.0'
+COPY ./app ./app
+
+COPY ./bin ./bin
+
+COPY ./config ./config
+
+COPY ./db ./db
+
+COPY ./public ./public
+
+COPY ./spec ./spec
+
+COPY ./.rspec ./
+
+COPY ./config.ru ./
+
+COPY ./Rakefile ./
+
+CMD bundle exec rails s -p 3000 -b '0.0.0.0'

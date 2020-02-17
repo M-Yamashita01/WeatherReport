@@ -37,6 +37,8 @@ services:
     <<: *test-web-container
     build:
       context: .
+      args:
+        rails_env: test
       dockerfile: Dockerfile.server
     ports:
       - "3000:3000"
@@ -48,6 +50,6 @@ services:
       context: .
       dockerfile: Dockerfile.frontend
     ports:
-      - "8080:8080"
+      - "8080:80"
     depends_on:
       - server_latest
