@@ -36,5 +36,3 @@ CMD [ "nginx", "-g", "daemon off;" ]
 # EXPOSE 8080
 
 # CMD ["yarn", "run", "serve"]
-
-
