@@ -47,6 +47,8 @@ services:
     << : *web-container
     build:
       context: .
+      args:
+        rails_env: production
       dockerfile: Dockerfile.server
     ports:
       - '3000:3000'

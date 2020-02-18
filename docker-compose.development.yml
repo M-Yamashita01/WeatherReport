@@ -49,7 +49,7 @@ services:
     build:
       context: .
       args:
-        rails_env: test
+        rails_env: development
       dockerfile: Dockerfile.server
     ports:
       - '3000:3000'
