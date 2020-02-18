@@ -29,20 +29,20 @@ COPY Gemfile* ./
 RUN gem install bundler:2.0.1 && \
     bundle install
 
-COPY ./app ./app
-
-COPY ./config ./config
-
-COPY ./db ./db
-
-COPY ./public ./public
-
-COPY ./spec ./spec
-
-COPY ./.rspec ./
-
 COPY ./config.ru ./
 
 COPY ./Rakefile ./
+
+COPY ./.rspec ./
+
+COPY ./config ./config
+
+COPY ./public ./public
+
+COPY ./app ./app
+
+COPY ./db ./db
+
+COPY ./spec ./spec
 
 CMD bundle exec rake app:update:bin && bundle exec rails s -p 3000 -b '0.0.0.0'
