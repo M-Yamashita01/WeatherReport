@@ -176,7 +176,9 @@ workflows:
             - test
           filters:
             branches:
-              only: develop, release
+              only: 
+                - develop
+                - release
       - aws-ecs/deploy-service-update:
           requires:
             - push_images
