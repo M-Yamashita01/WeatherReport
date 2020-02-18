@@ -29,11 +29,7 @@ COPY Gemfile* ./
 RUN gem install bundler:2.0.1 && \
     bundle install
 
-RUN rm -rf ./tmp
-
 COPY ./app ./app
-
-COPY ./bin ./bin
 
 COPY ./config ./config
 
@@ -49,4 +45,4 @@ COPY ./config.ru ./
 
 COPY ./Rakefile ./
 
-CMD bundle exec rails s -p 3000 -b '0.0.0.0'
+CMD bundle exec rake app:update:bin && bundle exec rails s -p 3000 -b '0.0.0.0'
