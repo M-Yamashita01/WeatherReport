@@ -10,7 +10,7 @@ default: &default
   pool: 5
   username: mysql_user
   password: mysql_user
-  host: db_latest
+  host: <%= ENV['DB_HOST_NAME'] %>
   socket: /tmp/mysql.sock
 
 development:

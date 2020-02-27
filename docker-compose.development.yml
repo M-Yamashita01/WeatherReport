@@ -28,6 +28,7 @@ services:
       context: .
       args:
         rails_env: development
+        db_host_name: db_latest
       dockerfile: Dockerfile.migration
     depends_on:
       - db_latest
@@ -50,6 +51,7 @@ services:
       context: .
       args:
         rails_env: development
+        db_host_name: db_latest
       dockerfile: Dockerfile.server
     ports:
       - '3000:3000'
