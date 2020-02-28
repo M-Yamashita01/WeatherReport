@@ -1,9 +1,7 @@
 FROM ruby:2.6.5-alpine3.9
 
 ARG rails_env
-ARG db_host_name
 ENV RAILS_ENV $rails_env
-ENV DB_HOST_NAME $db_host_name
 
 # 必要なパッケージのインストール（基本的に必要になってくるものだと思うので削らないこと）
 RUN apk update && \
@@ -40,4 +38,4 @@ COPY ./app/models ./app/models
 
 COPY ./db ./db
 
-CMD bundle exec rake app:update:bin && ./wait-for-it.sh -t 60 -h $DB_HOST_NAME -p 3306 && bin/rails db:migrate && /bin/bash
+CMD bundle exec rake app:update:bin && ./wait-for-it.sh -h $DB_HOSTNAME -p 3306 -t 60 && bin/rails db:migrate && /bin/bash
