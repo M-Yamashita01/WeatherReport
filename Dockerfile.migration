@@ -38,6 +38,4 @@ COPY ./app/models ./app/models
 
 COPY ./db ./db
 
-
-
-CMD bundle exec rake app:update:bin && ./wait-for-it.sh -t 60 -h db_latest -p 3306 && bin/rails db:migrate && /bin/bash
+CMD bundle exec rake app:update:bin && ./wait-for-it.sh -h $DB_HOSTNAME -p 3306 -t 60 && bin/rails db:migrate && /bin/bash

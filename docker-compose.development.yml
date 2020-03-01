@@ -2,10 +2,10 @@ version: '3.7'
 
 x-web-container: &web-container
   environment:
-    MYSQL_PASS: mysql_user
-    MYSQL_USER: mysql_user
+    DB_USERNAME: mysql_user
+    DB_PASSWORD: mysql_user
+    DB_HOSTNAME: db_latest    
     RAILS_SERVE_STATIC_FILES: 'true'
-    DB_SERVICE_NAME: 'db_latest'
     OPENWEATHERMAP_API_KEY:
     MYSQL_DATABASE: weather_report_development
 
