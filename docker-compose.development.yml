@@ -65,6 +65,8 @@ services:
     build: 
       context: .
       dockerfile: Dockerfile.frontend
+    environment:
+      - HOST_NAME=server_latest
     ports:
       - '8080:80'
     volumes:
