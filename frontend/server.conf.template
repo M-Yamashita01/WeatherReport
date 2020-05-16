@@ -8,6 +8,6 @@ server {
     }
 
     location ^~ /api/ {
-        proxy_pass http://server_latest:3000;
+        proxy_pass http://$HOST_NAME:3000;
     }
 }

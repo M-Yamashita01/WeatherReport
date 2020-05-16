@@ -62,6 +62,7 @@ yarn-debug.log*
 *.DS_Store
 .env
 local_circleci_executer.sh
+/ManualAWSPush
 
 # data directory for docker
 /data
