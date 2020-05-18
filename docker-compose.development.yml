@@ -38,7 +38,7 @@ services:
   db-openweathermap:
     << : *web-container
     build:
-      context: .
+      context: ./weatherupdator
       dockerfile: Dockerfile.openWeatherMap
     depends_on: 
       - db-migrate_latest
