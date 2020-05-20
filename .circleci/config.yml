@@ -28,13 +28,13 @@ commands:
     steps:
       - restore_cache:
           name: Restore server container
-          key: docker-{{ .Branch }}--{{ checksum ".circleci/config.yml" }}--{{ checksum "Dockerfile.server" }}
+          key: docker-{{ .Branch }}--{{ checksum ".circleci/config.yml" }}--{{ checksum "backend/Dockerfile.server" }}
 
   restore_db_migrate_pkg:
     steps:
       - restore_cache:
           name: Restore db-migrate container
-          key: docker-{{ .Branch }}--{{ checksum ".circleci/config.yml" }}--{{ checksum "Dockerfile.migration" }}
+          key: docker-{{ .Branch }}--{{ checksum ".circleci/config.yml" }}--{{ checksum "backend/Dockerfile.migration" }}
   restore_client_pkg:
     steps:
       - restore_cache:
@@ -45,7 +45,7 @@ commands:
     steps:
       - save_cache:
           name: Save server container
-          key: docker-{{ .Branch }}--{{ checksum ".circleci/config.yml" }}--{{ checksum "Dockerfile.server" }}
+          key: docker-{{ .Branch }}--{{ checksum ".circleci/config.yml" }}--{{ checksum "backend/Dockerfile.server" }}
           paths:
             - ~/WeatherReport/
 
@@ -53,7 +53,7 @@ commands:
     steps:
       - save_cache:
           name: Save db-migrate container
-          key: docker-{{ .Branch }}--{{ checksum ".circleci/config.yml" }}--{{ checksum "Dockerfile.migration" }}
+          key: docker-{{ .Branch }}--{{ checksum ".circleci/config.yml" }}--{{ checksum "backend/Dockerfile.migration" }}
           paths:
             - ~/WeatherReport/
 
@@ -109,12 +109,12 @@ jobs:
       - setup_remote_docker
       - attach_workspace:
           at: WeatherReport
-      - aws-cli/install
-      - aws-cli/configure:
-          profile-name: my-profile-name
-          aws-access-key-id: AWS_ACCESS_KEY_ID
-          aws-secret-access-key: AWS_SECRET_ACCESS_KEY
-          aws-region: AWS_REGION
+      #- aws-cli/install
+      #- aws-cli/configure:
+      #    profile-name: my-profile-name
+      #    aws-access-key-id: AWS_ACCESS_KEY_ID
+      #    aws-secret-access-key: AWS_SECRET_ACCESS_KEY
+      #    aws-region: AWS_REGION
 
   test:
     executor: default
