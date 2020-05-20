@@ -13,7 +13,7 @@ x-web-container: &test-web-container
 services:
   db_latest:
     build:
-      context: .
+      context: ./database
       args:
         env_database: test
       dockerfile: Dockerfile.db
@@ -26,7 +26,7 @@ services:
   db-migrate:
     <<: *test-web-container
     build:
-      context: .
+      context: ./backend
       args:
         rails_env: test
       dockerfile: Dockerfile.migration
@@ -36,7 +36,7 @@ services:
   server_latest:
     <<: *test-web-container
     build:
-      context: .
+      context: ./backend
       args:
         rails_env: test
       dockerfile: Dockerfile.server
@@ -47,7 +47,7 @@ services:
 
   client_latest:
     build:
-      context: .
+      context: ./frontend
       dockerfile: Dockerfile.frontend
     environment: 
       - HOST_NAME=server_latest

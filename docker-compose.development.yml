@@ -12,7 +12,7 @@ x-web-container: &web-container
 services:
   db_latest:
     build:
-      context: .
+      context: ./database
       args:
         env_database: development
       dockerfile: Dockerfile.db
@@ -25,7 +25,7 @@ services:
   db-migrate_latest:
     << : *web-container
     build: 
-      context: .
+      context: ./backend
       args:
         rails_env: development
       dockerfile: Dockerfile.migration
@@ -47,23 +47,23 @@ services:
   server_latest:
     << : *web-container
     build:
-      context: .
+      context: ./backend
       args:
         rails_env: development
       dockerfile: Dockerfile.server
     ports:
       - '3000:3000'
     volumes:
-      - ./app/javascript:/weather_report/app/javascript
-      - ./app/controllers:/weather_report/app/controllers
-      - ./app/models:/weather_report/app/models
-      - ./app/views:/weather_report/app/views
+      - ./backend/app/javascript:/weather_report/app/javascript
+      - ./backend/app/controllers:/weather_report/app/controllers
+      - ./backend/app/models:/weather_report/app/models
+      - ./backend/app/views:/weather_report/app/views
     depends_on:
       - db-migrate_latest
 
   client_latest:
     build: 
-      context: .
+      context: ./frontend
       dockerfile: Dockerfile.frontend
     environment:
       - HOST_NAME=server_latest

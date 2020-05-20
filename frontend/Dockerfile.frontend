@@ -11,13 +11,13 @@ RUN apk --no-cache add tzdata && \
 WORKDIR /app
 
 # `package.json` と `package-lock.json` （あれば）を両方コピーする
-COPY ./frontend/package*.json ./
+COPY ./package*.json ./
 
 # プロジェクトの依存ライブラリをインストールする
 RUN yarn install
 
 # カレントワーキングディレクトリ(つまり 'app' フォルダ)にプロジェクトのファイルやフォルダをコピーする
-COPY ./frontend/ .
+COPY . .
 
 # 本番向けに圧縮しながらアプリケーションをビルドする
 RUN yarn build
