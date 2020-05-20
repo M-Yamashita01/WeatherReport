@@ -39,7 +39,7 @@ commands:
     steps:
       - restore_cache:
           name: Restore client container
-          key: docker-{{ .Branch }}--{{ checksum ".circleci/config.yml" }}--{{ checksum "Dockerfile.frontend" }}
+          key: docker-{{ .Branch }}--{{ checksum ".circleci/config.yml" }}--{{ checksum "frontend/Dockerfile.frontend" }}
 
   save_server_pkg:
     steps:
@@ -47,7 +47,7 @@ commands:
           name: Save server container
           key: docker-{{ .Branch }}--{{ checksum ".circleci/config.yml" }}--{{ checksum "backend/Dockerfile.server" }}
           paths:
-            - ~/WeatherReport/
+            - ~/WeatherReport/backend
 
   save_db_migrate_pkg:
     steps:
@@ -55,13 +55,13 @@ commands:
           name: Save db-migrate container
           key: docker-{{ .Branch }}--{{ checksum ".circleci/config.yml" }}--{{ checksum "backend/Dockerfile.migration" }}
           paths:
-            - ~/WeatherReport/
+            - ~/WeatherReport/backend
 
   save_client_pkg:
     steps:
       - save_cache:
           name: Save client container
-          key: docker-{{ .Branch }}--{{ checksum ".circleci/config.yml" }}--{{ checksum "Dockerfile.frontend" }}
+          key: docker-{{ .Branch }}--{{ checksum ".circleci/config.yml" }}--{{ checksum "frontend/Dockerfile.frontend" }}
           paths:
             - ~/WeatherReport/frontend/
 
