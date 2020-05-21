@@ -26,8 +26,7 @@ RUN curl -O https://raw.githubusercontent.com/vishnubob/wait-for-it/54d1f0bfeb65
 COPY Gemfile* ./
 
 # Gemfileのbundle install
-RUN gem install bundler:2.0.1 && \
-    bundle install
+RUN gem install bundler:2.0.1 && bundle install
 
 COPY ./config.ru ./
 
