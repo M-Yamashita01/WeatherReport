@@ -26,23 +26,16 @@ RUN curl -O https://raw.githubusercontent.com/vishnubob/wait-for-it/54d1f0bfeb65
 COPY Gemfile* ./
 
 # Gemfileのbundle install
-RUN gem install bundler:2.0.1 && \
-    bundle install
-
-COPY ./config.ru ./
+RUN gem install bundler:2.0.1 && bundle install
 
 COPY ./Rakefile ./
 
-COPY ./.rspec ./
-
 COPY ./config ./config
 
-COPY ./public ./public
+COPY ./app/controllers ./app/controllers
 
-COPY ./app ./app
+COPY ./app/models ./app/models
 
 COPY ./db ./db
 
-COPY ./spec ./spec
-
-CMD bundle exec rake app:update:bin && bundle exec rails s -p 3000 -b '0.0.0.0'
+CMD bundle exec rake app:update:bin && ./wait-for-it.sh -h $DB_HOSTNAME -p 3306 -t 60 && bin/rails db:migrate && /bin/bash
