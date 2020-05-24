@@ -75,23 +75,4 @@ class CurrentWeathersGetter
 
     return current_weather
   end
-
-  def get_city_id_list(country_code)
-    reader = CityIdReader.new
-    city_list = reader.read_city_id(country_code)
-    return city_list
-  end
-
-  def get_weathers
-    timers = Timers::Group.new
-    city_id_list = get_city_id_list('JP')
-    weather_list = CurrentWeatherList.new
-
-    city_id_list.each do |city|
-      timers.after(1) { puts city }
-      timers.wait
-      weather = get_weather(city['id'])
-      weather_list.add(weather)
-    end
-  end
 end
