@@ -1,7 +1,7 @@
 require 'test/unit'
 require_relative '../../openWeatherMap/current_weathers_getter.rb'
 
-class CurrentWeatherGetterTest < Test::Unit::TestCase
+class TestCurrentWeatherGetter < Test::Unit::TestCase
   def self.startup
     @@api_key = ENV["OPENWEATHERMAP_API_KEY"]
   end

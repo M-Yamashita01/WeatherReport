@@ -1,7 +1,7 @@
 require 'test/unit'
 require_relative '../../openWeatherMap/city_id_reader.rb'
 
-class CityIdReaderTest < Test::Unit::TestCase
+class TestCityIdReader < Test::Unit::TestCase
   def test_get_city_id_list
     id_reader = CityIdReader.new
     city_id_list_jp = id_reader.read_city_id('JP')
