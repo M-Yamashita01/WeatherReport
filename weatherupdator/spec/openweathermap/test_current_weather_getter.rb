@@ -14,11 +14,5 @@ class TestCurrentWeatherGetter < Test::Unit::TestCase
     ENV["OPENWEATHERMAP_API_KEY"] = "0"
     current_weather = CurrentWeathersGetter.new
     assert_equal "", current_weather.get_weather(1861387)
-  end
-
-  def test_get_weather_by_valid_api_key
-    ENV["OPENWEATHERMAP_API_KEY"] = @@api_key
-    current_weather = CurrentWeathersGetter.new
-    assert_equal "Ishikawa", current_weather.get_weather(1861387).city_name
-  end    
+  end 
 end
