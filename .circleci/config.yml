@@ -69,6 +69,11 @@ commands:
     steps:
       - *change_command
       - run:
+          name: run unit tests
+          command: |
+            ${SUDO_COMMAND} docker-compose -f docker-compose.test.yml run --rm db-openweathermap sh -c 'cd .. && bundle install && env &&rake test -f spec/rakefile'
+      
+      - run:
           name: docker-compose up
           command: |
             set -x

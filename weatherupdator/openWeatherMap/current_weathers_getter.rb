@@ -14,13 +14,14 @@ class CurrentWeathersGetter
   BASE_URL = 'http://api.openweathermap.org/data/2.5/weather'  
 
   def get_weather(city_id)
-    api_key = ENV['OPENWEATHERMAP_API_KEY']
-    # response = open(BASE_URL + "?id=#{city_id}&APPID=#{api_key}")
+    api_key = ENV.fetch('OPENWEATHERMAP_API_KEY', '0')
     uri = URI.parse(BASE_URL + "?id=#{city_id}&APPID=#{api_key}")
-    json = Net::HTTP.get(uri)
-    location_weather = JSON.parse(json)
-
-    # location_weather = JSON.parse(response.read)
+    response = Net::HTTP.get_response(uri)
+    if response.code != '200'
+      puts "url:#{uri} is not valid."
+      return ""
+    end
+    location_weather = JSON.parse(response.body)
 
     current_weather = CurrentWeather.new
     current_weather.longitude = location_weather['coord']['lon']
@@ -73,24 +74,5 @@ class CurrentWeathersGetter
     current_weather.country_code = location_weather['sys']['country']
 
     return current_weather
-  end
-
-  def get_city_id_list(country_code)
-    reader = CityIdReader.new
-    city_list = reader.read_city_id(country_code)
-    return city_list
-  end
-
-  def get_weathers
-    timers = Timers::Group.new
-    city_id_list = get_city_id_list('JP')
-    weather_list = CurrentWeatherList.new
-
-    city_id_list.each do |city|
-      timers.after(1) { puts city }
-      timers.wait
-      weather = get_weather(city['id'])
-      weather_list.add(weather)
-    end
   end
 end

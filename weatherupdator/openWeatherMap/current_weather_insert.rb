@@ -62,6 +62,10 @@ city_id_list.each do |city|
   current_weather = CurrentWeather.new
   timers.after(1) { current_weather = current_weather_getter.get_weather(city['id']) }
   timers.wait
+  if current_weather == ""
+    puts "Failed to get current weather."
+    next
+  end
 
   location_id = insert_weathermap_location(db_access, current_weather, city['name_ja'])
   weather_group_id = insert_weather_group(db_access, current_weather)
