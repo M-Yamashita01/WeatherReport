@@ -63,6 +63,7 @@ yarn-debug.log*
 .env
 local_circleci_executer.sh
 /ManualAWSPush
+/backend/db/schema.rb
 
 # data directory for docker
 /data
