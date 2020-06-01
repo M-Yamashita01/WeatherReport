@@ -74,22 +74,16 @@ commands:
             ${SUDO_COMMAND} docker-compose -f docker-compose.test.yml run --rm db-openweathermap sh -c 'cd .. && bundle install && env &&rake test -f spec/rakefile'
       
       - run:
-          name: docker-compose up
+          name: migrate db
           command: |
-            set -x
-            ${SUDO_COMMAND} docker-compose -f docker-compose.test.yml up -d
+            ${SUDO_COMMAND} docker-compose -f docker-compose.test.yml run --rm db-migrate bundle exec rake db:migrate
 
       - run:
-          name: sleep for waiting launch db
-          command: |
-            sleep 30
-
-      - run:
-          name: run tests
+          name: run rspec
           command: |
             mkdir -p /tmp/test-results
             TEST_FILES="$(circleci tests glob 'spec/**/*_spec.rb' | circleci tests split --split-by=timings)"
-            ${SUDO_COMMAND} docker-compose -f docker-compose.test.yml exec server_latest bundle exec rspec --format progress \
+            ${SUDO_COMMAND} docker-compose -f docker-compose.test.yml run --rm server_latest bundle exec rspec --format progress \
                                                                   --format RspecJunitFormatter \
                                                                   --out /tmp/test-results/rspec.xml \
                                                                   $TEST_FILES
