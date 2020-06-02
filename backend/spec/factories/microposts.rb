@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 FactoryBot.define do
   factory :sunny_comment, class: Micropost do
     content { 'today is sunny.' }

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class WeathermapLocation < ApplicationRecord
   validates :city_id, presence: true
   validates :latitude, presence: true

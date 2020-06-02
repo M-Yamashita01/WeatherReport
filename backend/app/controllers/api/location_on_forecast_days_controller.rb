@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Api::LocationOnForecastDaysController < ApplicationController
   def index
     @location_on_forecast = LocationOnForecastDay.joins(:location, :weather).search(search_params).select('location_on_forecast_days.*, locations.*, weathers.*')

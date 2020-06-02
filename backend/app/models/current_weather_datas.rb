@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CurrentWeatherDatas < ApplicationRecord
   belongs_to :weather_group, foreign_key: :weather_group_id, primary_key: :id
   belongs_to :weathermap_location, foreign_key: :weathermap_location_id, primary_key: :id
@@ -16,7 +18,7 @@ class CurrentWeatherDatas < ApplicationRecord
   validates :country_code, presence: true
 
   scope :search, lambda { |params|
-    search_by_less_than_longitude(params[:longitude_max]).search_by_more_than_longitude(params[:longitude_min]).search_by_less_than_latitude(params[:latitude_max]).search_by_more_than_latitude(params[:latitude_min]).exist_city_ja()
+    search_by_less_than_longitude(params[:longitude_max]).search_by_more_than_longitude(params[:longitude_min]).search_by_less_than_latitude(params[:latitude_max]).search_by_more_than_latitude(params[:latitude_min]).exist_city_ja
   }
 
   scope :search_by_less_than_longitude, lambda { |longitude|

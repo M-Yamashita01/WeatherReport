@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 FactoryBot.define do
   factory :weather_sunny, class: WeatherGroup do
     weather_group_id { 1 }
