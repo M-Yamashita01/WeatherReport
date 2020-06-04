@@ -65,6 +65,26 @@ commands:
           paths:
             - ~/WeatherReport/frontend/
 
+  bundle_install:
+    steps:
+      - run:
+          name: bundle install
+          command: |
+            cd ~/WeatherReport/backend
+            bundle install
+            cd ~/WeatherReport
+
+  rubocop_container:
+    steps:
+      - *change_command
+      - run:
+          name: run rubocop
+          command: |
+            cd ~/WeatherReport/backend
+            ${SUDO_COMMAND} bundle exec rubocop
+            cd ~/WeatherReport
+
+
   test_container:
     steps:
       - *change_command
