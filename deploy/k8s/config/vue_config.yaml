@@ -1,6 +1,0 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: vue-config
-data:
-  HOST_NAME: localhost
