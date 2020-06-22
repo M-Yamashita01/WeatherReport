@@ -1,0 +1,23 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name:  rails-db-setup
+spec:
+  template:
+    metadata:
+      name:  rails-db-setup
+    spec:
+      containers:
+      - name: rails-db-setup
+        #image: ${REPOSITORY_URI_BACKEND}
+        image: "weatherreport_server_latest"
+        #imagePullPolicy: Always
+        imagePullPolicy: Never
+        command: ["ash"]
+        args: ["-c", "bundle exec rake app:update:bin && bin/rails db:create && bin/rails db:migrate"]
+        
+        envFrom:
+        - configMapRef:
+            name: rails-config
+      restartPolicy: Never
+  backoffLimit: 1
