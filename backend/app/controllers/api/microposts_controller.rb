@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Api::MicropostsController < ApplicationController
   def index
     @micropost = Micropost.joins(:user).search(search_params).select('microposts.id as micropost_id, microposts.user_id, microposts.content, microposts.created_at, users.id, users.name')
@@ -19,7 +21,7 @@ class Api::MicropostsController < ApplicationController
   def destroy
     @post = Micropost.find_by(id: params[:id])
     @post.destroy
-    render json: {status: 'SUCCESS', message: 'Deleted the post', data: @post}
+    render json: { status: 'SUCCESS', message: 'Deleted the post', data: @post }
   end
 
   private

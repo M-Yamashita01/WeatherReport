@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe CurrentWeatherDatas, type: :model do
@@ -8,7 +10,7 @@ RSpec.describe CurrentWeatherDatas, type: :model do
   end
 
   describe '現在の天気情報が存在する場合' do
-    it 'validationがpassすること'do
+    it 'validationがpassすること' do
       expect(@current_weather).to be_valid
     end
   end
@@ -85,7 +87,7 @@ RSpec.describe CurrentWeatherDatas, type: :model do
 
   describe '現在の天気情報に雲の量が存在しない場合' do
     it 'validationがpassしないこと' do
-      @current_weather.cloudiness= nil
+      @current_weather.cloudiness = nil
       expect(@current_weather).not_to be_valid
     end
   end

@@ -6,7 +6,7 @@ class DBAccess
     user_name = ENV['DB_USERNAME']
     password = ENV['DB_PASSWORD']
     host_name = ENV['DB_HOSTNAME']
-    database = ENV['MYSQL_DATABASE']
+    database = ENV['DATABASE_NAME']
 
     @client = Mysql2::Client.new(host: host_name, username: user_name, password: password)
     query = 'use ' + database
