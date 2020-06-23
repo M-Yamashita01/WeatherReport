@@ -8,7 +8,7 @@ x-web-container: &test-web-container
     DB_HOSTNAME: db_latest
     RAILS_SERVE_STATIC_FILES: "true"
     OPENWEATHERMAP_API_KEY:
-    MYSQL_DATABASE: weather_report_test
+    DATABASE_NAME: weatherreportdb
 
 services:
   db_latest:
@@ -32,6 +32,13 @@ services:
       dockerfile: Dockerfile.migration
     depends_on:
       - db_latest
+
+  db-openweathermap:
+    << : *test-web-container
+    build:
+      context: ./weatherupdator
+      dockerfile: Dockerfile.openWeatherMap
+    command: sh -c "./wait-for-it.sh -t 60 -h db_latest -p 3306 && ruby current_weather_insert.rb"
 
   server_latest:
     <<: *test-web-container

@@ -1,0 +1,7 @@
+# ドキュメントのないpublic classを許可する
+Style/Documentation:
+  Enabled: false
+
+# 長い行を許可する
+Layout/LineLength:
+  Enabled: false

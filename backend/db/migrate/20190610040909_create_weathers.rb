@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreateWeathers < ActiveRecord::Migration[5.2]
   def change
     create_table :weathers, id: false do |t|

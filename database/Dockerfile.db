@@ -1,7 +1,7 @@
 FROM mysql:5.7
 
 ARG env_database
-ENV MYSQL_DATABASE weather_report_$env_database
+ENV MYSQL_DATABASE weatherreportdb
 ENV MYSQL_ROOT_PASSWORD password
 ENV MYSQL_USER mysql_user
 ENV MYSQL_PASSWORD mysql_user

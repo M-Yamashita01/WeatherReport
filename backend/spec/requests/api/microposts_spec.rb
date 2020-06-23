@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe 'Micropost', type: :request do
@@ -30,17 +32,15 @@ RSpec.describe 'Micropost', type: :request do
     end
   end
 
-  describe "DELETE /api/micropost/id" do
-    it "指定した記事の削除ができること" do
+  describe 'DELETE /api/micropost/id' do
+    it '指定した記事の削除ができること' do
       rainy_post = FactoryBot.create(:rainy_comment, user: @user)
       api = '/api/microposts/' + rainy_post.id.to_s
-      expect {
+      expect do
         delete api
-      }.to change { Micropost.count }.by(-1)
-      
-      expect(response.status).to eq 200
+      end.to change { Micropost.count }.by(-1)
 
-      
+      expect(response.status).to eq 200
     end
   end
 end

@@ -50,22 +50,32 @@ end
 
 puts 'current weather insert start'
 
-db_access = DBAccess.new
+begin
+  db_access = DBAccess.new
 
-city_id_reader = CityIdReader.new
-city_id_list = city_id_reader.read_city_id('JP')
-current_weather_getter = CurrentWeathersGetter.new
+  city_id_reader = CityIdReader.new
+  city_id_list = city_id_reader.read_city_id('JP')
+  current_weather_getter = CurrentWeathersGetter.new
 
-timers = Timers::Group.new
+  timers = Timers::Group.new
 
-city_id_list.each do |city|
-  current_weather = CurrentWeather.new
-  timers.after(1) { current_weather = current_weather_getter.get_weather(city['id']) }
-  timers.wait
+  city_id_list.each do |city|
+    current_weather = CurrentWeather.new
+    timers.after(1) { current_weather = current_weather_getter.get_weather(city['id']) }
+    timers.wait
+    if current_weather == ""
+      puts "Failed to get current weather."
+      next
+    end
 
-  location_id = insert_weathermap_location(db_access, current_weather, city['name_ja'])
-  weather_group_id = insert_weather_group(db_access, current_weather)
-  insert_current_weather_data(db_access, current_weather, location_id, weather_group_id)
+    location_id = insert_weathermap_location(db_access, current_weather, city['name_ja'])
+    weather_group_id = insert_weather_group(db_access, current_weather)
+    insert_current_weather_data(db_access, current_weather, location_id, weather_group_id)
+  end
+rescue => e
+  puts "Exception occurred."
+  puts e.message
+  puts e.backtrace
 end
 
 puts 'current weather insert end'

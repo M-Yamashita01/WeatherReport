@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Micropost < ApplicationRecord
   belongs_to :user
   default_scope -> { order(created_at: :desc) }
@@ -12,5 +14,5 @@ class Micropost < ApplicationRecord
     return all if user_id.blank?
 
     where('microposts.user_id = ?', user_id)
-  }    
+  }
 end

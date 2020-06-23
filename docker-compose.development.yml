@@ -7,7 +7,7 @@ x-web-container: &web-container
     DB_HOSTNAME: db_latest    
     RAILS_SERVE_STATIC_FILES: 'true'
     OPENWEATHERMAP_API_KEY:
-    MYSQL_DATABASE: weather_report_development
+    DATABASE_NAME: weatherreportdb
 
 services:
   db_latest:

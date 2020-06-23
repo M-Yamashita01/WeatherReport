@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 FactoryBot.define do
   factory :current_weather_sample, class: CurrentWeatherDatas do
     acquired_datetime { Time.now }
@@ -11,6 +13,6 @@ FactoryBot.define do
     wind_speed { 0.47 }
     wind_degree { 107.538 }
     cloudiness { 2 }
-    country_code { 'JP '}
+    country_code { 'JP ' }
   end
 end
