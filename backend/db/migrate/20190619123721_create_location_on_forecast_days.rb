@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreateLocationOnForecastDays < ActiveRecord::Migration[5.2]
   def change
     create_table :location_on_forecast_days do |t|
@@ -12,4 +14,3 @@ class CreateLocationOnForecastDays < ActiveRecord::Migration[5.2]
     add_foreign_key :location_on_forecast_days, :weathers, column: :weather_id, primary_key: :weather_id
   end
 end
-

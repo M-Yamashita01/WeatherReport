@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class WeatherGroup < ApplicationRecord
   validates :weather_group_id, presence: true
   validates :weather_icon, presence: true
