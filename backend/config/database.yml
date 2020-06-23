@@ -11,19 +11,20 @@ default: &default
   username: <%= ENV['DB_USERNAME'] %>
   password: <%= ENV['DB_PASSWORD'] %>
   host: <%= ENV['DB_HOSTNAME'] %>
+  database: <%= ENV['DATABASE_NAME'] %>
   socket: /tmp/mysql.sock
 
 development:
   <<: *default
-  database: weather_report_development
+
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: weather_report_test
+  database: weatherreportdb
 
 production:
   <<: *default
-  database: weather_report_production
+  database: weatherreportdb
