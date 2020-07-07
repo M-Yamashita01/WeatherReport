@@ -118,6 +118,16 @@ commands:
             set -x
             ${SUDO_COMMAND} docker-compose -f docker-compose.test.yml down
 
+
+  apply_manifest:
+    steps:
+      - run:
+          name: Apply manifest
+          command: |
+            cd deploy/k8s
+            ${SUDO_COMMAND} docker-compose -f docker-compose.yml build --force-rm
+            ${SUDO_COMMAND} docker-compose -f docker-compose.yml run --rm deploy sh -c 'sh apply.sh'
+
 jobs:
   setup:
     executor: default
@@ -183,7 +193,16 @@ jobs:
           dockerfile: Dockerfile.frontend
           region: AWS_REGION
           repo: $AWS_ECR_REPOSITORY
-          tag: 'client_latest'         
+          tag: 'client_latest' 
+
+  apply_manifest:
+    executor: default
+    steps:
+      - checkout
+      - *change_command
+      - setup_remote_docker
+      - apply_manifest
+
 workflows:
   test_and_deploy:
     jobs:
@@ -199,6 +218,13 @@ workflows:
               only: 
                 - develop
                 - release
+      - apply_manifest:
+          requires:
+            - push_images
+          filters:
+            branches:
+              only:
+                - develop
       - aws-ecs/deploy-service-update:
           requires:
             - push_images
