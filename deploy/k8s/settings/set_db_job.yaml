@@ -1,0 +1,21 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name:  rails-db-setup
+spec:
+  template:
+    metadata:
+      name:  rails-db-setup
+    spec:
+      containers:
+      - name: rails-db-setup
+        image: "$AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$AWS_ECR_REPOSITORY_NAME:$BACKEND_IMAGE_NAME$BACKEND_IMAGE_VERSION"
+        imagePullPolicy: Always
+        command: ["ash"]
+        args: ["-c", "bundle exec rake app:update:bin && bin/rails db:create && bin/rails db:migrate"]
+        
+        envFrom:
+        - configMapRef:
+            name: rails-config
+      restartPolicy: Never
+  backoffLimit: 1
