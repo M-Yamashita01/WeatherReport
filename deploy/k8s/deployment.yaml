@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name:  weatherreport-development
+  labels:
+    app: weatherreport
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: weatherreport
+  template:
+    metadata:
+      labels:
+        app: weatherreport
+    spec:
+      containers:
+      - name: vue
+        image: "$AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/$AWS_ECR_REPOSITORY:$FRONTEND_IMAGE_NAME$FRONTEND_IMAGE_VERSION"
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
+        envFrom:
+        - configMapRef:
+            name: vue-config
+      - name: rails
+        image: "$AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/$AWS_ECR_REPOSITORY:$BACKEND_IMAGE_NAME$BACKEND_IMAGE_VERSION"
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 3000
+        envFrom:
+        - configMapRef:
+            name: rails-config
+
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name:  weatherreport-service
+spec:
+  type:  LoadBalancer
+  selector:
+    app: weatherreport
+  ports:
+  - protocol: TCP
+    port:  8080
+    targetPort:  80
