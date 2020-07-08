@@ -24,7 +24,8 @@ executors:
       - image: circleci/ruby:2.6.5
   terraform_machine:
     working_directory: ~/WeatherReport
-    machine: true
+    docker:
+      - image: hashicorp/terraform:0.12.23
 
 commands:
   restore_server_pkg:
