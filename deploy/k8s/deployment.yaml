@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: vue
-        image: "$AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$AWS_ECR_REPOSITORY_NAME:$FRONTEND_IMAGE_NAME$FRONTEND_IMAGE_VERSION"
+        image: "$AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/$AWS_ECR_REPOSITORY:$FRONTEND_IMAGE_NAME$FRONTEND_IMAGE_VERSION"
         imagePullPolicy: Always
         ports:
         - containerPort: 80
@@ -24,7 +24,7 @@ spec:
         - configMapRef:
             name: vue-config
       - name: rails
-        image: "$AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$AWS_ECR_REPOSITORY_NAME:$BACKEND_IMAGE_NAME$BACKEND_IMAGE_VERSION"
+        image: "$AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/$AWS_ECR_REPOSITORY:$BACKEND_IMAGE_NAME$BACKEND_IMAGE_VERSION"
         imagePullPolicy: Always
         ports:
         - containerPort: 3000
