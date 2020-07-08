@@ -172,14 +172,13 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Change directory
-          command: cd deploy/terraform
-      - run:
           name: Init terraform
           command: terraform init
+          working_directory: ~/WeatherReport/deploy/terraform
       - run:
           name: Plan terraform
           command: terraform plan
+          working_directory: ~/WeatherReport/deploy/terraform
     
   apply_terraform:
     executor: terraform_machine
@@ -190,14 +189,13 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Change directory
-          command: cd deploy/terraform
-      - run:
           name: Init terraform
           command: terraform init
+          working_directory: ~/WeatherReport/deploy/terraform
       - run:
           name: Apply terraform
           command: terraform apply -auto-approve
+          working_directory: ~/WeatherReport/deploy/terraform
 
   destroy_terraform:
     machine: true
@@ -208,14 +206,13 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Change directory
-          command: cd deploy/terraform
-      - run:
           name: Init terraform
           command: terraform init
+          working_directory: ~/WeatherReport/deploy/terraform
       - run:
           name: Destroy terraform
           command: terraform destroy -auto-approve
+          working_directory: ~/WeatherReport/deploy/terraform
 
   push_images:
     executor: default
