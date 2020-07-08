@@ -22,6 +22,9 @@ executors:
     working_directory: ~/WeatherReport
     docker:
       - image: circleci/ruby:2.6.5
+  terraform_machine:
+    working_directory: ~/WeatherReport
+    machine: true
 
 commands:
   restore_server_pkg:
@@ -159,6 +162,60 @@ jobs:
       - save_db_migrate_pkg
       - save_client_pkg
 
+  plan_terraform:
+    executor: terraform_machine
+    environment:
+      S3_BUCKET: yamashii-terraform
+      AWS_REGION: ap-northeast-1
+      TERRAFROM_VER: 0.12.23
+    steps:
+      - checkout
+      - run:
+          name: Change directory
+          command: cd deploy/terraform
+      - run:
+          name: Init terraform
+          command: terraform init
+      - run:
+          name: Plan terraform
+          command: terraform plan
+    
+  apply_terraform:
+    executor: terraform_machine
+    environment:
+      S3_BUCKET: yamashii-terraform
+      AWS_REGION: ap-northeast-1
+      TERRAFROM_VER: 0.12.23
+    steps:
+      - checkout
+      - run:
+          name: Change directory
+          command: cd deploy/terraform
+      - run:
+          name: Init terraform
+          command: terraform init
+      - run:
+          name: Apply terraform
+          command: terraform apply -auto-approve
+
+  destroy_terraform:
+    machine: true
+    environment:
+      S3_BUCKET: yamashii-terraform
+      AWS_REGION: ap-northeast-1
+      TERRAFROM_VER: 0.12.23
+    steps:
+      - checkout
+      - run:
+          name: Change directory
+          command: cd deploy/terraform
+      - run:
+          name: Init terraform
+          command: terraform init
+      - run:
+          name: Destroy terraform
+          command: terraform destroy -auto-approve
+
   push_images:
     executor: default
     steps:
@@ -210,9 +267,26 @@ workflows:
       - test:
           requires:
             - setup
-      - push_images:
+      - plan_terraform:
           requires:
             - test
+      - apply_terraform:
+          requires:
+            - plan_terraform
+          filters:
+            branches:
+              only:
+                - feature-215
+      - destroy_terraform:
+          requires:
+            - apply_terraform
+          filters:
+            branches:
+              only:
+                - feature-215
+      - push_images:
+          requires:
+            - apply_terraform
           filters:
             branches:
               only: 
