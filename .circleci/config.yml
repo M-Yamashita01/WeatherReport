@@ -244,28 +244,28 @@ jobs:
       - setup_remote_docker
       - aws-ecr/build-and-push-image:
          account-url: AWS_ECR_ACCOUNT_URL
-         dockerfile: Dockerfile.db
+         dockerfile: database/Dockerfile.db
          region: AWS_REGION
          repo: $AWS_ECR_REPOSITORY
          extra-build-args: '--build-arg env_database=development'
          tag: 'db_latest'
       - aws-ecr/build-and-push-image:
          account-url: AWS_ECR_ACCOUNT_URL
-         dockerfile: Dockerfile.migration
+         dockerfile: backend/Dockerfile.migration
          region: AWS_REGION
          repo: $AWS_ECR_REPOSITORY
          extra-build-args: '--build-arg rails_env=development'
          tag: 'db-migrate_latest'
       - aws-ecr/build-and-push-image:
          account-url: AWS_ECR_ACCOUNT_URL
-         dockerfile: Dockerfile.server
+         dockerfile: backend/Dockerfile.server
          region: AWS_REGION
          repo: $AWS_ECR_REPOSITORY
          extra-build-args: '--build-arg rails_env=development'
          tag: 'server_latest'
       - aws-ecr/build-and-push-image:
           account-url: AWS_ECR_ACCOUNT_URL
-          dockerfile: Dockerfile.frontend
+          dockerfile: frontend/Dockerfile.frontend
           region: AWS_REGION
           repo: $AWS_ECR_REPOSITORY
           tag: 'client_latest' 
