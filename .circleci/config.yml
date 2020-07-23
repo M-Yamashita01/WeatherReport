@@ -245,6 +245,7 @@ jobs:
       - aws-ecr/build-and-push-image:
          account-url: AWS_ECR_ACCOUNT_URL
          dockerfile: database/Dockerfile.db
+         context: database
          region: AWS_REGION
          repo: $AWS_ECR_REPOSITORY
          extra-build-args: '--build-arg env_database=development'
@@ -252,6 +253,7 @@ jobs:
       - aws-ecr/build-and-push-image:
          account-url: AWS_ECR_ACCOUNT_URL
          dockerfile: backend/Dockerfile.migration
+         context: backend
          region: AWS_REGION
          repo: $AWS_ECR_REPOSITORY
          extra-build-args: '--build-arg rails_env=development'
@@ -259,6 +261,7 @@ jobs:
       - aws-ecr/build-and-push-image:
          account-url: AWS_ECR_ACCOUNT_URL
          dockerfile: backend/Dockerfile.server
+         context: backend
          region: AWS_REGION
          repo: $AWS_ECR_REPOSITORY
          extra-build-args: '--build-arg rails_env=development'
@@ -266,6 +269,7 @@ jobs:
       - aws-ecr/build-and-push-image:
           account-url: AWS_ECR_ACCOUNT_URL
           dockerfile: frontend/Dockerfile.frontend
+          context: frontend
           region: AWS_REGION
           repo: $AWS_ECR_REPOSITORY
           tag: 'client_latest' 
