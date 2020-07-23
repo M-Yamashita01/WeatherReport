@@ -22,6 +22,10 @@ executors:
     working_directory: ~/WeatherReport
     docker:
       - image: circleci/ruby:2.6.5
+  terraform_machine:
+    working_directory: ~/WeatherReport
+    docker:
+      - image: hashicorp/terraform:0.12.28
 
 commands:
   restore_server_pkg:
@@ -128,6 +132,14 @@ commands:
             ${SUDO_COMMAND} docker-compose -f docker-compose.yml build --force-rm
             ${SUDO_COMMAND} docker-compose -f docker-compose.yml run --rm deploy sh -c 'sh apply.sh'
 
+  add_envsubst:
+    steps:
+      - run:
+          name: Add envsubst
+          command: |
+            apk update
+            apk upgrade
+            apk add --no-cache gettext
 jobs:
   setup:
     executor: default
@@ -158,6 +170,71 @@ jobs:
       - save_server_pkg
       - save_db_migrate_pkg
       - save_client_pkg
+
+  plan_terraform:
+    executor: terraform_machine
+    environment:
+      S3_BUCKET: yamashii-terraform
+      AWS_REGION: ap-northeast-1
+      TERRAFROM_VER: 0.12.28
+    steps:
+      - checkout
+      - add_envsubst
+      - run:
+          name: Init terraform
+          command: |
+            envsubst '$$AWS_ACCESS_KEY_ID $$AWS_SECRET_ACCESS_KEY $$AWS_BUCKET' < provider.tf > provider_converted.tf
+            rm provider.tf
+            mv provider_converted.tf provider.tf
+            terraform init
+          working_directory: ~/WeatherReport/deploy/terraform
+      - run:
+          name: Plan terraform
+          command: terraform plan
+          working_directory: ~/WeatherReport/deploy/terraform
+    
+  apply_terraform:
+    executor: terraform_machine
+    environment:
+      S3_BUCKET: yamashii-terraform
+      AWS_REGION: ap-northeast-1
+      TERRAFROM_VER: 0.12.28
+    steps:
+      - checkout
+      - add_envsubst
+      - run:
+          name: Init terraform
+          command: |
+            envsubst '$$AWS_ACCESS_KEY_ID $$AWS_SECRET_ACCESS_KEY $$AWS_BUCKET' < provider.tf > provider_converted.tf
+            rm provider.tf
+            mv provider_converted.tf provider.tf
+            terraform init
+          working_directory: ~/WeatherReport/deploy/terraform
+      - run:
+          name: Apply terraform
+          command: terraform apply -auto-approve
+          working_directory: ~/WeatherReport/deploy/terraform
+
+  destroy_terraform:
+    executor: terraform_machine
+    environment:
+      S3_BUCKET: yamashii-terraform
+      AWS_REGION: ap-northeast-1
+      TERRAFROM_VER: 0.12.28
+    steps:
+      - checkout
+      - add_envsubst
+      - run:
+          name: Init terraform
+          command: |
+            envsubst '$$AWS_ACCESS_KEY_ID $$AWS_SECRET_ACCESS_KEY $$AWS_BUCKET' < provider.tf > provider_converted.tf
+            rm provider.tf
+            terraform init
+          working_directory: ~/WeatherReport/deploy/terraform
+      - run:
+          name: Apply terraform
+          command: terraform destroy -auto-approve
+          working_directory: ~/WeatherReport/deploy/terraform
 
   push_images:
     executor: default
@@ -210,9 +287,26 @@ workflows:
       - test:
           requires:
             - setup
-      - push_images:
+      - plan_terraform:
           requires:
             - test
+      - apply_terraform:
+          requires:
+            - plan_terraform
+          filters:
+            branches:
+              only:
+                - develop
+      - destroy_terraform:
+          requires:
+            - plan_terraform
+          filters:
+            branches:
+              only:
+                - destroy
+      - push_images:
+          requires:
+            - apply_terraform
           filters:
             branches:
               only: 
