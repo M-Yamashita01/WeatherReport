@@ -148,12 +148,6 @@ jobs:
       - setup_remote_docker
       - attach_workspace:
           at: WeatherReport
-      #- aws-cli/install
-      #- aws-cli/configure:
-      #    profile-name: my-profile-name
-      #    aws-access-key-id: AWS_ACCESS_KEY_ID
-      #    aws-secret-access-key: AWS_SECRET_ACCESS_KEY
-      #    aws-region: AWS_REGION
 
   test:
     executor: default
@@ -249,14 +243,14 @@ jobs:
          region: AWS_REGION
          repo: $AWS_ECR_REPOSITORY
          extra-build-args: '--build-arg rails_env=development'
-         tag: 'server_latest_v1.0'
+         tag: 'backend_v1.0'
       - aws-ecr/build-and-push-image:
           account-url: AWS_ECR_ACCOUNT_URL
           dockerfile: frontend/Dockerfile.frontend
           path: frontend
           region: AWS_REGION
           repo: $AWS_ECR_REPOSITORY
-          tag: 'client_latest_v1.0'
+          tag: 'frontend_v1.0'
 
   apply_manifest:
     executor: default
