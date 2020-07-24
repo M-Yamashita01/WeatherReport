@@ -298,8 +298,10 @@ workflows:
               only: 
                 - develop
       - apply_manifest:
+          requires:
+            - plan_terraform        
           # requires:
-          #   - push_images
+            # - push_images
           # filters:
           #   branches:
           #     only:
