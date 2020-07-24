@@ -298,9 +298,9 @@ workflows:
               only: 
                 - develop
       - apply_manifest:
-          requires:
-            - push_images
-          filters:
-            branches:
-              only:
-                - develop
+          # requires:
+          #   - push_images
+          # filters:
+          #   branches:
+          #     only:
+          #       - develop

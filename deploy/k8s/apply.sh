@@ -1,5 +1,14 @@
+echo "debug"
+aws rds --region ap-northeast-1 describe-db-instances --query "DBInstances[*].Endpoint.Address"
+echo "debug1 start"
+aws rds --region ap-northeast-1 describe-db-instances --query "DBInstances[*].Endpoint.Address"
+echo "debug1 end"
+
 aws rds --region ap-northeast-1 describe-db-instances --query "DBInstances[*].Endpoint.Address" --output text > tmpfile
 export RDS_ENDPOINT=$(cat tmpfile)
+echo "debug2 start"
+env
+echo "debug2 end"
 rm tmpfile
 
 envsubst '$$RDS_ENDPOINT' < ./config/rails_config.yaml > ./config/rails_config_converted.yaml
