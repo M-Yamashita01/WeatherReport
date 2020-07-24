@@ -244,21 +244,8 @@ jobs:
       - setup_remote_docker
       - aws-ecr/build-and-push-image:
          account-url: AWS_ECR_ACCOUNT_URL
-         dockerfile: database/Dockerfile.db
-         region: AWS_REGION
-         repo: $AWS_ECR_REPOSITORY
-         extra-build-args: '--build-arg env_database=development'
-         tag: 'db_latest'
-      - aws-ecr/build-and-push-image:
-         account-url: AWS_ECR_ACCOUNT_URL
-         dockerfile: backend/Dockerfile.migration
-         region: AWS_REGION
-         repo: $AWS_ECR_REPOSITORY
-         extra-build-args: '--build-arg rails_env=development'
-         tag: 'db-migrate_latest'
-      - aws-ecr/build-and-push-image:
-         account-url: AWS_ECR_ACCOUNT_URL
          dockerfile: backend/Dockerfile.server
+         path: backend
          region: AWS_REGION
          repo: $AWS_ECR_REPOSITORY
          extra-build-args: '--build-arg rails_env=development'
@@ -266,6 +253,7 @@ jobs:
       - aws-ecr/build-and-push-image:
           account-url: AWS_ECR_ACCOUNT_URL
           dockerfile: frontend/Dockerfile.frontend
+          path: frontend
           region: AWS_REGION
           repo: $AWS_ECR_REPOSITORY
           tag: 'client_latest' 
@@ -309,7 +297,6 @@ workflows:
             branches:
               only: 
                 - develop
-                - release
       - apply_manifest:
           requires:
             - push_images
@@ -317,55 +304,3 @@ workflows:
             branches:
               only:
                 - develop
-      - aws-ecs/deploy-service-update:
-          requires:
-            - push_images
-          aws-region: ${AWS_REGION}
-          family: '${MY_APP_PREFIX}'
-          cluster-name: '${MY_APP_PREFIX}'
-          service-name: '${MY_APP_PREFIX}'
-          container-image-name-updates: 'container=db_latest,tag=db_latest'
-          filters:
-            branches:
-              only: 
-                - develop
-                - release
-      - aws-ecs/deploy-service-update:
-          requires:
-            - push_images
-          aws-region: ${AWS_REGION}
-          family: '${MY_APP_PREFIX}'
-          cluster-name: '${MY_APP_PREFIX}'
-          service-name: '${MY_APP_PREFIX}'
-          container-image-name-updates: 'container=db-migrate_latest,tag=db-migrate_latest'
-          filters:
-            branches:
-              only: 
-                - develop
-                - release
-      - aws-ecs/deploy-service-update:
-          requires:
-            - push_images
-          aws-region: ${AWS_REGION}
-          family: '${MY_APP_PREFIX}'
-          cluster-name: '${MY_APP_PREFIX}'
-          service-name: '${MY_APP_PREFIX}'
-          container-image-name-updates: 'container=server_latest,tag=server_latest'
-          filters:
-            branches:
-              only: 
-                - develop
-                - release
-      - aws-ecs/deploy-service-update:
-          requires:
-            - push_images
-          aws-region: ${AWS_REGION}
-          family: '${MY_APP_PREFIX}'
-          cluster-name: '${MY_APP_PREFIX}'
-          service-name: '${MY_APP_PREFIX}'
-          container-image-name-updates: 'container=client_latest,tag=client_latest'
-          filters:
-            branches:
-              only: 
-                - develop
-                - release       
