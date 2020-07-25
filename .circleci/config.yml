@@ -286,19 +286,15 @@ workflows:
                 - destroy
       - push_images:
           requires:
-            - plan_terraform
-          # requires:
-          #   - apply_terraform
-          # filters:
-          #   branches:
-          #     only: 
-          #       - develop
+            - apply_terraform
+          filters:
+            branches:
+              only: 
+                - develop
       - apply_manifest:
           requires:
             - push_images
-          # requires:
-            # - push_images
-          # filters:
-          #   branches:
-          #     only:
-          #       - develop
+          filters:
+            branches:
+              only:
+                - develop
