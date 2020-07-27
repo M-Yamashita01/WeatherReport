@@ -276,7 +276,7 @@ workflows:
           filters:
             branches:
               only:
-                - develop
+                - release
       - destroy_terraform:
           requires:
             - plan_terraform
@@ -290,11 +290,11 @@ workflows:
           filters:
             branches:
               only: 
-                - develop
+                - release
       - apply_manifest:
           requires:
             - push_images
           filters:
             branches:
               only:
-                - develop
+                - release
