@@ -1,0 +1,24 @@
+name: Move trello card when pull request closed
+
+on:
+  pull_request:
+    types: closed
+    branches:
+      - master # ここではmasterへのマージを対応させています
+
+jobs:
+  move_card_when_pull_request_open:
+    runs-on: ubuntu-latest
+    name: Move Trello Card 
+    steps:
+    - name: Call trello-github-actions
+      id: call-trello-github-actions
+      uses: jessicazu/trello-github-actions@v1.0
+      with:
+        trello-action: move_card_when_pull_request_opened # マージでカード移動アクション
+      env:
+        TRELLO_API_KEY: ${{ secrets.TRELLO_API_KEY }}
+        TRELLO_API_TOKEN: ${{ secrets.TRELLO_API_TOKEN }}
+        TRELLO_BOARD_ID: ${{ secrets.TRELLO_BOARD_ID }}
+        TRELLO_DEPARTURE_LIST_ID: ${{ secrets.TRELLO_REVIEW_ID }} # カードの移動元となるリスト
+        TRELLO_DESTINATION_LIST_ID: ${{ secrets.TRELLO_DONE_ID }} # カードの移動先となるリスト
