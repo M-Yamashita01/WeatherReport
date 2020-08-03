@@ -2,7 +2,7 @@ aws rds --region ap-northeast-1 describe-db-instances --query "DBInstances[*].En
 export RDS_ENDPOINT=$(cat tmpfile)
 rm tmpfile
 
-aws iam --region ap-northeast-1 list-roles --query "Roles[?RoleName == 'route53-externaldns-controller'].[Arn]" --output > tmpfile
+aws iam list-roles --region ap-northeast-1 --query "Roles[?RoleName == 'route53-externaldns-controller'].[Arn]" --output text > tmpfile
 export ROUTE53_EXDNS_CONTROLLER_ARN=$(cat tmpfile)
 rm tmpfile
 
