@@ -69,6 +69,10 @@ resource "aws_iam_role_policy_attachment" "eks_node_group_AmazonEC2RoleforSSM" {
   role       = aws_iam_role.eks_node_group_iam_role.name  
 }
 
+resource "aws_iam_role_policy_attachment" "eks_node_group_route53_access_policy" {
+  policy_arn = aws_iam_policy.route53-external-policy.arn
+  role       = aws_iam_role.eks_node_group_iam_role.name
+}
 
 # External-dns用IAM
 resource "aws_iam_policy" "route53-external-policy" {
