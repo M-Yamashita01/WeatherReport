@@ -37,11 +37,13 @@ kind: Service
 apiVersion: v1
 metadata:
   name:  weatherreport-service
+  annotations:
+    external-dns.alpha.kubernetes.io/hostname: the-weather-report.com
 spec:
   type:  LoadBalancer
   selector:
     app: weatherreport
   ports:
   - protocol: TCP
-    port:  8080
+    port:  80
     targetPort:  80
