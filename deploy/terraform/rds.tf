@@ -16,10 +16,8 @@ resource "aws_db_instance" "rds" {
   engine_version = "5.7"
   instance_class = "db.t2.micro"
   name = "${var.project}db"
-  #username = "handson_user"
-  username = "mysql_user"
-  #password = "handson2020"
-  password =  "mysql_user"
+  username = "$DB_USERNAME"
+  password = "$DB_PASSWORD"
   port = 3306
   vpc_security_group_ids = [aws_security_group.rds.id]
   skip_final_snapshot = true

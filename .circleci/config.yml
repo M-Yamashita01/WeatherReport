@@ -176,8 +176,9 @@ jobs:
           name: Init terraform
           command: |
             envsubst '$$AWS_ACCESS_KEY_ID $$AWS_SECRET_ACCESS_KEY $$AWS_BUCKET' < provider.tf > provider_converted.tf
-            rm provider.tf
             mv provider_converted.tf provider.tf
+            envsubst '$$DB_USERNAME $$DB_PASSWORD' < rds.tf > rds_converted.tf
+            mv rds_converted.tf rds.tf
             terraform init
           working_directory: ~/WeatherReport/deploy/terraform
       - run:
@@ -198,8 +199,9 @@ jobs:
           name: Init terraform
           command: |
             envsubst '$$AWS_ACCESS_KEY_ID $$AWS_SECRET_ACCESS_KEY $$AWS_BUCKET' < provider.tf > provider_converted.tf
-            rm provider.tf
             mv provider_converted.tf provider.tf
+            envsubst '$$DB_USERNAME $$DB_PASSWORD' < rds.tf > rds_converted.tf
+            mv rds_converted.tf rds.tf
             terraform init
           working_directory: ~/WeatherReport/deploy/terraform
       - run:

@@ -6,6 +6,6 @@ data:
   RAILS_ENV: development
   RAILS_SERVE_STATIC_FILES: "true"
   DB_HOSTNAME: $RDS_ENDPOINT
-  DB_USERNAME: mysql_user
-  DB_PASSWORD: mysql_user
+  DB_USERNAME: $DB_USERNAME
+  DB_PASSWORD: $DB_PASSWORD
   DATABASE_NAME: weatherreportdb
