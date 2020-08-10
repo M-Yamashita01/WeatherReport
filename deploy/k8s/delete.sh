@@ -19,5 +19,7 @@ kubectl delete -f ./deployment_converted.yaml
 
 kubectl delete -f ./settings/set_db_job.yaml
 
+kubectl apply -f ./kube2iam/kube2iam.yaml
+
 kubectl delete -f ./config/vue_config.yaml
 kubectl delete -f ./config/rails_config.yaml
