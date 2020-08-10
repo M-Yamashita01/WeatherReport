@@ -3,7 +3,7 @@ kind: ConfigMap
 metadata:
   name: rails-config
 data:
-  RAILS_ENV: development
+  RAILS_ENV: production
   RAILS_SERVE_STATIC_FILES: "true"
   DB_HOSTNAME: $RDS_ENDPOINT
   DB_USERNAME: $DB_USERNAME
