@@ -27,14 +27,14 @@
   - AWS
     - Route53
     - ALB
-    - ECS
+    - EKS
     - ECR
-    - Fargate
+    - EC2
     - RDS
   - Terraform
 
 # 構成図
-![](https://github.com/M-Yamashita01/WeatherReport/blob/images/WeatherReport.svg)
+![](https://github.com/M-Yamashita01/WeatherReport/blob/images/WeatherReport.jpg)
 
 ## How to run
 OpenWeatherMapのAPI Keyを取得します。  
