@@ -16,6 +16,8 @@ aws eks --region ap-northeast-1 update-kubeconfig --name weatherreport-prod-clus
 kubectl apply -f ./config/rails_config_converted.yaml
 kubectl apply -f ./config/vue_config.yaml
 
+kubectl apply -f ./kube2iam/kube2iam.yaml
+
 kubectl apply -f ./settings/set_db_job_converted.yaml
 
 kubectl apply -f ./deployment_converted.yaml
