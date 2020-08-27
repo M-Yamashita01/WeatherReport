@@ -1,29 +1,31 @@
 # WeatherReport
-日本の天気を表示するWebアプリです。
+This is web application to display weather in Japan.
 
-## 機能一覧
-- 日本地図上で全国の天気表示
-- 地図上で選択したエリアを拡大、付近の天気を表示
-- ログイン、ログアウト
-- コメント表示、投稿、ページネーション
-- Twitterタイムライン表示
-- プロフィール表示、編集
+There are already various weather web sites, but the functions I want to see are scattered around each site, so I started to make one that I thought would be nice to put together.
 
-## 使用技術
-- フロントエンド
+# Feature list
+- Display the weather for all of Japan.
+- If you zoom in on the selected area on the map, you can see the weather in the vicinity.
+- You can login and logout.
+- You can post a comment, and see the comments in timeline.
+- Display the twitter timeline.
+- You can see your profile, and edit the profile.
+
+# Framework, Cloud, Tool
+- Frontend
   - Vue.js  
-- バックエンド(APIサーバー)
+- Backend(API Server)
   - Ruby on Rails
 - DB
   - MySQL
-- 開発環境
+- Container
   - Docker
   - Docker Compose
-- テスト
+- Test
   - RSpec
 - CI
   - Circle CI
-- インフラ
+- Cloud
   - AWS
     - Route53
     - ALB
@@ -33,28 +35,30 @@
     - RDS
   - Terraform
 
-# 構成図
+# Architecture
 ![](https://github.com/M-Yamashita01/WeatherReport/blob/images/WeatherReport.jpg)
 
-## How to run
-OpenWeatherMapのAPI Keyを取得します。  
-参考記事
+# How to run
+
+Get the OpenWeatherMap API Key.  
+Reference Article.
 [RubyでOpenWeatherMapを使って天気を取得してみた](https://qiita.com/M-Yamashii/items/ba54d7556c58feb3b86a)
 
-cloneしてきた環境に、以下.envファイルを作り、API Keyをセットします。  
+Create .env file, and write the following .env file. 
 ```.env
-OPENWEATHERMAP_API_KEY=取得したAPIキー
+OPENWEATHERMAP_API_KEY=<The above API key>
 ```
 
-docker-composeで起動します。
+Use following commands, and start WeatherReport application.
 ```
-$ docker-compose up --force-recreate --build
+$ docker-compose -f docker-development.yml build
+$ docker-compose -f docker-development.yml up
 ```
 
-天気情報はOpenWeatherMapから取得しています。  
-db-openweathermapコンテナ内で天気情報を取得し、DBに入れています。
+If you access ```localhost:8080```, you can see the WeatherReport application.
 
 
-## 補足情報
-- 地図にはamchartsを使用
-- ログインにはdevise tokenを使用
+# supplement
+- Use amcharts in map.
+- Use devise in login process.
+- Get the weather data by OpenWeatherMap
