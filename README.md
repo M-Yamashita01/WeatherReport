@@ -58,7 +58,7 @@ $ docker-compose -f docker-development.yml up
 If you access ```localhost:8080```, you can see the WeatherReport application.
 
 
-# supplement
+# Supplement
 - Use amcharts in map.
 - Use devise in login process.
 - Get the weather data by OpenWeatherMap
