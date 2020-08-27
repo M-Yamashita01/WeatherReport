@@ -1,4 +1,4 @@
-# WeatherReport
+# What is WeatherReport?
 This is web application to display weather in Japan.
 
 There are already various weather web sites, but the functions I want to see are scattered around each site, so I started to make one that I thought would be nice to put together.
