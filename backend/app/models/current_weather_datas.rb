@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# class CurrentWeatherDatas < ApplicationRecord
 class CurrentWeatherDatas < ApplicationRecord
   belongs_to :weather_group, foreign_key: :weather_group_id, primary_key: :id
   belongs_to :weathermap_location, foreign_key: :weathermap_location_id, primary_key: :id

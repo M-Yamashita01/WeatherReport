@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# class Micropost < ApplicationRecord
 class Micropost < ApplicationRecord
   belongs_to :user
   default_scope -> { order(created_at: :desc) }
