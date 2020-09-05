@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# class DeviseTokenAuthCreateUsers < ActiveRecord::Migration[5.2]
 class DeviseTokenAuthCreateUsers < ActiveRecord::Migration[5.2]
   def change
     create_table(:users) do |t|
