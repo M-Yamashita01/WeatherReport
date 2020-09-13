@@ -2,13 +2,15 @@
 
 require 'rails_helper'
 
-RSpec.describe Micropost, type: :model do
+describe Micropost  do
   before(:each) do
     @user = FactoryBot.create(:user)
     @micropost = @user.microposts.build(content: 'Lorem ipsum')
   end
 
-  describe '投稿データが存在する場合' do
+  context '投稿データが存在する場合' do
+    let(:user) { create(:test_user) }
+    let!(:micropost) { build(:sunny_comment, user: user) }
     it 'validationがpassすること' do
       expect(@micropost).to be_valid
     end
