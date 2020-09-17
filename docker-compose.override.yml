@@ -1,0 +1,20 @@
+version: '3.7'
+
+services:
+  db_latest:
+    volumes:
+      - ./data/db:/var/lib/mysql
+    ports:
+      - "3306:3306"
+
+  server_latest:
+    ports:
+      - '3000:3000'
+    volumes:
+      - ./backend:/weather_report
+
+  client_latest:
+    ports:
+      - '8080:80'
+    volumes:
+      - ./frontend:/app

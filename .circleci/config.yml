@@ -92,26 +92,22 @@ commands:
 
   test_container:
     steps:
-      - *change_command
-      - run:
-          name: run unit tests
-          command: |
-            ${SUDO_COMMAND} docker-compose -f docker-compose.test.yml run --rm db-openweathermap sh -c 'cd .. && bundle install && env &&rake test -f spec/rakefile'
-      
-      - run:
-          name: migrate db
-          command: |
-            ${SUDO_COMMAND} docker-compose -f docker-compose.test.yml run --rm db-migrate bundle exec rake db:migrate
-
+      - *change_command 
       - run:
           name: run rspec
           command: |
             mkdir -p /tmp/test-results
-            ${SUDO_COMMAND} docker-compose -f docker-compose.test.yml run server_latest bundle exec rspec --format progress \
-                                                                  --format RspecJunitFormatter \
-                                                                  --out /tmp/test-results/rspec.xml
-            ${SUDO_COMMAND} docker cp `${SUDO_COMMAND} docker-compose -f docker-compose.test.yml ps -aq server_latest`:/weather_report/coverage/index.html /tmp/
-            ${SUDO_COMMAND} docker-compose -f docker-compose.test.yml down
+            ${SUDO_COMMAND} docker-compose -f docker-compose.yml build
+            ${SUDO_COMMAND} docker-compose -f docker-compose.yml up -d
+            ${SUDO_COMMAND} docker-compose -f docker-compose.yml exec server_latest sh -c "\
+            curl -O https://raw.githubusercontent.com/vishnubob/wait-for-it/54d1f0bfeb6557adf8a3204455389d0901652242/wait-for-it.sh && \
+            chmod +x wait-for-it.sh && \
+            ./wait-for-it.sh -h db_latest -p 3306 -t 60"
+            ${SUDO_COMMAND} docker-compose -f docker-compose.yml exec server_latest sh -c "RAILS_ENV=test bundle exec rake db:create&&RAILS_ENV=test bundle exec rake db:migrate"
+            ${SUDO_COMMAND} docker-compose -f docker-compose.yml exec server_latest sh -c "bundle exec rspec --format progress \
+                                                                     --format RspecJunitFormatter \
+                                                                     --out /tmp/test-results/rspec.xml"
+            ${SUDO_COMMAND} docker cp `${SUDO_COMMAND} docker-compose -f docker-compose.yml ps -aq server_latest`:/weather_report/coverage/index.html /tmp/
 
       # Save test results for timing analysis
       - store_test_results:
@@ -121,7 +117,7 @@ commands:
           name: docker-compose down
           command: |
             set -x
-            ${SUDO_COMMAND} docker-compose -f docker-compose.test.yml down
+            ${SUDO_COMMAND} docker-compose -f docker-compose.yml down
 
 
   apply_manifest:

@@ -1,8 +1,5 @@
 FROM ruby:2.6.5-alpine3.9
 
-ARG rails_env
-ENV RAILS_ENV $rails_env
-
 # 必要なパッケージのインストール（基本的に必要になってくるものだと思うので削らないこと）
 RUN apk update && \
     apk --no-cache add build-base \

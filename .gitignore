@@ -49,10 +49,6 @@ build-iPhoneSimulator/
 # unless supporting rvm < 1.11.0 or doing something fancy, ignore this:
 .rvmrc
 
-log/
-RailsLaunch.sh
-TestExecution.sh
-
 /public/packs
 /public/packs-test
 /node_modules
@@ -62,8 +58,12 @@ yarn-debug.log*
 *.DS_Store
 .env
 local_circleci_executer.sh
-/ManualAWSPush
-/backend/db/schema.rb
+
+# backend 
+/backend/Gemfile.lock
 /backend/coverage
+/backend/db/schema.rb
+/backend/log
+/backend/tmp
 # data directory for docker
 /data
