@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# class CreateWeatherGroups < ActiveRecord::Migration[5.2]
 class CreateWeatherGroups < ActiveRecord::Migration[5.2]
   def change
     create_table :weather_groups do |t|

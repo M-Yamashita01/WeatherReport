@@ -1,9 +1,8 @@
 # frozen_string_literal: true
 
-# class Api::Auth::RegistrationsController < ApplicationController
-# end
 module Api
   module Auth
+    # class Api::Auth::RegistrationsController < ApplicationController
     class RegistrationsController < DeviseTokenAuth::RegistrationsController
       private
 

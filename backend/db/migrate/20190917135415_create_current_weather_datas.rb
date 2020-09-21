@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# class CreateCurrentWeatherDatas < ActiveRecord::Migration[5.2]
 class CreateCurrentWeatherDatas < ActiveRecord::Migration[5.2]
   def change
     create_table :current_weather_datas do |t|
