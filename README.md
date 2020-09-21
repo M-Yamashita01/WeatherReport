@@ -49,10 +49,16 @@ Create .env file, and write the following .env file.
 OPENWEATHERMAP_API_KEY=<The above API key>
 ```
 
-Use following commands, and start WeatherReport application.
+The first time you start the application, use following commands.
+
 ```
-$ docker-compose -f docker-development.yml build
-$ docker-compose -f docker-development.yml up
+sh ./setup.sh
+```
+
+Use following commands, and start WeatherReport application.
+
+```
+$ docker-compose up
 ```
 
 If you access ```localhost:8080```, you can see the WeatherReport application.
