@@ -61,6 +61,7 @@ local_circleci_executer.sh
 
 # backend 
 /backend/Gemfile.lock
+/backend/bin
 /backend/coverage
 /backend/db/schema.rb
 /backend/log
