@@ -2,6 +2,7 @@ class Forecast < ApplicationRecord
   validate :specified_forecast_type?
 
   belongs_to :weathermap_location
+  has_many :sunrisesets
 
   def specified_forecast_type?
     forecast_type_list = ["current", "minutely", "hourly", "daily"]
