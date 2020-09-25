@@ -3,6 +3,7 @@ class Forecast < ApplicationRecord
 
   belongs_to :weathermap_location
   has_many :sunrisesets
+  has_many :temperatures
 
   def specified_forecast_type?
     forecast_type_list = ["current", "minutely", "hourly", "daily"]
