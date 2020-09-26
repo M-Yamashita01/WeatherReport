@@ -6,4 +6,6 @@ class WeathermapLocation < ApplicationRecord
   validates :latitude, presence: true
   validates :longitude, presence: true
   validates :city_name, presence: true
+
+  has_many :forecasts
 end
