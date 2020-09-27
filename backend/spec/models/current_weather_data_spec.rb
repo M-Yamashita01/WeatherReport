@@ -3,7 +3,7 @@
 require 'rails_helper'
 
 describe CurrentWeatherDatas do
-  let(:weathermap_location) { create(:city) }
+  let(:weathermap_location) { create(:tokyo) }
   let(:weather_group) { create(:weather_sunny) }
   let!(:current_weather) { create(:current_weather_sample, weathermap_location: weathermap_location, weather_group: weather_group) }
 

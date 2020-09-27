@@ -5,7 +5,7 @@ require 'rails_helper'
 RSpec.describe 'CurrentWeatherDatas', type: :request do
   describe 'GET /current_weather_datas' do
     context '登録されている地域の天気が1つのみの場合' do
-      let(:weathermap_location) { create(:city) }
+      let(:weathermap_location) { create(:tokyo) }
       let(:weather_group) { create(:weather_sunny) }
       let!(:current_weather) { create(:current_weather_sample, weathermap_location: weathermap_location, weather_group: weather_group) }
 
@@ -21,7 +21,7 @@ RSpec.describe 'CurrentWeatherDatas', type: :request do
 
   describe 'GET /current_weather_datas?longitude_max=&longitude_min=&latitude_max=&latitude_min=' do
     context '登録されている地域の天気が1つのみで、緯度経度を指定せずに天気を取得した場合' do
-      let(:weathermap_location) { create(:city) }
+      let(:weathermap_location) { create(:tokyo) }
       let(:weather_group) { create(:weather_sunny) }
       let!(:current_weather) { create(:current_weather_sample, weathermap_location: weathermap_location, weather_group: weather_group) }
 

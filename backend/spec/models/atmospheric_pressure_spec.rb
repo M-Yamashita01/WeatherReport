@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe AtmosphericPressure, type: :model do
-  let(:location) { create(:city) }
+  let(:location) { create(:tokyo) }
   let(:forecast) { location.forecasts.create!(forecast_type: "current", weathermap_location_id: location.id)}
 
   context '大気圧を入れた場合' do
