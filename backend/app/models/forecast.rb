@@ -12,10 +12,20 @@ class Forecast < ApplicationRecord
   has_many :rainfalls
   has_many :snowfalls
 
+  scope :search_current_forecast_by_location, ->(weathermap_location_id){
+    conditions = {
+      forecast_type: "current",
+      weathermap_location_id: weathermap_location_id
+    }
+    where(conditions)
+  }
+
   def specified_forecast_type?
     forecast_type_list = ["current", "minutely", "hourly", "daily"]
     unless forecast_type_list.include?(forecast_type)
       errors.add(:forecast_type, "forecast_typeは指定文字列以外セットできません。")
     end
   end
+
+
 end
