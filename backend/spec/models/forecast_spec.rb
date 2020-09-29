@@ -93,6 +93,33 @@ RSpec.describe Forecast, type: :model do
           expect(subject.count).to eq 0
         end
       end
+
+      context '地域idが空文字の場合' do
+        let(:location_id) { "" }
+        let!(:forecast) { location_tokyo.forecasts.create(forecast_type: "daily") }
+
+        it '取得できるレコード数が0件であること' do
+          expect(subject.count).to eq 0
+        end
+      end
+
+      context '地域idがnilの場合' do
+        let(:location_id) { nil }
+        let!(:forecast) { location_tokyo.forecasts.create(forecast_type: "daily") }
+
+        it '取得できるレコード数が0件であること' do
+          expect(subject.count).to eq 0
+        end
+      end
+
+      context '地域idが空文字の場合' do
+        let(:location_id) { "" }
+        let!(:forecast) { location_tokyo.forecasts.create(forecast_type: "daily") }
+
+        it '取得できるレコード数が0件であること' do
+          expect(subject.count).to eq 0
+        end
+      end
     end
   end
 end
