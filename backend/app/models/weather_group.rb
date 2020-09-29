@@ -2,6 +2,8 @@
 
 # class WeatherGroup < ApplicationRecord
 class WeatherGroup < ApplicationRecord
+  belongs_to :forecast
+
   validates :weather_group_id, presence: true
   validates :weather_icon, presence: true
   validates :weather_main, presence: true

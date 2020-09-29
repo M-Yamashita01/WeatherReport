@@ -11,13 +11,16 @@ class Forecast < ApplicationRecord
   has_many :winds
   has_many :rainfalls
   has_many :snowfalls
+  has_many :weather_groups
 
   scope :search_current_forecast_by_location, ->(weathermap_location_id){
+    return none if weathermap_location_id.blank?
+
     conditions = {
       forecast_type: "current",
       weathermap_location_id: weathermap_location_id
     }
-    where(conditions)
+    left_joins(:sunrisesets, :temperatures, :atmospheric_pressures, :humidities, :clouds, :uv_indices, :winds, :rainfalls, :snowfalls, :weather_groups).where(conditions)
   }
 
   def specified_forecast_type?

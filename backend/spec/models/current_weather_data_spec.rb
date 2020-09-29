@@ -4,7 +4,8 @@ require 'rails_helper'
 
 describe CurrentWeatherDatas do
   let(:weathermap_location) { create(:tokyo) }
-  let(:weather_group) { create(:weather_sunny) }
+  let(:forecast) { weathermap_location.forecasts.create(forecast_type: "current") }
+  let(:weather_group) { create(:weather_sunny, forecast_id: forecast.id) }
   let!(:current_weather) { create(:current_weather_sample, weathermap_location: weathermap_location, weather_group: weather_group) }
 
   context '現在の天気情報が存在する場合' do
