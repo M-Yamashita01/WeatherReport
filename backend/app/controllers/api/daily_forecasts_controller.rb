@@ -5,7 +5,12 @@ module Api
     # GET /daily_forecasts
     # GET /daily_forecasts.json
     def index
-      @daily_forecasts = Forecast.all
+      location = WeathermapLocation.search_location(daily_forecast_params[:latitude], daily_forecast_params[:longitude])
+      if location.blank?
+        @daily_forecast = []
+      else
+        @daily_forecast = Forecast.search_daily_forecast_by_location(location[0][:id])
+      end
     end
 
     # GET /daily_forecasts/1
@@ -47,9 +52,8 @@ module Api
         @daily_forecast = Forecast.find(params[:id])
       end
 
-      # Only allow a list of trusted parameters through.
       def daily_forecast_params
-        params.fetch(:daily_forecast, {})
+        params.permit(:longitude, :latitude)
       end
   end
 end

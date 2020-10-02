@@ -23,6 +23,16 @@ class Forecast < ApplicationRecord
     left_joins(:sunrisesets, :temperatures, :atmospheric_pressures, :humidities, :clouds, :uv_indices, :winds, :rainfalls, :snowfalls, :weather_groups).where(conditions)
   }
 
+  scope :search_daily_forecast_by_location, ->(weathermap_location_id){
+    return none if weathermap_location_id.blank?
+    WeathermapLocation.find_by_id(weathermap_location_id)
+    # conditions = {
+      # forecast_type: "daily",
+      # weathermap_location_id: weathermap_location_id
+    # }
+    # left_joins(:weathermap_location, :sunrisesets, :temperatures, :atmospheric_pressures, :humidities, :clouds, :uv_indices, :winds, :rainfalls, :snowfalls, :weather_groups).where(conditions).select('forecasts.id, weathermap_locations.city_name')
+  }
+
   def specified_forecast_type?
     forecast_type_list = ["current", "minutely", "hourly", "daily"]
     unless forecast_type_list.include?(forecast_type)
