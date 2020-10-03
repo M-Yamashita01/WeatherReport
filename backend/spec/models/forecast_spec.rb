@@ -121,5 +121,25 @@ RSpec.describe Forecast, type: :model do
         end
       end
     end
+    describe 'search_daily_forecast_by_location' do
+      let(:location_tokyo) { create(:tokyo) }
+
+      subject { Forecast.search_daily_forecast_by_location(location_id) }
+
+      context '現在の天気予報を持つ地域idが1件ある場合' do
+        let(:location_id) { location_tokyo.id}
+        let!(:forecast) { location_tokyo.forecasts.create(forecast_type: "daily") }
+        let!(:now_datetime) { DateTime.now }
+        let!(:sunrisesets) { forecast.sunrisesets.create(sunrise_at: now_datetime) }
+
+        it '取得できるレコード数が1件であること' do
+          expect(subject.count).to eq 1
+        end
+
+        it '日の出時刻が一致していること' do
+          expect(subject.first.sunrise_at.to_i).to eq now_datetime.to_i
+        end
+      end
+    end
   end
 end

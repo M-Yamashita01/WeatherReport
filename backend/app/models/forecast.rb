@@ -13,24 +13,47 @@ class Forecast < ApplicationRecord
   has_many :snowfalls
   has_many :weather_groups
 
-  scope :search_current_forecast_by_location, ->(weathermap_location_id){
+  scope :search_current_forecast_by_location, ->(weathermap_location_id) {
     return none if weathermap_location_id.blank?
 
     conditions = {
       forecast_type: "current",
       weathermap_location_id: weathermap_location_id
     }
-    left_joins(:sunrisesets, :temperatures, :atmospheric_pressures, :humidities, :clouds, :uv_indices, :winds, :rainfalls, :snowfalls, :weather_groups).where(conditions)
+    left_joins(
+      :sunrisesets,
+      :temperatures,
+      :atmospheric_pressures,
+      :humidities,
+      :clouds,
+      :uv_indices,
+      :winds,
+      :rainfalls,
+      :snowfalls,
+      :weather_groups
+    ).where(conditions)
   }
 
-  scope :search_daily_forecast_by_location, ->(weathermap_location_id){
+  scope :search_daily_forecast_by_location, ->(weathermap_location_id) {
     return none if weathermap_location_id.blank?
-    WeathermapLocation.find_by_id(weathermap_location_id)
-    # conditions = {
-      # forecast_type: "daily",
-      # weathermap_location_id: weathermap_location_id
-    # }
-    # left_joins(:weathermap_location, :sunrisesets, :temperatures, :atmospheric_pressures, :humidities, :clouds, :uv_indices, :winds, :rainfalls, :snowfalls, :weather_groups).where(conditions).select('forecasts.id, weathermap_locations.city_name')
+    
+    conditions = {
+      forecast_type: "daily",
+      weathermap_location_id: weathermap_location_id
+    }
+
+    left_joins(
+      :sunrisesets,
+      :temperatures,
+      :atmospheric_pressures,
+      :humidities,
+      :clouds,
+      :uv_indices,
+      :winds,
+      :rainfalls,
+      :snowfalls,
+      :weather_groups
+    ).where(conditions).select('*')
   }
 
   def specified_forecast_type?
