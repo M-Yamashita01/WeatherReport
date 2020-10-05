@@ -7,17 +7,22 @@ RSpec.describe "DailyForecasts", type: :request do
     context 'パラメータに緯度、経度が与えられたとき' do
       let!(:location) { create(:tokyo) }
       let!(:forecast) { location.forecasts.create(forecast_type: "daily")}
+      let(:now_datetime) { DateTime.now }
+      let!(:sunriseset) { forecast.sunrisesets.create(sunrise_at: now_datetime, sunset_at: now_datetime )}
       let(:params) { { latitude: 139.691, longitude: 35.689 } }
 
-      it "works! (now write some real specs)" do
-        subject
-        expect(response).to have_http_status(200)
-      end
-
-      it "都市名を取得できること" do
+      it "日の出時間が取得できること" do
         subject
         json = JSON.parse(response.body)
-        expect(json['daily_forecast']['city_name']).to eq "tokyo"
+        sunrise_at = json['daily_forecast']['sunrise_at']
+        expect(DateTime.parse(sunrise_at).to_i).to eq now_datetime.to_i
+      end
+
+      it "日の入時間が取得できること" do
+        subject
+        json = JSON.parse(response.body)
+        sunset_at = json['daily_forecast']['sunset_at']
+        expect(DateTime.parse(sunset_at).to_i).to eq now_datetime.to_i
       end
     end
   end

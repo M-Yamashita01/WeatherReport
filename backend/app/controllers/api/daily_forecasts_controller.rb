@@ -9,8 +9,11 @@ module Api
       if location.blank?
         @daily_forecast = []
       else
-        @daily_forecast = Forecast.search_daily_forecast_by_location(location[0][:id])
+        @daily_forecast = Forecast.search_daily_forecast_by_location(location.first.id)
       end
+
+      # 天気は最初の1レコード目に入っているため
+      @daily_forecast = @daily_forecast.first
     end
 
     # GET /daily_forecasts/1
