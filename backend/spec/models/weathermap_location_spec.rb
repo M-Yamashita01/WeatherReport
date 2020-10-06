@@ -74,8 +74,8 @@ RSpec.describe WeathermapLocation, type: :model do
         end
 
         it '取得したレコードの緯度、経度が一致していること' do
-          expect(subject[0].latitude.to_digits).to eq("139.691")
-          expect(subject[0].longitude.to_digits).to eq("35.689")
+          expect(subject.first.latitude.to_digits).to eq("139.691")
+          expect(subject.first.longitude.to_digits).to eq("35.689")
         end
       end
 

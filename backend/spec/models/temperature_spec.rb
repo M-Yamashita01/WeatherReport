@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Temperature, type: :model do
   let(:location) { create(:tokyo) }
-  let(:forecast) { location.forecasts.create!(forecast_type: "current", weathermap_location_id: location.id)}
+  let!(:forecast) { location.forecasts.create(forecast_datetime: DateTime.now, forecast_type: "current", weathermap_location_id: location.id)}
 
   context '気温を入れた場合' do
     let(:temperature) { forecast.temperatures.create(temperature: 0.0, forecast_id: forecast.id) }

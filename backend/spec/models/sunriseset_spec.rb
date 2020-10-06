@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Sunriseset, type: :model do
   let(:location) { create(:tokyo) }
-  let(:forecast) { location.forecasts.create!(forecast_type: "current", weathermap_location_id: location.id)}
+  let!(:forecast) { location.forecasts.create(forecast_datetime: DateTime.now, forecast_type: "current", weathermap_location_id: location.id)}
 
   context '日の出時刻を入れた場合' do
     let(:sunrise) { forecast.sunrisesets.create(sunrise_at: DateTime.now, forecast_id: forecast.id) }

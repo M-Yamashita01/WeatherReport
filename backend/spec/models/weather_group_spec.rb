@@ -5,7 +5,7 @@ require 'rails_helper'
 RSpec.describe WeatherGroup, type: :model do
   describe 'validation' do
     let(:location) { create(:tokyo) }
-    let(:forecast) { location.forecasts.create(forecast_type: "current") }
+    let(:forecast) { location.forecasts.create(forecast_datetime: DateTime.now, forecast_type: "current") }
     let(:weather_group) { create(:weather_sunny, forecast_id: forecast.id) }
 
     context '天気グループでの必要なデータが存在する場合' do
