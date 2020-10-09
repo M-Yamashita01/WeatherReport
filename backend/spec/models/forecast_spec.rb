@@ -1,8 +1,10 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe Forecast, type: :model do
   context '現在を表すレコードを入れた場合' do
-    let(:location) { create(:tokyo)}
+    let(:location) { create(:tokyo) }
     let(:forecast) { create(:forecast, :current, weathermap_location_id: location.id) }
 
     it 'validationがpassすること' do
@@ -11,7 +13,7 @@ RSpec.describe Forecast, type: :model do
   end
 
   context '分ごとを表すレコードを入れた場合' do
-    let(:location) { create(:tokyo)}
+    let(:location) { create(:tokyo) }
     let(:forecast) { create(:forecast, :minutely, weathermap_location_id: location.id) }
 
     it 'validationがpassすること' do
@@ -20,7 +22,7 @@ RSpec.describe Forecast, type: :model do
   end
 
   context '時間ごとを表すレコードを入れた場合' do
-    let(:location) { create(:tokyo)}
+    let(:location) { create(:tokyo) }
     let(:forecast) { create(:forecast, :hourly, weathermap_location_id: location.id) }
 
     it 'validationがpassすること' do
@@ -29,7 +31,7 @@ RSpec.describe Forecast, type: :model do
   end
 
   context '日ごとを表すレコードを入れた場合' do
-    let(:location) { create(:tokyo)}
+    let(:location) { create(:tokyo) }
     let(:forecast) { create(:forecast, :daily, weathermap_location_id: location.id) }
 
     it 'validationがpassすること' do
@@ -38,8 +40,12 @@ RSpec.describe Forecast, type: :model do
   end
 
   context '適当な文字(hogehoge)のレコードを入れた場合' do
-    let(:location) { create(:tokyo)}
-    let(:forecast) { location.forecasts.create(forecast_datetime: DateTime.now, forecast_type: "hogehoge", weathermap_location_id: location.id) }
+    let(:location) { create(:tokyo) }
+    let(:forecast) {
+      location.forecasts.create(forecast_datetime: DateTime.now,
+                                forecast_type: 'hogehoge',
+                                weathermap_location_id: location.id)
+    }
 
     it 'validationがpassしないこと' do
       expect(forecast).not_to be_valid
@@ -53,8 +59,6 @@ RSpec.describe Forecast, type: :model do
       subject { Forecast.search_current_forecast_by_location(location_tokyo.id) }
 
       context '現在の天気予報を持つ地域idが1件ある場合' do
-        let(:location_id) { location_tokyo.id}
-        # let!(:forecast) { location_tokyo.forecasts.create(forecast_datetime: DateTime.now, forecast_type: "current") }
         let!(:forecast) { create(:forecast, :current, weathermap_location_id: location_tokyo.id) }
 
         it '取得できるレコード数が1件であること' do

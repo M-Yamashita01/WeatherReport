@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-describe Micropost  do
+describe Micropost do
   context '投稿データが存在する場合' do
     let(:user) { create(:test_user) }
     let!(:micropost) { build(:sunny_comment, user: user) }

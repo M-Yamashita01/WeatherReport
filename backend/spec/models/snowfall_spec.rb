@@ -1,8 +1,10 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe Snowfall, type: :model do
   let(:location) { create(:tokyo) }
-  let!(:forecast) { location.forecasts.create(forecast_datetime: DateTime.now, forecast_type: "current", weathermap_location_id: location.id)}
+  let(:forecast) { create(:forecast, :current, weathermap_location_id: location.id) }
 
   context '過去1時間の雪量(mm)を入れた場合' do
     let(:snowfall) { forecast.snowfalls.create(snow_volume_last_hour: 0.0, forecast_id: forecast.id) }

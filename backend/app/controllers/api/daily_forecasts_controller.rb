@@ -1,4 +1,7 @@
+# frozen_string_literal: true
+
 module Api
+  # class DailyForecastsController < ApplicationController
   class DailyForecastsController < ApplicationController
     before_action :set_daily_forecast, only: [:show, :update, :destroy]
 
@@ -19,6 +22,7 @@ module Api
     # GET /daily_forecasts/1
     # GET /daily_forecasts/1.json
     def show
+      # nothing
     end
 
     # POST /daily_forecasts
@@ -50,13 +54,14 @@ module Api
     end
 
     private
-      # Use callbacks to share common setup or constraints between actions.
-      def set_daily_forecast
-        @daily_forecast = Forecast.find(params[:id])
-      end
 
-      def daily_forecast_params
-        params.permit(:longitude, :latitude)
-      end
+    # Use callbacks to share common setup or constraints between actions.
+    def set_daily_forecast
+      @daily_forecast = Forecast.find(params[:id])
+    end
+
+    def daily_forecast_params
+      params.permit(:longitude, :latitude)
+    end
   end
 end

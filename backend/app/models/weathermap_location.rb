@@ -9,8 +9,9 @@ class WeathermapLocation < ApplicationRecord
 
   has_many :forecasts
 
-  scope :search_location, -> (latitude, longitude) {
+  scope :search_location, lambda { |latitude, longitude|
     return none if latitude.blank? || longitude.blank?
+
     where(latitude: latitude, longitude: longitude)
   }
 end

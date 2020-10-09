@@ -5,7 +5,12 @@ module Api
   class MicropostsController < ApplicationController
     def index
       micropost_for_user = Micropost.joins(:user).search(search_params)
-      @micropost = micropost_for_user.select('microposts.id as micropost_id, microposts.user_id, microposts.content, microposts.created_at, users.id, users.name')
+      @micropost = micropost_for_user.select('microposts.id as micropost_id,
+                                              microposts.user_id,
+                                              microposts.content,
+                                              microposts.created_at,
+                                              users.id,
+                                              users.name')
     end
 
     def create

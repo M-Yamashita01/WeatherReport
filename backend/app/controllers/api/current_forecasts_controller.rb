@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Api
   class CurrentForecastsController < ApplicationController
     before_action :set_current_forecast, only: [:show, :update, :destroy]
@@ -11,6 +13,7 @@ module Api
     # GET /current_forecasts/1
     # GET /current_forecasts/1.json
     def show
+      # nothing
     end
 
     # POST /current_forecasts
@@ -42,14 +45,15 @@ module Api
     end
 
     private
-      # Use callbacks to share common setup or constraints between actions.
-      def set_current_forecast
-        @current_forecast = Forecast.find(params[:id])
-      end
 
-      # Only allow a list of trusted parameters through.
-      def current_forecast_params
-        params.fetch(:current_forecast, {})
-      end
+    # Use callbacks to share common setup or constraints between actions.
+    def set_current_forecast
+      @current_forecast = Forecast.find(params[:id])
+    end
+
+    # Only allow a list of trusted parameters through.
+    def current_forecast_params
+      params.fetch(:current_forecast, {})
+    end
   end
 end

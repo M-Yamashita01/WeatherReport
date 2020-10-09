@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Forecast < ApplicationRecord
   validate :specified_forecast_type?
 
@@ -13,11 +15,11 @@ class Forecast < ApplicationRecord
   has_many :snowfalls
   has_many :weather_groups
 
-  scope :search_current_forecast_by_location, ->(weathermap_location_id) {
+  scope :search_current_forecast_by_location, lambda { |weathermap_location_id|
     return none if weathermap_location_id.blank?
 
     conditions = {
-      forecast_type: "current",
+      forecast_type: 'current',
       weathermap_location_id: weathermap_location_id
     }
     left_joins(
@@ -34,11 +36,11 @@ class Forecast < ApplicationRecord
     ).where(conditions)
   }
 
-  scope :search_daily_forecast_by_location, ->(weathermap_location_id) {
+  scope :search_daily_forecast_by_location, lambda { |weathermap_location_id|
     return none if weathermap_location_id.blank?
-    
+
     conditions = {
-      forecast_type: "daily",
+      forecast_type: 'daily',
       weathermap_location_id: weathermap_location_id
     }
 
@@ -57,11 +59,9 @@ class Forecast < ApplicationRecord
   }
 
   def specified_forecast_type?
-    forecast_type_list = ["current", "minutely", "hourly", "daily"]
-    unless forecast_type_list.include?(forecast_type)
-      errors.add(:forecast_type, "forecast_typeは指定文字列以外セットできません。")
-    end
+    forecast_type_list = ['current', 'minutely', 'hourly', 'daily']
+    return if forecast_type_list.include?(forecast_type)
+
+    errors.add(:forecast_type, 'forecast_typeは指定文字列以外セットできません。')
   end
-
-
 end

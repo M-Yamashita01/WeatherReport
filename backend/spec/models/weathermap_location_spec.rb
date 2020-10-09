@@ -74,8 +74,8 @@ RSpec.describe WeathermapLocation, type: :model do
         end
 
         it '取得したレコードの緯度、経度が一致していること' do
-          expect(subject.first.latitude.to_digits).to eq("139.691")
-          expect(subject.first.longitude.to_digits).to eq("35.689")
+          expect(subject.first.latitude.to_digits).to eq('139.691')
+          expect(subject.first.longitude.to_digits).to eq('35.689')
         end
       end
 
@@ -89,8 +89,8 @@ RSpec.describe WeathermapLocation, type: :model do
       end
 
       context '緯度、経度が両方空文字の場合' do
-        let(:latitude) { "" }
-        let(:longitude) { "" }
+        let(:latitude) { '' }
+        let(:longitude) { '' }
 
         it '取得したレコードが0件であること' do
           expect(subject.count).to eq(0)
@@ -98,7 +98,7 @@ RSpec.describe WeathermapLocation, type: :model do
       end
 
       context '緯度のみ片方空文字の場合' do
-        let(:latitude) { "" }
+        let(:latitude) { '' }
         let(:longitude) { 0 }
 
         it '取得したレコードが0件であること' do
@@ -108,7 +108,7 @@ RSpec.describe WeathermapLocation, type: :model do
 
       context '経度のみ片方空文字の場合' do
         let(:latitude) { 0 }
-        let(:longitude) { "" }
+        let(:longitude) { '' }
 
         it '取得したレコードが0件であること' do
           expect(subject.count).to eq(0)
@@ -116,8 +116,8 @@ RSpec.describe WeathermapLocation, type: :model do
       end
 
       context '緯度、経度が適当な文字の場合' do
-        let(:latitude) { "hogehoge" }
-        let(:longitude) { "hogehoge" }
+        let(:latitude) { 'hogehoge' }
+        let(:longitude) { 'hogehoge' }
 
         it '取得したレコードが0件であること' do
           expect(subject.count).to eq(0)

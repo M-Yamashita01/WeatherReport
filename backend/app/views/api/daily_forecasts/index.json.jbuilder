@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 json.set! :daily_forecast do
   json.sunrise_at @daily_forecast.sunrise_at
   json.sunset_at @daily_forecast.sunset_at

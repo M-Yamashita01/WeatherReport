@@ -104,7 +104,7 @@ end
 # 参照：https://qiita.com/sonoran/items/8c3b65b054cb483c35cb
 # save to CircleCI's artifacts directory if we're on CircleCI
 if ENV['CIRCLE_ARTIFACTS']
-  dir = File.join(ENV['CIRCLE_ARTIFACTS'], "coverage")
+  dir = File.join(ENV['CIRCLE_ARTIFACTS'], 'coverage')
   SimpleCov.coverage_dir(dir)
 end
 
