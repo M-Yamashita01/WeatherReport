@@ -1,8 +1,10 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe Wind, type: :model do
-  let(:location) { create(:city) }
-  let(:forecast) { location.forecasts.create!(forecast_type: "current", weathermap_location_id: location.id)}
+  let(:location) { create(:tokyo) }
+  let!(:forecast) { create(:forecast, :current, weathermap_location_id: location.id) }
 
   context '風速(m/s)を入れた場合' do
     let(:wind) { forecast.winds.create(wind_speed: 0.0, forecast_id: forecast.id) }

@@ -32,9 +32,8 @@ RSpec.describe 'Micropost', type: :request do
 
         json = JSON.parse(response.body)
         expect(json['micropost'].length).to eq 10
-        for i in 0..9 do
-          expect(json['micropost'][i]['user_id']).to eq test_user.id
-        end
+        range = 0..9
+        range.each { |i| expect(json['micropost'][i]['user_id']).to eq test_user.id }
       end
     end
   end
@@ -57,17 +56,17 @@ RSpec.describe 'Micropost', type: :request do
 
   describe '#create' do
     context 'ユーザ登録済みのユーザの場合' do
-      let(:user) {create(:user)}
+      let(:user) { create(:user) }
 
       it '記事の投稿ができること' do
         params = {
           user_id: user.id,
-          content: "test content"
+          content: 'test content'
         }
 
         post '/api/microposts/', params: params
         expect(response.status).to eq 200
-      end      
+      end
     end
   end
 end

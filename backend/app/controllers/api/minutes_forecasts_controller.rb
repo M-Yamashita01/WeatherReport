@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Api
   class MinutesForecastsController < ApplicationController
     before_action :set_minutes_forecast, only: [:show, :update, :destroy]
@@ -11,6 +13,7 @@ module Api
     # GET /minutes_forecasts/1
     # GET /minutes_forecasts/1.json
     def show
+      # nothing
     end
 
     # POST /minutes_forecasts
@@ -42,14 +45,15 @@ module Api
     end
 
     private
-      # Use callbacks to share common setup or constraints between actions.
-      def set_minutes_forecast
-        @minutes_forecast = Forecast.find(params[:id])
-      end
 
-      # Only allow a list of trusted parameters through.
-      def minutes_forecast_params
-        params.fetch(:minutes_forecast, {})
-      end
+    # Use callbacks to share common setup or constraints between actions.
+    def set_minutes_forecast
+      @minutes_forecast = Forecast.find(params[:id])
+    end
+
+    # Only allow a list of trusted parameters through.
+    def minutes_forecast_params
+      params.fetch(:minutes_forecast, {})
+    end
   end
 end

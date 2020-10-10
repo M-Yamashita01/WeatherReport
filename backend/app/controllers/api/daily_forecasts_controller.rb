@@ -1,16 +1,28 @@
+# frozen_string_literal: true
+
 module Api
+  # class DailyForecastsController < ApplicationController
   class DailyForecastsController < ApplicationController
     before_action :set_daily_forecast, only: [:show, :update, :destroy]
 
     # GET /daily_forecasts
     # GET /daily_forecasts.json
     def index
-      @daily_forecasts = Forecast.all
+      location = WeathermapLocation.search_location(daily_forecast_params[:latitude], daily_forecast_params[:longitude])
+      if location.blank?
+        @daily_forecast = []
+      else
+        @daily_forecast = Forecast.search_daily_forecast_by_location(location.first.id)
+      end
+
+      # 天気は最初の1レコード目に入っているため
+      @daily_forecast = @daily_forecast.first
     end
 
     # GET /daily_forecasts/1
     # GET /daily_forecasts/1.json
     def show
+      # nothing
     end
 
     # POST /daily_forecasts
@@ -42,14 +54,14 @@ module Api
     end
 
     private
-      # Use callbacks to share common setup or constraints between actions.
-      def set_daily_forecast
-        @daily_forecast = Forecast.find(params[:id])
-      end
 
-      # Only allow a list of trusted parameters through.
-      def daily_forecast_params
-        params.fetch(:daily_forecast, {})
-      end
+    # Use callbacks to share common setup or constraints between actions.
+    def set_daily_forecast
+      @daily_forecast = Forecast.find(params[:id])
+    end
+
+    def daily_forecast_params
+      params.permit(:longitude, :latitude)
+    end
   end
 end
