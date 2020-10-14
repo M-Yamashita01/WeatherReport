@@ -27,6 +27,7 @@ gem 'rails', '~> 5.2.3'
 gem 'rubocop', require: false
 gem 'rubocop-performance', require: false
 gem 'rubocop-rails', require: false
+gem 'rubocop-rspec'
 # Use SCSS for stylesheets
 gem 'sass-rails', '5.0.6'
 gem 'sprockets', '3.6.3'
