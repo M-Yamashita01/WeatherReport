@@ -1,7 +1,7 @@
 name: Static Analysis
 
 on:
-  push:
+  pull_request:
     branches-ignore:
       - 'master'
       - 'develop'
@@ -19,4 +19,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           rubocop_flags: --config backend/.rubocop.yml backend/
           rubocop_extensions: meowcop
-          reporter: github-pr-check
+          # reporter: github-pr-check
