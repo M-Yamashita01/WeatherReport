@@ -1,4 +1,11 @@
 AllCops:
+  Exclude:
+    - bin/**/*
+    - db/schema.rb
+    - db/migrate/*.rb
+    - node_modules/**/*
+    - tmp/**/*
+    - vendor/**/*XS
   NewCops: enable
 
 Layout/BeginEndAlignment: # (new in 0.91)
@@ -104,8 +111,6 @@ Style/SoleNestedConditional: # (new in 0.89)
 Style/StringConcatenation: # (new in 0.89)
   Enabled: true
   
-
-
 Style/AsciiComments:
   Enabled: false
 
@@ -131,4 +136,7 @@ Style/SymbolArray:
   Enabled: false
 
 Style/ClassAndModuleChildren:
+  Enabled: false
+
+Metrics/MethodLength:
   Enabled: false
