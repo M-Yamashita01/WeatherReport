@@ -44,7 +44,7 @@ RSpec.describe 'Micropost', type: :request do
       let!(:micropost) { create(:rainy_comment, user: user) }
 
       it '指定した記事の削除ができること' do
-        api = '/api/microposts/' + micropost.id.to_s
+        api = "/api/microposts/ + #{micropost.id}"
         expect do
           delete api
         end.to change { Micropost.count }.by(-1)
